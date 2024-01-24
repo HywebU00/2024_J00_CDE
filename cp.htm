@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+  <meta name="robots" content="noindex" />
+  <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HyUI kit</title>
+  <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+  <!-- slick css-->
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+  <!-- 燈箱facybox -->
+  <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
+  <!-- hyUI css -->
+  <link rel="stylesheet" href="css/hyui.css" />
+  <!-- favicon -->
+  <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- 直接跳主內容區 -->
+  <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+  <!-- wrapper Start -->
+  <div class="wrapper">
+    <!-- header Start -->
+    <header class="header ">
+      <div class="container">
+        <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+        <h1>
+          <a href="index.htm"><img src="images/logo.svg" alt="網站標題" /></a>
+        </h1>
+
+        <!-- navigation Start -->
+        <nav class="navigation" role="navigation" aria-label="Site">
+          <!-- 新增div navlist -->
+          <div class="navlist">
+            <ul>
+              <li><a href="#">網站導覽</a></li>
+              <li><a href="#">意見信箱</a></li>
+              <li><a href="#">員工專區</a></li>
+              <li><a href="#">English</a></li>
+            </ul>
+          </div>
+          <!-- font_size -->
+          <div class="font_size_block">
+            <button type="button" class="fontsize_btn">A</button>
+            <div class="font_size_list">
+              <ul>
+                <li><a href="#" role="button" class="small">小</a></li>
+                <li><a href="#" role="button" class="medium">中</a></li>
+                <li><a href="#" role="button" class="large">大</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Search Start -->
+          <div class="searchblock">
+            <button type="button" class="searchbtn">查詢</button>
+            <div class="searchcontent">
+              <div class="search" role="search">
+                <div class="form_grp">
+                  <label for="mustSameAsId">搜尋</label>
+                  <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S" title="請輸入文字" aria-label="搜尋網站內容" />
+                  <input name="" type="submit" value="查詢" class="btn btn-search" />
+                </div>
+                <!-- <div class="btn_grp">
+                              <input name="" type="submit" value="進階搜尋" class="btn" />
+                            </div> -->
+                <div class="keywordHot">
+                  <ul>
+                    <li><a href="#">熱門熱門</a></li>
+                    <li><a href="#">查詢</a></li>
+                    <li><a href="#">字詞三</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Search End -->
+        </nav>
+        <!-- navigation End -->
+        <!-- menu Start -->
+        <nav class="menu" role="navigation" aria-label="Header的導航列">
+          <ul>
+            <li>
+              <a href="#">審查評估業務</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li><a href="#">法規諮詢輔導</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">最新法規資訊</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">訊息公告</a>
+              <ul>
+                <li><a href="#">CDE重大消息/政策</a></li>
+                <li><a href="#">業務最新公告</a></li>
+                <li><a href="http://www.google.com">採購公告</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">認識CDE</a>
+              <ul>
+                <li><a href="#">緣起宗旨</a></li>
+                <li><a href="#">董事會/董事長</a></li>
+                <li><a href="#">執行長</a></li>
+                <li><a href="#">組織架構</a></li>
+                <li><a href="#">業務介紹</a></li>
+                <li><a href="#">公開資訊</a></li>
+                <li><a href="#">地理位置</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">加入CDE</a>
+              <ul>
+                <li><a href="#">菁英招募</a></li>
+                <li><a href="#">實習專區</a></li>
+                <li><a href="#">下載專區</a></li>
+                <li><a href="#">聯絡我們</a></li>
+                <li><a href="#">員工專區</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- menu End -->
+        <!-- noscript -->
+        <noscript>
+          您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+          <a href="#">網站導覽</a>
+        </noscript>
+      </div>
+    </header>
+    <!-- header End -->
+    <!-- main Start -->
+    <div id="center" class="main innerpage">
+      <!-- 內頁新增一個classname-->
+      <a class="accesskey" href="#ac" id="ac" accesskey="C" title="主要內容區">:::</a>
+      <!-- breadcrumb路徑 start-->
+      <div class="breadcrumb">
+        <ul>
+          <li><a href="#">首頁</a></li>
+          <li><a href="#">節點</a></li>
+          <li>節點</li>
+        </ul>
+      </div>
+      <div class="container">
+        <!-- 左側 -->
+        <!-- 如果不要sticky效果，就移除stickySidebar classname -->
+        <div class="left_block stickySidebar hidden">
+          <div class="leftblock_list">
+            <div class="title">標題文字</div>
+            <ul>
+              <li>
+                <time>2020/01/01</time>
+                <div class="dept">部門</div>
+                <a href="#">連結文字樣式連結文字樣式連結文字樣式連結文字樣式</a>
+              </li>
+              <li>
+                <time>2020/01/01</time>
+                <div class="dept">部門</div>
+                <a href="#">連結文字樣式連結文字樣式連結文字樣式連結文字樣式</a>
+              </li>
+              <li>
+                <time>2020/01/01</time>
+                <div class="dept">部門</div>
+                <a href="#">連結文字樣式連結文字樣式連結文字樣式連結文字樣式</a>
+              </li>
+              <li>
+                <time>2020/01/01</time>
+                <div class="dept">部門</div>
+                <a href="#">連結文字樣式連結文字樣式連結文字樣式連結文字樣式</a>
+              </li>
+              <li>
+                <time>2020/01/01</time>
+                <div class="dept">部門</div>
+                <a href="#">連結文字樣式連結文字樣式連結文字樣式連結文字樣式</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 主要內容區 -->
+        <div class="center_block">
+
+          <h2 class="title">要套文章標題</h2>
+          <!-- function_panel -->
+          <div class="function_panel">
+            <!-- function功能區塊 start-->
+            <div class="function">
+              <ul>
+                <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
+                <li class="print"><a href="#">友善列印</a></li>
+                <li class="forward"><a href="#">轉寄友人</a></li>
+              </ul>
+            </div>
+            <!-- 社群分享 -->
+            <div class="share">
+              <ul>
+                <li>
+                  <a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_line.svg" alt="line" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_googleplus.svg" alt="google plus" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_rss.svg" alt="RSS" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_plurk.svg" alt="Plurk" /></a>
+                </li>
+              </ul>
+            </div>
+            <!-- function功能區塊 end-->
+          </div>
+          <!-- function_panel -->
+
+
+          <!-- CP Start -->
+          <section class="cp">
+            <ul class="publish_info">
+              <!-- <li>發布日期：2018-03-20</li>
+                              <li>發布單位：移民事務組‧移民輔導科</li>
+                              <li>聯絡電話：(02)2388-9393 分機2689</li>
+                              <li>更新頻率：不定期</li>
+                              <li>更新日期：2018-03-20</li> -->
+              <li>點閱次數：123456</li>
+            </ul>
+            <figure class="pic float_left">
+              <!-- 此範例為4:3比例 -->
+              <img src="images/pic05.jpg" alt="圖片說明" />
+              <figcaption>圖說</figcaption>
+            </figure>
+            <p>
+              <a href="#">連結文字樣式
+              </a>藥品上市前的審查，包含了臨床試驗階段的試驗計畫書審查、藥品生體可用率試驗計畫書及報告審查、銜接性試驗評估與申請上市的藥品查驗登記。其中藥品查驗登記又可分為新藥查驗登記審查、學名藥查驗登記審查、符合指示藥品審查基準之藥品查驗登記審查及原料藥查驗登記審查。為確保民眾用藥安全，本中心針對具安全性考量(如有重大已知風險或潛在風險)的藥品進行風險管理計畫書及追蹤報告審查。此外，為提升國內製劑使用的原料藥品質管理，本中心亦協助衛生福利部食品藥物管理署進行原料藥主檔案之技術性資料評估。
+            </p>
+            <p>
+              <a href="#">連結文字樣式
+              </a>藥品上市前的審查，包含了臨床試驗階段的試驗計畫書審查、藥品生體可用率試驗計畫書及報告審查、銜接性試驗評估與申請上市的藥品查驗登記。其中藥品查驗登記又可分為新藥查驗登記審查、學名藥查驗登記審查、符合指示藥品審查基準之藥品查驗登記審查及原料藥查驗登記審查。為確保民眾用藥安全，本中心針對具安全性考量(如有重大已知風險或潛在風險)的藥品進行風險管理計畫書及追蹤報告審查。此外，為提升國內製劑使用的原料藥品質管理，本中心亦協助衛生福利部食品藥物管理署進行原料藥主檔案之技術性資料評估。
+            </p>
+            <ul>
+              <li>臨床試驗計畫書審查時，主要著重於確保受試者參與試驗設計良好的臨床試驗，使用具有品質管控的藥品，試驗的過程中，能有足夠的安全性監測與保護措施，以保障受試者的權益。</li>
+              <li>藥品生體可用率/生體相等性試驗計畫書及報告書審查需評估（1）執行該生體相等性試驗之目的與對照品選擇之合適性；（2）比較試驗藥品與對照藥品之化學、製造與管制基本資料；（3）試驗設計合理性；（4）統計分析方法；試驗報告書另包含（1）檢品含量分析方法確效；（2）試驗檢品分析；（3）試驗統計結果。</li>
+              <li>銜接性試驗評估乃藉由藥品之藥動／藥效學或療效、安全資訊，輔以比較東亞族群(例如台灣)與非東亞族群的數據，評估國外臨床試驗數據是否能外推至我國，以利評估我國病患之用法用量的合理性。</li>
+              <li>
+                新藥查驗登記的技術性資料評估重點著重於（1）化學、製造與管制的資料能顯示藥品的原料藥與製劑品質有良好的控管，於不同批次之間，具有穩定的品質一致性；（2）動物的藥理與毒理資料能支持藥品的作用機制，可完整評估可能的潛在毒性反應；（3）由動物與人體的藥動／藥效學資料可了解藥品基本藥動／藥效學特性，且由藥品於特殊族群的藥動學資訊，與其他藥品的交互作用資訊，有利於評估藥品的於特殊族群及與其他藥品合併使用時，用法用量調整的合理性；（4）人體試驗的結果能顯示藥品於宣稱適應症的族群具有可信的療效、與可接受的安全性，以支持宣稱用法用量的合理性。
+              </li>
+            </ul>
+            <p>最新公告請至<a href="#">台灣藥物法規資訊網>綜合查詢</a>查詢。</p>
+            <h2>標題二</h2>
+            <figure class="pic float_right ">
+              <!-- 此範例為4:3比例 -->
+              <img src="images/demo/01.jpg" alt="圖片說明" />
+              <figcaption>圖說</figcaption>
+            </figure>
+            <p>
+              <a
+                href="#">連結文字樣式</a>大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。
+            </p>
+            <h3>標題三</h3>
+
+            <p>大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。</p>
+
+            <h4>標題四</h4>
+            <img src="images/pic05.jpg" alt="圖片說明" class="float_left" />
+
+            <p>
+              <a href="#">連結文字樣式
+              </a>大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。
+            </p>
+            <h5>標題五</h5>
+
+            <p>
+              <a
+                href="#">連結文字樣式</a>大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。
+            </p>
+
+
+            <h6>標題六</h6>
+
+            <img src="images/demo/04.jpg" alt="圖片說明" class="float_right" />
+            <p>
+              <a
+                href="#">連結文字樣式</a>大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。
+            </p>
+
+
+            <!-- tooltip -->
+            <!-- <h3>tooltip</h3>
+            <div class="tooltip">
+              <span tooltip="上方的tooltop說明文字">上</span>
+              <span tooltip="左方的tooltop說明文字" flow="down">下</span>
+              <span tooltip="下方的tooltop說明文字" flow="left">左</span>
+              <span tooltip="右方的tooltop說明文字" flow="right">右</span>
+            </div>
+            <p>Lorem, ipsum dolor sit amet <em tooltip="上方的tooltop說明文字">consectetur</em> adipisicing elit. Aliquid, aspernatur! Dolore quas sapiente, possimus veritatis! Eveniet, minus similique sint
+              cum quidem eaque voluptatum eius ipsam rerum quae culpa quasi nisi!</p> -->
+            <h3>列表樣式</h3>
+            <p>
+              <a href="#">連結文字樣式
+              </a>藥品上市前的審查，包含了臨床試驗階段的試驗計畫書審查、藥品生體可用率試驗計畫書及報告審查、銜接性試驗評估與申請上市的藥品查驗登記。其中藥品查驗登記又可分為新藥查驗登記審查、學名藥查驗登記審查、符合指示藥品審查基準之藥品查驗登記審查及原料藥查驗登記審查。為確保民眾用藥安全，本中心針對具安全性考量(如有重大已知風險或潛在風險)的藥品進行風險管理計畫書及追蹤報告審查。此外，為提升國內製劑使用的原料藥品質管理，本中心亦協助衛生福利部食品藥物管理署進行原料藥主檔案之技術性資料評估。
+            </p>
+
+            <p>
+              <a href="#">連結文字樣式
+              </a>藥品上市前的審查，包含了臨床試驗階段的試驗計畫書審查、藥品生體可用率試驗計畫書及報告審查、銜接性試驗評估與申請上市的藥品查驗登記。其中藥品查驗登記又可分為新藥查驗登記審查、學名藥查驗登記審查、符合指示藥品審查基準之藥品查驗登記審查及原料藥查驗登記審查。為確保民眾用藥安全，本中心針對具安全性考量(如有重大已知風險或潛在風險)的藥品進行風險管理計畫書及追蹤報告審查。此外，為提升國內製劑使用的原料藥品質管理，本中心亦協助衛生福利部食品藥物管理署進行原料藥主檔案之技術性資料評估。
+            </p>
+            <img src="images/pic04.jpg" alt="圖片說明" />
+
+            <table>
+              <!-- 無障礙表格必須帶有標題 <caption> -->
+              <caption>
+                表格標題
+                <!-- 若表格內容複雜，可以補充摘要(summary)來加強說明表格內容，但 內容不要與標題重複 -->
+                <span class="summary">表格摘要</span>
+              </caption>
+              <tr>
+                <th scope="col">案件狀態</th>
+                <th scope="col">受文者</th>
+                <th scope="col">收件地址</th>
+
+              </tr>
+              <tr>
+                <td>新申請案/申復案</td>
+                <td>衛生福利部食品藥物管理署</td>
+                <td>(A) 國家生技園區F棟<br>
+                  (地址：11571台北市南港區研究院路一段130巷99號)；或<br>
+
+                  (B) 衛生福利部食品藥物管理署聯合服務中心<br>
+
+                  (地址：11561台北市南港區昆陽街161號)</td>
+              </tr>
+            </table>
+            <blockquote>大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。</blockquote>
+            <ul>
+              <li>影開兒中不們西動會味理化由子常洲國有標題</li>
+              <li>首動我行得流事個要使著獨操大</li>
+              <li>推列黃上道有畫走長市上</li>
+              <li>證會不就人推陸跑公片重</li>
+              <li>處來在山工國生即工球一，易心個長什去實用當們公有也候</li>
+            </ul>
+            <ol>
+              <li>影開兒中不們西動會味理化由子常洲國有標題</li>
+              <li>首動我行得流事個要使著獨操大</li>
+              <li>推列黃上道有畫走長市上</li>
+              <li>證會不就人推陸跑公片重</li>
+              <li>處來在山工國生即工球一，易心個長什去實用當們公有也候</li>
+            </ol>
+
+            <h3>表格樣式</h3>
+            <table>
+              <!-- 無障礙表格必須帶有標題 <caption> -->
+              <caption>
+                表格標題
+                <!-- 若表格內容複雜，可以補充摘要(summary)來加強說明表格內容，但 內容不要與標題重複 -->
+                <span class="summary">表格摘要</span>
+              </caption>
+              <tr>
+                <th scope="col">th 1</th>
+                <th scope="col">th 2</th>
+                <th scope="col">th 3</th>
+                <th scope="col">th 4</th>
+                <th scope="col">th 5</th>
+                <th scope="col">th 6</th>
+              </tr>
+              <tr>
+                <th scope="row">th A</th>
+                <td>td 資料</td>
+                <td>td 資料</td>
+                <td>td 資料</td>
+                <td>td 資料</td>
+                <td>td 資料</td>
+              </tr>
+              <tr>
+                <th scope="row">th B</th>
+                <td>td 資料</td>
+                <td>td 資料</td>
+                <td>td 資料</td>
+                <td>td 資料</td>
+                <td>td 資料</td>
+              </tr>
+              <tr>
+                <th scope="row">th C</th>
+                <td>td 資料</td>
+                <td>td 資料</td>
+                <td>td 資料</td>
+                <td>td 資料</td>
+                <td>td 資料</td>
+              </tr>
+            </table>
+            <div class="iframe_v">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/i2---Xxl8-E?si=YqwZaVBLn-Fiu0t-" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <h3>新藥臨床試驗計畫書審核(IND)之技術資料評估</h3>
+            <p>民國 111 年完成新案評估 177 件（non-CTN，含細胞及基因治療製劑新案 27 件）、變更案含申復共 989 件。其中，新案依送件廠商、試驗用途、試驗規模及試驗研發階段分析如下：</p>
+            <figure class="pic ">
+              <!-- 此範例為4:3比例 -->
+              <img src="images/data_pic01.jpg" alt="圖片說明" />
+              <figcaption>圖說</figcaption>
+            </figure>
+            <h3>新藥查驗登記申請案(NDA)之技術資料評估</h3>
+            <p>完成之新藥類別區分：化學製劑 108 件(70.6%)，其中新成分新藥 60件、新複方 16 件、新適應症 4 件、新使用途徑 2 件、新劑型 12 件、新使用劑量 2 件及新單位含量 12 件。生物藥品及放射性藥品有 45 件(29.4%)，其中，疫苗 3 件、血液製劑 1 件、類毒素製劑 0 件、基因工程製劑 22 件、生物相似藥 17 件、細胞基因治療 1
+              件，放射性藥品 1 件。</p>
+            <figure class="pic ">
+              <!-- 此範例為4:3比例 -->
+              <img src="images/data_pic02.jpg" alt="圖片說明" />
+              <figcaption>圖說</figcaption>
+            </figure>
+            <h3>新藥銜接性試驗評估申請案(BSE)之技術資料評估</h3>
+            <ul>
+              <li>民國 111 年完成新案 37 件、申復案 2 件，共 39 件，新案免除率為86.5%。</li>
+              <li>新案中，新成分新藥 23 件(佔 62.2%)，非新成分新藥 1 件(佔 2.7%)，生物藥品 13 件(佔 35.1%)。</li>
+            </ul>
+            <figure class="pic ">
+              <!-- 此範例為4:3比例 -->
+              <img src="images/data_pic03.jpg" alt="圖片說明" />
+              <figcaption>圖說</figcaption>
+            </figure>
+            <!-- fanybox cppic_slider lightbox_slider-->
+            <div class="lightbox_slider_block">
+              <h3>相關圖檔</h3>
+              <div class="cppic_slider">
+                <div class="img-container">
+                  <a href="images/demo/06.jpg" data-fancybox="images" data-caption="第1張圖說">
+                    <img src="images/demo/06.jpg" alt="" />
+                    <noscript><img src="images/demo/06.jpg" alt="" /></noscript>
+                    <span class="caption">第1張圖說</span>
+                  </a>
+                </div>
+                <div class="img-container">
+                  <a href="images/demo/07.jpg" data-fancybox="images" data-caption="第2張圖說">
+                    <img src="images/demo/07.jpg" alt="" />
+                    <noscript><img src="images/demo/07.jpg" alt="" /></noscript>
+                    <span class="caption">第2張圖說</span>
+                  </a>
+                </div>
+                <div class="img-container">
+                  <a href="images/demo/08.jpg" data-fancybox="images" data-caption="第3張圖說">
+                    <img src="images/demo/08.jpg" alt="" />
+                    <noscript><img src="images/demo/08.jpg" alt="" /></noscript>
+                    <span class="caption">第3張圖說</span>
+                  </a>
+                </div>
+                <div class="img-container">
+                  <a href="images/demo/10.jpg" data-fancybox="images" data-caption="第4張圖說">
+                    <img src="images/demo/10.jpg" alt="" />
+                    <noscript><img src="images/demo/10.jpg" alt="" /></noscript>
+                    <span class="caption">第4張圖說</span>
+                  </a>
+                </div>
+                <div class="img-container">
+                  <a href="images/demo/12.jpg" data-fancybox="images" data-caption="第5張圖說">
+                    <img src="images/demo/12.jpg" alt="" />
+                    <noscript><img src="images/demo/12.jpg" alt="" /></noscript>
+                    <span class="caption">第5張圖說</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- weblink 外部連結 -->
+            <div class="web_link">
+              <h3>相關連結</h3>
+              <ol>
+                <li><a href="javscript:;">台灣藥物法規資訊網>綜合查詢</a></li>
+                <li><a href="javscript:;">財團法人醫藥品查驗中心 臨床試驗案送件窗口</a></li>
+              </ol>
+            </div>
+            <!-- file download 檔案下載 -->
+            <div class="file_download">
+              <h3>檔案下載</h3>
+              <ul>
+                <li>
+                  <span class="file_name">檔案名稱</span>
+                  <span class="file_doc"><a href="xxxx.doc">doc</a>823.8 KB，下載 1,489 次</span>
+                  <span class="file_docx"><a href="xxx.docx">docx</a>823.8 KB，下載 1,489 次</span>
+                  <span class="file_odt"><a href="xxxx.odt">odt</a>823.8 KB，下載 1,489 次</span>
+                </li>
+                <li>
+                  <span class="file_name">檔案名稱檔案名稱</span>
+                  <span class="file_xls"><a href="xxxx.xls">xls</a>823.8 KB，下載 1,489 次</span>
+                  <span class="file_xlsx"><a href="xxxx.xlsx">xlsx</a>823.8 KB，下載 1,489 次</span>
+                  <span class="file_csv"><a href="xxxx.csv">csv</a>823.8 KB，下載 1,489 次</span>
+                  <span class="file_ods"><a href="xxxx.ods">ods</a>823.8 KB，下載 1,489 次</span>
+                </li>
+                <li>
+                  <span class="file_name">檔案名稱</span>
+                  <span class="file_ppt"><a href="xxxx.ppt">ppt</a>823.8 KB，下載 1,489 次</span>
+                  <span class="file_pptx"><a href="xxxx.pptx">pptx</a>823.8 KB，下載 1,489 次</span>
+                  <span class="file_odp"><a href="xxxx.odp">odp</a>823.8 KB，下載 1,489 次</span>
+                </li>
+                <li>
+                  <span class="file_name">檔案名稱</span>
+                  <span class="file_pdf"><a href="xxxx.pdf">pdf</a>823.8 KB，下載 1,489 次</span>
+                  <span class="file_zip"><a href="xxxx.zip">zip</a>823.8 KB，下載 1,489 次</span>
+                  <span class="file_txt"><a href="xxxx.txt">txt</a>823.8 KB，下載 1,489 次</span>
+                  <span class="file_mov"><a href="xxxx.mov">mov</a>823.8 KB，下載 1,489 次</span>
+                  <span class="file_mp3"><a href="xxxx.mp3">mp3</a>823.8 KB，下載 1,489 次</span>
+                  <span class="file_jpg"><a href="xxxx.jpg">jpg</a>823.8 KB，下載 1,489 次</span>
+                  <span class="file_wmv"><a href="xxxx.wmv">wmv</a>823.8 KB，下載 1,489 次</span>
+                  <span class="file_mp4"><a href="xxxx.mp4">mp4</a>823.8 KB，下載 1,489 次</span>
+                </li>
+              </ul>
+            </div>
+
+          </section>
+          <!-- CP End -->
+        </div>
+      </div>
+    </div>
+    <!-- fatfooter Start -->
+    <section class="fatfooter">
+      <div class="container">
+        <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btn-fatfooter">收合</button>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">審查評估業務</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li><a href="#">法規諮詢輔導</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">最新法規資訊</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">訊息公告</a>
+              <ul>
+                <li><a href="#">CDE重大消息/政策</a></li>
+                <li><a href="#">業務最新公告</a></li>
+                <li><a href="http://www.google.com">採購公告</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">認識CDE</a>
+              <ul>
+                <li><a href="#">緣起宗旨</a></li>
+                <li><a href="#">董事會/董事長</a></li>
+                <li><a href="#">執行長</a></li>
+                <li><a href="#">組織架構</a></li>
+                <li><a href="#">業務介紹</a></li>
+                <li><a href="#">公開資訊</a></li>
+                <li><a href="#">地理位置</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">加入CDE</a>
+              <ul>
+                <li><a href="#">菁英招募</a></li>
+                <li><a href="#">實習專區</a></li>
+                <li><a href="#">下載專區</a></li>
+                <li><a href="#">聯絡我們</a></li>
+                <li><a href="#">員工專區</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <!-- fatfooter End -->
+    <!-- footer Start-->
+    <footer>
+      <div class="container">
+        <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+        <div class="footer_logo">
+          <img src="images/footer_logo.svg" alt="" class="img-responsive" />
+        </div>
+        <div class="footer_map"><a href="#">本中心位置圖</a></div>
+        <div class="footer_info">
+          <div class="infoblock">
+            <p class="Copyright">版權所有© 財團法人醫藥品查驗中心<br>
+              地址：台北市南港區11557忠孝東路六段465號3樓</p>
+          </div>
+          <div class="infoblock">
+            <p>電話：886-2-8170-6000（總機服務時間：8:30-12:30 ，13:30-17:30）<br>
+              傳真：886-2-8170-6001、886-2-8170-6002</p>
+          </div>
+          <div class="infoblock">
+            <p>本網站支援IE、Firefox及Chrome，最佳瀏覽解析度為1024x768以上<br>
+              <span class="update">更新日期:<em>2018/01/01</em></span>
+              <span class="counter">累計瀏覽人次:<em>46476653</em></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer End -->
+  </div>
+  <a href="javascript:;" class="scrollToTop">回頁首</a>
+  <!-- JQ -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <!-- 外掛 plugin js -->
+  <script src="vendor/jquery.easing.min.js"></script>
+  <!-- ease -->
+  <script src="vendor/slick/slick.min.js "></script>
+  <!-- slick -->
+  <script src="vendor/lazyload/lazyload.js"></script>
+  <!-- lazyload -->
+  <script src="vendor/picturefill/picturefill.min.js" async></script>
+  <!-- picturefill -->
+  <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+  <!-- scrolltable -->
+  <!-- sticky-sidebar -->
+  <script src="vendor/sticky-sidebar/sticky-sidebar.js"></script>
+  <script src="vendor/sticky-sidebar/ResizeSensor.js"></script>
+  <!-- fancy -->
+  <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+  <!-- hyUI -->
+  <script src="js/hyui.js"></script>
+  <!-- 客製js -->
+  <script src="js/customize.js"></script>
+</body>
+
+</html>
