@@ -237,3 +237,408 @@ $(function () {
       $(this).parent('li').stop().toggleClass('open');
     });
 });
+
+////////////////////////////////////////////////////////
+$(function () {
+  if ($('.slick12_5').length > 0) {
+    $('.slick12_5').slick({
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      dots: false,
+    });
+  }
+  if ($('.slick12_3').length > 0) {
+    $('.slick12_3').slick({
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      dots: false,
+    });
+  }
+  if ($('.slick12_4').length > 0) {
+    $('.slick12_4').slick({
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      dots: false,
+    });
+  }
+});
+
+//c_iconBox_next_lv判斷數量大於6隱藏出現更多
+$(window).on('load', function () {
+  if (!$('.c_iconBox_next_lv .hoverBox').length) {
+    return;
+  }
+  $('.c_iconBox_next_lv .hoverBox').each(function () {
+    let countLi = $(this).find('li').length;
+    if (countLi > 5) {
+      $(this)
+        .find('li')
+        .each(function (index, el) {
+          if (index > 4) {
+            $(this).hide();
+          }
+        });
+      $(this).find('.moreItem').show();
+    }
+  });
+});
+
+let outerWidth = 1300;
+let width8 = (outerWidth / 12) * 8;
+let width6 = (outerWidth / 12) * 6;
+let width4 = (outerWidth / 12) * 4;
+
+function checkOuter12_5() {
+  $('.checkOuter12_5').each(function () {
+    let elemWidth = $(this).width();
+    if (elemWidth <= width4) {
+      $(this).attr('col', 2);
+    } else if (elemWidth <= width6) {
+      $(this).attr('col', 3);
+    } else if (elemWidth <= width8) {
+      $(this).attr('col', 4);
+    } else if (elemWidth > width8) {
+      $(this).attr('col', 5);
+    }
+  });
+}
+function checkOuter12_3() {
+  $('.checkOuter12_3').each(function () {
+    let elemWidth = $(this).width();
+    if (elemWidth <= width6) {
+      $(this).attr('col', 1);
+    } else if (elemWidth <= width8) {
+      $(this).attr('col', 2);
+    } else if (elemWidth > width8) {
+      $(this).attr('col', 3);
+    }
+  });
+}
+function checkOuter12_4() {
+  $('.checkOuter12_4').each(function () {
+    let elemWidth = $(this).width();
+    if (elemWidth <= width4) {
+      $(this).attr('col', 1);
+    } else if (elemWidth <= width6) {
+      $(this).attr('col', 2);
+    } else if (elemWidth <= width8) {
+      $(this).attr('col', 3);
+    } else if (elemWidth > width8) {
+      $(this).attr('col', 4);
+    }
+  });
+}
+$(window).on('load resize', checkOuter12_5);
+$(window).on('load resize', checkOuter12_4);
+$(window).on('load resize', checkOuter12_3);
+
+function checkSlick12_5() {
+  if (!$('.slick12_5').length) {
+    return;
+  }
+  $('.slick12_5').each(function () {
+    let boxWidth = $(this).width();
+    if (boxWidth <= width4) {
+      $(this).parent().attr('col', 2);
+      $(this).slick('unslick');
+      $(this).off().slick({
+        slidesToShow: 2,
+      });
+    } else if (boxWidth <= width6) {
+      $(this).parent().attr('col', 3);
+      $(this).slick('unslick');
+      $(this).off().slick({
+        slidesToShow: 3,
+      });
+    } else if (boxWidth <= width8) {
+      $(this).parent().attr('col', 4);
+      $(this).slick('unslick');
+      $(this).off().slick({
+        slidesToShow: 4,
+      });
+    } else if (boxWidth > width8) {
+      $(this).parent().attr('col', 5);
+      $(this).slick('unslick');
+      $(this).off().slick({
+        slidesToShow: 5,
+      });
+    }
+  });
+}
+
+function checkSlick12_3() {
+  if (!$('.slick12_3').length) {
+    return;
+  }
+  $('.slick12_3').each(function () {
+    let boxWidth = $(this).width() - 30;
+    if (boxWidth <= width4) {
+      $(this).parent().attr('col', 1);
+      $(this).slick('unslick');
+      $(this).off().slick({
+        slidesToShow: 1,
+      });
+    } else if (boxWidth <= width6) {
+      $(this).attr('col', 2);
+      $(this).slick('unslick');
+      $(this).off().slick({
+        slidesToShow: 2,
+      });
+    } else if (boxWidth <= width8) {
+      $(this).attr('col', 3);
+      $(this).slick('unslick');
+      $(this).off().slick({
+        slidesToShow: 3,
+      });
+    } else if (boxWidth > width8) {
+      $(this).attr('col', 3);
+      $(this).slick('unslick');
+      $(this).off().slick({
+        slidesToShow: 3,
+      });
+    }
+  });
+}
+
+function checkSlick12_4() {
+  if (!$('.slick12_4').length) {
+    return;
+  }
+  $('.slick12_4').each(function () {
+    let boxWidth = $(this).width();
+    if (boxWidth <= width4) {
+      $(this).attr('col', 1);
+      $(this).slick('unslick');
+      $(this).off().slick({
+        slidesToShow: 1,
+      });
+    } else if (boxWidth <= width6) {
+      $(this).attr('col', 2);
+      $(this).slick('unslick');
+      $(this).off().slick({
+        slidesToShow: 2,
+      });
+    } else if (boxWidth <= width8) {
+      $(this).attr('col', 3);
+      $(this).slick('unslick');
+      $(this).off().slick({
+        slidesToShow: 3,
+      });
+    } else if (boxWidth > width8) {
+      $(this).attr('col', 4);
+      $(this).slick('unslick');
+      $(this).off().slick({
+        slidesToShow: 4,
+      });
+    }
+  });
+}
+
+$(window).on('load resize', checkSlick12_5);
+$(window).on('load resize', checkSlick12_4);
+$(window).on('load resize', checkSlick12_3);
+
+function animateNumber(element, start, stop, duration, ease) {
+  let startTime = null;
+  const isCountdown = start > stop;
+
+  function numberWithCommas(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+  function animationStep(timestamp) {
+    if (!startTime) {
+      startTime = timestamp;
+    }
+    const elapsedTime = timestamp - startTime;
+    const progress = elapsedTime / duration;
+    let currentValue;
+    if (isCountdown) {
+      currentValue = Math.floor(start - (start - stop) * progress);
+    } else {
+      currentValue = Math.floor(start + (stop - start) * progress);
+    }
+    element.textContent = numberWithCommas(currentValue);
+    if (progress < 1) {
+      requestAnimationFrame(animationStep);
+    } else {
+      element.textContent = numberWithCommas(stop);
+    }
+  }
+  requestAnimationFrame(animationStep);
+}
+
+function animateChart(elem, start, stop, max, duration) {
+  let element = typeof elem === 'string' ? document.querySelector(elem) : elem;
+  let startTime = null;
+  const isCountdown = start > stop;
+  let p = max === undefined ? 100 : (stop / max) * 100;
+
+  function numberWithCommas(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+  function animationStep(timestamp) {
+    if (!startTime) {
+      startTime = timestamp;
+    }
+    const elapsedTime = timestamp - startTime;
+    const progress = elapsedTime / (p * 50);
+    let currentValue;
+    let currentValueP;
+    if (isCountdown) {
+      currentValue = Math.floor(start - (start - stop) * progress);
+    } else {
+      currentValue = Math.floor(start + (stop - start) * progress);
+    }
+
+    if (isCountdown) {
+      currentValueP = Math.floor(start - (start - p) * progress);
+    } else {
+      currentValueP = Math.floor(start + (p - start) * progress);
+    }
+
+    element.style.width = `calc(${currentValueP}%)`;
+    element.nextElementSibling.textContent = numberWithCommas(currentValue);
+    if (progress < 1) {
+      requestAnimationFrame(animationStep);
+    } else {
+      element.nextElementSibling.textContent = numberWithCommas(stop);
+    }
+  }
+  requestAnimationFrame(animationStep);
+}
+
+if ($('.c_chart').length > 0) {
+  const indexChart = document.querySelector('.c_chart');
+  const indexTab = indexChart.querySelector('.tab');
+  const indexTabContent = indexChart.querySelector('.contentBox');
+  const indexTabContentChart = indexTabContent.querySelectorAll('.content');
+
+  window.addEventListener('load', function () {
+    chartData.forEach((chart, index) => {
+      chart.data.forEach((data, i) => {
+        let itemElem = document.createElement('div');
+        itemElem.classList.add('item');
+
+        let titleElem = document.createElement('div');
+        titleElem.classList.add('title');
+        titleElem.textContent = data.title;
+        itemElem.appendChild(titleElem);
+
+        let lineBox = document.createElement('div');
+        lineBox.classList.add('lineBox');
+        lineBox.classList.add(`line${i + 1}`);
+
+        let span = document.createElement('span');
+        lineBox.appendChild(span);
+
+        let countElem = document.createElement('div');
+        countElem.classList.add('count');
+        countElem.dataset.count = data.value;
+        lineBox.appendChild(countElem);
+        itemElem.appendChild(lineBox);
+        indexTabContentChart[index].appendChild(itemElem);
+      });
+
+      indexTabContent.appendChild(indexTabContentChart[index]);
+
+      let infoElem = document.createElement('div');
+      infoElem.classList.add('infoBox');
+      infoElem.dataset.first = chart.info[0];
+      for (let i = 1; i < chart.info[2] + 1; i++) {
+        let block = document.createElement('div');
+        block.classList.add('block');
+        block.textContent = (chart.info[1] / chart.info[2]) * i;
+        block.style.width = `${100 / chart.info[2]}%`;
+        infoElem.appendChild(block);
+      }
+
+      indexTabContentChart[index].appendChild(infoElem);
+    });
+
+    const indexTabChartBox = indexChart.querySelectorAll('.content');
+    const indexTabButton = indexTab.querySelectorAll('button');
+    indexTabButton.forEach((value, index) => {
+      value.addEventListener('click', function () {
+        let max = chartData[index].info[1];
+
+        let allItem = indexTabChartBox[index].querySelectorAll('.item');
+        allItem.forEach((item, index) => {
+          animateChart(item.querySelector('span'), 0, Number(item.querySelector('.count').dataset.count), max);
+        });
+      });
+    });
+
+    setTimeout(() => {
+      let indexScrollCheck = false;
+      let allItem = indexTabContent.querySelectorAll('.content')[0].querySelectorAll('.item');
+      let max = chartData[0].info[1];
+
+      function handleChartAnimation() {
+        if (isObjectTBVisible(indexChart) && !indexScrollCheck) {
+          allItem.forEach((item, index) => {
+            animateChart(item.querySelector('span'), 0, Number(item.querySelector('.count').dataset.count), max);
+          });
+          indexScrollCheck = true;
+        }
+      }
+
+      handleChartAnimation();
+      window.addEventListener('scroll', handleChartAnimation);
+    }, 100);
+  });
+
+  function isObjectTBVisible(object) {
+    let windowHeight = window.innerHeight;
+
+    let objectRect = object?.getBoundingClientRect();
+    let objectTop = objectRect?.top;
+    let objectBottom = objectRect?.bottom;
+
+    let isFullyVisible = (objectTop - windowHeight + 100 <= 0 && objectBottom > 0) || (objectTop <= 0 && objectBottom.bottom - 100 > 0);
+    return isFullyVisible;
+  }
+}
+
+function tabUse(elem, hasTab) {
+  $(elem).find('.tab button').eq(0).addClass('active');
+  $(elem).find('.content').eq(0).show();
+  $(elem)
+    .find('.tab button')
+    .on('click', function () {
+      let index = $(this).index();
+      $(elem).find('.tab button').removeClass('active');
+      $(this).addClass('active');
+      $(elem).find('.content').hide();
+      $(elem).find('.content').eq(index).show();
+      if (hasTab) {
+        checkSlick12_3();
+        checkSlick12_4();
+        checkSlick12_5();
+        $(elem).find('.slick12_3').slick('refresh');
+        $(elem).find('.slick12_4').slick('refresh');
+        $(elem).find('.slick12_5').slick('refresh');
+      }
+    });
+}
+
+tabUse('.c_chart');
+tabUse('.c_tab');
+tabUse('.c_newsCardTab', true);
+
+function faq(elem) {
+  $(elem)
+    .off()
+    .on('click', 'button.title', function () {
+      console.log($(this).parent('.item').siblings('.item'));
+      $(this).parent('.item').siblings('.item').find('.aBox').slideUp('fast');
+      $(this).parent('.item').siblings('.item').find('.title').removeClass('active');
+      $(this).toggleClass('active');
+      $(this).siblings('.aBox').slideToggle('fast');
+    });
+}
+faq('.c_faq');

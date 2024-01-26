@@ -22,6 +22,7 @@ body {
 .wrapper {
   width: 100%;
   margin: 0px auto;
+
   @include screen('mobile') {
     background: #fff;
     overflow: hidden;
@@ -39,11 +40,13 @@ body {
 .main {
   position: relative;
   margin: 0 auto;
+
   // 可先設定一個中央區塊最大寬，限制accesskey對齊
   h2 {
     line-height: 1.375em;
   }
 }
+
 h2.title {
   font-size: 1.875em;
   margin: 0 0 0.5em;
@@ -60,22 +63,26 @@ h2.title {
   padding-bottom: 5em;
 
   > .container {
-    @include gutter(80px); //gutter 代表左右要留白
+    @include gutter(30px); //gutter 代表左右要留白
     display: flex;
+
     @include screen('xs_mobile') {
-      @include gutter(40px);
+      @include gutter(15px);
     }
   }
+
   .center_block {
     flex: none;
     flex-basis: 100%;
     max-width: 100%;
   }
+
   .left_block {
     flex: none;
     flex-basis: 240px;
     max-width: 240px;
     margin-right: 40px;
+
     &.hidden {
       + .center_block {
         flex: none;
@@ -83,13 +90,16 @@ h2.title {
         max-width: 100%;
       }
     }
+
     + .center_block {
       flex: auto;
       flex-basis: calc(100% - 280px);
       max-width: calc(100% - 280px);
     }
+
     @include screen('tablet') {
       display: none;
+
       + .center_block {
         flex: none;
         flex-basis: 100%;
@@ -97,9 +107,11 @@ h2.title {
       }
     }
   }
+
   &.small_size {
     font-size: 0.938em;
   }
+
   &.large_size {
     font-size: 1.125em;
   }
