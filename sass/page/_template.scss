@@ -63,11 +63,11 @@ h2.title {
   padding-bottom: 5em;
 
   > .container {
-    @include gutter(30px); //gutter 代表左右要留白
+    @include gutter(40px); //gutter 代表左右要留白
     display: flex;
 
     @include screen('xs_mobile') {
-      @include gutter(15px);
+      @include gutter(30px);
     }
   }
 

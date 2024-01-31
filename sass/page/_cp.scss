@@ -131,6 +131,11 @@
 
   a {
     @include aSetting;
+    color: lighten($color: $primaryColor, $amount: 15);
+    &:hover {
+      text-decoration: underline;
+      color: lighten($color: $primaryColor, $amount: 15);
+    }
   }
 }
 

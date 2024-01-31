@@ -3258,9 +3258,9 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .header > .container .searchCtrl:before {
   width: 40px;
   height: 40px;
-  background: url(../images/basic/icon_search.png) no-repeat center center;
+  background: url(../images/icon_search.svg) no-repeat center center;
   background-size: 28px;
-  opacity: 0.6;
+  opacity: 1;
   content: "";
   position: absolute;
   top: 10px;
@@ -3387,6 +3387,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .searchblock {
   position: relative;
   z-index: 100;
+  margin-right: 15px;
 }
 @media screen and (max-width: 767px) {
   .searchblock {
@@ -4618,13 +4619,24 @@ footer:before, footer:after {
 footer:after {
   clear: both;
 }
+footer:after {
+  content: "";
+  width: 100%;
+  height: 150px;
+  background-color: #4b74ac;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -60px;
+  z-index: -1;
+}
 footer .container {
   position: relative;
   z-index: 9;
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
@@ -4776,24 +4788,12 @@ footer .footer_icon img {
 }
 
 .fatfooter {
-  padding-bottom: 1em;
+  padding-bottom: 2em;
   margin: 0 auto;
   background-color: #4b74ac;
   transform: skewY(-1.8deg);
   border-radius: 50px 0 0 0;
   position: relative;
-}
-.fatfooter:after {
-  content: "";
-  width: 100%;
-  height: 100px;
-  background-color: #4b74ac;
-  position: absolute;
-  transform: skewY(1.8deg);
-  right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 0;
 }
 @media screen and (max-width: 767px) {
   .fatfooter {
@@ -4807,7 +4807,6 @@ footer .footer_icon img {
   padding-left: 15px;
   padding-right: 15px;
   box-sizing: border-box;
-  transform: skewY(1.8deg);
   position: relative;
   z-index: 9;
 }
@@ -4863,9 +4862,10 @@ footer .footer_icon img {
   overflow: hidden;
   display: block;
   position: relative;
-  padding: 4em 0 2em 2em;
+  padding: 4em 1em 2em 1em;
   box-sizing: border-box;
   border-bottom: 1px solid #fff;
+  transform: skewY(1.8deg);
 }
 .fatfooter nav ul {
   display: flex;
@@ -7224,6 +7224,7 @@ table .date {
 .lp table td a {
   color: #333;
   text-decoration: none;
+  color: #4b74ac;
 }
 .lp table td a:hover, .lp table td a:focus {
   color: #4b74ac;
@@ -7363,10 +7364,26 @@ table .date {
 }
 @media screen and (max-width: 767px) {
   .sub_menu li {
-    flex: 1 1 100%;
+    flex: 1 1 47%;
+    margin: 0 1.5% 0.8em;
   }
-  .sub_menu li:nth-child(odd) {
+  .sub_menu li:nth-child(n) {
+    margin: 0 1.5% 0.8em;
+  }
+  .sub_menu li:nth-child(2n) {
     margin-right: 0;
+  }
+  .sub_menu li:nth-child(2n+1) {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  .sub_menu li {
+    flex: 1 1 100%;
+    margin: 0 0 0.8em;
+  }
+  .sub_menu li:nth-child(n) {
+    margin: 0 0 0.8em;
   }
 }
 .sub_menu li a {
@@ -9064,8 +9081,8 @@ h2.title {
 .innerpage > .container {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
   box-sizing: border-box;
   display: flex;
 }
@@ -9073,8 +9090,8 @@ h2.title {
   .innerpage > .container {
     position: relative;
     min-height: 1px;
-    padding-left: 7.5px;
-    padding-right: 7.5px;
+    padding-left: 15px;
+    padding-right: 15px;
     box-sizing: border-box;
   }
 }
@@ -9315,10 +9332,15 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .cp a {
   color: #0c3a78;
   text-decoration: none;
+  color: #135cbe;
 }
 .cp a:hover, .cp a:focus {
   color: #4b74ac;
   cursor: pointer;
+}
+.cp a:hover {
+  text-decoration: underline;
+  color: #135cbe;
 }
 
 .file_download {
@@ -11283,7 +11305,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   background: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.14) 0px 0px 30px;
-  padding: 0.5em 0 1em;
+  padding: 1em 0 1em;
   border-top: 10px solid #0c3a78;
   border-bottom: 4px solid #0c3a78;
   position: relative;
@@ -11372,7 +11394,8 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   display: block;
 }
 
-.explain_block {
+.explain_block,
+.np {
   background-color: #fff;
   padding: 2em;
   border-radius: 10px;

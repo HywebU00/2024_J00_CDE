@@ -3,6 +3,7 @@
     td {
       a {
         @include aSetting_nocolor;
+        color: $linkColor;
         &:hover {
           text-decoration: underline;
         }

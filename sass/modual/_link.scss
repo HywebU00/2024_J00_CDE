@@ -25,9 +25,23 @@
       margin-left: 1.32%;
     }
     @include screen('mobile') {
-      flex: 1 1 100%;
-      &:nth-child(odd) {
+      flex: 1 1 47%;
+      margin: 0 1.5% 0.8em;
+      &:nth-child(n) {
+        margin: 0 1.5% 0.8em;
+      }
+      &:nth-child(2n) {
         margin-right: 0;
+      }
+      &:nth-child(2n + 1) {
+        margin-left: 0;
+      }
+    }
+    @include screen('xs_mobile') {
+      flex: 1 1 100%;
+      margin: 0 0 0.8em;
+      &:nth-child(n) {
+        margin: 0 0 0.8em;
       }
     }
     a {

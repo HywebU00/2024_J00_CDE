@@ -89,9 +89,9 @@
       &:before {
         width: 40px;
         height: 40px;
-        background: url(../images/basic/icon_search.png) no-repeat center center;
+        background: url(../images/icon_search.svg) no-repeat center center;
         background-size: 28px;
-        opacity: 0.6;
+        opacity: 1;
         content: '';
         position: absolute;
         top: 10px;
@@ -212,6 +212,7 @@
 .searchblock {
   position: relative;
   z-index: 100;
+  margin-right: 15px;
   @include screen('mobile') {
     display: none;
   }
