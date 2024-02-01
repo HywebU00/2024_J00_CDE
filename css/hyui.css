@@ -9841,13 +9841,6 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   }
 }
 
-.c_main section {
-  background-size: cover !important;
-}
-.c_main section:last-child {
-  padding-bottom: 180px;
-}
-
 .c_indexMore {
   max-width: 180px;
   border: #0c3a78 2px solid;
@@ -9908,7 +9901,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   text-align: center;
   font-size: 32px;
   line-height: 1.4;
-  margin: 30px 0;
+  margin: 0 0 20px;
 }
 @media screen and (max-width: 991px) {
   .c_titleBox {
@@ -9922,7 +9915,11 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 
 .c_main section {
-  padding: 20px 0;
+  padding: 0 0 50px;
+  background-size: cover !important;
+}
+.c_main section:last-child {
+  padding-bottom: 180px;
 }
 .c_main .container > .col {
   padding: 0 15px;
@@ -9969,6 +9966,15 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   margin-top: -60px;
 }
 
+.c_kv {
+  padding-bottom: 2em;
+}
+.c_kv.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+.c_kv .slick-dots {
+  bottom: 0;
+}
 .c_kv .slick-dots li {
   width: auto;
   height: auto;
