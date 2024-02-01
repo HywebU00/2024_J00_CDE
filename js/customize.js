@@ -382,16 +382,16 @@ function checkSlick12_3() {
         slidesToShow: 1,
       });
     } else if (boxWidth <= width6) {
+      $(this).attr('col', 1);
+      $(this).slick('unslick');
+      $(this).off().slick({
+        slidesToShow: 1,
+      });
+    } else if (boxWidth <= width8) {
       $(this).attr('col', 2);
       $(this).slick('unslick');
       $(this).off().slick({
         slidesToShow: 2,
-      });
-    } else if (boxWidth <= width8) {
-      $(this).attr('col', 3);
-      $(this).slick('unslick');
-      $(this).off().slick({
-        slidesToShow: 3,
       });
     } else if (boxWidth > width8) {
       $(this).attr('col', 3);
