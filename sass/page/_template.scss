@@ -40,7 +40,9 @@ body {
 .main {
   position: relative;
   margin: 0 auto;
-
+  @include screen('mobile') {
+    padding-top: 60px;
+  }
   // 可先設定一個中央區塊最大寬，限制accesskey對齊
   h2 {
     line-height: 1.375em;
@@ -51,6 +53,9 @@ h2.title {
   font-size: 1.875em;
   margin: 0 0 0.5em;
   color: $primaryColor;
+  @include screen('mobile') {
+    margin: 0 0 0.3em;
+  }
 }
 
 ////////////////////////////////////////////////////////////
@@ -61,6 +66,9 @@ h2.title {
   background-repeat: no-repeat;
   background-color: #fff;
   padding-bottom: 5em;
+  @include screen('mobile') {
+    padding-top: 60px;
+  }
 
   > .container {
     @include gutter(40px); //gutter 代表左右要留白
@@ -70,7 +78,44 @@ h2.title {
       @include gutter(30px);
     }
   }
-
+  .nodemenu_btn {
+    display: none;
+    position: absolute;
+    left: 0em;
+    top: 100px;
+    z-index: 9;
+    width: 1.5em;
+    @include screen('tablet') {
+      display: block;
+    }
+    a {
+      color: #fff;
+      display: block;
+      background-color: $primaryColor;
+      padding: 2em 0.5em 1em;
+      border-radius: 0 5px 5px 0;
+      width: 2em;
+      position: relative;
+      &:before {
+        content: '';
+        border: 2px solid #fff;
+        border-right: none;
+        border-bottom: none;
+        transform: rotate(135deg);
+        position: absolute;
+        top: 0.8em;
+        left: 0.6em;
+        width: 8px;
+        height: 8px;
+      }
+      &.open {
+        &:before {
+          left: 0.8em;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
   .center_block {
     flex: none;
     flex-basis: 100%;
@@ -98,7 +143,16 @@ h2.title {
     }
 
     @include screen('tablet') {
-      display: none;
+      position: absolute;
+      left: -210px;
+      top: 100px;
+      bottom: 0;
+      width: 210px;
+      transition: 0.5s;
+      z-index: 10;
+      &.open {
+        left: 2em;
+      }
 
       + .center_block {
         flex: none;

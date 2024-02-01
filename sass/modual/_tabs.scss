@@ -1,6 +1,15 @@
 .tabSet {
   margin: 30px auto;
-
+  &.subscription_epaper {
+    .item {
+      @include screen('mobile') {
+        font-size: 1.125em !important;
+      }
+      @include screen('xs_mobile') {
+        font-size: 1.125em !important;
+      }
+    }
+  }
   .tabItems {
     display: flex;
     flex-flow: row nowrap;
@@ -29,7 +38,8 @@
       }
       @include screen('xs_mobile') {
         font-size: 0.813em;
-        line-height: 1em;
+        line-height: 1.2em;
+        padding: 0 0.5em;
       }
       cursor: pointer;
 

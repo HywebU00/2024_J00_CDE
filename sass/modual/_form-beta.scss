@@ -234,14 +234,25 @@ select::-ms-expand {
 .flex-form {
   font-size: 100%;
   margin: 0.5em 0;
+  &.flex-form_block {
+    background-color: #fff;
+    padding: 1em 2em;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 2em;
+    h3 {
+      color: $secondaryColor;
+      font-size: 1.25em;
+    }
+  }
   // 表單的線 ----------------------- start
   // border-top: 1px solid #DDD;
   .form_grp {
     border-bottom: 1px dashed #ddd;
     padding: 0.5em 0;
-    // &:last-child{
-    //     border-bottom: transparent;  // 最後一筆不要下虛線
-    // }
+    &:last-child {
+      border-bottom: transparent; // 最後一筆不要下虛線
+    }
   }
   &.form_inline {
     border-bottom: 1px dashed #ddd;
@@ -1115,13 +1126,14 @@ select::-ms-expand {
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    padding: 0.3em 0;
+    padding: 1em 0;
     @include screen('mobile') {
       flex-wrap: wrap;
     }
   }
   .check_grp,
   .radio_grp {
+    padding: 1em 0 0;
     label {
       position: relative;
       //display: block;
@@ -1440,7 +1452,7 @@ input[type='radio'] {
   width: 1em;
   height: 1em;
   background-color: #fff;
-  border: 2px solid #f0f1f2;
+  border: 2px solid #ddd;
 }
 
 input[type='radio'] {

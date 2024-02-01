@@ -236,6 +236,11 @@ $(function () {
       $(this).next('ul').stop().slideToggle();
       $(this).parent('li').stop().toggleClass('open');
     });
+  //  內頁左欄 左右收合
+  $('.nodemenu_btn>a').click(function () {
+    $('.left_block').stop().toggleClass('open');
+    $(this).stop().toggleClass('open');
+  });
 });
 
 ////////////////////////////////////////////////////////
