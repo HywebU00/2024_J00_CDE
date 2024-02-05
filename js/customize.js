@@ -648,13 +648,38 @@ function faq(elem) {
 }
 faq('.c_faq');
 
-//
+//業務成果 跑數字
 $(function () {
-  let abc = document.querySelector('.num01');
-  animateNumber(abc, 0, 117, 2000);
+  let num01 = document.querySelector('.num01');
+  animateNumber(num01, 0, 117, 2000);
+  let num02 = document.querySelector('.num02');
+  animateNumber(num02, 0, 39, 2000);
+  let num03 = document.querySelector('.num03');
+  animateNumber(num03, 0, 628, 2000);
+  let num04 = document.querySelector('.num04');
+  animateNumber(num04, 0, 320, 2000);
+
+  let amount01 = document.querySelector('.amount01');
+  animateNumber(amount01, 0, 27, 2000);
+  let amount02 = document.querySelector('.amount02');
+  animateNumber(amount02, 0, 2, 500);
+  let amount03 = document.querySelector('.amount03');
+  animateNumber(amount03, 0, 412, 2000);
+  let amount04 = document.querySelector('.amount04');
+  animateNumber(amount04, 0, 30, 2000);
+  let amount05 = document.querySelector('.amount05');
+  animateNumber(amount05, 0, 382, 2000);
+  let amount06 = document.querySelector('.amount06');
+  animateNumber(amount06, 0, 216, 2000);
+  let amount07 = document.querySelector('.amount07');
+  animateNumber(amount07, 0, 18, 2000);
+  let amount08 = document.querySelector('.amount08');
+  animateNumber(amount08, 0, 5, 2000);
+  let amount09 = document.querySelector('.amount09');
+  animateNumber(amount09, 0, 216, 2000);
 });
 
-//
+//業務成果
 $(function () {
   $('.achievement_slider').slick({
     dots: false,

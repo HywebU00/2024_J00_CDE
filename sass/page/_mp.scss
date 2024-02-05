@@ -75,6 +75,16 @@ a.more {
 }
 // 最新消息
 .mp_newsBlock {
+  .nwes_slider {
+    .tabItems {
+      justify-content: center;
+      .item {
+        flex: 0 0 auto;
+        height: auto;
+        padding: 0.5em 1em;
+      }
+    }
+  }
   .tabContent {
     .nwes_content {
       display: flex;
@@ -303,7 +313,7 @@ a.more {
         border-top: 1px solid #7f7f7f;
       }
     }
-    .num01 {
+    .num {
       flex: 0 0 auto;
       flex-basis: 100px;
       color: $secondaryColor;

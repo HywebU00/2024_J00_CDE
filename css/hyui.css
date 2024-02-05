@@ -9323,6 +9323,14 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   background: #dedede;
 }
 
+.mp_newsBlock .nwes_slider .tabItems {
+  justify-content: center;
+}
+.mp_newsBlock .nwes_slider .tabItems .item {
+  flex: 0 0 auto;
+  height: auto;
+  padding: 0.5em 1em;
+}
 .mp_newsBlock .tabContent .nwes_content {
   display: flex;
   flex-wrap: wrap;
@@ -9548,7 +9556,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
     border-top: 1px solid #7f7f7f;
   }
 }
-.mp_achievementsBlock .item .num01 {
+.mp_achievementsBlock .item .num {
   flex: 0 0 auto;
   flex-basis: 100px;
   color: #de7a00;
