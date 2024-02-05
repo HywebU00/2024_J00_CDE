@@ -1,15 +1,5 @@
 .tabSet {
   margin: 30px auto;
-  &.subscription_epaper {
-    .item {
-      @include screen('mobile') {
-        font-size: 1.125em !important;
-      }
-      @include screen('xs_mobile') {
-        font-size: 1.125em !important;
-      }
-    }
-  }
   .tabItems {
     display: flex;
     flex-flow: row nowrap;
@@ -68,7 +58,6 @@
       }
     }
   }
-
   .tabContent {
     display: none;
     position: relative;
@@ -83,6 +72,47 @@
       //取代原有focus
       border: 2px solid red;
       outline: none;
+    }
+  }
+
+  // 電子報訂閱
+  &.subscription_epaper {
+    .item {
+      @include screen('mobile') {
+        font-size: 1.125em !important;
+      }
+      @include screen('xs_mobile') {
+        font-size: 1.125em !important;
+      }
+    }
+  }
+  // 最新消息
+  &.nwes_slider {
+    margin: 0 0 30px;
+    width: 100%;
+    .tabItems {
+      .item {
+        background: $primaryColor;
+        color: #fff;
+        box-shadow: none;
+        border-radius: 0;
+        &:hover {
+          background: $lightColor;
+        }
+
+        &.active {
+          background-color: $secondaryColor;
+
+          &:before {
+            content: '';
+            display: none;
+          }
+        }
+      }
+    }
+    .tabContent {
+      padding: 1em 0;
+      box-shadow: none;
     }
   }
 }
