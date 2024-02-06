@@ -327,6 +327,9 @@ a.more {
         border-top: 1px solid #7f7f7f;
       }
     }
+    @media (max-width: 400px) {
+      padding: 1em;
+    }
     .num {
       flex: 0 0 auto;
       flex-basis: 100px;
@@ -335,6 +338,7 @@ a.more {
       padding-right: 10px;
       font-weight: bolder;
       text-align: center;
+      line-height: 1.5em;
     }
     .info {
       flex: 1 1 auto;

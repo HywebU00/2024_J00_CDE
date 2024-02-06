@@ -9568,6 +9568,11 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
     border-top: 1px solid #7f7f7f;
   }
 }
+@media (max-width: 400px) {
+  .mp_achievementsBlock .item {
+    padding: 1em;
+  }
+}
 .mp_achievementsBlock .item .num {
   flex: 0 0 auto;
   flex-basis: 100px;
@@ -9576,6 +9581,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   padding-right: 10px;
   font-weight: bolder;
   text-align: center;
+  line-height: 1.5em;
 }
 .mp_achievementsBlock .item .info {
   flex: 1 1 auto;
