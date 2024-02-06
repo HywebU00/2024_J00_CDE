@@ -9325,22 +9325,34 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 
 .mp_newsBlock .nwes_slider .tabItems {
   justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.5em;
 }
 .mp_newsBlock .nwes_slider .tabItems .item {
   flex: 0 0 auto;
   height: auto;
   padding: 0.5em 1em;
+  margin-bottom: 0.5em;
 }
 .mp_newsBlock .tabContent .nwes_content {
   display: flex;
   flex-wrap: wrap;
 }
 .mp_newsBlock .tabContent .nwes_content .col:nth-of-type(1) {
+  flex-basis: 40%;
   width: 40%;
   margin-right: 30px;
 }
 .mp_newsBlock .tabContent .nwes_content .col:nth-of-type(2) {
+  flex-basis: calc(60% - 30px);
   width: calc(60% - 30px);
+}
+@media screen and (max-width: 767px) {
+  .mp_newsBlock .tabContent .nwes_content .col:nth-of-type(1), .mp_newsBlock .tabContent .nwes_content .col:nth-of-type(2) {
+    flex-basis: 100%;
+    width: 100%;
+    margin-right: 0;
+  }
 }
 .mp_newsBlock .tabContent .nwes_content .picBox time {
   background: #4b74ac;
@@ -10343,7 +10355,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   padding: 20px 0;
 }
 .c_main .fatfooter {
-  padding: 0;
+  padding: 0 0 2em;
 }
 .c_main .container > .col {
   padding: 0 15px;
@@ -10436,6 +10448,14 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   position: relative;
   overflow: hidden;
 }
+@media screen and (max-width: 767px) {
+  .c_news .picBox {
+    max-width: 100%;
+  }
+  .c_news .picBox .pic img {
+    width: 100%;
+  }
+}
 .c_news .picBox .pic {
   line-height: 0;
 }
@@ -10481,6 +10501,11 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   padding: 15px 30px;
   box-sizing: border-box;
   transition: 0.5s;
+}
+@media screen and (max-width: 767px) {
+  .c_news .info {
+    max-width: 100%;
+  }
 }
 .c_news .info .title {
   font-size: 1.25em;

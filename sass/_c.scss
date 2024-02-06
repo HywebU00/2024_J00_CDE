@@ -98,7 +98,7 @@ $thirdColor: #de7a00;
     padding: 20px 0;
   }
   .fatfooter {
-    padding: 0;
+    padding: 0 0 2em;
   }
 
   .container > .col {
@@ -239,7 +239,14 @@ $thirdColor: #de7a00;
     max-width: 625px;
     position: relative;
     overflow: hidden;
-
+    @include screen('mobile') {
+      max-width: 100%;
+      .pic {
+        img {
+          width: 100%;
+        }
+      }
+    }
     .pic {
       line-height: 0;
       img {
@@ -288,7 +295,9 @@ $thirdColor: #de7a00;
     padding: 15px 30px;
     box-sizing: border-box;
     transition: 0.5s;
-
+    @include screen('mobile') {
+      max-width: 100%;
+    }
     .title {
       font-size: 1.25em;
       font-weight: bold;

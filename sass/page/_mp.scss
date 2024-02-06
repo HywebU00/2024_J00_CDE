@@ -78,10 +78,13 @@ a.more {
   .nwes_slider {
     .tabItems {
       justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 0.5em;
       .item {
         flex: 0 0 auto;
         height: auto;
         padding: 0.5em 1em;
+        margin-bottom: 0.5em;
       }
     }
   }
@@ -89,13 +92,24 @@ a.more {
     .nwes_content {
       display: flex;
       flex-wrap: wrap;
+
       .col {
         &:nth-of-type(1) {
+          flex-basis: 40%;
           width: 40%;
           margin-right: 30px;
         }
         &:nth-of-type(2) {
+          flex-basis: calc(100% - 40% - 30px);
           width: calc(100% - 40% - 30px);
+        }
+        @include screen('mobile') {
+          &:nth-of-type(1),
+          &:nth-of-type(2) {
+            flex-basis: 100%;
+            width: 100%;
+            margin-right: 0;
+          }
         }
       }
       .picBox {
