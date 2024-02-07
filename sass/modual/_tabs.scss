@@ -91,11 +91,18 @@
     margin: 0 0 30px;
     width: 100%;
     .tabItems {
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 0.5em;
       .item {
         background: $primaryColor;
         color: #fff;
         box-shadow: none;
-        border-radius: 0;
+        border-radius: 8px;
+        flex: 0 0 auto;
+        height: auto;
+        padding: 0.5em 1em;
+        margin-bottom: 0.5em;
         &:hover {
           background: $lightColor;
         }

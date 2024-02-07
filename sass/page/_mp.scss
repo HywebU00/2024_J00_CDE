@@ -75,19 +75,6 @@ a.more {
 }
 // 最新消息
 .mp_newsBlock {
-  .nwes_slider {
-    .tabItems {
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 0.5em;
-      .item {
-        flex: 0 0 auto;
-        height: auto;
-        padding: 0.5em 1em;
-        margin-bottom: 0.5em;
-      }
-    }
-  }
   .tabContent {
     .nwes_content {
       display: flex;
@@ -112,12 +99,18 @@ a.more {
           }
         }
       }
+
       .picBox {
+        border-radius: 8px 8px 0 0;
+        .sort {
+          border-radius: 0 0 0 8px;
+        }
         time {
           background: $linkColor;
         }
       }
       .info {
+        border-radius: 0 0 8px 8px;
         .title {
           overflow: hidden;
           display: -webkit-box;
@@ -170,6 +163,7 @@ a.more {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: flex;
     margin-bottom: 1.2em;
+    border-radius: 8px;
     @include screen('tablet') {
       flex: 1 1 auto;
       flex-basis: 100%;
@@ -187,6 +181,7 @@ a.more {
       overflow: hidden;
       position: relative;
       min-height: 147px;
+      border-radius: 8px 0 0 8px;
       @include screen('xs_mobile') {
         flex-basis: 35%;
       }
@@ -262,8 +257,10 @@ a.more {
     .item {
       box-shadow: none !important;
       padding: 0 !important;
+      border-radius: 8px;
       &:hover {
         box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15) !important;
+        border-radius: 8px;
       }
     }
   }
@@ -285,11 +282,13 @@ a.more {
   .pic {
     position: relative;
     @include aspect-ratio(3, 2.5);
+    border-radius: 8px 8px 0 0;
     img {
       transition: 0.5s;
     }
   }
   .info {
+    border-radius: 0 0 8px 8px;
     .title {
       margin-bottom: 0 !important;
       text-align: center;
@@ -302,6 +301,14 @@ a.more {
   padding: 1em 0;
   margin-bottom: 2em;
   position: relative;
+  @include screen('mobile') {
+    margin-bottom: 0;
+  }
+  .achievement_slider {
+    .slick-list {
+      padding-bottom: 1em;
+    }
+  }
   .item {
     background-color: #fff;
     display: flex !important;
@@ -310,6 +317,7 @@ a.more {
     padding: 1em;
     min-height: 170px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 8px;
     @media (max-width: 600px) {
       display: block !important;
       padding: 2em;
@@ -388,6 +396,32 @@ a.more {
           }
         }
       }
+    }
+  }
+}
+// 網站連結
+.mp_linkBox {
+  .item {
+    padding-top: 1em;
+    a {
+      .pic {
+        img {
+          border-radius: 8px;
+        }
+      }
+      .title {
+        border-radius: 8px;
+      }
+      &:hover {
+        border-radius: 8px;
+      }
+    }
+  }
+}
+.mp_main {
+  .c_indexMore {
+    a {
+      border-radius: 8px;
     }
   }
 }

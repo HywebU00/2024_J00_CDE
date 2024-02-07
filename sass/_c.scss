@@ -8,6 +8,9 @@ $thirdColor: #de7a00;
 
     &:last-child {
       padding-bottom: 180px;
+      @include screen('mobile') {
+        padding-bottom: 60px;
+      }
     }
   }
 }

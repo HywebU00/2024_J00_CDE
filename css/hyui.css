@@ -7545,11 +7545,20 @@ table .date {
   margin: 0 0 30px;
   width: 100%;
 }
+.tabSet.nwes_slider .tabItems {
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.5em;
+}
 .tabSet.nwes_slider .tabItems .item {
   background: #0c3a78;
   color: #fff;
   box-shadow: none;
-  border-radius: 0;
+  border-radius: 8px;
+  flex: 0 0 auto;
+  height: auto;
+  padding: 0.5em 1em;
+  margin-bottom: 0.5em;
 }
 .tabSet.nwes_slider .tabItems .item:hover {
   background: #99bcdc;
@@ -9323,17 +9332,6 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   background: #dedede;
 }
 
-.mp_newsBlock .nwes_slider .tabItems {
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 0.5em;
-}
-.mp_newsBlock .nwes_slider .tabItems .item {
-  flex: 0 0 auto;
-  height: auto;
-  padding: 0.5em 1em;
-  margin-bottom: 0.5em;
-}
 .mp_newsBlock .tabContent .nwes_content {
   display: flex;
   flex-wrap: wrap;
@@ -9354,8 +9352,17 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
     margin-right: 0;
   }
 }
+.mp_newsBlock .tabContent .nwes_content .picBox {
+  border-radius: 8px 8px 0 0;
+}
+.mp_newsBlock .tabContent .nwes_content .picBox .sort {
+  border-radius: 0 0 0 8px;
+}
 .mp_newsBlock .tabContent .nwes_content .picBox time {
   background: #4b74ac;
+}
+.mp_newsBlock .tabContent .nwes_content .info {
+  border-radius: 0 0 8px 8px;
 }
 .mp_newsBlock .tabContent .nwes_content .info .title {
   overflow: hidden;
@@ -9405,6 +9412,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   display: flex;
   margin-bottom: 1.2em;
+  border-radius: 8px;
 }
 @media screen and (max-width: 991px) {
   .mp_businessBlock .business_group {
@@ -9421,6 +9429,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   overflow: hidden;
   position: relative;
   min-height: 147px;
+  border-radius: 8px 0 0 8px;
 }
 @media screen and (max-width: 575px) {
   .mp_businessBlock .business_group .pic {
@@ -9495,9 +9504,11 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .mp_knowledgeBlock .listBox .item {
   box-shadow: none !important;
   padding: 0 !important;
+  border-radius: 8px;
 }
 .mp_knowledgeBlock .listBox .item:hover {
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15) !important;
+  border-radius: 8px;
 }
 
 .mp_cardLinkBlock {
@@ -9509,6 +9520,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .mp_cardLinkBlock .pic {
   position: relative;
   overflow: hidden;
+  border-radius: 8px 8px 0 0;
 }
 .mp_cardLinkBlock .pic:before {
   display: inline-block;
@@ -9529,6 +9541,9 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .mp_cardLinkBlock .pic img {
   transition: 0.5s;
 }
+.mp_cardLinkBlock .info {
+  border-radius: 0 0 8px 8px;
+}
 .mp_cardLinkBlock .info .title {
   margin-bottom: 0 !important;
   text-align: center;
@@ -9540,6 +9555,14 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   margin-bottom: 2em;
   position: relative;
 }
+@media screen and (max-width: 767px) {
+  .mp_achievementsBlock {
+    margin-bottom: 0;
+  }
+}
+.mp_achievementsBlock .achievement_slider .slick-list {
+  padding-bottom: 1em;
+}
 .mp_achievementsBlock .item {
   background-color: #fff;
   display: flex !important;
@@ -9548,6 +9571,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   padding: 1em;
   min-height: 170px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 8px;
 }
 @media (max-width: 600px) {
   .mp_achievementsBlock .item {
@@ -9629,6 +9653,23 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .mp_achievementsBlock .item .info ul li a:hover {
   color: #de7a00;
+}
+
+.mp_linkBox .item {
+  padding-top: 1em;
+}
+.mp_linkBox .item a .pic img {
+  border-radius: 8px;
+}
+.mp_linkBox .item a .title {
+  border-radius: 8px;
+}
+.mp_linkBox .item a:hover {
+  border-radius: 8px;
+}
+
+.mp_main .c_indexMore a {
+  border-radius: 8px;
 }
 
 .cp .pic {
@@ -10280,6 +10321,11 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .c_main section:last-child {
   padding-bottom: 180px;
+}
+@media screen and (max-width: 767px) {
+  .c_main section:last-child {
+    padding-bottom: 60px;
+  }
 }
 
 .c_indexMore {
