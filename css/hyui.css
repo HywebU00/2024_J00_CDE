@@ -6421,7 +6421,7 @@ select::-ms-expand {
 .flex-form .btn_grp,
 .flex-form .upload_grp {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
   padding: 1em 0;
@@ -6445,7 +6445,7 @@ select::-ms-expand {
   z-index: 1;
   flex-basis: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .flex-form .check_grp label input:checked ~ span:after,
 .flex-form .radio_grp label input:checked ~ span:after {
@@ -6472,7 +6472,7 @@ select::-ms-expand {
   flex-basis: 18%;
   margin-right: 2%;
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
 }
 @media screen and (max-width: 1399px) {
   .flex-form .check_grp.form_inline label,
@@ -6498,6 +6498,9 @@ select::-ms-expand {
     flex-basis: 100%;
     margin-right: 0;
   }
+}
+.flex-form .radio_grp label {
+  margin-bottom: 1em;
 }
 .flex-form.form_inline .check_grp label,
 .flex-form.form_inline .radio_grp label,
@@ -6767,6 +6770,7 @@ input[type=radio] {
   height: 1em;
   background-color: #fff;
   border: 2px solid #ddd;
+  flex: 0 0 1em;
 }
 
 input[type=radio] {

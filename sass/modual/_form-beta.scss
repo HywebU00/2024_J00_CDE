@@ -1123,7 +1123,7 @@ select::-ms-expand {
   .btn_grp,
   .upload_grp {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
     padding: 1em 0;
@@ -1140,7 +1140,7 @@ select::-ms-expand {
       z-index: 1;
       flex-basis: 100%;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       input {
         &:checked {
           & ~ span {
@@ -1171,7 +1171,7 @@ select::-ms-expand {
         flex-basis: 18%;
         margin-right: 2%;
         display: inline-flex;
-        align-items: center;
+        align-items: flex-start;
         @include screen('notebook') {
           flex-basis: 23%;
         }
@@ -1186,6 +1186,11 @@ select::-ms-expand {
           margin-right: 0;
         }
       }
+    }
+  }
+  .radio_grp {
+    label {
+      margin-bottom: 1em;
     }
   }
   &.form_inline,
@@ -1453,6 +1458,7 @@ input[type='radio'] {
   height: 1em;
   background-color: #fff;
   border: 2px solid #ddd;
+  flex: 0 0 1em;
 }
 
 input[type='radio'] {
