@@ -8,6 +8,7 @@ $thirdColor: #de7a00;
 
     &:last-child {
       padding-bottom: 180px;
+
       @include screen('mobile') {
         padding-bottom: 60px;
       }
@@ -17,6 +18,7 @@ $thirdColor: #de7a00;
 
 .c_indexMore {
   text-align: center;
+
   a {
     // max-width: 180px;
     border: $mainColor 2px solid;
@@ -100,6 +102,7 @@ $thirdColor: #de7a00;
   section {
     padding: 20px 0;
   }
+
   .fatfooter {
     padding: 0 0 2em;
   }
@@ -180,8 +183,59 @@ $thirdColor: #de7a00;
   }
 }
 
-///c_kv
+///c_kv///c_kv
 .c_kv {
+  .slick-slide > div {
+    line-height: 0;
+    padding: 0;
+  }
+
+  .pic {
+    position: relative;
+    line-height: 0;
+
+    .caption {
+      position: absolute;
+      width: 100%;
+      height: 3em;
+      background: rgba(0, 0, 0, 0.65);
+      padding: 1em 0.5em 0.5em;
+      font-size: 1.125em;
+      color: #FFF;
+      margin: 0;
+      text-align: center;
+      bottom: -3em;
+      left: 0;
+      z-index: 999;
+      line-height: 1;
+      transition: .3s ease-out;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      box-sizing: border-box;
+    }
+
+    &:hover {
+      .caption {
+        bottom: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    .slick-arrow {
+      &.slick-prev {
+        right: auto;
+        left: 10px;
+      }
+
+      &.slick-next {
+        left: auto;
+        right: 10px;
+      }
+    }
+  }
+
   .slick-dots li {
     width: auto;
     height: auto;
@@ -219,9 +273,11 @@ $thirdColor: #de7a00;
     @include screen('mobile') {
       width: 100%;
     }
+
     &:nth-of-type(1) {
       a {
         display: block;
+
         &:hover {
           .picBox {
             .pic {
@@ -230,6 +286,7 @@ $thirdColor: #de7a00;
               }
             }
           }
+
           .info {
             background: $thirdColor;
           }
@@ -242,20 +299,25 @@ $thirdColor: #de7a00;
     max-width: 625px;
     position: relative;
     overflow: hidden;
+
     @include screen('mobile') {
       max-width: 100%;
+
       .pic {
         img {
           width: 100%;
         }
       }
     }
+
     .pic {
       line-height: 0;
+
       img {
         transition: 0.5s;
       }
     }
+
     .sort {
       position: absolute;
       right: 0;
@@ -265,6 +327,7 @@ $thirdColor: #de7a00;
       padding: 0.5em 1em;
       font-size: 1.125em;
     }
+
     time {
       position: absolute;
       left: 15px;
@@ -298,9 +361,11 @@ $thirdColor: #de7a00;
     padding: 15px 30px;
     box-sizing: border-box;
     transition: 0.5s;
+
     @include screen('mobile') {
       max-width: 100%;
     }
+
     .title {
       font-size: 1.25em;
       font-weight: bold;
@@ -1553,6 +1618,7 @@ $thirdColor: #de7a00;
   }
 
   .c_indexMore {
+
     // margin-top: 30px;
     a {
       display: inline-block;
@@ -1572,8 +1638,10 @@ $thirdColor: #de7a00;
     display: block;
     position: relative;
     transition: 0.5s;
+
     &:hover {
       transform: scale(1.1);
+
       .title {
         background: rgba(0, 0, 0, 0.5);
         color: #fff;

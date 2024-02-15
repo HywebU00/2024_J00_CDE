@@ -10462,6 +10462,47 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   margin-top: -60px;
 }
 
+.c_kv .slick-slide > div {
+  line-height: 0;
+  padding: 0;
+}
+.c_kv .pic {
+  position: relative;
+  line-height: 0;
+}
+.c_kv .pic .caption {
+  position: absolute;
+  width: 100%;
+  height: 3em;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 1em 0.5em 0.5em;
+  font-size: 1.125em;
+  color: #FFF;
+  margin: 0;
+  text-align: center;
+  bottom: -3em;
+  left: 0;
+  z-index: 999;
+  line-height: 1;
+  transition: 0.3s ease-out;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+.c_kv .pic:hover .caption {
+  bottom: 0;
+}
+@media screen and (max-width: 1400px) {
+  .c_kv .slick-arrow.slick-prev {
+    right: auto;
+    left: 10px;
+  }
+  .c_kv .slick-arrow.slick-next {
+    left: auto;
+    right: 10px;
+  }
+}
 .c_kv .slick-dots li {
   width: auto;
   height: auto;

@@ -721,7 +721,7 @@ $(function () {
   };
 
   const observer = new IntersectionObserver(callback, options);
-  observer.observe(check);
+  check ? observer.observe(check) : null;
 });
 
 //業務成果
