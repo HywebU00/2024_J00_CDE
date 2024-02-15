@@ -84,11 +84,11 @@
   // padding: 0 0 0.5em 0;
   margin-bottom: 1.5em;
   background: rgb(255, 255, 255);
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.14) 0px 0px 30px;
   padding: 1em 0 1em;
-  border-top: 10px solid $primaryColor;
-  border-bottom: 4px solid $primaryColor;
+  border-top: 5px solid $primaryColor;
+  border-bottom: 5px solid $primaryColor;
   position: relative;
   &:before {
     content: '';

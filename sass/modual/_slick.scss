@@ -147,7 +147,7 @@
   border: none;
   outline: none;
   box-shadow: none;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
 
   &:hover,
   &:focus {
@@ -157,49 +157,45 @@
   }
 }
 
-
 /* 上一則 位置 圖片*/
 
 .slick-prev {
   left: 25px;
-  background: url('../images/slick/icon_arrow_left_inverse.png') center center no-repeat RGBA(255, 255, 255, .5);
-  background-size: 30px 30px;
+  background: url('../images/slick/icon_arrow_left_inverse.png') center center no-repeat RGBA(255, 255, 255, 0.5);
+  background-size: 24px;
 
   /* 箭頭 hover及focus 樣式 */
   &:hover,
   &:focus {
-    background: url('../images/slick/icon_arrow_left_inverse.png') center center no-repeat RGBA(255, 255, 255, .8);
-    background-size: 30px 30px;
+    background: url('../images/slick/icon_arrow_left_inverse.png') center center no-repeat RGBA(255, 255, 255, 0.8);
+    background-size: 24px;
   }
 }
-
 
 /* 下一則 位置 圖片*/
 
 .slick-next {
   right: 25px;
-  background: url('../images/slick/icon_arrow_right_inverse.png') center center no-repeat RGBA(255, 255, 255, .5);
-  background-size: 30px 30px;
+  background: url('../images/slick/icon_arrow_right_inverse.png') center center no-repeat RGBA(255, 255, 255, 0.5);
+  background-size: 24px;
 
   /* 箭頭 hover及focus 樣式 */
   &:hover,
   &:focus {
-    background: url('../images/slick/icon_arrow_right_inverse.png') center center no-repeat RGBA(255, 255, 255, .8);
-    background-size: 30px 30px;
+    background: url('../images/slick/icon_arrow_right_inverse.png') center center no-repeat RGBA(255, 255, 255, 0.8);
+    background-size: 24px;
   }
 }
-
 
 /* 沒有無限輪播時，滑到最兩邊資料時，箭頭暗掉 */
 
 .slick-disabled {
-  opacity: .25;
+  opacity: 0.25;
 }
-
 
 /* ---點的樣式---*/
 
-// slick dots 
+// slick dots
 .slick-dots {
   position: absolute;
   right: 0;
@@ -229,7 +225,6 @@
   }
 }
 
-
 /* ---點的位置、大小、顏色---*/
 
 .slick-dots {
@@ -243,7 +238,7 @@
     button {
       /* 點的顏色 */
       background: #666;
-      opacity: .4;
+      opacity: 0.4;
       width: 15px;
       height: 15px;
       border-radius: 50%;
@@ -288,19 +283,17 @@
 }
 
 // ---------slick._scss
-// 首頁大圖輪播 
+// 首頁大圖輪播
 .mpSlider {
   width: 100%;
   padding-bottom: 3em;
   @include gutter(0);
 
   .img-container {
-    @include aspect-ratio(5,
-      2); //PC版比例
+    @include aspect-ratio(5, 2); //PC版比例
 
     @include screen('mobile') {
-      @include aspect-ratio(5,
-        3); //Mobile版比例
+      @include aspect-ratio(5, 3); //Mobile版比例
     }
   }
 
@@ -357,7 +350,7 @@
 
     &:focus {
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         z-index: 9;
         width: 100%;
@@ -391,8 +384,7 @@
 
   .img-container {
     margin: 0px 15px;
-    @include aspect-ratio(4,
-      3);
+    @include aspect-ratio(4, 3);
     overflow: hidden;
 
     img {
@@ -401,18 +393,18 @@
   }
 
   .caption {
-    padding: .5em !important;
+    padding: 0.5em !important;
     position: absolute;
-    background: rgba(0, 0, 0, .75) !important;
-    color: #FFF;
+    background: rgba(0, 0, 0, 0.75) !important;
+    color: #fff;
     bottom: -2em !important;
     left: 0;
-    font-size: .938em !important;
+    font-size: 0.938em !important;
     height: 2em !important;
     line-height: 1 !important;
     width: 100%;
     @include text-overflow;
-    transition: .3s ease-out;
+    transition: 0.3s ease-out;
   }
 
   // dots
@@ -458,7 +450,7 @@
   }
 }
 
-// 
+//
 // slick燈箱
 .lightbox_slider_block {
   h3 {
@@ -478,8 +470,7 @@
 
   .img-container {
     // margin: 0px 15px;
-    @include aspect-ratio(4,
-      3);
+    @include aspect-ratio(4, 3);
     overflow: hidden;
 
     img {
@@ -488,18 +479,18 @@
   }
 
   .caption {
-    padding: .5em !important;
+    padding: 0.5em !important;
     position: absolute;
-    background: rgba(0, 0, 0, .75) !important;
-    color: #FFF;
+    background: rgba(0, 0, 0, 0.75) !important;
+    color: #fff;
     bottom: -2em !important;
     left: 0;
-    font-size: .938em !important;
+    font-size: 0.938em !important;
     height: 2em !important;
     line-height: 1 !important;
     width: 100%;
     @include text-overflow;
-    transition: .3s ease-out;
+    transition: 0.3s ease-out;
   }
 
   // dots
@@ -553,7 +544,6 @@
   }
 }
 
-
 /*  slick-lightbox  */
 
 .slick-lightbox {
@@ -569,7 +559,7 @@
   transition: opacity 0.5s ease;
 
   .slick-loading .slick-list {
-    background-color: transparent
+    background-color: transparent;
   }
 
   .slick-prev {
@@ -591,8 +581,8 @@
   opacity: 0;
 
   &.slick-lightbox-ie {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0)
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+    filter: alpha(opacity=0);
   }
 }
 
@@ -602,8 +592,8 @@
   opacity: 0;
 
   &.slick-lightbox-ie {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0)
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+    filter: alpha(opacity=0);
   }
 }
 
@@ -612,7 +602,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%
+  height: 100%;
 }
 
 .slick-lightbox-slick-item {
@@ -683,27 +673,27 @@
   }
 
   &:before {
-    content: "";
+    content: '';
     height: 6px;
     width: 32px;
     transform: rotate(45deg);
     position: absolute;
     top: 18px;
-    background: #DDD;
+    background: #ddd;
     left: 6px;
-    transition: .3s all ease-out;
+    transition: 0.3s all ease-out;
   }
 
   &:after {
-    content: "";
+    content: '';
     height: 6px;
     width: 32px;
     transform: rotate(-45deg);
     position: absolute;
     top: 18px;
-    background: #DDD;
+    background: #ddd;
     left: 6px;
-    transition: .3s all ease-out;
+    transition: 0.3s all ease-out;
   }
 
   &:hover,
@@ -714,7 +704,7 @@
 
     &:before,
     &:after {
-      background: #FFF;
+      background: #fff;
     }
   }
 }
@@ -739,17 +729,16 @@
     text-align: center;
     font-weight: bold;
     max-width: 100px;
-    color: #FFF;
-    padding: .2em .5em;
+    color: #fff;
+    padding: 0.2em 0.5em;
     margin: 0px auto;
     background: $primaryColor;
     border-radius: 20px;
-    text-shadow: 1px 1px 2px RGBA(0, 0, 0, .8);
+    text-shadow: 1px 1px 2px RGBA(0, 0, 0, 0.8);
   }
 
   .img-container {
-    @include aspect-ratio(16,
-      9);
+    @include aspect-ratio(16, 9);
 
     img {
       position: absolute;
@@ -765,10 +754,10 @@
 
   p {
     position: absolute;
-    background: RGBA(0, 0, 0, .55);
+    background: RGBA(0, 0, 0, 0.55);
     text-align: center;
-    color: #FFF;
-    padding: .5em;
+    color: #fff;
+    padding: 0.5em;
     box-sizing: border-box;
     @include text-overflow;
     bottom: 0px;
@@ -788,7 +777,7 @@
     background-size: 80%;
 
     @include screen('mobile') {
-      right: .5em;
+      right: 0.5em;
     }
   }
 
@@ -797,7 +786,7 @@
     background-size: 80%;
 
     @include screen('mobile') {
-      left: .5em;
+      left: 0.5em;
     }
   }
 

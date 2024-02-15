@@ -237,7 +237,7 @@ select::-ms-expand {
   &.flex-form_block {
     background-color: #fff;
     padding: 1em 2em;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin-bottom: 2em;
     h3 {
@@ -1458,7 +1458,9 @@ input[type='radio'] {
 input[type='radio'] {
   border-radius: 50%;
 }
-
+input[type='checkbox'] {
+  border-radius: 0.2em;
+}
 input[type='checkbox']:checked,
 input[type='checkbox']:focus,
 input[type='radio']:checked,
