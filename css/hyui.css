@@ -12452,7 +12452,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .cascading li {
   line-height: 1.5;
-  width: 25%;
+  width: 100%;
   display: inline-block;
   vertical-align: top;
   margin: 0 -5px 1em 0;
@@ -12473,21 +12473,54 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   text-decoration: none;
 }
 .cascading li ul {
-  padding-left: 1em;
+  padding: 0;
+  margin: 0.5em 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 .cascading li ul li {
-  width: 100%;
-  display: block;
-  margin-bottom: 0;
+  flex: none;
+  flex-basis: 31%;
+  margin: 0 1.16% 20px;
   padding: 0;
+}
+@media screen and (max-width: 767px) {
+  .cascading li ul li {
+    flex-basis: 48%;
+    margin: 0 1% 5px;
+  }
+}
+@media (max-width: 480px) {
+  .cascading li ul li {
+    flex-basis: 100%;
+    margin: 0 0 5px;
+  }
 }
 .cascading li ul li a {
   display: block;
   font-size: 1em;
-  padding: 0.2em 0;
-  border-bottom: 1px dotted #ccc;
+  padding: 10px;
+  border-bottom: none;
+  border-radius: 5px;
   background-color: transparent;
   font-weight: normal;
+  background-color: #ddd;
+}
+.cascading li ul li ul {
+  padding: 0;
+  margin: 1em;
+  display: block;
+}
+.cascading li ul li ul li {
+  width: 100%;
+  margin: 0 0 5px;
+}
+.cascading li ul li ul li a {
+  display: block;
+  background-color: transparent;
+  border-radius: 0;
+  border-bottom: 1px dashed #ccc;
+  padding: 0.2em 0;
 }
 @media screen and (max-width: 767px) {
   .cascading {
