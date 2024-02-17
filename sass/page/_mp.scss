@@ -323,6 +323,9 @@ a.more {
         a {
           display: flex;
           background-color: #d3d3d3;
+          background-image: url('../images/mp/mpsliderbg2.jpg');
+          background-position: left top;
+          background-repeat: no-repeat;
           @include screen('tablet') {
             display: block;
           }

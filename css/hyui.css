@@ -9630,6 +9630,9 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .mpSliderblock .container .mpSlider02 .pic_box a {
   display: flex;
   background-color: #d3d3d3;
+  background-image: url("../images/mp/mpsliderbg2.jpg");
+  background-position: left top;
+  background-repeat: no-repeat;
 }
 @media screen and (max-width: 991px) {
   .mpSliderblock .container .mpSlider02 .pic_box a {
