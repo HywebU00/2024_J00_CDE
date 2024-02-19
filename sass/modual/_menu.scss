@@ -23,7 +23,8 @@
     left: 0;
     width: 100%;
     z-index: 999;
-    background-color: lighten($color: $lightColor, $amount: 10);
+    background: rgb(75, 116, 172);
+    background: linear-gradient(90deg, rgba(75, 116, 172, 1) 0%, rgba(12, 58, 120, 1) 50%, rgba(75, 116, 172, 1) 100%);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     &:after {
       position: absolute;
@@ -38,6 +39,16 @@
       width: 100%;
       max-width: $container-max;
       margin: 0 auto;
+      > li {
+        > a {
+          color: #fff;
+        }
+        &:hover {
+          > a {
+            color: #ccc;
+          }
+        }
+      }
     }
   }
   @include screen('mobile') {
@@ -54,7 +65,7 @@
     max-width: $container-max;
     // 第一層選單樣式
     > li {
-      flex: 0 1 auto;
+      flex: 0 0 auto;
       > a {
         display: block;
         padding: 0 1em 0;
@@ -63,6 +74,7 @@
         line-height: 2.5em;
         white-space: nowrap;
         color: $color-word;
+        font-size: 1.125em;
         @include screen('tablet') {
           padding: 0 0.7em;
         }
@@ -106,7 +118,7 @@
       ul {
         display: none;
         overflow: visible;
-        width: 99%;
+        width: 150px;
         background: rgba(0, 0, 0, 0.8);
         padding: 0;
         z-index: 999999;
@@ -116,7 +128,7 @@
         list-style: none;
         text-align: left;
         animation: showMenu 0.3s $cubic;
-        font-size: 0.875em;
+        font-size: 0.938em;
         // 第二層選單樣式
         li {
           float: none;

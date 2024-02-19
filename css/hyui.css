@@ -3637,7 +3637,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   left: 0;
   width: 100%;
   z-index: 999;
-  background-color: #bfd5e9;
+  background: rgb(75, 116, 172);
+  background: linear-gradient(90deg, rgb(75, 116, 172) 0%, rgb(12, 58, 120) 50%, rgb(75, 116, 172) 100%);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .menu.sticky:after {
@@ -3654,6 +3655,12 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   max-width: 1330px;
   margin: 0 auto;
 }
+.menu.sticky > ul > li > a {
+  color: #fff;
+}
+.menu.sticky > ul > li:hover > a {
+  color: #ccc;
+}
 @media screen and (max-width: 767px) {
   .menu {
     display: none;
@@ -3669,7 +3676,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   max-width: 1330px;
 }
 .menu > ul > li {
-  flex: 0 1 auto;
+  flex: 0 0 auto;
 }
 .menu > ul > li > a {
   display: block;
@@ -3679,6 +3686,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   line-height: 2.5em;
   white-space: nowrap;
   color: #333;
+  font-size: 1.125em;
 }
 @media screen and (max-width: 991px) {
   .menu > ul > li > a {
@@ -3716,7 +3724,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .menu ul li ul {
   display: none;
   overflow: visible;
-  width: 99%;
+  width: 150px;
   background: rgba(0, 0, 0, 0.8);
   padding: 0;
   z-index: 999999;
@@ -3726,7 +3734,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   list-style: none;
   text-align: left;
   animation: showMenu 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  font-size: 0.875em;
+  font-size: 0.938em;
 }
 .menu ul li ul li {
   float: none;
@@ -9150,6 +9158,12 @@ body.noscroll {
 .main h2 {
   line-height: 1.375em;
 }
+.main.small_size {
+  font-size: 0.938em;
+}
+.main.large_size {
+  font-size: 1.125em;
+}
 
 h2.title {
   font-size: 1.875em;
@@ -9268,12 +9282,6 @@ h2.title {
     flex-basis: 100%;
     max-width: 100%;
   }
-}
-.innerpage.small_size {
-  font-size: 0.938em;
-}
-.innerpage.large_size {
-  font-size: 1.125em;
 }
 
 .hidden {
