@@ -31,7 +31,7 @@ $btn-radius: 8px;
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px $aFocus !important;
+    // box-shadow: 0 0px 0px 2px $aFocus !important;
     // @include gradient(lighten($btn-bg, 10), darken($btn-bg, 18), vertical);
   }
   &.active {
@@ -80,7 +80,7 @@ $btn-radius: 8px;
 }
 .btn-blue {
   // @extend %btn;
-  @include btn_setting($color-blue, #fff);
+  @include btn_setting($primaryColor, #fff);
 }
 .btn-yellow {
   // @extend %btn;
@@ -109,6 +109,10 @@ $btn-radius: 8px;
 .btn-search {
   // @extend %btn;
   @include btn_setting(lighten($primaryColor, 5), #fff);
+}
+.btn-grey {
+  // @extend %btn;
+  @include btn_setting($color-hr, #fff);
 }
 // 主要按鈕
 .btn-primary {

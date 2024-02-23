@@ -24,7 +24,7 @@
     width: 100%;
     z-index: 999;
     background: rgb(75, 116, 172);
-    background: linear-gradient(90deg, rgba(75, 116, 172, 1) 0%, rgba(12, 58, 120, 1) 50%, rgba(75, 116, 172, 1) 100%);
+    background: linear-gradient(180deg, rgba(75, 116, 172, 1) 0%, rgba(12, 58, 120, 1) 100%);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     &:after {
       position: absolute;
@@ -44,8 +44,9 @@
           color: #fff;
         }
         &:hover {
+          background-color: $primaryColor;
           > a {
-            color: #ccc;
+            color: #fff;
           }
         }
       }
@@ -76,7 +77,7 @@
         color: $color-word;
         font-size: 1.125em;
         @include screen('tablet') {
-          padding: 0 0.7em;
+          padding: 0 0.5em;
         }
       }
       &.hasChild {
@@ -119,7 +120,7 @@
         display: none;
         overflow: visible;
         width: 150px;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgb(12, 58, 120);
         padding: 0;
         z-index: 999999;
         position: absolute;
@@ -145,12 +146,14 @@
         li.hasChild {
           > ul {
             z-index: 999;
+            background: $aHover;
           }
           > a {
             padding-right: 2em;
+
             &:hover,
             &:focus {
-              background: $primaryColor;
+              background: $aHover;
             }
             &:after {
               content: '';
@@ -165,12 +168,25 @@
               border-left: none;
             }
           }
+          &:hover {
+            > a {
+              background: $aHover;
+            }
+          }
         }
         ul {
           top: 0;
           left: 100%;
           animation: none;
           font-size: 1em;
+          li {
+            a {
+              &:hover,
+              &:focus {
+                background: lighten($color: $linkColor, $amount: 10);
+              }
+            }
+          }
         }
       }
       &.leftSlider {

@@ -29,7 +29,6 @@ $thirdColor: #de7a00;
     margin: 0 auto;
     transition: all 0.3s ease;
     font-weight: bold;
-    font-size: 18px;
     position: relative;
     margin-top: 30px;
     font-size: 1.125em;
@@ -85,11 +84,11 @@ $thirdColor: #de7a00;
   text-align: center;
   font-size: 32px;
   line-height: 1.4;
-  margin: 30px 0;
+  margin: 20px 0;
 
-  @include screen('tablet') {
-    margin: 30px 0 20px;
-  }
+  // @include screen('tablet') {
+  //   margin: 30px 0 20px;
+  // }
 
   span {
     display: block;
@@ -100,7 +99,7 @@ $thirdColor: #de7a00;
 
 .c_main {
   section {
-    padding: 20px 0;
+    padding: 10px 0 20px;
   }
 
   .fatfooter {
@@ -538,7 +537,7 @@ $thirdColor: #de7a00;
     inset: 0;
     transform: translateY(100%);
     transition: all 0.3s linear;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(12, 58, 120, 0.9);
     padding: 15px 15px 10px;
     display: flex;
     flex-direction: column;

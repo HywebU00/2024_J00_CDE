@@ -22,15 +22,7 @@
       &:last-of-type {
         margin-right: 0;
       }
-      @include screen('mobile') {
-        font-size: 0.938em;
-        line-height: 1.2em;
-      }
-      @include screen('xs_mobile') {
-        font-size: 0.813em;
-        line-height: 1.2em;
-        padding: 0 0.5em;
-      }
+
       cursor: pointer;
 
       &:focus {
@@ -61,13 +53,10 @@
   .tabContent {
     display: none;
     position: relative;
-    padding: 2em;
+
     // box-shadow: #bbb 0 0 0 1px inset;
     background-color: #fff;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    @include screen('xs_mobile') {
-      padding: 1em;
-    }
+
     a:focus {
       //取代原有focus
       border: 2px solid red;
@@ -84,6 +73,12 @@
       @include screen('xs_mobile') {
         font-size: 1.125em !important;
       }
+    }
+    .tabContent {
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 1em 2em;
     }
   }
   // 最新消息
@@ -120,6 +115,31 @@
     .tabContent {
       padding: 1em 0;
       box-shadow: none;
+    }
+  }
+  //cp審查
+  &.cpreview_slider {
+    .tabItems {
+      .item {
+        padding: 0.5em 0.5em;
+      }
+      @include screen('mobile') {
+        .item {
+          margin-bottom: 0.5em;
+          font-size: 1.063em;
+          line-height: 1.2em;
+        }
+      }
+      @include screen('xs_mobile') {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 0.5em;
+        .item {
+          flex: 0 0 auto;
+          font-size: 1em;
+          margin-bottom: 0.5em;
+        }
+      }
     }
   }
 }

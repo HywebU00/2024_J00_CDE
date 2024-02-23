@@ -1126,7 +1126,7 @@ select::-ms-expand {
     align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
-    padding: 1em 0;
+    padding: 0 0;
     @include screen('mobile') {
       flex-wrap: wrap;
     }

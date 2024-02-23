@@ -790,3 +790,8 @@ $(function () {
     ],
   });
 });
+$(function () {
+  $('.searchblockbtn').click(function () {
+    $('.conditional_searchblock').slideToggle();
+  });
+});
