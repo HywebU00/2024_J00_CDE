@@ -16,15 +16,93 @@
   position: relative;
   z-index: 99;
   clear: both;
-
+  &.orangemenu {
+    &.sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      background: rgb(252, 174, 80);
+      background: linear-gradient(180deg, rgba(252, 174, 80, 1) 0%, rgba(222, 122, 0, 1) 100%);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      &:after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+      & > ul {
+        width: 100%;
+        max-width: $container-max;
+        margin: 0 auto;
+        > li {
+          &:before {
+            content: '';
+            height: 100%;
+            width: 1px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: #de7a00;
+          }
+          &:after {
+            content: '';
+            height: 100%;
+            width: 1px;
+            position: absolute;
+            right: -1px;
+            top: 0;
+            background-color: #ffb151;
+          }
+          > a {
+            color: #fff;
+            padding: 0.3em 1em;
+          }
+          &.hasChild {
+            > a {
+              &:after {
+                content: '';
+                width: 4px;
+                height: 4px;
+                display: inline-block;
+                margin-left: 0.5em;
+                vertical-align: middle;
+                border: 2px solid #fff;
+                transform: rotate(135deg);
+                border-bottom: none;
+                border-left: none;
+                margin-bottom: 0.2em;
+              }
+            }
+          }
+          &:hover {
+            background: rgb(8, 36, 74);
+            background: linear-gradient(180deg, rgba(8, 36, 74, 1) 0%, rgba(12, 58, 120, 1) 100%);
+            > a {
+              color: #fff;
+            }
+          }
+        }
+      }
+      ul {
+        ul {
+          width: 158px;
+        }
+      }
+    }
+  }
   &.sticky {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 999;
-    background: rgb(75, 116, 172);
-    background: linear-gradient(180deg, rgba(75, 116, 172, 1) 0%, rgba(12, 58, 120, 1) 100%);
+    background: rgb(16, 116, 182);
+    background: linear-gradient(180deg, rgba(16, 116, 182, 1) 0%, rgba(0, 64, 111, 1) 100%);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     &:after {
       position: absolute;
@@ -40,12 +118,31 @@
       max-width: $container-max;
       margin: 0 auto;
       > li {
+        &:before {
+          content: '';
+          height: 100%;
+          width: 1px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          background-color: #0b2d49;
+        }
+        &:after {
+          content: '';
+          height: 100%;
+          width: 1px;
+          position: absolute;
+          right: -1px;
+          top: 0;
+          background-color: #517ca0;
+        }
         > a {
           color: #fff;
-          padding: 0.5em 1em;
+          padding: 0.3em 1em;
         }
         &:hover {
-          background-color: $primaryColor;
+          background: rgb(8, 36, 74);
+          background: linear-gradient(180deg, rgba(8, 36, 74, 1) 0%, rgba(12, 58, 120, 1) 100%);
           > a {
             color: #fff;
           }
@@ -82,6 +179,7 @@
         white-space: nowrap;
         color: $color-word;
         font-size: 1.125em;
+        position: relative;
         @include screen('tablet') {
           padding: 0 0.5em;
         }

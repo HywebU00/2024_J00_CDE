@@ -130,7 +130,8 @@
                 left: 0;
                 top: 13px;
               }
-              &:hover {
+              &:hover,
+              &:focus {
                 color: #fff;
                 text-decoration: underline;
               }
