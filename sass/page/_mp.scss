@@ -279,10 +279,10 @@ a.more {
                 }
               }
               p {
-                font-size: 1.313em;
+                font-size: 1.25em;
                 line-height: 1.5em;
                 @include text-line(5, 1.5em);
-                font-weight: 500;
+                font-weight: normal;
                 letter-spacing: 0.02em;
                 @media (max-width: 1500px) {
                   @include text-line(4, 1.5em);
@@ -479,7 +479,7 @@ a.more {
               p {
                 font-size: 1em;
                 @include text-line(5, 1.7em);
-                font-weight: 500;
+                font-weight: normal;
                 letter-spacing: 0.05em;
                 transform: skewY(5deg);
                 line-height: 1.7em;
@@ -681,6 +681,8 @@ a.more {
           -webkit-box-orient: vertical;
           line-height: 1.5;
           margin-bottom: 0;
+          font-size: 1.125em;
+          font-weight: normal;
         }
       }
       ul {
@@ -700,12 +702,14 @@ a.more {
               background-color: transparent;
               color: $color-word;
               font-size: 1.125em;
+              font-weight: normal;
             }
             .title {
               overflow: hidden;
               display: -webkit-box;
               -webkit-line-clamp: 1;
               -webkit-box-orient: vertical;
+              font-weight: normal;
             }
           }
         }

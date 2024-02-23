@@ -9684,7 +9684,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   }
 }
 .mpSliderblock .container .mpSlider01 .pic_box a .pic_content .caption p {
-  font-size: 1.313em;
+  font-size: 1.25em;
   line-height: 1.5em;
   overflow: hidden;
   text-overflow: -o-ellipsis-lastline;
@@ -9694,7 +9694,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   -webkit-box-orient: vertical;
   line-height: 1.5em;
   height: calc(1.5em * 5);
-  font-weight: 500;
+  font-weight: normal;
   letter-spacing: 0.02em;
 }
 @media (max-width: 1500px) {
@@ -9968,7 +9968,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   -webkit-box-orient: vertical;
   line-height: 1.7em;
   height: calc(1.7em * 5);
-  font-weight: 500;
+  font-weight: normal;
   letter-spacing: 0.05em;
   transform: skewY(5deg);
   line-height: 1.7em;
@@ -10196,6 +10196,8 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   -webkit-box-orient: vertical;
   line-height: 1.5;
   margin-bottom: 0;
+  font-size: 1.125em;
+  font-weight: normal;
 }
 .mp_newsBlock .tabContent .nwes_content ul {
   height: auto;
@@ -10216,12 +10218,14 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   background-color: transparent;
   color: #333;
   font-size: 1.125em;
+  font-weight: normal;
 }
 .mp_newsBlock .tabContent .nwes_content ul li a .title {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  font-weight: normal;
 }
 
 .mp_businessBlock {
