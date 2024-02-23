@@ -3676,12 +3676,16 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .menu.sticky > ul > li > a {
   color: #fff;
+  padding: 0.5em 1em;
 }
 .menu.sticky > ul > li:hover {
   background-color: #0c3a78;
 }
 .menu.sticky > ul > li:hover > a {
   color: #fff;
+}
+.menu.sticky ul ul {
+  width: 160px;
 }
 @media screen and (max-width: 767px) {
   .menu {

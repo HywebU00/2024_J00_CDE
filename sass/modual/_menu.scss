@@ -42,6 +42,7 @@
       > li {
         > a {
           color: #fff;
+          padding: 0.5em 1em;
         }
         &:hover {
           background-color: $primaryColor;
@@ -49,6 +50,11 @@
             color: #fff;
           }
         }
+      }
+    }
+    ul {
+      ul {
+        width: 160px;
       }
     }
   }
