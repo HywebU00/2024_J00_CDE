@@ -234,6 +234,7 @@
         text-align: left;
         animation: showMenu 0.3s $cubic;
         font-size: 0.938em;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         // 第二層選單樣式
         li {
           float: none;

@@ -1,7 +1,7 @@
 .breadcrumb {
   padding: 0.1em 0em 0.1em 1em;
   margin: 0px auto 50px;
-  background-color: $linkColor;
+  background-color: $primaryColor;
   @include screen('mobile') {
     padding: 0 0 0 1em;
     margin: 0px auto 20px;

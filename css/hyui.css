@@ -2129,7 +2129,7 @@ kbd kbd {
 .breadcrumb {
   padding: 0.1em 0em 0.1em 1em;
   margin: 0px auto 50px;
-  background-color: #4b74ac;
+  background-color: #0c3a78;
 }
 @media screen and (max-width: 767px) {
   .breadcrumb {
@@ -3854,6 +3854,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   text-align: left;
   animation: showMenu 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   font-size: 0.938em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .menu ul li ul li {
   float: none;
