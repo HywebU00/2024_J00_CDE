@@ -93,13 +93,14 @@ h2.title {
     top: 100px;
     z-index: 9;
     width: 1.5em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     @include screen('tablet') {
       display: block;
     }
     a {
       color: #fff;
       display: block;
-      background-color: $primaryColor;
+      background-color: $secondaryColor;
       padding: 2em 0.5em 1em;
       border-radius: 0 5px 5px 0;
       width: 2em;
