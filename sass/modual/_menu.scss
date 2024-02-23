@@ -23,8 +23,8 @@
       left: 0;
       width: 100%;
       z-index: 999;
-      background: rgb(252, 174, 80);
-      background: linear-gradient(180deg, rgba(252, 174, 80, 1) 0%, rgba(222, 122, 0, 1) 100%);
+      background: rgb(252, 176, 124);
+      background: linear-gradient(180deg, rgba(252, 176, 124, 1) 0%, rgba(247, 146, 77, 1) 100%);
       box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
       &:after {
         position: absolute;
@@ -47,7 +47,7 @@
             position: absolute;
             right: 0;
             top: 0;
-            background-color: #de7a00;
+            background-color: #f8883c;
           }
           &:after {
             content: '';

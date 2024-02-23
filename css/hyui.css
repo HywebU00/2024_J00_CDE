@@ -1348,7 +1348,7 @@ a.goCenter {
   padding: 0 0.5em;
   height: 2em;
   line-height: 2em;
-  background: #de7a00;
+  background: #f7924d;
   color: #fff;
   text-decoration: none;
   z-index: 999999999999;
@@ -1535,7 +1535,7 @@ br {
 }
 
 .gs-webResult div.gs-visibleUrl {
-  color: #de7a00 !important;
+  color: #f7924d !important;
 }
 
 .gsc-search-button.gsc-search-button-v2 {
@@ -1906,26 +1906,26 @@ kbd kbd {
 }
 
 .btn-orange {
-  background: #de7a00;
-  border: 1px solid #de7a00;
+  background: #f7924d;
+  border: 1px solid #f7924d;
   color: #fff;
 }
 .btn-orange:hover {
-  background: #ab5e00;
-  border: 1px solid #784200;
+  background: #f5741c;
+  border: 1px solid #d45c0a;
   cursor: pointer;
   color: #fff;
   outline: none;
 }
 .btn-orange:focus {
-  background: #ab5e00;
-  border: 1px solid #784200;
+  background: #f5741c;
+  border: 1px solid #d45c0a;
   cursor: pointer;
   color: #fff;
   outline: none;
 }
 .btn-orange.active {
-  background: #f88800;
+  background: #f8a165;
   cursor: pointer;
 }
 
@@ -3118,8 +3118,8 @@ em[tooltip]:hover, em[tooltip]:focus {
 }
 .category a.active {
   color: #fff;
-  background-color: #de7a00;
-  border: 1px solid #de7a00;
+  background-color: #f7924d;
+  border: 1px solid #f7924d;
 }
 .category a span:before {
   content: "(";
@@ -3660,8 +3660,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   left: 0;
   width: 100%;
   z-index: 999;
-  background: rgb(252, 174, 80);
-  background: linear-gradient(180deg, rgb(252, 174, 80) 0%, rgb(222, 122, 0) 100%);
+  background: rgb(252, 176, 124);
+  background: linear-gradient(180deg, rgb(252, 176, 124) 0%, rgb(247, 146, 77) 100%);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .menu.orangemenu.sticky:after {
@@ -3685,7 +3685,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   position: absolute;
   right: 0;
   top: 0;
-  background-color: #de7a00;
+  background-color: #f8883c;
 }
 .menu.orangemenu.sticky > ul > li:after {
   content: "";
@@ -4824,7 +4824,7 @@ footer .footer_map a {
   font-size: 1.25em;
 }
 footer .footer_map a:hover {
-  background-color: #de7a00;
+  background-color: #f7924d;
 }
 footer .footer_info {
   flex: 1 1 auto;
@@ -4989,7 +4989,7 @@ footer .footer_icon img {
   transition: 0.3s ease-out;
 }
 .fatfooter .btn-fatfooter:hover, .fatfooter .btn-fatfooter:focus {
-  background-color: #de7a00;
+  background-color: #f7924d;
   color: #fff;
   text-decoration: none;
   cursor: pointer;
@@ -5270,7 +5270,7 @@ select::-ms-expand {
   margin-bottom: 2em;
 }
 .flex-form.flex-form_block h3 {
-  color: #de7a00;
+  color: #f7924d;
   font-size: 1.25em;
 }
 .flex-form .form_grp {
@@ -7591,7 +7591,7 @@ table .date {
 .sub_menu li a:hover, .sub_menu li a:focus {
   color: #fff;
   background-color: #0c3a78;
-  border-left: 10px solid #de7a00;
+  border-left: 10px solid #f7924d;
   text-decoration: none;
 }
 
@@ -7691,7 +7691,7 @@ table .date {
   background: #99bcdc;
 }
 .tabSet.nwes_slider .tabItems .item.active {
-  background-color: #de7a00;
+  background-color: #f7924d;
 }
 .tabSet.nwes_slider .tabItems .item.active:before {
   content: "";
@@ -9570,8 +9570,8 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .mpSliderblock .container .mpSlider01 .pic_box a:after {
   content: "";
   border-radius: 0 0 25% 0/0 1% 102% 0;
-  background: rgb(152, 152, 152);
-  background: linear-gradient(119deg, rgb(152, 152, 152) 75%, rgb(235, 235, 235) 83%, rgb(152, 152, 152) 88%);
+  background: rgb(129, 129, 129);
+  background: linear-gradient(121deg, rgb(129, 129, 129) 74%, rgb(235, 235, 235) 82%, rgb(115, 115, 115) 88%);
   position: absolute;
   left: 0;
   top: 0;
@@ -9582,16 +9582,16 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .mpSliderblock .container .mpSlider01 .pic_box a:before {
   content: "";
-  border-radius: 0 0 22% 0/0 1% 65% 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0 0 22% 0/0 1% 138% 0;
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
   z-index: 50;
-  width: 34.6%;
+  width: 35.4%;
   height: 500px;
-  box-shadow: 2px 2px 7px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 2px 24px 13px rgba(0, 0, 0, 0.6);
 }
 @media screen and (max-width: 767px) {
   .mpSliderblock .container .mpSlider01 .pic_box a {
@@ -10320,7 +10320,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   color: #0c3a78;
 }
 .mp_businessBlock .business_group .info ul li a:hover {
-  color: #de7a00;
+  color: #f7924d;
 }
 
 .mp_knowledgeBlock {
@@ -10425,7 +10425,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .mp_achievementsBlock .item .num {
   flex: 0 0 auto;
   flex-basis: 100px;
-  color: #de7a00;
+  color: #f7924d;
   font-size: 3em;
   padding-right: 10px;
   font-weight: bolder;
@@ -10477,7 +10477,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   color: #0c3a78;
 }
 .mp_achievementsBlock .item .info ul li a:hover {
-  color: #de7a00;
+  color: #f7924d;
 }
 
 .mp_linkBox .item {
@@ -11370,7 +11370,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   transform: scale(1.1);
 }
 .c_news .col:nth-of-type(1) a:hover .info {
-  background: #de7a00;
+  background: #f7924d;
 }
 .c_news .picBox {
   max-width: 625px;
@@ -11395,7 +11395,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   position: absolute;
   right: 0;
   top: 0;
-  background: #de7a00;
+  background: #f7924d;
   color: #fff;
   padding: 0.5em 1em;
   font-size: 1.125em;
@@ -11778,7 +11778,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   display: flex;
 }
 .c_iconBox_wbg .listBox .item:nth-child(even) .pic {
-  background: #de7a00;
+  background: #f7924d;
 }
 .c_iconBox_wbg .listBox .item .pic {
   width: 100px;
@@ -12133,7 +12133,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   box-shadow: none;
 }
 .c_tab .tabBox .tab button.active {
-  background: #de7a00;
+  background: #f7924d;
 }
 .c_tab .tabBox .tab button.active::before {
   opacity: 1;
@@ -12176,7 +12176,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 
 .c_newsCard .item:hover .info {
-  background: #de7a00;
+  background: #f7924d;
 }
 .c_newsCard .item:hover .info time {
   color: #fff;
@@ -12272,7 +12272,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   box-shadow: none;
 }
 .c_newsCardTab .tab button.active {
-  background: #de7a00;
+  background: #f7924d;
 }
 .c_newsCardTab .tab button.active::before {
   opacity: 1;
@@ -12282,7 +12282,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   margin: 0 -12px;
 }
 .c_newsCardTab .item:hover .info {
-  background: #de7a00;
+  background: #f7924d;
 }
 .c_newsCardTab .item:hover .info time {
   color: #fff;
@@ -12335,7 +12335,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 
 .c_cardLink .item:hover .info {
-  background: #de7a00;
+  background: #f7924d;
 }
 .c_cardLink .item a {
   display: block;
@@ -12616,7 +12616,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   line-height: 1.2;
 }
 .c_newsCardLink .item .info .linkBox a:hover {
-  background: #de7a00;
+  background: #f7924d;
 }
 
 .c_faq .listBox {
@@ -13066,7 +13066,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   font-size: 1.25em;
   margin-bottom: 0;
   font-weight: 500;
-  color: #de7a00;
+  color: #f7924d;
 }
 @media screen and (max-width: 767px) {
   .conditional_searchblock .title {
