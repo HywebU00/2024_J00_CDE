@@ -277,6 +277,15 @@ $(function () {
     $('.left_block').stop().toggleClass('open');
     $(this).stop().toggleClass('open');
   });
+
+  $(document)
+    .off('touchend click')
+    .on('touchend click', function (e) {
+      var container = $('.nodemenu_btn a, .left_block '); //點這些以外的區塊
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        $('.left_block').removeClass('open'); //要被收起來的區塊
+      }
+    });
 });
 
 ////////////////////////////////////////////////////////

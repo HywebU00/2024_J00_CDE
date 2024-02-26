@@ -90,12 +90,16 @@ h2.title {
     display: none;
     position: absolute;
     left: 0em;
-    top: 70px;
+    top: 116px;
     z-index: 9;
     width: 1.5em;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     @include screen('tablet') {
       display: block;
+    }
+    @include screen('mobile') {
+      display: block;
+      top: 100px;
     }
     a {
       color: #fff;
@@ -155,7 +159,7 @@ h2.title {
     @include screen('tablet') {
       position: absolute;
       left: -210px;
-      top: 70px;
+      top: 116px;
       bottom: 0;
       width: 210px;
       transition: 0.5s;
@@ -169,6 +173,9 @@ h2.title {
         flex-basis: 100%;
         max-width: 100%;
       }
+    }
+    @include screen('mobile') {
+      top: 100px;
     }
   }
 }
