@@ -269,8 +269,10 @@ $(function () {
     .children('li')
     .children('a')
     .click(function () {
-      $(this).next('ul').stop().slideToggle();
-      $(this).parent('li').stop().toggleClass('open');
+      $(this).next('ul').stop().slideDown();
+      $(this).parent('.hasChild').addClass('open');
+      $(this).parent('li').siblings('li').children('ul').stop().slideUp();
+      $(this).parent('li').siblings('.hasChild').removeClass('open');
     });
   //  內頁左欄 左右收合
   $('.nodemenu_btn>a').click(function () {
