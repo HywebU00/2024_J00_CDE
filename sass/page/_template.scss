@@ -90,19 +90,19 @@ h2.title {
     display: none;
     position: absolute;
     left: 0em;
-    top: 100px;
+    top: 70px;
     z-index: 9;
     width: 1.5em;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     @include screen('tablet') {
       display: block;
     }
     a {
       color: #fff;
       display: block;
-      background-color: $secondaryColor;
+      background-color: $primaryColor;
       padding: 2em 0.5em 1em;
-      border-radius: 0 5px 5px 0;
+      border-radius: 0 8px 8px 0;
       width: 2em;
       position: relative;
       &:before {
@@ -118,6 +118,7 @@ h2.title {
         height: 8px;
       }
       &.open {
+        border-radius: 0 8px 0 0;
         &:before {
           left: 0.8em;
           transform: rotate(-45deg);
@@ -154,7 +155,7 @@ h2.title {
     @include screen('tablet') {
       position: absolute;
       left: -210px;
-      top: 100px;
+      top: 70px;
       bottom: 0;
       width: 210px;
       transition: 0.5s;

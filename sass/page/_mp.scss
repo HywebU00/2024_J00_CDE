@@ -198,6 +198,22 @@ a.more {
             z-index: 90;
             width: 35.2%;
             height: 500px;
+            @media (max-width: 1800px) {
+              border-radius: 0 0 33% 0/0 1% 102% 0;
+              background: linear-gradient(118deg, rgb(129, 129, 129) 74%, rgb(235, 235, 235) 80%, rgb(115, 115, 115) 88%);
+            }
+            @media (max-width: 1500px) {
+              border-radius: 0 0 35% 0/0 1% 102% 0;
+              background: linear-gradient(110deg, rgb(129, 129, 129) 74%, rgb(235, 235, 235) 80%, rgb(115, 115, 115) 88%);
+            }
+            @media (max-width: 1200px) {
+              border-radius: 0 0 43% 0/0 1% 102% 0;
+              background: linear-gradient(109deg, rgb(129, 129, 129) 74%, rgb(235, 235, 235) 77%, rgb(115, 115, 115) 88%);
+            }
+            @media (max-width: 992px) {
+              border-radius: 0 0 43% 0/0 1% 102% 0;
+              background: linear-gradient(110deg, rgb(129, 129, 129) 61%, rgb(235, 235, 235) 73%, rgb(115, 115, 115) 88%);
+            }
           }
           &:before {
             content: '';
@@ -222,7 +238,7 @@ a.more {
             flex: 0 0 auto;
             flex-basis: 35%;
             max-width: 35%;
-            border-radius: 0 0 51% 0/0 1% 100% 0;
+            border-radius: 0 0 54% 0/0 1% 100% 0;
             background-color: #3361a1;
             position: absolute;
             left: 0;
@@ -235,6 +251,18 @@ a.more {
             background-image: url('../images/mp/mpsliderbg.jpg');
             background-repeat: no-repeat;
             background-position: center top;
+            @media (max-width: 1800px) {
+              border-radius: 0 0 78% 0/0 1% 100% 0;
+            }
+            @media (max-width: 1500px) {
+              border-radius: 0 0 90% 0/0 1% 100% 0;
+            }
+            @media (max-width: 1200px) {
+              border-radius: 0 0 100% 0/0 1% 100% 0;
+            }
+            @media (max-width: 992px) {
+              height: 400px;
+            }
             @include screen('mobile') {
               max-width: 100%;
               position: relative;
@@ -257,7 +285,7 @@ a.more {
                 margin: 1.5em 2em 0;
               }
               @media (max-width: 992px) {
-                margin: 1em 1em 0;
+                margin: 1em 2em 0;
               }
               @include screen('mobile') {
                 margin: 0;

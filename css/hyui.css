@@ -9343,10 +9343,10 @@ h2.title {
   display: none;
   position: absolute;
   left: 0em;
-  top: 100px;
+  top: 70px;
   z-index: 9;
   width: 1.5em;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 @media screen and (max-width: 991px) {
   .innerpage .nodemenu_btn {
@@ -9356,9 +9356,9 @@ h2.title {
 .innerpage .nodemenu_btn a {
   color: #fff;
   display: block;
-  background-color: #f7924d;
+  background-color: #0c3a78;
   padding: 2em 0.5em 1em;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 8px 8px 0;
   width: 2em;
   position: relative;
 }
@@ -9373,6 +9373,9 @@ h2.title {
   left: 0.6em;
   width: 8px;
   height: 8px;
+}
+.innerpage .nodemenu_btn a.open {
+  border-radius: 0 8px 0 0;
 }
 .innerpage .nodemenu_btn a.open:before {
   left: 0.8em;
@@ -9403,7 +9406,7 @@ h2.title {
   .innerpage .left_block {
     position: absolute;
     left: -210px;
-    top: 100px;
+    top: 70px;
     bottom: 0;
     width: 210px;
     transition: 0.5s;
@@ -9582,6 +9585,30 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   width: 35.2%;
   height: 500px;
 }
+@media (max-width: 1800px) {
+  .mpSliderblock .container .mpSlider01 .pic_box a:after {
+    border-radius: 0 0 33% 0/0 1% 102% 0;
+    background: linear-gradient(118deg, rgb(129, 129, 129) 74%, rgb(235, 235, 235) 80%, rgb(115, 115, 115) 88%);
+  }
+}
+@media (max-width: 1500px) {
+  .mpSliderblock .container .mpSlider01 .pic_box a:after {
+    border-radius: 0 0 35% 0/0 1% 102% 0;
+    background: linear-gradient(110deg, rgb(129, 129, 129) 74%, rgb(235, 235, 235) 80%, rgb(115, 115, 115) 88%);
+  }
+}
+@media (max-width: 1200px) {
+  .mpSliderblock .container .mpSlider01 .pic_box a:after {
+    border-radius: 0 0 43% 0/0 1% 102% 0;
+    background: linear-gradient(109deg, rgb(129, 129, 129) 74%, rgb(235, 235, 235) 77%, rgb(115, 115, 115) 88%);
+  }
+}
+@media (max-width: 992px) {
+  .mpSliderblock .container .mpSlider01 .pic_box a:after {
+    border-radius: 0 0 43% 0/0 1% 102% 0;
+    background: linear-gradient(110deg, rgb(129, 129, 129) 61%, rgb(235, 235, 235) 73%, rgb(115, 115, 115) 88%);
+  }
+}
 .mpSliderblock .container .mpSlider01 .pic_box a:before {
   content: "";
   border-radius: 0 0 22% 0/0 1% 138% 0;
@@ -9607,7 +9634,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   flex: 0 0 auto;
   flex-basis: 35%;
   max-width: 35%;
-  border-radius: 0 0 51% 0/0 1% 100% 0;
+  border-radius: 0 0 54% 0/0 1% 100% 0;
   background-color: #3361a1;
   position: absolute;
   left: 0;
@@ -9620,6 +9647,26 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   background-image: url("../images/mp/mpsliderbg.jpg");
   background-repeat: no-repeat;
   background-position: center top;
+}
+@media (max-width: 1800px) {
+  .mpSliderblock .container .mpSlider01 .pic_box a .pic_content {
+    border-radius: 0 0 78% 0/0 1% 100% 0;
+  }
+}
+@media (max-width: 1500px) {
+  .mpSliderblock .container .mpSlider01 .pic_box a .pic_content {
+    border-radius: 0 0 90% 0/0 1% 100% 0;
+  }
+}
+@media (max-width: 1200px) {
+  .mpSliderblock .container .mpSlider01 .pic_box a .pic_content {
+    border-radius: 0 0 100% 0/0 1% 100% 0;
+  }
+}
+@media (max-width: 992px) {
+  .mpSliderblock .container .mpSlider01 .pic_box a .pic_content {
+    height: 400px;
+  }
 }
 @media screen and (max-width: 767px) {
   .mpSliderblock .container .mpSlider01 .pic_box a .pic_content {
@@ -9655,7 +9702,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 @media (max-width: 992px) {
   .mpSliderblock .container .mpSlider01 .pic_box a .pic_content .caption {
-    margin: 1em 1em 0;
+    margin: 1em 2em 0;
   }
 }
 @media screen and (max-width: 767px) {
