@@ -267,13 +267,17 @@ $(function () {
   _leftnodemenu.find('li').has('ul').addClass('hasChild');
 
   _leftnodemenu.children('li').click(function () {
-    $(this).find('ul').slideToggle();
-    // $(this).next('ul').stop().slideDown();
-    $(this).toggleClass('open');
-    // $(this).parent('.hasChild').addClass('open');
+    $(this).find('ul').stop().slideToggle();
+    $(this).stop().toggleClass('open');
     $(this).siblings('li').children('ul').stop().slideUp();
     $(this).siblings('.hasChild').removeClass('open');
   });
+  _leftnodemenu
+    .children('li')
+    .children('a')
+    .click(function () {
+      $(this).children('ul').hide();
+    });
   //  內頁左欄 左右收合
   $('.nodemenu_btn>a').click(function () {
     $('.left_block').stop().toggleClass('open');
