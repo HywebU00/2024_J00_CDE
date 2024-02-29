@@ -116,32 +116,42 @@
       border-bottom: 1px solid #ccc;
       position: relative;
       display: block;
-      //   &:before {
-      //     content: '';
-      //     border: 5px solid #333;
-      //     border-color: transparent transparent transparent #333;
-      //     position: absolute;
-      //     left: 5px;
-      //     top: 15px;
-      //   }
-      &.hasChild {
+      button.arrow {
+        font-size: 0;
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-color: #eee;
+        right: 5px;
+        top: 3px;
+        border-radius: 5px;
+        border: none;
+        &:focus {
+          border: none;
+          box-shadow: none;
+        }
         &:after {
           content: '';
           border: 2px solid #333;
           width: 8px;
           height: 8px;
+          border-radius: 0;
           position: absolute;
           border-top: none;
           border-left: none;
           transform: rotate(45deg);
-          right: 15px;
-          top: 12px;
+          right: 10px;
+          top: 8px;
           transition: 0.2s;
         }
         &.open {
+          &:focus {
+            background-color: lighten($color: $lightColor, $amount: 8);
+          }
           &:after {
             transform: rotate(-135deg);
-            top: 16px;
+            top: 12px;
           }
         }
       }
@@ -154,7 +164,7 @@
         line-height: 1.4em;
         color: #333;
         font-size: 1.063em;
-        margin-right: 2em;
+        margin-right: 3em;
         &:hover {
           color: $aHover;
         }

@@ -265,19 +265,18 @@ $(function () {
   //內頁左欄上下開合
   var _leftnodemenu = $('.left_block .leftblock_nodemenu ul');
   _leftnodemenu.find('li').has('ul').addClass('hasChild');
-
-  _leftnodemenu.children('li').click(function () {
-    $(this).find('ul').stop().slideToggle();
-    $(this).stop().toggleClass('open');
-    $(this).siblings('li').children('ul').stop().slideUp();
-    $(this).siblings('.hasChild').removeClass('open');
-  });
+  var _hasul = _leftnodemenu.find('.hasChild').children('a');
+  $('<button type="button" class="arrow">箭頭</button>').insertAfter(_hasul);
   _leftnodemenu
     .children('li')
-    .children('a')
+    .children('button')
     .click(function () {
-      $(this).children('ul').hide();
+      $(this).next('ul').stop().slideToggle();
+      $(this).stop().toggleClass('open');
+      $(this).parent('li').siblings('li').children('ul').stop().slideUp();
+      $(this).parent('li').siblings('.hasChild').children('button').removeClass('open');
     });
+
   //  內頁左欄 左右收合
   $('.nodemenu_btn>a').click(function () {
     $('.left_block').stop().toggleClass('open');

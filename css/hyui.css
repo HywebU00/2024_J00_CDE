@@ -12996,22 +12996,42 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   position: relative;
   display: block;
 }
-.leftblock_nodemenu ul > li.hasChild:after {
+.leftblock_nodemenu ul > li button.arrow {
+  font-size: 0;
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #eee;
+  right: 5px;
+  top: 3px;
+  border-radius: 5px;
+  border: none;
+}
+.leftblock_nodemenu ul > li button.arrow:focus {
+  border: none;
+  box-shadow: none;
+}
+.leftblock_nodemenu ul > li button.arrow:after {
   content: "";
   border: 2px solid #333;
   width: 8px;
   height: 8px;
+  border-radius: 0;
   position: absolute;
   border-top: none;
   border-left: none;
   transform: rotate(45deg);
-  right: 15px;
-  top: 12px;
+  right: 10px;
+  top: 8px;
   transition: 0.2s;
 }
-.leftblock_nodemenu ul > li.hasChild.open:after {
+.leftblock_nodemenu ul > li button.arrow.open:focus {
+  background-color: #b7d0e6;
+}
+.leftblock_nodemenu ul > li button.arrow.open:after {
   transform: rotate(-135deg);
-  top: 16px;
+  top: 12px;
 }
 .leftblock_nodemenu ul > li:last-child {
   border: none;
@@ -13022,7 +13042,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   line-height: 1.4em;
   color: #333;
   font-size: 1.063em;
-  margin-right: 2em;
+  margin-right: 3em;
 }
 .leftblock_nodemenu ul > li a:hover {
   color: #4b74ac;
