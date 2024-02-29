@@ -290,7 +290,7 @@ $(function () {
       if (!container.is(e.target) && container.has(e.target).length === 0) {
         $('.left_block').removeClass('open'); //要被收起來的區塊
         $('.left_block .leftblock_nodemenu ul ul').stop().slideUp();
-        $('.left_block .leftblock_nodemenu ul li.hasChild').removeClass('open');
+        $('.left_block .leftblock_nodemenu ul li.hasChild button').removeClass('open');
       }
     });
 });

@@ -10576,21 +10576,21 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   text-align: center;
   background: #fff;
   overflow: hidden;
-  margin: 0;
-  padding: 0.5em 0.8em 0.2em;
+  padding: 0.5em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 400px;
+  margin: 0 auto 1em;
+}
+.cp .pic img {
+  width: 100%;
+  margin: 0 0 0.5em;
+  display: block;
 }
 .cp .pic.float_left {
   width: 400px;
-  height: 300px;
   float: left;
   margin: 0px 2em 1em 0;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.cp .pic.float_left img {
-  width: 100%;
-  border: none;
-  padding: 0;
-  margin-bottom: 0.3em;
+  display: block;
 }
 @media screen and (max-width: 575px) {
   .cp .pic.float_left {
@@ -10605,16 +10605,8 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .cp .pic.float_right {
   width: 400px;
-  height: 300px;
   float: right;
   margin: 0px 0 1em 2em;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.cp .pic.float_right img {
-  width: 100%;
-  border: none;
-  padding: 0;
-  margin-bottom: 0.3em;
 }
 @media screen and (max-width: 575px) {
   .cp .pic.float_right {
@@ -10626,14 +10618,6 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
     display: block;
     margin-bottom: 1em;
   }
-}
-.cp .pic img {
-  float: none;
-  max-width: 100%;
-  margin: 0 auto 0.5em;
-  display: block;
-  border: 1px solid #ddd;
-  padding: 1em;
 }
 .cp .pic figcaption {
   text-align: center;

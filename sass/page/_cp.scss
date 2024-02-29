@@ -7,6 +7,7 @@
   background: #fff;
   border-radius: 8px;
   padding: 2em;
+
   @include screen('xs_mobile') {
     padding: 1em;
   }
@@ -14,21 +15,22 @@
     text-align: center;
     background: #fff;
     overflow: hidden;
-    margin: 0;
-    padding: 0.5em 0.8em 0.2em;
-
+    padding: 0.5em;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 400px;
+    margin: 0 auto 1em;
+    img {
+      width: 100%;
+      margin: 0 0 0.5em;
+      display: block;
+    }
     &.float_left {
       width: 400px;
-      height: 300px;
+
       float: left;
       margin: 0px 2em 1em 0;
-      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-      img {
-        width: 100%;
-        border: none;
-        padding: 0;
-        margin-bottom: 0.3em;
-      }
+      display: block;
+
       @include screen('xs_mobile') {
         float: none;
         max-width: 100%;
@@ -41,16 +43,10 @@
     }
     &.float_right {
       width: 400px;
-      height: 300px;
+
       float: right;
       margin: 0px 0 1em 2em;
-      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-      img {
-        width: 100%;
-        border: none;
-        padding: 0;
-        margin-bottom: 0.3em;
-      }
+
       @include screen('xs_mobile') {
         float: none;
         max-width: 100%;
@@ -60,15 +56,6 @@
         display: block;
         margin-bottom: 1em;
       }
-    }
-
-    img {
-      float: none;
-      max-width: 100%;
-      margin: 0 auto 0.5em;
-      display: block;
-      border: 1px solid #ddd;
-      padding: 1em;
     }
 
     figcaption {
