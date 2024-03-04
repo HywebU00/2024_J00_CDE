@@ -13034,7 +13034,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .leftblock_nodemenu ul > li ul {
   display: none;
   margin: 0;
-  padding: 10px 0;
+  padding: 10px 0 5px;
   background-color: #d2e1f0;
 }
 .leftblock_nodemenu ul > li ul li {
@@ -13054,10 +13054,15 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   border: none;
 }
 .leftblock_nodemenu ul > li ul li a {
-  padding: 0.3em 0 0.2em 2.5em;
+  padding: 0.4em 0 0.4em 2.5em;
   position: relative;
   display: block;
   margin-right: 1em;
+  margin-left: 1em;
+  border-bottom: 1px solid #fff;
+}
+.leftblock_nodemenu ul > li ul li:last-child a {
+  border-bottom: none;
 }
 
 .explain_block,

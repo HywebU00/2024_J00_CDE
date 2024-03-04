@@ -172,7 +172,7 @@
       ul {
         display: none;
         margin: 0;
-        padding: 10px 0;
+        padding: 10px 0 5px;
         background-color: lighten($color: $lightColor, $amount: 15);
         li {
           position: relative;
@@ -190,10 +190,17 @@
             border: none;
           }
           a {
-            padding: 0.3em 0 0.2em 2.5em;
+            padding: 0.4em 0 0.4em 2.5em;
             position: relative;
             display: block;
             margin-right: 1em;
+            margin-left: 1em;
+            border-bottom: 1px solid #fff;
+          }
+          &:last-child {
+            a {
+              border-bottom: none;
+            }
           }
         }
       }
