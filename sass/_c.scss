@@ -485,6 +485,7 @@ $thirdColor: #f7924d;
       display: flex;
       flex-direction: column;
       align-items: center;
+      background-color: #fff;
 
       &:hover {
         .hoverBox {
@@ -655,6 +656,7 @@ $thirdColor: #f7924d;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-color: #fff;
       }
 
       .pic {
@@ -1071,6 +1073,7 @@ $thirdColor: #f7924d;
 
     a {
       display: flex;
+      background-color: #fff;
     }
 
     .pic {
