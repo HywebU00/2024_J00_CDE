@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+  <meta name="robots" content="noindex" />
+  <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HyUI kit</title>
+  <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+  <!-- slick css-->
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+  <!-- 燈箱facybox -->
+  <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
+  <!-- hyUI css -->
+  <link rel="stylesheet" href="css/hyui.css" />
+  <!-- favicon -->
+  <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- 直接跳主內容區 -->
+  <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+  <!-- wrapper Start -->
+  <div class="wrapper">
+    <!-- header Start -->
+    <header class="header ">
+      <div class="container">
+        <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+        <h1>
+          <a href="index.htm"><img src="images/logo.svg" alt="網站標題" /></a>
+        </h1>
+
+        <!-- navigation Start -->
+        <nav class="navigation" role="navigation" aria-label="Site">
+          <!-- 新增div navlist -->
+          <div class="navlist">
+            <ul>
+              <li><a href="#">網站導覽</a></li>
+              <li><a href="#">意見信箱</a></li>
+              <li><a href="#">員工專區</a></li>
+              <li><a href="#">English</a></li>
+            </ul>
+          </div>
+          <!-- font_size -->
+          <div class="font_size_block">
+            <button type="button" class="fontsize_btn">A</button>
+            <div class="font_size_list">
+              <ul>
+                <li><a href="#" role="button" class="small">小</a></li>
+                <li><a href="#" role="button" class="medium">中</a></li>
+                <li><a href="#" role="button" class="large">大</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Search Start -->
+          <div class="searchblock">
+            <button type="button" class="searchbtn">查詢</button>
+            <div class="searchcontent">
+              <div class="search" role="search">
+                <div class="form_grp">
+                  <label for="mustSameAsId">搜尋</label>
+                  <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S" title="請輸入文字" aria-label="搜尋網站內容" />
+                  <input name="" type="submit" value="查詢" class="btn btn-search" />
+                </div>
+                <!-- <div class="btn_grp">
+                              <input name="" type="submit" value="進階搜尋" class="btn" />
+                            </div> -->
+                <div class="keywordHot">
+                  <ul>
+                    <li><a href="#">熱門熱門</a></li>
+                    <li><a href="#">查詢</a></li>
+                    <li><a href="#">字詞三</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Search End -->
+        </nav>
+        <!-- navigation End -->
+        <!-- menu Start -->
+        <nav class="menu" role="navigation" aria-label="Header的導航列">
+          <ul>
+            <li>
+              <a href="#">審查評估業務</a>
+              <ul>
+                <li><a href="#">藥品</a>
+                  <ul>
+                    <li><a href="#">臨床試驗計畫書審查</a></li>
+                    <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
+                    <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li><a href="#">法規諮詢輔導</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a>
+                  <ul>
+                    <li><a href="#">新藥查驗登記</a></li>
+                    <li><a href="#">學名藥查驗登記</a></li>
+                    <li><a href="#">醫師藥師藥劑生指示藥品及成藥等三類別</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">最新法規資訊</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">訊息公告</a>
+              <ul>
+                <li><a href="#">CDE重大消息/政策</a></li>
+                <li><a href="#">業務最新公告</a></li>
+                <li><a href="http://www.google.com">採購公告</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">認識CDE</a>
+              <ul>
+                <li><a href="#">緣起宗旨</a></li>
+                <li><a href="#">董事會/董事長</a></li>
+                <li><a href="#">執行長</a></li>
+                <li><a href="#">組織架構</a></li>
+                <li><a href="#">業務介紹</a></li>
+                <li><a href="#">公開資訊</a></li>
+                <li><a href="#">地理位置</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">加入CDE</a>
+              <ul>
+                <li><a href="#">菁英招募</a></li>
+                <li><a href="#">實習專區</a></li>
+                <li><a href="#">下載專區</a></li>
+                <li><a href="#">聯絡我們</a></li>
+                <li><a href="#">員工專區</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- menu End -->
+        <!-- noscript -->
+        <noscript>
+          您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+          <a href="#">網站導覽</a>
+        </noscript>
+      </div>
+    </header>
+    <!-- header End -->
+    <!-- main Start -->
+    <div id="center" class="main innerpage">
+      <!-- 內頁新增一個classname-->
+      <a class="accesskey" href="#ac" id="ac" accesskey="C" title="主要內容區">:::</a>
+      <!-- breadcrumb路徑 start-->
+      <div class="breadcrumb">
+        <ul>
+          <li><a href="#">首頁</a></li>
+          <li><a href="#">節點</a></li>
+          <li>節點</li>
+        </ul>
+      </div>
+      <div class="container">
+        <div class="nodemenu_btn"><a href="javascript:;">節點連結</a></div>
+        <!-- 左側 -->
+        <div class="left_block ">
+          <div class="leftblock_nodemenu">
+            <div class="title">審查評估業務</div>
+            <ul>
+              <li><a href="mp.htm">業務說明</a>
+              </li>
+              <li>
+                <a href="np.htm">臨床試驗</a>
+                <ul>
+                  <li><a href="#">臨床試驗計畫書審查</a></li>
+                  <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
+                  <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
+                </ul>
+              </li>
+              <li><a href="#">銜接性試驗評估</a>
+              </li>
+              <li><a href="#">藥品查驗登記</a>
+                <ul>
+                  <li><a href="#">新藥查驗登記</a></li>
+                  <li><a href="#">學名藥查驗登記</a></li>
+                  <li><a href="#">醫師藥師藥劑生指示藥品及成藥等三類別</a></li>
+                </ul>
+              </li>
+              <li><a href="#">原料藥</a>
+                <ul>
+                  <li><a href="#">原料藥查驗登記</a></li>
+                  <li><a href="#">原料藥主檔案評估</a></li>
+                </ul>
+              </li>
+              <li><a href="#">藥品上市後業務</a>
+                <ul>
+                  <li><a href="#">適應症及用法用量變更</a></li>
+                  <li><a href="#">仿單變更</a></li>
+                  <li><a href="#">藥品風險管理計畫及執行成效報告評估</a></li>
+                </ul>
+              </li>
+              <li><a href="#">常見問題FAQ</a>
+                <ul>
+                  <li><a href="#">臨床試驗</a></li>
+                  <li><a href="#">銜接性試驗評估</a></li>
+                  <li><a href="#">藥品查驗登記</a></li>
+                  <li><a href="#">原料藥</a></li>
+                  <li><a href="#">藥品上市後業務</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 主要內容區 -->
+        <div class="center_block">
+
+          <h2 class="title">地理資訊</h2>
+          <!-- function_panel -->
+          <div class="function_panel">
+            <!-- function功能區塊 start-->
+            <div class="function">
+              <ul>
+                <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
+                <li class="print"><a href="#">友善列印</a></li>
+                <li class="forward"><a href="#">轉寄友人</a></li>
+              </ul>
+            </div>
+            <!-- 社群分享 -->
+            <div class="share">
+              <ul>
+                <li>
+                  <a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_line.svg" alt="line" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_googleplus.svg" alt="google plus" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_rss.svg" alt="RSS" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_plurk.svg" alt="Plurk" /></a>
+                </li>
+              </ul>
+            </div>
+            <!-- function功能區塊 end-->
+          </div>
+          <!-- function_panel -->
+
+
+          <!-- CP Start -->
+          <section class="cp">
+            <!-- <ul class="publish_info">
+             <li>發布日期：2018-03-20</li>
+                              <li>發布單位：移民事務組‧移民輔導科</li>
+                              <li>聯絡電話：(02)2388-9393 分機2689</li>
+                              <li>更新頻率：不定期</li>
+              <li>更新日期：2024-02-20</li>
+              <li>點閱次數：123456</li>
+            </ul>-->
+            <h3 class="title">位置地圖</h3>
+            <div class="maps"><iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28916.02664776331!2d121.59410499999998!3d25.050924!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab6ffd9e1943%3A0x31e23e2f2c96b08a!2zMTE15Y-w5YyX5biC5Y2X5riv5Y2A5b-g5a2d5p2x6Lev5YWt5q61NDY16JmfM2Y!5e0!3m2!1szh-TW!2stw!4v1709531491981!5m2!1szh-TW!2stw"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <h3 class="title">交通資訊：臨捷運昆陽站123公尺</h3>
+
+            <ul>
+              <li>搭乘捷運請於昆陽站 4 號出口出站，至昆陽街左轉步行 1 分鐘。</li>
+              <li>搭乘公車可在昆陽站下車，可達公車有 212、240、261、270、279、281、284、551、817、小12、小1、小3、小5、市民小巴6、新幹線忠孝、信義、南軟專車、棕19、藍12、15、20、21、22、23、25、36</li>
+              <li>搭乘高鐵可在台北市南港站下車，再轉搭捷運於昆陽站4號出口出站，至昆陽街左轉步行1分鐘。</li>
+              <li>停車場資訊：<br><br>
+                <table>
+                  <!-- 無障礙表格必須帶有標題 <caption> -->
+                  <tr>
+                    <th scope="col">停車場名稱</th>
+                    <th scope="col">地址</th>
+                    <th scope="col">開放時間</th>
+                    <th scope="col">小車位數</th>
+                    <th scope="col">機車位數</th>
+                  </tr>
+                  <tr>
+                    <td>玉成國小地下停車場</td>
+                    <td>台北市南港區昆陽街23號地下</td>
+                    <td>24小時</td>
+                    <td>297</td>
+                    <td>28</td>
+                  </tr>
+                  <tr>
+                    <td>捷運昆陽站(一區)</td>
+                    <td>臺北市南港區忠孝東路6段451號</td>
+                    <td>24小時</td>
+                    <td>42</td>
+                    <td>無</td>
+                  </tr>
+                  <tr>
+                    <td>捷運昆陽站(二區)</td>
+                    <td>臺北市南港區忠孝東路6段451號</td>
+                    <td>24小時</td>
+                    <td>45</td>
+                    <td>無</td>
+                  </tr>
+                  <tr>
+                    <td>捷運昆陽站(三區)</td>
+                    <td>臺北市南港區忠孝東路6段451號</td>
+                    <td>24小時</td>
+                    <td>48</td>
+                    <td>無</td>
+                  </tr>
+                </table>
+              </li>
+            </ul>
+
+
+          </section>
+          <!-- CP End -->
+        </div>
+      </div>
+    </div>
+    <!-- fatfooter Start -->
+    <section class="fatfooter">
+      <div class="container">
+        <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btn-fatfooter">收合</button>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">審查評估業務</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li><a href="#">法規諮詢輔導</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">最新法規資訊</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">訊息公告</a>
+              <ul>
+                <li><a href="#">CDE重大消息/政策</a></li>
+                <li><a href="#">業務最新公告</a></li>
+                <li><a href="http://www.google.com">採購公告</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">認識CDE</a>
+              <ul>
+                <li><a href="#">緣起宗旨</a></li>
+                <li><a href="#">董事會/董事長</a></li>
+                <li><a href="#">執行長</a></li>
+                <li><a href="#">組織架構</a></li>
+                <li><a href="#">業務介紹</a></li>
+                <li><a href="#">公開資訊</a></li>
+                <li><a href="#">地理位置</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">加入CDE</a>
+              <ul>
+                <li><a href="#">菁英招募</a></li>
+                <li><a href="#">實習專區</a></li>
+                <li><a href="#">下載專區</a></li>
+                <li><a href="#">聯絡我們</a></li>
+                <li><a href="#">員工專區</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <!-- fatfooter End -->
+    <!-- footer Start-->
+    <footer>
+      <div class="container">
+        <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+        <div class="footer_logo">
+          <img src="images/footer_logo.svg" alt="" class="img-responsive" />
+        </div>
+        <div class="footer_map"><a href="#">本中心位置圖</a></div>
+        <div class="footer_info">
+          <div class="infoblock">
+            <p class="Copyright">版權所有© 財團法人醫藥品查驗中心<br>
+              地址：台北市南港區11557忠孝東路六段465號3樓</p>
+          </div>
+          <div class="infoblock">
+            <p>電話：886-2-8170-6000（總機服務時間：8:30-12:30 ，13:30-17:30）<br>
+              傳真：886-2-8170-6001、886-2-8170-6002</p>
+          </div>
+          <div class="infoblock">
+            <p>本網站支援IE、Firefox及Chrome，最佳瀏覽解析度為1024x768以上<br>
+              <span class="update">更新日期:<em>2018/01/01</em></span>
+              <span class="counter">累計瀏覽人次:<em>46476653</em></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer End -->
+  </div>
+  <a href="javascript:;" class="scrollToTop">回頁首</a>
+  <!-- JQ -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <!-- 外掛 plugin js -->
+  <script src="vendor/jquery.easing.min.js"></script>
+  <!-- ease -->
+  <script src="vendor/slick/slick.min.js "></script>
+  <!-- slick -->
+  <script src="vendor/lazyload/lazyload.js"></script>
+  <!-- lazyload -->
+  <script src="vendor/picturefill/picturefill.min.js" async></script>
+  <!-- picturefill -->
+  <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+  <!-- scrolltable -->
+  <!-- sticky-sidebar -->
+  <script src="vendor/sticky-sidebar/sticky-sidebar.js"></script>
+  <script src="vendor/sticky-sidebar/ResizeSensor.js"></script>
+  <!-- fancy -->
+  <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+  <!-- hyUI -->
+  <script src="js/hyui.js"></script>
+  <!-- 客製js -->
+  <script src="js/customize.js"></script>
+</body>
+
+</html>
