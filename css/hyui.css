@@ -11782,6 +11782,10 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .c_iconBox2.circle .listBox .slick-slide:nth-child(odd) .pic {
   background: #f7924d;
 }
+.c_iconBox.circle .listBox .item a,
+.c_iconBox2.circle .listBox .item a {
+  background-color: transparent;
+}
 .c_iconBox.circle .listBox .pic,
 .c_iconBox2.circle .listBox .pic {
   width: 100%;

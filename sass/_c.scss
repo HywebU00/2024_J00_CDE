@@ -696,7 +696,11 @@ $thirdColor: #f7924d;
           }
         }
       }
-
+      .item {
+        a {
+          background-color: transparent;
+        }
+      }
       .pic {
         width: 100%;
         max-width: 130px;
