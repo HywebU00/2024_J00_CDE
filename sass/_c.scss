@@ -696,11 +696,13 @@ $thirdColor: #f7924d;
           }
         }
       }
+
       .item {
         a {
           background-color: transparent;
         }
       }
+
       .pic {
         width: 100%;
         max-width: 130px;
@@ -989,14 +991,63 @@ $thirdColor: #f7924d;
         height: 30px;
       }
 
-      $amount: 1;
+      // $amount: 1;
 
-      @while $amount <=10 {
-        &:nth-child(#{$amount}) span {
-          background-color: lighten(#333333, $amount * 6 * 1%);
-        }
+      // @while $amount <=10 {
+      //   &:nth-child(#{$amount}) span {
+      //     background-color: lighten(#333333, $amount * 6 * 1%);
+      //   }
 
-        $amount: $amount + 1;
+      //   $amount: $amount + 1;
+      // }
+
+
+      &:nth-of-type(1n + 1) span {
+        background-color: #2d4374;
+      }
+
+      &:nth-of-type(2n + 1) span {
+        background-color: #a3678b;
+      }
+
+      &:nth-of-type(3n + 1) span {
+        background-color: #7d81ae;
+      }
+
+      &:nth-of-type(4n + 1) span {
+        background-color: #7aac79;
+      }
+
+      &:nth-of-type(5n + 1) span {
+        background-color: #ebe76c;
+      }
+
+      &:nth-of-type(6n + 1) span {
+        background-color: #dac1a3;
+      }
+
+      &:nth-of-type(7n + 1) span {
+        background-color: #fbb254;
+      }
+
+      &:nth-of-type(8n + 1) span {
+        background-color: #fbb254;
+      }
+
+      &:nth-of-type(9n + 1) span {
+        background-color: #834e00;
+      }
+
+      &:nth-of-type(10n + 1) span {
+        background-color: #efb496;
+      }
+
+      &:nth-of-type(11n + 1) span {
+        background-color: #e35e3f;
+      }
+
+      &:nth-of-type(12n + 1) span {
+        background-color: #9b3b3c;
       }
 
       .lineBox {
@@ -1036,16 +1087,30 @@ $thirdColor: #f7924d;
       margin: 20px 0 0 auto;
       position: relative;
 
+      @include screen('tablet') {
+        width: calc(100% - 100px);
+      }
+
       &::before {
         content: attr(data-first);
         position: absolute;
-        left: 0;
+        right: 100%;
       }
 
       .block {
-        width: calc(100% / counter(item));
         position: relative;
         text-align: right;
+        padding-right: 5px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          right: 0;
+          bottom: 100%;
+          width: 1px;
+          height: 10px;
+          background: #9e9e9f;
+        }
       }
     }
   }
@@ -1624,6 +1689,7 @@ $thirdColor: #f7924d;
   }
 
   .c_indexMore {
+
     // margin-top: 30px;
     a {
       display: inline-block;

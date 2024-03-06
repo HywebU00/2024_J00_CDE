@@ -12006,35 +12006,41 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   display: block;
   height: 30px;
 }
-.c_chart .content .item:nth-child(1) span {
-  background-color: #424242;
+.c_chart .content .item:nth-of-type(1n + 1) span {
+  background-color: #2d4374;
 }
-.c_chart .content .item:nth-child(2) span {
-  background-color: #525252;
+.c_chart .content .item:nth-of-type(2n + 1) span {
+  background-color: #a3678b;
 }
-.c_chart .content .item:nth-child(3) span {
-  background-color: #616161;
+.c_chart .content .item:nth-of-type(3n + 1) span {
+  background-color: #7d81ae;
 }
-.c_chart .content .item:nth-child(4) span {
-  background-color: #707070;
+.c_chart .content .item:nth-of-type(4n + 1) span {
+  background-color: #7aac79;
 }
-.c_chart .content .item:nth-child(5) span {
-  background-color: gray;
+.c_chart .content .item:nth-of-type(5n + 1) span {
+  background-color: #ebe76c;
 }
-.c_chart .content .item:nth-child(6) span {
-  background-color: #8f8f8f;
+.c_chart .content .item:nth-of-type(6n + 1) span {
+  background-color: #dac1a3;
 }
-.c_chart .content .item:nth-child(7) span {
-  background-color: #9e9e9e;
+.c_chart .content .item:nth-of-type(7n + 1) span {
+  background-color: #fbb254;
 }
-.c_chart .content .item:nth-child(8) span {
-  background-color: #adadad;
+.c_chart .content .item:nth-of-type(8n + 1) span {
+  background-color: #fbb254;
 }
-.c_chart .content .item:nth-child(9) span {
-  background-color: #bdbdbd;
+.c_chart .content .item:nth-of-type(9n + 1) span {
+  background-color: #834e00;
 }
-.c_chart .content .item:nth-child(10) span {
-  background-color: #cccccc;
+.c_chart .content .item:nth-of-type(10n + 1) span {
+  background-color: #efb496;
+}
+.c_chart .content .item:nth-of-type(11n + 1) span {
+  background-color: #e35e3f;
+}
+.c_chart .content .item:nth-of-type(12n + 1) span {
+  background-color: #9b3b3c;
 }
 .c_chart .content .item .lineBox {
   width: calc(100% - 130px);
@@ -12068,15 +12074,29 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   margin: 20px 0 0 auto;
   position: relative;
 }
+@media screen and (max-width: 991px) {
+  .c_chart .content .infoBox {
+    width: calc(100% - 100px);
+  }
+}
 .c_chart .content .infoBox::before {
   content: attr(data-first);
   position: absolute;
-  left: 0;
+  right: 100%;
 }
 .c_chart .content .infoBox .block {
-  width: calc(100% / counter(item));
   position: relative;
   text-align: right;
+  padding-right: 5px;
+}
+.c_chart .content .infoBox .block::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  width: 1px;
+  height: 10px;
+  background: #9e9e9f;
 }
 
 .c_ptBox .listBox {
