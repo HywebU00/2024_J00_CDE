@@ -43,7 +43,7 @@ $sitemapWidth: 100%;
     width: $sitemapWidth;
     display: inline-block;
     vertical-align: top;
-    margin: 0 -5px 1em 0; // margin-right:改為負5;
+    margin: 0 -5px 0em 0; // margin-right:改為負5;
     box-sizing: border-box;
     padding: 0px 0.5em;
     a {
@@ -62,13 +62,13 @@ $sitemapWidth: 100%;
     }
     ul {
       padding: 0;
-      margin: 0.5em 0;
+      margin: 0.5em 0 0;
       display: flex;
       flex-wrap: wrap;
       li {
         flex: none;
         flex-basis: 31%;
-        margin: 0 1.16% 20px;
+        margin: 0 1.16% 5px;
         padding: 0;
         @include screen('mobile') {
           flex-basis: 48%;

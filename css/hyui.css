@@ -12813,7 +12813,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   width: 100%;
   display: inline-block;
   vertical-align: top;
-  margin: 0 -5px 1em 0;
+  margin: 0 -5px 0em 0;
   box-sizing: border-box;
   padding: 0px 0.5em;
 }
@@ -12832,14 +12832,14 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .cascading li ul {
   padding: 0;
-  margin: 0.5em 0;
+  margin: 0.5em 0 0;
   display: flex;
   flex-wrap: wrap;
 }
 .cascading li ul li {
   flex: none;
   flex-basis: 31%;
-  margin: 0 1.16% 20px;
+  margin: 0 1.16% 5px;
   padding: 0;
 }
 @media screen and (max-width: 767px) {
