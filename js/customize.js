@@ -569,122 +569,136 @@ function animateChart(elem, start, stop, max, duration) {
   requestAnimationFrame(animationStep);
 }
 
-if ($('.c_chart').length > 0) {
-  const indexChart = document.querySelector('.c_chart');
-  const indexTab = indexChart.querySelector('.tab');
-  const indexTabContent = indexChart.querySelector('.contentBox');
-  const indexTabContentChart = indexTabContent.querySelectorAll('.content');
+function chartFn(elem, data) {
+  if ($(elem).length > 0) {
+    const indexChart = document.querySelectorAll(elem);
 
-  window.addEventListener('load', function () {
-    chartData.forEach((chart, index) => {
-      chart.data.forEach((data, i) => {
-        let itemElem = document.createElement('div');
-        itemElem.classList.add('item');
+    window.addEventListener('load', function () {
+      indexChart.forEach((item) => {
+        const indexTab = item.querySelector('.tab');
+        const indexTabContent = item.querySelector('.contentBox');
+        const indexTabContentChart = indexTabContent.querySelectorAll('.content');
 
-        let titleElem = document.createElement('div');
-        titleElem.classList.add('title');
-        titleElem.textContent = data.title;
-        itemElem.appendChild(titleElem);
+        data.forEach((chart, index) => {
+          chart.data.forEach((data, i) => {
+            let itemElem = document.createElement('div');
+            itemElem.classList.add('item');
 
-        let lineBox = document.createElement('div');
-        lineBox.classList.add('lineBox');
-        lineBox.classList.add(`line${i + 1}`);
+            let titleElem = document.createElement('div');
+            titleElem.classList.add('title');
+            titleElem.textContent = data.title;
+            itemElem.appendChild(titleElem);
 
-        let span = document.createElement('span');
-        lineBox.appendChild(span);
+            let lineBox = document.createElement('div');
+            lineBox.classList.add('lineBox');
+            lineBox.classList.add(`line${i + 1}`);
 
-        let countElem = document.createElement('div');
-        countElem.classList.add('count');
-        countElem.dataset.count = data.value;
-        lineBox.appendChild(countElem);
-        itemElem.appendChild(lineBox);
-        indexTabContentChart[index].appendChild(itemElem);
-      });
+            let span = document.createElement('span');
+            lineBox.appendChild(span);
 
-      indexTabContent.appendChild(indexTabContentChart[index]);
-
-      let infoElem = document.createElement('div');
-      infoElem.classList.add('infoBox');
-      infoElem.dataset.first = chart.info[0];
-      for (let i = 1; i < chart.info[2] + 1; i++) {
-        let block = document.createElement('div');
-        block.classList.add('block');
-        block.textContent = (chart.info[1] / chart.info[2]) * i;
-        block.style.width = `${100 / chart.info[2]}%`;
-        infoElem.appendChild(block);
-      }
-
-      indexTabContentChart[index].appendChild(infoElem);
-    });
-
-    const indexTabChartBox = indexChart.querySelectorAll('.content');
-    const indexTabButton = indexTab.querySelectorAll('button');
-    indexTabButton.forEach((value, index) => {
-      value.addEventListener('click', function () {
-        let max = chartData[index].info[1];
-
-        let allItem = indexTabChartBox[index].querySelectorAll('.item');
-        allItem.forEach((item, index) => {
-          animateChart(item.querySelector('span'), 0, Number(item.querySelector('.count').dataset.count), max);
-        });
-      });
-    });
-
-    setTimeout(() => {
-      let indexScrollCheck = false;
-      let allItem = indexTabContent.querySelectorAll('.content')[0].querySelectorAll('.item');
-      let max = chartData[0].info[1];
-
-      function handleChartAnimation() {
-        if (isObjectTBVisible(indexChart) && !indexScrollCheck) {
-          allItem.forEach((item, index) => {
-            animateChart(item.querySelector('span'), 0, Number(item.querySelector('.count').dataset.count), max);
+            let countElem = document.createElement('div');
+            countElem.classList.add('count');
+            countElem.dataset.count = data.value;
+            lineBox.appendChild(countElem);
+            itemElem.appendChild(lineBox);
+            indexTabContentChart[index].appendChild(itemElem);
           });
-          indexScrollCheck = true;
-        }
-      }
 
-      handleChartAnimation();
-      window.addEventListener('scroll', handleChartAnimation);
-    }, 100);
-  });
+          indexTabContent.appendChild(indexTabContentChart[index]);
 
-  function isObjectTBVisible(object) {
-    let windowHeight = window.innerHeight;
+          let infoElem = document.createElement('div');
+          infoElem.classList.add('infoBox');
+          infoElem.dataset.first = chart.info[0];
+          for (let i = 1; i < chart.info[2] + 1; i++) {
+            let block = document.createElement('div');
+            block.classList.add('block');
+            block.textContent = (chart.info[1] / chart.info[2]) * i;
+            block.style.width = `${100 / chart.info[2]}%`;
+            infoElem.appendChild(block);
+          }
 
-    let objectRect = object?.getBoundingClientRect();
-    let objectTop = objectRect?.top;
-    let objectBottom = objectRect?.bottom;
+          indexTabContentChart[index].appendChild(infoElem);
+        });
 
-    let isFullyVisible = (objectTop - windowHeight + 100 <= 0 && objectBottom > 0) || (objectTop <= 0 && objectBottom.bottom - 100 > 0);
-    return isFullyVisible;
+        const indexTabChartBox = item.querySelectorAll('.content');
+        const indexTabButton = indexTab.querySelectorAll('button');
+        indexTabButton.forEach((value, index) => {
+          value.addEventListener('click', function () {
+            let max = chartData[index].info[1];
+
+            let allItem = indexTabChartBox[index].querySelectorAll('.item');
+            allItem.forEach((item, index) => {
+              animateChart(item.querySelector('span'), 0, Number(item.querySelector('.count').dataset.count), max);
+            });
+          });
+        });
+
+        setTimeout(() => {
+          let indexScrollCheck = false;
+          let allItem = indexTabContent.querySelectorAll('.content')[0].querySelectorAll('.item');
+          let max = chartData[0].info[1];
+
+          function handleChartAnimation() {
+            if (isObjectTBVisible(item) && !indexScrollCheck) {
+              allItem.forEach((item, index) => {
+                animateChart(item.querySelector('span'), 0, Number(item.querySelector('.count').dataset.count), max);
+              });
+              indexScrollCheck = true;
+            }
+          }
+
+          handleChartAnimation();
+          window.addEventListener('scroll', handleChartAnimation);
+        }, 100);
+      });
+    });
+
+    function isObjectTBVisible(object) {
+      let windowHeight = window.innerHeight;
+
+      let objectRect = object?.getBoundingClientRect();
+      let objectTop = objectRect?.top;
+      let objectBottom = objectRect?.bottom;
+
+      let isFullyVisible = (objectTop - windowHeight + 100 <= 0 && objectBottom > 0) || (objectTop <= 0 && objectBottom.bottom - 100 > 0);
+      return isFullyVisible;
+    }
   }
 }
+chartFn('.c_chart', chartData);
 
 function tabUse(elem, hasTab) {
-  $(elem).find('.tab button').eq(0).addClass('active');
-  $(elem).find('.content').eq(0).show();
-  $(elem)
-    .find('.tab button')
-    .on('click', function () {
+  let _target = $(elem).children('.tabBox')[0];
+  $(_target).children('.tab').find('button').eq(0).addClass('active');
+  console.log($(_target));
+  $(_target).find('.contentBox > .content').eq(0).show();
+
+  $(_target)
+    .find('.tab > button')
+    .on('click', function (e) {
       let index = $(this).index();
-      $(elem).find('.tab button').removeClass('active');
+      console.log($(this).parent().siblings('.contentBox').children('.content'));
+
+      $(this).siblings('button').removeClass('active');
       $(this).addClass('active');
-      $(elem).find('.content').hide();
-      $(elem).find('.content').eq(index).show();
+      $(this).parent().siblings('.contentBox').children('.content').hide();
+      $(this).parent().siblings('.contentBox').children('.content').eq(index).show();
       if (hasTab) {
         checkSlick12_3();
         checkSlick12_4();
         checkSlick12_5();
-        $(elem).find('.slick12_3').slick('refresh');
-        $(elem).find('.slick12_4').slick('refresh');
-        $(elem).find('.slick12_5').slick('refresh');
+        $(_target).find('.slick12_3').slick('refresh');
+        $(_target).find('.slick12_4').slick('refresh');
+        $(_target).find('.slick12_5').slick('refresh');
       }
     });
 }
 
+// tabUse('.chart1');
+// tabUse('.chart2');
 tabUse('.c_chart');
 tabUse('.c_tab');
+tabUse('.c_tab2');
 tabUse('.c_newsCardTab', true);
 
 function faq(elem) {

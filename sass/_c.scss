@@ -1207,12 +1207,13 @@ $thirdColor: #f7924d;
 /// c_ptBox
 
 /// c_tab
-.c_tab {
-  .tabBox {
+.c_tab,
+.c_tab2 {
+  & > .tabBox {
     max-width: 820px;
     margin: 0 auto;
 
-    .tab {
+    & > .tab {
       display: flex;
       gap: 5px;
       margin-bottom: 10px;
@@ -1309,6 +1310,15 @@ $thirdColor: #f7924d;
         }
       }
     }
+  }
+}
+
+.c_tab2 {
+
+  .tabBox {
+    max-width: none;
+    align-items: flex-start;
+    margin: 0 auto;
   }
 }
 

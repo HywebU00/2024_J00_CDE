@@ -11,6 +11,7 @@
   @include screen('xs_mobile') {
     padding: 1em;
   }
+
   .pic {
     text-align: center;
     background: #fff;
@@ -19,11 +20,13 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     width: 400px;
     margin: 0 auto 1em;
+
     img {
       width: 100%;
       margin: 0 0 0.5em;
       display: block;
     }
+
     &.float_left {
       width: 400px;
 
@@ -41,6 +44,7 @@
         margin-bottom: 1em;
       }
     }
+
     &.float_right {
       width: 400px;
 
@@ -63,6 +67,7 @@
       display: block;
       font-size: 0.938em;
     }
+
     @include screen('xs_mobile') {
       float: none;
       max-width: 100%;
@@ -72,19 +77,23 @@
       margin-bottom: 0.5em;
     }
   }
+
   table {
     background: #fff;
     margin-bottom: 0;
   }
+
   img {
     text-align: center;
     max-width: 100%;
     margin-bottom: 1em;
+
     &.float_left {
       float: left;
       margin: 0px 2em 1em 0;
       width: auto;
       max-width: 45%;
+
       @include screen('xs_mobile') {
         float: none;
         max-width: 100%;
@@ -92,11 +101,13 @@
         margin-bottom: 1em;
       }
     }
+
     &.float_right {
       float: right;
       margin: 0px 0 1em 2em;
       width: auto;
       max-width: 45%;
+
       @include screen('xs_mobile') {
         float: none;
         max-width: 100%;
@@ -105,11 +116,13 @@
       }
     }
   }
+
   .iframe_v {
     overflow: hidden;
-    padding-top: (9 / 16) * 100%;
+    padding-top: calc((9 / 16) * 100%);
     position: relative;
     margin: 1em 0;
+
     iframe {
       display: block;
       position: absolute;
@@ -126,11 +139,13 @@
   a {
     @include aSetting;
     color: lighten($color: $primaryColor, $amount: 15);
+
     &:hover {
       text-decoration: underline;
       color: lighten($color: $primaryColor, $amount: 15);
     }
   }
+
   h3.title {
     background-color: lighten($color: $lightColor, $amount: 18);
     padding: 0.5em 1em;
@@ -139,9 +154,11 @@
     font-size: 1.125em;
     border-left: 8px solid $primaryColor;
   }
+
   .maps {
     text-align: center;
     margin-bottom: 2em;
+
     iframe {
       width: 95%;
       margin: 0 auto;
@@ -154,6 +171,7 @@
   width: 100%;
   margin: 0 auto 2em;
   @include clearfix();
+
   h3 {
     font-size: 1.375em;
     padding: 12px 0px 10px 20px;
@@ -161,17 +179,20 @@
     // border-bottom: 1px solid $primaryColor;
     background-color: lighten($color: $lightColor, $amount: 15);
   }
+
   ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
   }
+
   li {
     display: flex;
     flex-wrap: wrap;
     position: relative;
     padding: 0.5em 0 0.5em 1.5em;
     border-bottom: solid 1px #eee;
+
     &:before {
       content: '·';
       font-size: 2em;
@@ -183,10 +204,12 @@
       left: 0.1em;
       color: #666;
     }
+
     .file_name {
       line-height: 1.8em;
       margin: 0.2em 0.5em 0.2em 0;
       color: #222;
+
       ~ span {
         flex: 0 0 auto;
         margin: 0.2em;
@@ -194,6 +217,7 @@
         line-height: 1.5em;
         vertical-align: middle;
         color: #666;
+
         a {
           color: #fff;
           display: inline-block;
@@ -201,7 +225,9 @@
         }
       }
     }
+
     $fileType: doc, docx, odt, xls, xlsx, csv, ods, ppt, pptx, odp, zip, txt, mov, mp3, jpg, wmv, mp4, pdf, other;
+
     @each $fileType in $fileType {
       span.file_#{$fileType} {
         a {
@@ -209,6 +235,7 @@
           font-weight: bold;
           padding: 0.2em 0.8em;
           border-radius: 3px;
+
           &:hover,
           &:focus {
             color: #fff;
@@ -216,101 +243,122 @@
         }
       }
     }
+
     span {
+
       &.file_doc,
       &.file_docx,
       &.file_odt {
         a {
           background: #275cb7;
+
           &:hover,
           &:focus {
             background: darken(#275cb7, 5%);
           }
         }
       }
+
       &.file_xls,
       &.file_xlsx,
       &.file_csv,
       &.file_ods {
         a {
           background: #387947;
+
           &:hover,
           &:focus {
             background: darken(#387947, 5%);
           }
         }
       }
+
       &.file_ppt,
       &.file_pptx,
       &.file_odp,
       &.file_pdf {
         a {
           background: #c55a3b;
+
           &:hover,
           &:focus {
             background: darken(#c55a3b, 5%);
           }
         }
       }
+
       &.file_pdf {
         a {
           background: #c00;
+
           &:hover,
           &:focus {
             background: darken(#c00, 5%);
           }
         }
       }
+
       &.file_zip {
         a {
           background: #eb712e;
+
           &:hover,
           &:focus {
             background: darken(#eb712e, 5%);
           }
         }
       }
+
       &.file_txt,
       &.file_other {
         a {
           background: #555;
+
           &:hover,
           &:focus {
             background: darken(#555, 5%);
           }
         }
       }
+
       &.file_mov {
         a {
           background: #009999;
+
           &:hover,
           &:focus {
             background: darken(#009999, 5%);
           }
         }
       }
+
       &.file_mp3,
       &.file_mp4 {
         a {
           background: #088ecc;
+
           &:hover,
           &:focus {
             background: darken(#088ecc, 5%);
           }
         }
       }
+
       &.file_jpg {
         a {
           background: #6c29a4;
+
           &:hover,
           &:focus {
             background: darken(#6c29a4, 5%);
           }
         }
       }
+
       &.file_wmv {
         a {
           background: #430a1f;
+
           &:hover,
           &:focus {
             background: darken(#430a1f, 5%);
@@ -325,6 +373,7 @@
 .web_link {
   margin: 1em 0;
   @extend %clearfix;
+
   h3 {
     font-size: 1.375em;
     padding: 12px 0px 10px 20px;
@@ -332,17 +381,20 @@
     // border-bottom: 1px solid $primaryColor;
     background-color: lighten($color: $lightColor, $amount: 15);
   }
+
   ol,
   ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
   }
+
   li {
     position: relative;
     padding: 0.5em 0;
     border-bottom: solid 1px #eee;
     padding-left: 1.5em;
+
     &:before {
       content: '·';
       font-size: 2em;
@@ -354,6 +406,7 @@
       left: 0.1em;
       color: #666;
     }
+
     a {
       padding: 0.2em 0px;
       display: block;
@@ -361,6 +414,7 @@
     }
   }
 }
+
 // 點閱次數
 .publish_info {
   line-height: 1.5em;
@@ -371,6 +425,7 @@
   flex-wrap: wrap;
   @extend %clearfix;
   box-sizing: border-box;
+
   li {
     flex: 0 0 auto;
     margin-bottom: 0.5em;
@@ -380,6 +435,7 @@
     border-radius: 50px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     position: relative;
+
     &:before {
       content: '';
       width: 8px;
@@ -391,10 +447,12 @@
       left: 1em;
       top: 13px;
     }
+
     &:only-child {
       margin-bottom: 0em;
       margin-right: 0;
     }
+
     // @include screen('tablet') {
     //   flex: 1 1 calc(100% / 2);
     // }
@@ -404,18 +462,21 @@
     }
   }
 }
+
 // 點閱次數
 .clicks_num {
   margin-bottom: 1.5em;
   display: block;
   clear: both;
   float: none;
+
   span {
     background-color: #fff;
     padding: 0.5em 1.5em 0.5em 3em;
     border-radius: 50px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     position: relative;
+
     &:before {
       content: '';
       width: 20px;
@@ -430,24 +491,30 @@
     }
   }
 }
+
 // 頁籤tab
 .tabblock {
   margin-bottom: 2em;
+
   ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
+
     li {
       flex: 1 1 auto;
       margin: 0 4px;
+
       &:first-child {
         margin-left: 0;
       }
+
       &:last-child {
         margin-right: 0;
       }
+
       a {
         display: block;
         padding: 0.8em 1.5em;
@@ -458,14 +525,17 @@
         font-size: 1.125em;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         position: relative;
+
         &:hover,
         &:focus {
           background-color: $primaryColor;
           color: #fff;
         }
+
         &.active {
           background-color: $primaryColor;
           color: #fff;
+
           &:before {
             content: '';
             border: 10px solid $primaryColor;
@@ -480,9 +550,11 @@
     }
   }
 }
+
 .cp_table {
   @include screen('xs_mobile') {
     table {
+
       th,
       td {
         display: block;
@@ -493,6 +565,7 @@
 
 .question_block {
   margin: 1em 0;
+
   .prev,
   .next {
     background-color: #fff;
@@ -502,19 +575,23 @@
     transition: 0.5s;
     display: flex;
     align-items: center;
+
     &:hover {
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       background-color: $linkColor;
       color: #fff;
     }
+
     button {
       flex: 0 0 auto;
       flex-basis: 100px;
       margin-right: 1em;
     }
+
     span {
       flex: 1 1 auto;
     }
+
     @include screen('xs_mobile') {
       flex-wrap: wrap;
 
