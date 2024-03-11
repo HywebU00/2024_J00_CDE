@@ -12237,6 +12237,12 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .c_tab2 > .tabBox > .tab button.active::before {
   opacity: 1;
 }
+@media screen and (max-width: 767px) {
+  .c_tab > .tabBox .contentBox,
+  .c_tab2 > .tabBox .contentBox {
+    width: 100%;
+  }
+}
 .c_tab > .tabBox .content,
 .c_tab2 > .tabBox .content {
   display: none;
@@ -12285,6 +12291,12 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   max-width: none;
   align-items: flex-start;
   margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .c_tab2 .c_chart .tab button {
+    font-size: 16px;
+    padding: 10px 50px 10px 20px;
+  }
 }
 
 .c_newsCard .item:hover .info {

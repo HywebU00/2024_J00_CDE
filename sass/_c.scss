@@ -1268,6 +1268,12 @@ $thirdColor: #f7924d;
       }
     }
 
+    @include screen('mobile') {
+      .contentBox {
+        width: 100%;
+      }
+    }
+
     .content {
       display: none;
     }
@@ -1319,6 +1325,13 @@ $thirdColor: #f7924d;
     max-width: none;
     align-items: flex-start;
     margin: 0 auto;
+  }
+
+  @include screen('mobile') {
+    .c_chart .tab button {
+      font-size: 16px;
+      padding: 10px 50px 10px 20px;
+    }
   }
 }
 

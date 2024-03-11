@@ -694,8 +694,8 @@ function tabUse(elem, hasTab) {
     });
 }
 
-// tabUse('.chart1');
-// tabUse('.chart2');
+tabUse('.chart1');
+tabUse('.chart2');
 tabUse('.c_chart');
 tabUse('.c_tab');
 tabUse('.c_tab2');
