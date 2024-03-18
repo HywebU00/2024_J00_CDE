@@ -569,89 +569,137 @@ function animateChart(elem, start, stop, max, duration) {
   requestAnimationFrame(animationStep);
 }
 
-function chartFn(elem, data) {
-  if ($(elem).length > 0) {
-    const indexChart = document.querySelectorAll(elem);
+function chartFn(elem, chartData) {
+  const indexChart = document.querySelectorAll(elem);
+  if (indexChart.length > 0) {
+    indexChart.forEach((item) => {
+      // 創建tab架構
+      const tabBox = document.createElement('div');
+      tabBox.classList.add('tabBox');
+      const tab = document.createElement('div');
+      tab.classList.add('tab');
+      const contentBox = document.createElement('div');
+      contentBox.classList.add('contentBox');
+      tabBox.appendChild(tab);
+      tabBox.appendChild(contentBox);
+      item.prepend(tabBox);
 
-    window.addEventListener('load', function () {
-      indexChart.forEach((item) => {
-        const indexTab = item.querySelector('.tab');
-        const indexTabContent = item.querySelector('.contentBox');
-        const indexTabContentChart = indexTabContent.querySelectorAll('.content');
+      chartData?.forEach((chart, index) => {
+        // 創建頁籤按鈕
+        const tabButton = document.createElement('button');
+        tabButton.textContent = chart.title;
+        tab.appendChild(tabButton);
+        // 啟動第一筆資料
+        index === 0 ? tabButton.classList.add('active') : null;
 
-        data.forEach((chart, index) => {
-          chart.data.forEach((data, i) => {
-            let itemElem = document.createElement('div');
-            itemElem.classList.add('item');
+        // 創建頁籤內容框架
+        const content = document.createElement('div');
+        content.classList.add('content');
+        contentBox.appendChild(content);
+        // 啟動第一筆資料
+        index === 0 ? content.classList.add('active') : null;
 
-            let titleElem = document.createElement('div');
-            titleElem.classList.add('title');
-            titleElem.textContent = data.title;
-            itemElem.appendChild(titleElem);
+        // 新增圖表資料 直
+        chart.data.forEach((data, i) => {
+          const itemElem = document.createElement('div');
+          itemElem.classList.add('item');
 
-            let lineBox = document.createElement('div');
-            lineBox.classList.add('lineBox');
-            lineBox.classList.add(`line${i + 1}`);
+          const titleElem = document.createElement('div');
+          titleElem.classList.add('title');
+          titleElem.textContent = data.title;
+          itemElem.appendChild(titleElem);
 
-            let span = document.createElement('span');
-            lineBox.appendChild(span);
+          const lineBox = document.createElement('div');
+          lineBox.classList.add('lineBox');
+          lineBox.classList.add(`line${i + 1}`);
 
-            let countElem = document.createElement('div');
-            countElem.classList.add('count');
-            countElem.dataset.count = data.value;
-            lineBox.appendChild(countElem);
-            itemElem.appendChild(lineBox);
-            indexTabContentChart[index].appendChild(itemElem);
-          });
+          const span = document.createElement('span');
+          lineBox.appendChild(span);
 
-          indexTabContent.appendChild(indexTabContentChart[index]);
-
-          let infoElem = document.createElement('div');
-          infoElem.classList.add('infoBox');
-          infoElem.dataset.first = chart.info[0];
-          for (let i = 1; i < chart.info[2] + 1; i++) {
-            let block = document.createElement('div');
-            block.classList.add('block');
-            block.textContent = (chart.info[1] / chart.info[2]) * i;
-            block.style.width = `${100 / chart.info[2]}%`;
-            infoElem.appendChild(block);
-          }
-
-          indexTabContentChart[index].appendChild(infoElem);
+          const countElem = document.createElement('div');
+          countElem.classList.add('count');
+          countElem.dataset.count = data.value;
+          lineBox.appendChild(countElem);
+          itemElem.appendChild(lineBox);
+          content.appendChild(itemElem);
         });
 
-        const indexTabChartBox = item.querySelectorAll('.content');
-        const indexTabButton = indexTab.querySelectorAll('button');
-        indexTabButton.forEach((value, index) => {
-          value.addEventListener('click', function () {
-            let max = chartData[index].info[1];
+        // 新增圖表資料 橫
+        const infoElem = document.createElement('div');
+        infoElem.classList.add('infoBox');
+        infoElem.dataset.first = chart.info[0];
+        for (let i = 1; i < chart.info[2] + 1; i++) {
+          const block = document.createElement('div');
+          block.classList.add('block');
+          block.textContent = (chart.info[1] / chart.info[2]) * i;
+          block.style.width = `${100 / chart.info[2]}%`;
+          infoElem.appendChild(block);
+        }
+        content.appendChild(infoElem);
+      });
 
-            let allItem = indexTabChartBox[index].querySelectorAll('.item');
-            allItem.forEach((item, index) => {
-              animateChart(item.querySelector('span'), 0, Number(item.querySelector('.count').dataset.count), max);
-            });
+      // 執行跑動效果
+
+      // 頁籤切換時重新執行跑動效果
+      const allContent = contentBox.querySelectorAll('.content');
+      function runLine() {
+        chartData?.forEach((chart, index) => {
+          const max = chart.info[1];
+
+          const allItem = allContent[index].querySelectorAll('.item');
+          allItem.forEach((item) => {
+            animateChart(item.querySelector('span'), 0, Number(item.querySelector('.count').dataset.count), max);
           });
         });
+      }
 
-        setTimeout(() => {
-          let indexScrollCheck = false;
-          let allItem = indexTabContent.querySelectorAll('.content')[0].querySelectorAll('.item');
-          let max = chartData[0].info[1];
+      // 判斷圖表是否已經出現在畫面
+      setTimeout(() => {
+        let indexScrollCheck = false;
 
-          function handleChartAnimation() {
-            if (isObjectTBVisible(item) && !indexScrollCheck) {
-              allItem.forEach((item, index) => {
-                animateChart(item.querySelector('span'), 0, Number(item.querySelector('.count').dataset.count), max);
-              });
-              indexScrollCheck = true;
-            }
+        function handleChartAnimation() {
+          if (isObjectTBVisible(item) && !indexScrollCheck) {
+            runLine();
+            indexScrollCheck = true;
           }
+        }
 
-          handleChartAnimation();
-          window.addEventListener('scroll', handleChartAnimation);
-        }, 100);
+        // 初始執行
+        handleChartAnimation();
+        // 捲動範圍時執行
+        window.addEventListener('scroll', handleChartAnimation);
+        // 切換其他頁籤時執行
+        checkObj(handleChartAnimation);
+      }, 100);
+
+      // tab切換功能
+      const tabButton = tab.querySelectorAll('button');
+      tabButton.forEach((button, index) => {
+        button.addEventListener('click', function () {
+          tabButton.forEach((item) => item.classList.remove('active'));
+          allContent.forEach((item) => item.classList.remove('active'));
+          button.classList.add('active');
+          allContent[index].classList.add('active');
+          runLine();
+        });
       });
     });
+
+    function checkObj(handleChartAnimation) {
+      const callback = (mutation) => {
+        handleChartAnimation();
+      };
+
+      const observer = new MutationObserver(callback);
+
+      const element = document.querySelector(elem);
+      const options = {
+        childList: true,
+        attributes: true,
+      };
+
+      observer.observe(element, options);
+    }
 
     function isObjectTBVisible(object) {
       let windowHeight = window.innerHeight;
@@ -665,41 +713,34 @@ function chartFn(elem, data) {
     }
   }
 }
-chartFn('.c_chart', chartData);
 
-function tabUse(elem, hasTab) {
+function tabUse(elem) {
   let _target = $(elem).children('.tabBox')[0];
   $(_target).children('.tab').find('button').eq(0).addClass('active');
-  console.log($(_target));
   $(_target).find('.contentBox > .content').eq(0).show();
 
   $(_target)
     .find('.tab > button')
     .on('click', function (e) {
       let index = $(this).index();
-      console.log($(this).parent().siblings('.contentBox').children('.content'));
+      $(this).parent().siblings('.contentBox').children('.content').eq(index).find('.c_chart').toggleClass('check');
 
       $(this).siblings('button').removeClass('active');
       $(this).addClass('active');
       $(this).parent().siblings('.contentBox').children('.content').hide();
       $(this).parent().siblings('.contentBox').children('.content').eq(index).show();
-      if (hasTab) {
-        checkSlick12_3();
-        checkSlick12_4();
-        checkSlick12_5();
-        $(_target).find('.slick12_3').slick('refresh');
-        $(_target).find('.slick12_4').slick('refresh');
-        $(_target).find('.slick12_5').slick('refresh');
-      }
+      checkSlick12_3();
+      checkSlick12_4();
+      checkSlick12_5();
+      $(_target).find('.slick12_3').slick('refresh');
+      $(_target).find('.slick12_4').slick('refresh');
+      $(_target).find('.slick12_5').slick('refresh');
     });
 }
 
-tabUse('.chart1');
-tabUse('.chart2');
-tabUse('.c_chart');
+// 頁籤
 tabUse('.c_tab');
-tabUse('.c_tab2');
-tabUse('.c_newsCardTab', true);
+tabUse('.c_newsCardTab');
 
 function faq(elem) {
   $(elem)

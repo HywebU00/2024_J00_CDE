@@ -618,16 +618,6 @@
             <div class="col">
               <div class="c_titleBox">統計圖表<span>NEWS</span></div>
               <div class="c_chart chart1">
-                <div class="tabBox">
-                  <div class="tab">
-                    <button type="button">審查評估業務</button>
-                    <button type="button">法規諮詢輔導業務</button>
-                  </div>
-                  <div class="contentBox">
-                    <div class="content"></div>
-                    <div class="content"></div>
-                  </div>
-                </div>
                 <div class="c_indexMore"><a href="#">更多</a></div>
               </div>
             </div>
@@ -647,21 +637,14 @@
                   </div>
                   <div class="contentBox">
                     <div class="content">
-                      <div class="c_chart chart2">
-                        <div class="tabBox">
-                          <div class="tab">
-                            <button type="button">審查評估業務</button>
-                            <button type="button">法規諮詢輔導業務</button>
-                          </div>
-                          <div class="contentBox">
-                            <div class="content"></div>
-                            <div class="content"></div>
-                          </div>
-                        </div>
-                      </div>
+                      <div class="c_chart chart2"></div>
                     </div>
-                    <div class="content">content2</div>
-                    <div class="content">content3</div>
+                    <div class="content">
+                      <div class="c_chart chart3"></div>
+                    </div>
+                    <div class="content">
+                      <div class="c_chart chart4"></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1466,6 +1449,56 @@
           ],
         },
       ];
+      const chartData2 = [
+        {
+          title: '審查評估業務',
+          info: [0, 12000, 6],
+          data: [
+            {
+              title: '項目AA',
+              value: 2313,
+            },
+            {
+              title: '項目B',
+              value: 7122,
+            },
+            {
+              title: '項目C',
+              value: 1343,
+            },
+            {
+              title: '項目D',
+              value: 1657,
+            },
+            {
+              title: '項目E',
+              value: 9645,
+            },
+            {
+              title: '項目F',
+              value: 5467,
+            },
+            {
+              title: '項目G',
+              value: 3546,
+            },
+          ],
+        },
+        {
+          title: '法規諮詢輔導業務',
+          info: [0, 12000, 6],
+          data: [
+            {
+              title: '項目HH',
+              value: 2313,
+            },
+            {
+              title: '項目I',
+              value: 7122,
+            },
+          ],
+        },
+      ];
     </script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <!-- 外掛 plugin js -->
@@ -1488,5 +1521,15 @@
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
     <script src="js/customize.js"></script>
+    <script>
+      // 圖表
+      chartFn('.chart1', chartData);
+
+      // 頁籤 + 圖表
+      tabUse('.c_tab2');
+      chartFn('.chart2', chartData2);
+      chartFn('.chart3', chartData);
+      chartFn('.chart4', chartData2);
+    </script>
   </body>
 </html>

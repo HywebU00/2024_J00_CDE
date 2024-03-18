@@ -975,6 +975,10 @@ $thirdColor: #f7924d;
   .content {
     display: none;
 
+    &.active {
+      display: block;
+    }
+
     .item {
       display: flex;
       align-items: center;
@@ -1276,6 +1280,10 @@ $thirdColor: #f7924d;
 
     .content {
       display: none;
+
+      &.active {
+        display: block;
+      }
     }
 
     .listBox {

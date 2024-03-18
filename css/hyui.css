@@ -11992,6 +11992,9 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .c_chart .content {
   display: none;
 }
+.c_chart .content.active {
+  display: block;
+}
 .c_chart .content .item {
   display: flex;
   align-items: center;
@@ -12246,6 +12249,10 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .c_tab > .tabBox .content,
 .c_tab2 > .tabBox .content {
   display: none;
+}
+.c_tab > .tabBox .content.active,
+.c_tab2 > .tabBox .content.active {
+  display: block;
 }
 .c_tab > .tabBox .listBox,
 .c_tab2 > .tabBox .listBox {
