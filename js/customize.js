@@ -692,13 +692,13 @@ function chartFn(elem, chartData) {
 
       const observer = new MutationObserver(callback);
 
-      const element = document.querySelector(elem);
+      const element = document.querySelectorAll(elem);
       const options = {
         childList: true,
         attributes: true,
       };
 
-      observer.observe(element, options);
+      element.forEach((item) => observer.observe(item, options));
     }
 
     function isObjectTBVisible(object) {
@@ -715,31 +715,36 @@ function chartFn(elem, chartData) {
 }
 
 function tabUse(elem) {
-  let _target = $(elem).children('.tabBox')[0];
-  $(_target).children('.tab').find('button').eq(0).addClass('active');
-  $(_target).find('.contentBox > .content').eq(0).show();
+  $(elem).each(function () {
+    let _target = $(this).children('.tabBox')[0];
+    $(_target).children('.tab').find('button').eq(0).addClass('active');
+    $(_target).find('.contentBox > .content').eq(0).addClass('active');
 
-  $(_target)
-    .find('.tab > button')
-    .on('click', function (e) {
-      let index = $(this).index();
-      $(this).parent().siblings('.contentBox').children('.content').eq(index).find('.c_chart').toggleClass('check');
+    $(_target)
+      .find('.tab > button')
+      .off()
+      .on('click', function (e) {
+        let index = $(this).index();
+        $(this).parent().siblings('.contentBox').children('.content').eq(index).find('.c_chart').toggleClass('check');
 
-      $(this).siblings('button').removeClass('active');
-      $(this).addClass('active');
-      $(this).parent().siblings('.contentBox').children('.content').hide();
-      $(this).parent().siblings('.contentBox').children('.content').eq(index).show();
-      checkSlick12_3();
-      checkSlick12_4();
-      checkSlick12_5();
-      $(_target).find('.slick12_3').slick('refresh');
-      $(_target).find('.slick12_4').slick('refresh');
-      $(_target).find('.slick12_5').slick('refresh');
-    });
+        $(this).siblings('button').removeClass('active');
+        $(this).addClass('active');
+        $(this).parent().siblings('.contentBox').children('.content').removeClass('active');
+        $(this).parent().siblings('.contentBox').children('.content').eq(index).addClass('active');
+        checkSlick12_3();
+        checkSlick12_4();
+        checkSlick12_5();
+        $(_target).find('.slick12_3').slick('refresh');
+        $(_target).find('.slick12_4').slick('refresh');
+        $(_target).find('.slick12_5').slick('refresh');
+      });
+  });
 }
 
 // 頁籤
 tabUse('.c_tab');
+tabUse('.c_tabDouble');
+tabUse('.c_tabLeft');
 tabUse('.c_newsCardTab');
 
 function faq(elem) {
