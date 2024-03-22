@@ -12901,6 +12901,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   padding: 30px;
   border-top: #f2f2f2 1px solid;
   display: none;
+  transition: all 0.3 linear;
 }
 
 /* sitemap */

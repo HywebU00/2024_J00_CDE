@@ -725,12 +725,19 @@ function tabUse(elem) {
       .off()
       .on('click', function (e) {
         let index = $(this).index();
-        $(this).parent().siblings('.contentBox').children('.content').eq(index).find('.c_chart').toggleClass('check');
+        let content = $(this).parent().siblings('.contentBox').children('.content');
+        content.eq(index).find('.c_chart').toggleClass('check');
 
         $(this).siblings('button').removeClass('active');
         $(this).addClass('active');
-        $(this).parent().siblings('.contentBox').children('.content').removeClass('active');
-        $(this).parent().siblings('.contentBox').children('.content').eq(index).addClass('active');
+        content.removeClass('active');
+        content.eq(index).addClass('active');
+
+        content.find('.tab button').removeClass('active');
+        content.find('.content').removeClass('active');
+        content.eq(index).find('.tab button').eq(0).addClass('active');
+        content.eq(index).find('.content').eq(0).addClass('active');
+
         checkSlick12_3();
         checkSlick12_4();
         checkSlick12_5();
