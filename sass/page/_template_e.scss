@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  &.noscroll {
+    position: static !important;
+    width: 100%;
+    height: 100%;
+    overflow: hidden !important;
+    overflow-y: hidden !important;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// 最外圍預設為100%
+.wrapper {
+  width: 100%;
+  margin: 0px auto;
+
+  @include screen('mobile') {
+    background: #fff;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
+
+// 整體共用container樣式，請注意首頁切版頁面的整齊
+.container {
+  padding: 0;
+  margin: 0 auto;
+  max-width: $container-max; //請看_variable.scss
+  // outline: 1px solid red;
+}
+
+.main {
+  position: relative;
+  margin: 0 auto;
+  @include screen('mobile') {
+    padding-top: 60px;
+  }
+  // 可先設定一個中央區塊最大寬，限制accesskey對齊
+  h2 {
+    line-height: 1.375em;
+  }
+  &.small_size {
+    font-size: 0.938em;
+  }
+
+  &.large_size {
+    font-size: 1.125em;
+  }
+}
+
+h2.title {
+  font-size: 1.875em;
+  margin: 0 0 0.5em;
+  color: $primaryColor;
+  @include screen('mobile') {
+    margin: 0 0 0.3em;
+  }
+}
+
+////////////////////////////////////////////////////////////
+// 為了與首頁區隔，請在內頁加上innerpage ClassName
+.innerpage {
+  background-image: url('../images/innerpage_bg.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  padding-bottom: 5em;
+  @include screen('mobile') {
+    padding-top: 60px;
+  }
+
+  > .container {
+    @include gutter(40px); //gutter 代表左右要留白
+    display: flex;
+
+    @include screen('xs_mobile') {
+      @include gutter(30px);
+    }
+  }
+  .nodemenu_btn {
+    display: none;
+    position: absolute;
+    left: 0em;
+    top: 116px;
+    z-index: 9;
+    width: 1.5em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    @include screen('tablet') {
+      display: block;
+    }
+    @include screen('mobile') {
+      display: block;
+      top: 100px;
+    }
+    a {
+      color: #fff;
+      display: block;
+      background-color: $primaryColor;
+      padding: 2em 0.5em 1em;
+      border-radius: 0 8px 8px 0;
+      width: 2em;
+      position: relative;
+      &:before {
+        content: '';
+        border: 2px solid #fff;
+        border-right: none;
+        border-bottom: none;
+        transform: rotate(135deg);
+        position: absolute;
+        top: 0.8em;
+        left: 0.6em;
+        width: 8px;
+        height: 8px;
+      }
+      &.open {
+        border-radius: 0 8px 0 0;
+        &:before {
+          left: 0.8em;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  .center_block {
+    flex: none;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .left_block {
+    flex: none;
+    flex-basis: 240px;
+    max-width: 240px;
+    margin-right: 40px;
+
+    &.hidden {
+      + .center_block {
+        flex: none;
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+
+    + .center_block {
+      flex: auto;
+      flex-basis: calc(100% - 280px);
+      max-width: calc(100% - 280px);
+    }
+
+    @include screen('tablet') {
+      position: absolute;
+      left: -210px;
+      top: 116px;
+      bottom: 0;
+      width: 210px;
+      transition: 0.5s;
+      z-index: 10;
+      &.open {
+        left: 2em;
+      }
+
+      + .center_block {
+        flex: none;
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+    @include screen('mobile') {
+      top: 100px;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}

@@ -1,6 +1,7 @@
 /////////////////////////////////////////////////////////以下為demo範例///
 // 首頁區塊設定
 // more按鈕
+
 a.more {
   display: block;
   width: 10em;
@@ -467,12 +468,13 @@ a.more {
             .caption {
               background-color: $importantColor;
               border-radius: 8px;
-              padding: 2em;
+              padding: 2em 2em 2em;
               width: 60%;
               margin: 2em 0;
               transform: skewY(-5deg);
               @media (max-width: 1700px) {
                 width: 70%;
+                padding: 1em 2em 2em;
               }
               @media (max-width: 1500px) {
                 width: 80%;
@@ -505,23 +507,23 @@ a.more {
                 }
               }
               p {
-                font-size: 1em;
-                @include text-line(5, 1.7em);
+                font-size: 1.125em;
+                @include text-line(7, 1.6em);
                 font-weight: normal;
                 letter-spacing: 0.05em;
                 transform: skewY(5deg);
-                line-height: 1.7em;
+                line-height: 1.6em;
                 @media (max-width: 1700px) {
-                  @include text-line(3, 1.7em);
+                  @include text-line(6, 1.6em);
                 }
                 @media (max-width: 1500px) {
-                  @include text-line(2, 1.7em);
+                  @include text-line(5, 1.6em);
                 }
                 @media (max-width: 1300px) {
-                  @include text-line(3, 1.7em);
+                  @include text-line(4, 1.6em);
                 }
                 @media (max-width: 1100px) {
-                  @include text-line(2, 1.7em);
+                  @include text-line(3, 1.6em);
                 }
                 @include screen('tablet') {
                   transform: skewY(0deg);
@@ -663,14 +665,16 @@ a.more {
     }
   }
 }
-
+.c_titleBox {
+  font-size: 1.875em !important;
+  letter-spacing: 0.02em;
+}
 // 最新消息
 .mp_newsBlock {
   .tabContent {
     .nwes_content {
       display: flex;
       flex-wrap: wrap;
-
       .col {
         &:nth-of-type(1) {
           flex: 0 0 auto;
@@ -690,13 +694,8 @@ a.more {
         }
         @include screen('mobile') {
           &:nth-of-type(1),
+          &:nth-of-type(2),
           &:only-child {
-            flex-basis: 100%;
-            max-width: 100%;
-            margin-right: 0;
-            margin-bottom: 1em;
-          }
-          &:nth-of-type(2) {
             flex-basis: 100%;
             max-width: 100%;
             margin-right: 0;
@@ -754,6 +753,12 @@ a.more {
             }
           }
         }
+      }
+      .wordcontent {
+        line-height: 2.2em;
+        font-size: 1.125em;
+        font-weight: bolder;
+        letter-spacing: 0.03em;
       }
     }
   }
@@ -878,6 +883,8 @@ a.more {
   margin-bottom: 3em;
   .item {
     a {
+      padding: 1em 0;
+
       &:hover {
         .pic {
           img {
@@ -889,8 +896,9 @@ a.more {
   }
   .pic {
     position: relative;
-    @include aspect-ratio(3, 2.5);
+    @include aspect-ratio(16, 6.6);
     border-radius: 8px 8px 0 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     img {
       transition: 0.5s;
     }
@@ -1001,6 +1009,121 @@ a.more {
             &:hover {
               color: $secondaryColor;
             }
+          }
+        }
+      }
+    }
+  }
+}
+// 年度報告
+.mp_annualreportsBlock {
+  .slick-initialized .slick-slide > div {
+    padding: 0;
+  }
+  .Syncing_slider {
+    .Slider-for {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      margin: 1em auto;
+      padding: 0 40px 30px;
+      box-sizing: border-box;
+      position: relative;
+
+      @media (max-width: 1400px) {
+        width: auto;
+        min-width: auto;
+        max-width: auto;
+        margin: 0 40px;
+      }
+      @media (max-width: 800px) {
+        padding: 0 20px 30px;
+        margin: 0 0px;
+      }
+      .item {
+        .itemblock {
+          display: flex;
+          @media (max-width: 800px) {
+            flex-wrap: wrap;
+          }
+          .bookblock {
+            flex: 0 0 auto;
+            flex-basis: 280px;
+            @media (max-width: 800px) {
+              flex-basis: 100%;
+              max-width: 100%;
+            }
+            .bookcover {
+              img {
+                width: 246px;
+              }
+              @media (max-width: 800px) {
+                width: 246px;
+                margin: 0 auto 1em;
+              }
+            }
+          }
+          .content {
+            flex: 1 1 auto;
+            p {
+              font-size: 1.188em;
+            }
+          }
+        }
+      }
+    }
+    .Slider-nav {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      margin: 1em auto;
+      padding: 0 40px;
+      box-sizing: border-box;
+      position: relative;
+
+      @media (max-width: 1400px) {
+        width: auto;
+        min-width: auto;
+        max-width: auto;
+        margin: 0 40px;
+      }
+      @media (max-width: 800px) {
+        padding: 0 20px;
+      }
+      .item {
+        cursor: pointer;
+
+        p {
+          font-size: 1.5em;
+          text-align: center;
+          position: relative;
+          padding-top: 1.5em;
+          // &.introduction {
+          //   font-size: 1.375em;
+          // }
+          &:before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: $primaryColor;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            right: auto;
+            z-index: 2;
+          }
+          &:after {
+            content: '';
+            width: 100%;
+            height: 4px;
+            background-color: $primaryColor;
+            position: absolute;
+            top: 5px;
+            left: 0;
+            right: 0;
+            z-index: 1;
           }
         }
       }

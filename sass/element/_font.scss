@@ -147,6 +147,9 @@ kbd {
         &.large {
           font-size: 1.125em;
         }
+        sub {
+          vertical-align: super;
+        }
       }
     }
   }

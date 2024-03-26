@@ -1,0 +1,147 @@
+.tabSet {
+  margin: 30px auto;
+  .tabItems {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 auto 1em;
+
+    .item {
+      flex: 1 1 auto;
+      font-size: 1.125em;
+      height: 3em;
+      text-align: center;
+      border: none;
+      margin: 0px 3px;
+      box-shadow: none;
+      background: #fff;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      border-radius: 8px;
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      cursor: pointer;
+
+      &:focus {
+        outline: 2px dashed #ff3e4d;
+      }
+
+      &:hover {
+        background: $lightColor;
+      }
+
+      &.active {
+        cursor: default;
+        background-color: $primaryColor;
+        color: #fff;
+        position: relative;
+        &:before {
+          content: '';
+          border: 10px solid $primaryColor;
+          border-color: $primaryColor transparent transparent transparent;
+          position: absolute;
+          left: 50%;
+          top: 100%;
+          margin-left: -5px;
+        }
+      }
+    }
+  }
+  .tabContent {
+    display: none;
+    position: relative;
+
+    // box-shadow: #bbb 0 0 0 1px inset;
+    background-color: #fff;
+
+    a:focus {
+      //取代原有focus
+      border: 2px solid red;
+      outline: none;
+    }
+  }
+
+  // 電子報訂閱
+  &.subscription_epaper {
+    .item {
+      @include screen('mobile') {
+        font-size: 1.125em !important;
+      }
+      @include screen('xs_mobile') {
+        font-size: 1.125em !important;
+      }
+    }
+    .tabContent {
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 1em 2em;
+    }
+  }
+  // 最新消息
+  &.nwes_slider {
+    margin: 0 0 30px;
+    width: 100%;
+    .tabItems {
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 0.5em;
+      .item {
+        background: $primaryColor;
+        color: #fff;
+        box-shadow: none;
+        border-radius: 8px;
+        flex: 0 0 auto;
+        height: auto;
+        padding: 0.5em 1em;
+        margin-bottom: 0.5em;
+        font-weight: bolder;
+        letter-spacing: 0.03em;
+        &:hover {
+          background: $lightColor;
+        }
+
+        &.active {
+          background-color: $secondaryColor;
+
+          &:before {
+            content: '';
+            display: none;
+          }
+        }
+      }
+    }
+    .tabContent {
+      padding: 1em 0;
+      box-shadow: none;
+    }
+  }
+  //cp審查
+  &.cpreview_slider {
+    .tabItems {
+      .item {
+        padding: 0.5em 0.5em;
+      }
+      @include screen('mobile') {
+        .item {
+          margin-bottom: 0.5em;
+          font-size: 1.063em;
+          line-height: 1.2em;
+        }
+      }
+      @include screen('xs_mobile') {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 0.5em;
+        .item {
+          flex: 0 0 auto;
+          font-size: 1em;
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+  }
+}

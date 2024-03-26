@@ -824,3 +824,89 @@
     display: none !important;
   }
 }
+
+.mp_annualreportsBlock {
+  .Syncing_slider {
+    @extend %clearfix;
+    position: relative;
+
+    .slick-slide {
+      position: relative;
+    }
+    .controls {
+      text-align: center;
+      font-weight: bold;
+      max-width: 100px;
+      color: #fff;
+      padding: 0.2em 0.5em;
+      margin: 0px auto;
+      background: $primaryColor;
+      border-radius: 20px;
+      text-shadow: 1px 1px 2px RGBA(0, 0, 0, 0.8);
+    }
+    p {
+      position: relative;
+      overflow: visible;
+      white-space: wrap;
+      padding: 0.5em;
+      box-sizing: border-box;
+      margin: 0px;
+      bottom: auto;
+      color: #333;
+      background-color: transparent;
+      height: auto;
+      text-align: left;
+      z-index: 2;
+      @include screen('mobile') {
+        display: block;
+      }
+    }
+    .slick-next {
+      background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat;
+      background-size: 80%;
+      left: 100%;
+      @include screen('mobile') {
+        right: 0.5em;
+      }
+    }
+
+    .slick-prev {
+      background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat;
+      background-size: 80%;
+      right: 100%;
+      @include screen('mobile') {
+        left: 0.5em;
+      }
+    }
+
+    .Slider-for {
+    }
+
+    .Slider-nav {
+      .img-container {
+        p {
+          display: none;
+        }
+      }
+
+      /*正在動作的縮圖*/
+      .slick-slide.slick-current {
+        opacity: 1;
+        p {
+          color: #de7a00;
+          &:before {
+            background-color: #de7a00;
+          }
+        }
+      }
+
+      position: relative;
+    }
+    .Slider-nav {
+    }
+
+    .slick-dots {
+      display: none !important;
+    }
+  }
+}

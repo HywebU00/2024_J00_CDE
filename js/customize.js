@@ -210,7 +210,7 @@ $(function () {
     infinite: true,
   });
   $('.Slider-nav').slick({
-    slidesToShow: 2,
+    slidesToShow: 10,
     slidesToScroll: 1,
     asNavFor: '.Slider-for',
     dots: true,
@@ -218,6 +218,50 @@ $(function () {
     lazyLoad: 'ondemand',
     focusOnSelect: true,
     infinite: true,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 8,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 630,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 
   // password_toggle
@@ -692,13 +736,13 @@ function chartFn(elem, chartData) {
 
       const observer = new MutationObserver(callback);
 
-      const element = document.querySelectorAll(elem);
+      const element = document.querySelector(elem);
       const options = {
         childList: true,
         attributes: true,
       };
 
-      element.forEach((item) => observer.observe(item, options));
+      observer.observe(element, options);
     }
 
     function isObjectTBVisible(object) {
@@ -715,43 +759,31 @@ function chartFn(elem, chartData) {
 }
 
 function tabUse(elem) {
-  $(elem).each(function () {
-    let _target = $(this).children('.tabBox')[0];
-    $(_target).children('.tab').find('button').eq(0).addClass('active');
-    $(_target).find('.contentBox > .content').eq(0).addClass('active');
+  let _target = $(elem).children('.tabBox')[0];
+  $(_target).children('.tab').find('button').eq(0).addClass('active');
+  $(_target).find('.contentBox > .content').eq(0).show();
 
-    $(_target)
-      .find('.tab > button')
-      .off()
-      .on('click', function (e) {
-        let index = $(this).index();
-        let content = $(this).parent().siblings('.contentBox').children('.content');
-        content.eq(index).find('.c_chart').toggleClass('check');
+  $(_target)
+    .find('.tab > button')
+    .on('click', function (e) {
+      let index = $(this).index();
+      $(this).parent().siblings('.contentBox').children('.content').eq(index).find('.c_chart').toggleClass('check');
 
-        $(this).siblings('button').removeClass('active');
-        $(this).addClass('active');
-        content.removeClass('active');
-        content.eq(index).addClass('active');
-
-        content.find('.tab button').removeClass('active');
-        content.find('.content').removeClass('active');
-        content.eq(index).find('.tab button').eq(0).addClass('active');
-        content.eq(index).find('.content').eq(0).addClass('active');
-
-        checkSlick12_3();
-        checkSlick12_4();
-        checkSlick12_5();
-        $(_target).find('.slick12_3').slick('refresh');
-        $(_target).find('.slick12_4').slick('refresh');
-        $(_target).find('.slick12_5').slick('refresh');
-      });
-  });
+      $(this).siblings('button').removeClass('active');
+      $(this).addClass('active');
+      $(this).parent().siblings('.contentBox').children('.content').hide();
+      $(this).parent().siblings('.contentBox').children('.content').eq(index).show();
+      checkSlick12_3();
+      checkSlick12_4();
+      checkSlick12_5();
+      $(_target).find('.slick12_3').slick('refresh');
+      $(_target).find('.slick12_4').slick('refresh');
+      $(_target).find('.slick12_5').slick('refresh');
+    });
 }
 
 // 頁籤
 tabUse('.c_tab');
-tabUse('.c_tabDouble');
-tabUse('.c_tabLeft');
 tabUse('.c_newsCardTab');
 
 function faq(elem) {
