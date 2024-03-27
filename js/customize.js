@@ -759,32 +759,57 @@ function chartFn(elem, chartData) {
 }
 
 function tabUse(elem) {
-  let _target = $(elem).children('.tabBox')[0];
-  $(_target).children('.tab').find('button').eq(0).addClass('active');
-  $(_target).find('.contentBox > .content').eq(0).show();
+  $(elem).each(function () {
+    let _target = $(this).children('.tabBox')[0];
+    $(_target).children('.tab').find('button').eq(0).addClass('active');
+    $(_target).find('.contentBox > .content').eq(0).addClass('active');
 
-  $(_target)
-    .find('.tab > button')
-    .on('click', function (e) {
-      let index = $(this).index();
-      $(this).parent().siblings('.contentBox').children('.content').eq(index).find('.c_chart').toggleClass('check');
+    $(this)
+      .find('.tab > button')
+      .on('click', function (e) {
+        let index = $(this).index();
+        let content = $(this).parent().siblings('.contentBox').children('.content');
+        console.log(content);
+        content.eq(index).find('.c_chart').toggleClass('check');
 
-      $(this).siblings('button').removeClass('active');
-      $(this).addClass('active');
-      $(this).parent().siblings('.contentBox').children('.content').hide();
-      $(this).parent().siblings('.contentBox').children('.content').eq(index).show();
-      checkSlick12_3();
-      checkSlick12_4();
-      checkSlick12_5();
-      $(_target).find('.slick12_3').slick('refresh');
-      $(_target).find('.slick12_4').slick('refresh');
-      $(_target).find('.slick12_5').slick('refresh');
-    });
+        $(this).siblings('button').removeClass('active');
+        $(this).addClass('active');
+        content.removeClass('active');
+        content.eq(index).addClass('active');
+
+        content.find('.tab button').removeClass('active');
+        content.find('.content').removeClass('active');
+        content.eq(index).find('.tab button').eq(0).addClass('active');
+        content.eq(index).find('.content').eq(0).addClass('active');
+
+        $('.c_tabSelect .tab').slideUp('fast');
+        $('.c_tabSelect .switchBtn').removeClass('active');
+
+        checkSlick12_3();
+        checkSlick12_4();
+        checkSlick12_5();
+        $(_target).find('.slick12_3').slick('refresh');
+        $(_target).find('.slick12_4').slick('refresh');
+        $(_target).find('.slick12_5').slick('refresh');
+      });
+  });
 }
 
 // 頁籤
 tabUse('.c_tab');
+tabUse('.c_tabDouble');
+tabUse('.c_tabLeft');
 tabUse('.c_newsCardTab');
+
+// tab select
+$('.c_tabSelect').each(function () {
+  $(this)
+    .find('.switchBtn')
+    .on('click', function () {
+      $(this).toggleClass('active');
+      $(this).siblings().find('.tab').stop().slideToggle('fast');
+    });
+});
 
 function faq(elem) {
   $(elem)
