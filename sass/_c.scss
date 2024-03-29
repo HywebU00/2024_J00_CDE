@@ -1435,8 +1435,9 @@ $thirdColor: #f7924d;
   .subTitle {
     font-size: 24px;
     font-weight: bold;
-    padding-right: 50px;
+    padding: 0 100px;
     margin-bottom: 30px;
+    text-align: center;
 
     @include screen('mobile') {
       font-size: 20px;
@@ -1502,7 +1503,7 @@ $thirdColor: #f7924d;
 
   .contentBox {
     flex-grow: 1;
-    padding: 30px 5% 30px 30px;
+    padding: 30px;
     background: #fff;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
   }
