@@ -417,7 +417,7 @@ $thirdColor: #f7924d;
 
       .title {
         font-size: 1.125em;
-        font-weight: 500;
+        font-weight: bold;
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -519,7 +519,7 @@ $thirdColor: #f7924d;
 
       .title {
         font-size: 18px;
-        font-weight: 600;
+        font-weight: bold;
         color: #333;
       }
 
@@ -673,7 +673,7 @@ $thirdColor: #f7924d;
 
       .title {
         font-size: 18px;
-        font-weight: 600;
+        font-weight: bold;
         color: #333;
       }
 
@@ -817,7 +817,7 @@ $thirdColor: #f7924d;
         position: relative;
         font-size: 20px;
         color: #1a1a1a;
-        font-weight: 500;
+        font-weight: bold;
 
         &::after {
           content: '';
@@ -937,7 +937,7 @@ $thirdColor: #f7924d;
       text-align: left;
       padding: 25px 50px 25px 30px;
       font-size: 20px;
-      font-weight: 500;
+      font-weight: bold;
       margin: 0;
 
       @include screen('mobile') {
@@ -1004,7 +1004,6 @@ $thirdColor: #f7924d;
 
       //   $amount: $amount + 1;
       // }
-
 
       &:nth-of-type(1n + 1) span {
         background-color: #2d4374;
@@ -1174,7 +1173,7 @@ $thirdColor: #f7924d;
         font-size: 24px;
         padding-bottom: 15px;
         margin-bottom: 10px;
-        font-weight: 600;
+        font-weight: bold;
         border-bottom: #7f7f7f 1px solid;
         overflow: hidden;
         display: -webkit-box;
@@ -1231,7 +1230,7 @@ $thirdColor: #f7924d;
         background: $mainColor;
         color: #fff;
         font-size: 20px;
-        font-weight: 500;
+        font-weight: bold;
         border-radius: 0;
         padding: 13px;
         transition: all 0.3s ease;
@@ -1330,7 +1329,6 @@ $thirdColor: #f7924d;
 
 .c_tab2,
 .c_tabDouble {
-
   .tabBox {
     max-width: none;
     align-items: flex-start;
@@ -1384,7 +1382,7 @@ $thirdColor: #f7924d;
       text-align: left;
       padding: 25px 50px 25px 30px;
       font-size: 20px;
-      font-weight: 500;
+      font-weight: bold;
       margin: 0;
 
       @include screen('mobile') {
@@ -1454,7 +1452,7 @@ $thirdColor: #f7924d;
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: bold;
     margin: 0;
 
     &.active {
@@ -1606,7 +1604,7 @@ $thirdColor: #f7924d;
       background: $mainColor;
       color: #fff;
       font-size: 20px;
-      font-weight: 500;
+      font-weight: bold;
       border-radius: 0;
       padding: 13px;
       transition: all 0.3s ease;
@@ -1797,7 +1795,7 @@ $thirdColor: #f7924d;
         position: relative;
         font-size: 18px;
         color: #1a1a1a;
-        font-weight: 500;
+        font-weight: bold;
         transition: all 0.3s ease;
 
         &::after {
@@ -1894,7 +1892,6 @@ $thirdColor: #f7924d;
   }
 
   .c_indexMore {
-
     // margin-top: 30px;
     a {
       display: inline-block;
@@ -1936,7 +1933,7 @@ $thirdColor: #f7924d;
     background: rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: bold;
     padding: 10px;
     text-align: center;
 
@@ -1973,7 +1970,7 @@ $thirdColor: #f7924d;
 
   .title {
     font-size: 21px;
-    font-weight: 500;
+    font-weight: bold;
     padding: 30px 0 0;
   }
 }
@@ -2012,7 +2009,7 @@ $thirdColor: #f7924d;
         position: relative;
         font-size: 20px;
         color: #fff;
-        font-weight: 500;
+        font-weight: bold;
         text-align: center;
       }
     }

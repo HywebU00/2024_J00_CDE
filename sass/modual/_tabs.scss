@@ -99,7 +99,7 @@
         padding: 0.5em 1em;
         margin-bottom: 0.5em;
         &:hover {
-          background: $lightColor;
+          background: $linkColor;
         }
 
         &.active {
@@ -122,6 +122,20 @@
     .tabItems {
       .item {
         padding: 0.5em 0.5em;
+        background: $primaryColor;
+        color: #fff;
+        &:hover {
+          background: $linkColor;
+        }
+
+        &.active {
+          background-color: $secondaryColor;
+          &:before {
+            content: '';
+            border: 10px solid $secondaryColor;
+            border-color: $secondaryColor transparent transparent transparent;
+          }
+        }
       }
       @include screen('mobile') {
         .item {
