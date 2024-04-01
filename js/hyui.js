@@ -612,10 +612,10 @@ $(function () {
       $(this).parent().parent('ul').hide();
     });
   // 點外面關閉share
-  $(document).on('touchend click', function (e) {
-    var container = $('.function_panel .share');
+  $('body').on('touchend click', function (e) {
+    var container = $('.function_panel .share, .font_size_block .fontsize_btn, .searchblock .searchbtn');
     if (!container.is(e.target) && container.has(e.target).length === 0) {
-      $('.function_panel .share ul').hide();
+      $('.function_panel .share ul, .font_size_block .font_size_list, .searchblock .searchcontent').slideUp();
     }
   });
   /*------------------------------------*/

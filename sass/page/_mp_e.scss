@@ -1021,6 +1021,13 @@ a.more {
     padding: 0;
   }
   .Syncing_slider {
+    .slick-prev {
+      right: auto;
+      left: -190px;
+      @include screen('mobile') {
+        left: 0.5em;
+      }
+    }
     .Slider-for {
       width: 100%;
       min-width: 100%;
@@ -1029,7 +1036,7 @@ a.more {
       padding: 0 40px 30px;
       box-sizing: border-box;
       position: relative;
-
+      // outline: 1px solid red;
       @media (max-width: 1400px) {
         width: auto;
         min-width: auto;
@@ -1073,19 +1080,20 @@ a.more {
       }
     }
     .Slider-nav {
-      width: 100%;
-      min-width: 100%;
-      max-width: 100%;
-      margin: 1em auto;
+      width: calc(100% - 150px);
+      min-width: calc(100% - 150px);
+      max-width: calc(100% - 150px);
+      margin: 1em 0 1em 150px;
       padding: 0 40px;
       box-sizing: border-box;
       position: relative;
+      // outline: 1px solid red;
 
       @media (max-width: 1400px) {
         width: auto;
         min-width: auto;
         max-width: auto;
-        margin: 0 40px;
+        margin: 0 40px 0 150px;
       }
       @media (max-width: 800px) {
         padding: 0 20px;
