@@ -1,254 +1,592 @@
 <!DOCTYPE html>
 <html lang="zh-Hant" class="no-js">
-  <head>
-    <meta name="robots" content="noindex" />
-    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>財團法人醫藥品查驗中心 Center For Drug Evaluation</title>
-    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+
+<head>
+  <meta name="robots" content="noindex" />
+  <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>財團法人醫藥品查驗中心 Center For Drug Evaluation</title>
+  <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
-    <!-- slick css-->
-    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
-    <!-- 燈箱facybox -->
-    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
-    <!-- hyUI css -->
-    <link rel="stylesheet" href="css/hyui.css" />
-    <!-- favicon -->
-    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+  <!-- slick css-->
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+  <!-- 燈箱facybox -->
+  <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
+  <!-- hyUI css -->
+  <link rel="stylesheet" href="css/hyui.css" />
+  <!-- favicon -->
+  <link href="images/favicon.png" rel="icon" type="image/x-icon" />
 
-    <script>
-      const dataItems = [
-        '臨床試驗',
-        '銜接性試驗評估',
-        '藥品查驗登記',
-        '原料藥審查',
-        '藥品上市後業務',
-        '付費諮詢',
-        '指標案件諮詢',
-        '一般諮詢',
-        '政府補助案法規評估(POJ)',
-        '法規新知及政策',
-        '研發策略指導原則 (藥品)',
-        '專題',
-        '常見問答FAQ',
-        '產官學會議',
-        '審查評估業務',
-        '法規諮詢輔導研發階段諮詢服務（付費諮詢）',
-        '法規諮詢輔導審查階段諮詢服務（函文釋疑）',
-        '知識專區_法規新知及政策',
-        '知識專區_常見問答FAQ',
-        '健保HTA',
-        '政策HTA',
-        '健康食品查驗登記審查',
-        '特殊營養食品查驗登記審查',
-        '電話諮詢',
-        '線上諮詢',
-        '教育訓練課程',
-        '推薦網站連結',
-        '業務簡介',
-        '訓練政策',
-        '我們的成果',
-        '聯絡我們',
-        '意見回饋',
-        '機制介紹',
-        '主副審醫院',
-        '每月執行現況報告',
-        'C-IRB操作手冊',
-        '送件窗口',
-        '下載專區',
-        '藥品',
-        '細胞治療技術',
-        '醫療器材',
-        '醫療科技評估',
-        '健康食品及特殊營養食品',
-        'CDE學苑',
-        'C-IRB',
-        '政策聲明',
-        '技轉及授權公告',
-        '董事會',
-        '董事長',
-        '執行長',
-        '組織架構',
-        '主要業務',
-        '年報',
-        '公開資訊',
-      ];
-    </script>
-  </head>
+  <script>
+    const dataItems = [
+      '臨床試驗',
+      '銜接性試驗評估',
+      '藥品查驗登記',
+      '原料藥審查',
+      '藥品上市後業務',
+      '付費諮詢',
+      '指標案件諮詢',
+      '一般諮詢',
+      '政府補助案法規評估(POJ)',
+      '法規新知及政策',
+      '研發策略指導原則 (藥品)',
+      '專題',
+      '常見問答FAQ',
+      '產官學會議',
+      '審查評估業務',
+      '法規諮詢輔導研發階段諮詢服務（付費諮詢）',
+      '法規諮詢輔導審查階段諮詢服務（函文釋疑）',
+      '知識專區_法規新知及政策',
+      '知識專區_常見問答FAQ',
+      '健保HTA',
+      '政策HTA',
+      '健康食品查驗登記審查',
+      '特殊營養食品查驗登記審查',
+      '電話諮詢',
+      '線上諮詢',
+      '教育訓練課程',
+      '推薦網站連結',
+      '業務簡介',
+      '訓練政策',
+      '我們的成果',
+      '聯絡我們',
+      '意見回饋',
+      '機制介紹',
+      '主副審醫院',
+      '每月執行現況報告',
+      'C-IRB操作手冊',
+      '送件窗口',
+      '下載專區',
+      '藥品',
+      '細胞治療技術',
+      '醫療器材',
+      '醫療科技評估',
+      '健康食品及特殊營養食品',
+      'CDE學苑',
+      'C-IRB',
+      '政策聲明',
+      '技轉及授權公告',
+      '董事會',
+      '董事長',
+      '執行長',
+      '組織架構',
+      '主要業務',
+      '年報',
+      '公開資訊',
+    ];
+  </script>
+</head>
 
-  <body>
-    <!-- 直接跳主內容區 -->
-    <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
-    <!-- wrapper Start -->
-    <div class="wrapper c_main">
-      <!-- header Start -->
-      <header class="header">
-        <div class="container">
-          <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
-          <h1>
-            <a href="index.htm"><img src="images/logo.svg" alt="網站標題" /></a>
-          </h1>
+<body>
+  <!-- 直接跳主內容區 -->
+  <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+  <!-- wrapper Start -->
+  <div class="wrapper c_main">
+    <!-- header Start -->
+    <header class="header">
+      <div class="container">
+        <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+        <h1>
+          <a href="index.htm"><img src="images/logo.svg" alt="網站標題" /></a>
+        </h1>
 
-          <!-- navigation Start -->
-          <nav class="navigation" role="navigation" aria-label="Site">
-            <!-- 新增div navlist -->
-            <div class="navlist">
+        <!-- navigation Start -->
+        <nav class="navigation" role="navigation" aria-label="Site">
+          <!-- 新增div navlist -->
+          <div class="navlist">
+            <ul>
+              <li><a href="#">網站導覽</a></li>
+              <li><a href="#">意見信箱</a></li>
+              <li><a href="#">員工專區</a></li>
+              <li><a href="#">English</a></li>
+            </ul>
+          </div>
+          <!-- font_size -->
+          <div class="font_size_block">
+            <button type="button" class="fontsize_btn">A</button>
+            <div class="font_size_list">
               <ul>
-                <li><a href="#">網站導覽</a></li>
-                <li><a href="#">意見信箱</a></li>
-                <li><a href="#">員工專區</a></li>
-                <li><a href="#">English</a></li>
+                <li><a href="#" role="button" class="small">小</a></li>
+                <li><a href="#" role="button" class="medium">中</a></li>
+                <li><a href="#" role="button" class="large">大</a></li>
               </ul>
             </div>
-            <!-- font_size -->
-            <div class="font_size_block">
-              <button type="button" class="fontsize_btn">A</button>
-              <div class="font_size_list">
-                <ul>
-                  <li><a href="#" role="button" class="small">小</a></li>
-                  <li><a href="#" role="button" class="medium">中</a></li>
-                  <li><a href="#" role="button" class="large">大</a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- Search Start -->
-            <div class="searchblock">
-              <button type="button" class="searchbtn">查詢</button>
-              <div class="searchcontent">
-                <div class="search" role="search">
-                  <div class="form_grp">
-                    <label for="mustSameAsId">搜尋</label>
-                    <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S" title="請輸入文字" aria-label="搜尋網站內容" />
-                    <input name="" type="submit" value="查詢" class="btn btn-search" />
-                  </div>
-                  <!-- <div class="btn_grp">
+          </div>
+          <!-- Search Start -->
+          <div class="searchblock">
+            <button type="button" class="searchbtn">查詢</button>
+            <div class="searchcontent">
+              <div class="search" role="search">
+                <div class="form_grp">
+                  <label for="mustSameAsId">搜尋</label>
+                  <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S" title="請輸入文字" aria-label="搜尋網站內容" />
+                  <input name="" type="submit" value="查詢" class="btn btn-search" />
+                </div>
+                <!-- <div class="btn_grp">
                   <input name="" type="submit" value="進階搜尋" class="btn" />
                 </div> -->
-                  <div class="keywordHot">
-                    <ul>
-                      <li><a href="#">熱門熱門</a></li>
-                      <li><a href="#">查詢</a></li>
-                      <li><a href="#">字詞三</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Search End -->
-          </nav>
-          <!-- navigation End -->
-          <!-- menu Start -->
-          <nav class="menu" role="navigation" aria-label="Header的導航列">
-            <ul>
-              <li>
-                <a href="#">審查評估業務</a>
-                <ul>
-                  <li><a href="#">藥品</a></li>
-                  <li><a href="#">細胞治療技術</a></li>
-                  <li><a href="#">醫療器材</a></li>
-                  <li><a href="#">醫療科技評估</a></li>
-                  <li><a href="#">健康食品及特殊營養食品</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">法規諮詢輔導</a>
-                <ul>
-                  <li><a href="#">藥品</a></li>
-                  <li><a href="#">細胞治療技術</a></li>
-                  <li><a href="#">醫療器材</a></li>
-                  <li><a href="#">醫療科技評估</a></li>
-                  <li><a href="#">健康食品及特殊營養食品</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">最新法規資訊</a>
-                <ul>
-                  <li><a href="#">藥品</a></li>
-                  <li><a href="#">細胞治療技術</a></li>
-                  <li><a href="#">醫療器材</a></li>
-                  <li><a href="#">醫療科技評估</a></li>
-                  <li><a href="#">健康食品及特殊營養食品</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">訊息公告</a>
-                <ul>
-                  <li><a href="#">CDE重大消息/政策</a></li>
-                  <li><a href="#">業務最新公告</a></li>
-                  <li><a href="http://www.google.com">採購公告</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">認識CDE</a>
-                <ul>
-                  <li><a href="#">緣起宗旨</a></li>
-                  <li><a href="#">董事會/董事長</a></li>
-                  <li><a href="#">執行長</a></li>
-                  <li><a href="#">組織架構</a></li>
-                  <li><a href="#">業務介紹</a></li>
-                  <li><a href="#">公開資訊</a></li>
-                  <li><a href="#">地理位置</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">加入CDE</a>
-                <ul>
-                  <li><a href="#">菁英招募</a></li>
-                  <li><a href="#">實習專區</a></li>
-                  <li><a href="#">下載專區</a></li>
-                  <li><a href="#">聯絡我們</a></li>
-                  <li><a href="#">員工專區</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-          <!-- menu End -->
-          <!-- noscript -->
-          <noscript>
-            您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
-            <a href="#">網站導覽</a>
-          </noscript>
-        </div>
-      </header>
-      <!-- header End -->
-      <!-- main Start -->
-      <div id="center" class="main">
-        <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
-        <!-- 任何一個section下一層都要包下一層都要包div container作對齊 -->
-        <!-- //// class 都可以隨意命名 !!! ///// -->
-
-        <section class="col-12">
-          <div class="container">
-            <div class="col">
-              <div class="c_kv mpSlider">
-                <div class="pic">
-                  <a href="#"><span class="caption">test</span><img src="images/mp/banner.jpg" alt="abc" /></a>
-                </div>
-                <div class="pic">
-                  <a href="#"><span class="caption">test</span><img src="images/mp/banner.jpg" alt="abc" /></a>
+                <div class="keywordHot">
+                  <ul>
+                    <li><a href="#">熱門熱門</a></li>
+                    <li><a href="#">查詢</a></li>
+                    <li><a href="#">字詞三</a></li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
-        </section>
 
-        <section class="col-12">
-          <div class="container">
-            <div class="col">
-              <!--  最新消息 -->
-              <div class="c_titleBox">最新消息<span>NEWS</span></div>
-              <div class="c_news">
-                <div class="col">
+          <!-- Search End -->
+        </nav>
+        <!-- navigation End -->
+        <!-- menu Start -->
+        <nav class="menu" role="navigation" aria-label="Header的導航列">
+          <ul>
+            <li>
+              <a href="#">審查評估業務</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">法規諮詢輔導</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">最新法規資訊</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">訊息公告</a>
+              <ul>
+                <li><a href="#">CDE重大消息/政策</a></li>
+                <li><a href="#">業務最新公告</a></li>
+                <li><a href="http://www.google.com">採購公告</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">認識CDE</a>
+              <ul>
+                <li><a href="#">緣起宗旨</a></li>
+                <li><a href="#">董事會/董事長</a></li>
+                <li><a href="#">執行長</a></li>
+                <li><a href="#">組織架構</a></li>
+                <li><a href="#">業務介紹</a></li>
+                <li><a href="#">公開資訊</a></li>
+                <li><a href="#">地理位置</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">加入CDE</a>
+              <ul>
+                <li><a href="#">菁英招募</a></li>
+                <li><a href="#">實習專區</a></li>
+                <li><a href="#">下載專區</a></li>
+                <li><a href="#">聯絡我們</a></li>
+                <li><a href="#">員工專區</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- menu End -->
+        <!-- noscript -->
+        <noscript>
+          您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+          <a href="#">網站導覽</a>
+        </noscript>
+      </div>
+    </header>
+    <!-- header End -->
+    <!-- main Start -->
+    <div id="center" class="main">
+      <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+      <!-- 任何一個section下一層都要包下一層都要包div container作對齊 -->
+      <!-- //// class 都可以隨意命名 !!! ///// -->
+
+      <section class="col-12">
+        <div class="container">
+          <div class="col">
+            <div class="c_kv mpSlider">
+              <div class="pic">
+                <a href="#"><span class="caption">test</span><img src="images/mp/banner.jpg" alt="abc" /></a>
+              </div>
+              <div class="pic">
+                <a href="#"><span class="caption">test</span><img src="images/mp/banner.jpg" alt="abc" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12">
+        <div class="container">
+          <div class="col">
+            <!--  最新消息 -->
+            <div class="c_titleBox">最新消息<span>NEWS</span></div>
+            <div class="c_news">
+              <div class="col">
+                <a href="#">
+                  <div class="picBox">
+                    <div class="pic"><img src="images/mp/pic1.jpg" alt="" /></div>
+                    <time><span>112</span>12.15</time>
+                  </div>
+                  <div class="info">
+                    <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                    <div class="description">一、近年因疫情及地緣政治因素造成供應鏈重組之影響，使得藥品供應短缺消息時有所聞，財團法人醫藥品查驗中心（以下簡稱本中心）為因應相關公衛需求，及...</div>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <ul>
+                  <li>
+                    <a href="#" id="">
+                      <time><span>112</span>12.15</time>
+                      <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" id="">
+                      <time><span>112</span>12.15</time>
+                      <div class="title">「醫師審查員」菁英招募說明會「醫師審查員」菁英招募說明會菁英招募說明會...</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" id="">
+                      <time><span>112</span>12.15</time>
+                      <div class="title">111年度藥品審查統計分析報告111年度藥品審查統計分析報告分析報告分析報告...</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" id="">
+                      <time><span>112</span>12.15</time>
+                      <div class="title">【PS113002】113年度資訊設備維護案-招標公告</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" id="">
+                      <time><span>112</span>12.15</time>
+                      <div class="title">【PC112004】112 年度「辦公室及會議室隔音改良工程採購案」</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="c_indexMore"><a href="#">更多消息</a></div>
+            <!--  最新消息 -->
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12">
+        <div class="container">
+          <div class="col">
+            <!-- icon區塊_方塊式 -->
+            <div class="c_titleBox">icon區塊_方塊式<span>NEWS</span></div>
+            <div class="c_iconBox_no_lv checkOuter12_5">
+              <ul class="listBox">
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/002.svg" alt="" /></div>
+                    <div class="title">臨床試驗</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/003.svg" alt="" /></div>
+                    <div class="title">銜接性試驗評估</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/004.svg" alt="" /></div>
+                    <div class="title">藥品查驗登記</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/005.svg" alt="" /></div>
+                    <div class="title">原料藥審查</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/006.svg" alt="" /></div>
+                    <div class="title">藥品上市後業務</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/007.svg" alt="" /></div>
+                    <div class="title">付費諮詢</div>
+                  </a>
+                </div>
+              </ul>
+            </div>
+            <!-- icon區塊_方塊式 -->
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12">
+        <div class="container">
+          <div class="col">
+            <!-- icon區塊_方塊式(有下層資料) -->
+            <div class="c_titleBox">icon區塊_方塊式(有下層資料)<span>NEWS</span></div>
+            <div class="c_iconBox_next_lv checkOuter12_5">
+              <ul class="listBox">
+                <li class="item">
+                  <div class="pic"><img src="images/mp/icon/002.svg" alt="" /></div>
+                  <div class="title">臨床試驗</div>
+                  <div class="hoverBox">
+                    <ul>
+                      <li><a href="#">臨床試驗計畫書審查</a></li>
+                      <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
+                      <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
+                      <li><a href="#">臨床試驗計畫書審查</a></li>
+                      <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
+                      <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
+                    </ul>
+                    <a href="#" class="moreItem">更多</a>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="pic"><img src="images/mp/icon/003.svg" alt="" /></div>
+                  <div class="title">銜接性試驗評估</div>
+                  <div class="hoverBox">
+                    <ul>
+                      <li><a href="#">臨床試驗計畫書審查</a></li>
+                      <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
+                      <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
+                      <li><a href="#">臨床試驗計畫書審查</a></li>
+                      <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
+                      <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
+                    </ul>
+                    <a href="#" class="moreItem">更多</a>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="pic"><img src="images/mp/icon/004.svg" alt="" /></div>
+                  <div class="title">藥品查驗登記</div>
+                  <div class="hoverBox">
+                    <ul>
+                      <li><a href="#">臨床試驗計畫書審查</a></li>
+                      <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
+                      <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
+                      <li><a href="#">臨床試驗計畫書審查</a></li>
+                      <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
+                      <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
+                    </ul>
+                    <a href="#" class="moreItem">更多</a>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="pic"><img src="images/mp/icon/005.svg" alt="" /></div>
+                  <div class="title">原料藥審查</div>
+                  <div class="hoverBox">
+                    <ul>
+                      <li><a href="#">臨床試驗計畫書審查</a></li>
+                      <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
+                      <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
+                      <li><a href="#">臨床試驗計畫書審查</a></li>
+                      <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
+                      <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
+                    </ul>
+                    <a href="#" class="moreItem">更多</a>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="pic"><img src="images/mp/icon/006.svg" alt="" /></div>
+                  <div class="title">藥品上市後業務</div>
+                  <div class="hoverBox">
+                    <ul>
+                      <li><a href="#">臨床試驗計畫書審查</a></li>
+                      <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
+                      <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
+                      <li><a href="#">臨床試驗計畫書審查</a></li>
+                      <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
+                      <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
+                    </ul>
+                    <a href="#" class="moreItem">更多</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- icon區塊_方塊式(有下層資料) -->
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12" style="background-color: #eee">
+        <div class="container">
+          <div class="col">
+            <!-- icon區塊_圓圈式 -->
+            <div class="c_titleBox">icon區塊_圓圈式<span>NEWS</span></div>
+            <div class="c_iconBox circle">
+              <div class="listBox slick12_5">
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/002.svg" alt="" /></div>
+                    <div class="title">臨床試驗</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/003.svg" alt="" /></div>
+                    <div class="title">銜接性試驗評估</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/004.svg" alt="" /></div>
+                    <div class="title">藥品查驗登記</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/005.svg" alt="" /></div>
+                    <div class="title">原料藥審查</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/006.svg" alt="" /></div>
+                    <div class="title">藥品上市後業務</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/007.svg" alt="" /></div>
+                    <div class="title">付費諮詢</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- icon區塊_圓圈式 -->
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12">
+        <div class="container">
+          <div class="col">
+            <!-- icon區塊_方塊式 -->
+            <div class="c_titleBox">icon區塊_方塊式<span>NEWS</span></div>
+            <div class="c_iconBox">
+              <div class="listBox slick12_5">
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/002.svg" alt="" /></div>
+                    <div class="title">臨床試驗</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/003.svg" alt="" /></div>
+                    <div class="title">銜接性試驗評估</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/004.svg" alt="" /></div>
+                    <div class="title">藥品查驗登記</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/005.svg" alt="" /></div>
+                    <div class="title">原料藥審查</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/006.svg" alt="" /></div>
+                    <div class="title">藥品上市後業務</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/007.svg" alt="" /></div>
+                    <div class="title">付費諮詢</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- icon區塊_方塊式 -->
+          </div>
+        </div>
+      </section>
+
+      <section class="col-6-6">
+        <div class="container">
+          <div class="col">
+            <!-- icon區塊_標題白底 -->
+            <div class="c_titleBox">icon區塊_標題白底<span>NEWS</span></div>
+            <div class="c_iconBox_wbg checkOuter12_3">
+              <ul class="listBox">
+                <li class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/011.svg" alt="" /></div>
+                    <div class="title">法規新知及政策</div>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/027.svg" alt="" /></div>
+                    <div class="title">教育訓練課程</div>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/014.svg" alt="" /></div>
+                    <div class="title">常見問答FAQ</div>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/028.svg" alt="" /></div>
+                    <div class="title">推薦網站連結</div>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/icon/021.svg" alt="" /></div>
+                    <div class="title">健保HTA</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- icon區塊_標題白底 -->
+          </div>
+          <div class="col">
+            <!-- 圖文卡片式 -->
+            <div class="c_titleBox">圖文卡片式<span>NEWS</span></div>
+            <div class="c_cardText">
+              <div class="listBox slick12_3">
+                <div class="item">
                   <a href="#">
                     <div class="picBox">
                       <div class="pic"><img src="images/mp/pic1.jpg" alt="" /></div>
-                      <time><span>112</span>12.15</time>
                     </div>
                     <div class="info">
                       <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
@@ -256,1480 +594,1151 @@
                     </div>
                   </a>
                 </div>
-                <div class="col">
-                  <ul>
-                    <li>
-                      <a href="#" id="">
-                        <time><span>112</span>12.15</time>
-                        <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" id="">
-                        <time><span>112</span>12.15</time>
-                        <div class="title">「醫師審查員」菁英招募說明會「醫師審查員」菁英招募說明會菁英招募說明會...</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" id="">
-                        <time><span>112</span>12.15</time>
-                        <div class="title">111年度藥品審查統計分析報告111年度藥品審查統計分析報告分析報告分析報告...</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" id="">
-                        <time><span>112</span>12.15</time>
-                        <div class="title">【PS113002】113年度資訊設備維護案-招標公告</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" id="">
-                        <time><span>112</span>12.15</time>
-                        <div class="title">【PC112004】112 年度「辦公室及會議室隔音改良工程採購案」</div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="c_indexMore"><a href="#">更多消息</a></div>
-              <!--  最新消息 -->
-            </div>
-          </div>
-        </section>
-
-        <section class="col-12">
-          <div class="container">
-            <div class="col">
-              <!-- icon區塊_方塊式 -->
-              <div class="c_titleBox">icon區塊_方塊式<span>NEWS</span></div>
-              <div class="c_iconBox_no_lv checkOuter12_5">
-                <ul class="listBox">
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/002.svg" alt="" /></div>
-                      <div class="title">臨床試驗</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/003.svg" alt="" /></div>
-                      <div class="title">銜接性試驗評估</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/004.svg" alt="" /></div>
-                      <div class="title">藥品查驗登記</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/005.svg" alt="" /></div>
-                      <div class="title">原料藥審查</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/006.svg" alt="" /></div>
-                      <div class="title">藥品上市後業務</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/007.svg" alt="" /></div>
-                      <div class="title">付費諮詢</div>
-                    </a>
-                  </div>
-                </ul>
-              </div>
-              <!-- icon區塊_方塊式 -->
-            </div>
-          </div>
-        </section>
-
-        <section class="col-12">
-          <div class="container">
-            <div class="col">
-              <!-- icon區塊_方塊式(有下層資料) -->
-              <div class="c_titleBox">icon區塊_方塊式(有下層資料)<span>NEWS</span></div>
-              <div class="c_iconBox_next_lv checkOuter12_5">
-                <ul class="listBox">
-                  <li class="item">
-                    <div class="pic"><img src="images/mp/icon/002.svg" alt="" /></div>
-                    <div class="title">臨床試驗</div>
-                    <div class="hoverBox">
-                      <ul>
-                        <li><a href="#">臨床試驗計畫書審查</a></li>
-                        <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
-                        <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
-                        <li><a href="#">臨床試驗計畫書審查</a></li>
-                        <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
-                        <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
-                      </ul>
-                      <a href="#" class="moreItem">更多</a>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div class="pic"><img src="images/mp/icon/003.svg" alt="" /></div>
-                    <div class="title">銜接性試驗評估</div>
-                    <div class="hoverBox">
-                      <ul>
-                        <li><a href="#">臨床試驗計畫書審查</a></li>
-                        <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
-                        <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
-                        <li><a href="#">臨床試驗計畫書審查</a></li>
-                        <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
-                        <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
-                      </ul>
-                      <a href="#" class="moreItem">更多</a>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div class="pic"><img src="images/mp/icon/004.svg" alt="" /></div>
-                    <div class="title">藥品查驗登記</div>
-                    <div class="hoverBox">
-                      <ul>
-                        <li><a href="#">臨床試驗計畫書審查</a></li>
-                        <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
-                        <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
-                        <li><a href="#">臨床試驗計畫書審查</a></li>
-                        <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
-                        <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
-                      </ul>
-                      <a href="#" class="moreItem">更多</a>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div class="pic"><img src="images/mp/icon/005.svg" alt="" /></div>
-                    <div class="title">原料藥審查</div>
-                    <div class="hoverBox">
-                      <ul>
-                        <li><a href="#">臨床試驗計畫書審查</a></li>
-                        <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
-                        <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
-                        <li><a href="#">臨床試驗計畫書審查</a></li>
-                        <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
-                        <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
-                      </ul>
-                      <a href="#" class="moreItem">更多</a>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div class="pic"><img src="images/mp/icon/006.svg" alt="" /></div>
-                    <div class="title">藥品上市後業務</div>
-                    <div class="hoverBox">
-                      <ul>
-                        <li><a href="#">臨床試驗計畫書審查</a></li>
-                        <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
-                        <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
-                        <li><a href="#">臨床試驗計畫書審查</a></li>
-                        <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
-                        <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
-                      </ul>
-                      <a href="#" class="moreItem">更多</a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <!-- icon區塊_方塊式(有下層資料) -->
-            </div>
-          </div>
-        </section>
-
-        <section class="col-12" style="background-color: #eee">
-          <div class="container">
-            <div class="col">
-              <!-- icon區塊_圓圈式 -->
-              <div class="c_titleBox">icon區塊_圓圈式<span>NEWS</span></div>
-              <div class="c_iconBox circle">
-                <div class="listBox slick12_5">
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/002.svg" alt="" /></div>
-                      <div class="title">臨床試驗</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/003.svg" alt="" /></div>
-                      <div class="title">銜接性試驗評估</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/004.svg" alt="" /></div>
-                      <div class="title">藥品查驗登記</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/005.svg" alt="" /></div>
-                      <div class="title">原料藥審查</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/006.svg" alt="" /></div>
-                      <div class="title">藥品上市後業務</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/007.svg" alt="" /></div>
-                      <div class="title">付費諮詢</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- icon區塊_圓圈式 -->
-            </div>
-          </div>
-        </section>
-
-        <section class="col-12">
-          <div class="container">
-            <div class="col">
-              <!-- icon區塊_方塊式 -->
-              <div class="c_titleBox">icon區塊_方塊式<span>NEWS</span></div>
-              <div class="c_iconBox">
-                <div class="listBox slick12_5">
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/002.svg" alt="" /></div>
-                      <div class="title">臨床試驗</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/003.svg" alt="" /></div>
-                      <div class="title">銜接性試驗評估</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/004.svg" alt="" /></div>
-                      <div class="title">藥品查驗登記</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/005.svg" alt="" /></div>
-                      <div class="title">原料藥審查</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/006.svg" alt="" /></div>
-                      <div class="title">藥品上市後業務</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/007.svg" alt="" /></div>
-                      <div class="title">付費諮詢</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- icon區塊_方塊式 -->
-            </div>
-          </div>
-        </section>
-
-        <section class="col-6-6">
-          <div class="container">
-            <div class="col">
-              <!-- icon區塊_標題白底 -->
-              <div class="c_titleBox">icon區塊_標題白底<span>NEWS</span></div>
-              <div class="c_iconBox_wbg checkOuter12_3">
-                <ul class="listBox">
-                  <li class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/011.svg" alt="" /></div>
-                      <div class="title">法規新知及政策</div>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/027.svg" alt="" /></div>
-                      <div class="title">教育訓練課程</div>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/014.svg" alt="" /></div>
-                      <div class="title">常見問答FAQ</div>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/028.svg" alt="" /></div>
-                      <div class="title">推薦網站連結</div>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/icon/021.svg" alt="" /></div>
-                      <div class="title">健保HTA</div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- icon區塊_標題白底 -->
-            </div>
-            <div class="col">
-              <!-- 圖文卡片式 -->
-              <div class="c_titleBox">圖文卡片式<span>NEWS</span></div>
-              <div class="c_cardText">
-                <div class="listBox slick12_3">
-                  <div class="item">
-                    <a href="#">
-                      <div class="picBox">
-                        <div class="pic"><img src="images/mp/pic1.jpg" alt="" /></div>
-                      </div>
-                      <div class="info">
-                        <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                        <div class="description">一、近年因疫情及地緣政治因素造成供應鏈重組之影響，使得藥品供應短缺消息時有所聞，財團法人醫藥品查驗中心（以下簡稱本中心）為因應相關公衛需求，及...</div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="picBox">
-                        <div class="pic"><img src="images/mp/pic1.jpg" alt="" /></div>
-                      </div>
-                      <div class="info">
-                        <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                        <div class="description">一、近年因疫情及地緣政治因素造成供應鏈重組之影響，使得藥品供應短缺消息時有所聞，財團法人醫藥品查驗中心（以下簡稱本中心）為因應相關公衛需求，及...</div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="c_indexMore"><a href="#">更多</a></div>
-              </div>
-              <!-- 圖文卡片式 -->
-            </div>
-          </div>
-        </section>
-
-        <section class="col-12" style="background: url('images/mp/bg.jpg') no-repeat">
-          <div class="container">
-            <div class="col">
-              <div class="c_titleBox">統計圖表<span>NEWS</span></div>
-              <div class="c_chart chart1">
-                <div class="c_indexMore"><a href="#">更多</a></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="col-12" style="background: url('images/mp/bg.jpg') no-repeat">
-          <div class="container">
-            <div class="col">
-              <div class="c_titleBox">統計圖表_頁籤式<span>NEWS</span></div>
-              <div class="c_tab2">
-                <div class="tabBox">
-                  <div class="tab">
-                    <button type="button">tab1</button>
-                    <button type="button">tab2</button>
-                    <button type="button">tab3</button>
-                  </div>
-                  <div class="contentBox">
-                    <div class="content">
-                      <div class="c_chart chart2"></div>
-                    </div>
-                    <div class="content">
-                      <div class="c_chart chart3"></div>
-                    </div>
-                    <div class="content">
-                      <div class="c_chart chart4"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="col-12" style="background: url('images/mp/bg.jpg') no-repeat">
-          <div class="container">
-            <div class="col">
-              <div class="c_titleBox">頁籤功能(按鈕在左)<span>NEWS</span></div>
-              <div class="c_tabLeft">
-                <div class="tabBox">
-                  <div class="tab"><button>審查評估業務</button><button>法規諮詢輔導業務</button></div>
-                  <div class="contentBox">
-                    <div class="content">
-                      1
-                      <div class="editor">
-                        <img src="images/demo/pic.jpg" alt="" />
-                      </div>
-                    </div>
-                    <div class="content">
-                      2
-                      <div class="editor">
-                        <img src="images/demo/pic.jpg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="col-12" style="background: url('images/mp/bg.jpg') no-repeat">
-          <div class="container">
-            <div class="col">
-              <div class="c_titleBox">雙層頁籤<span>NEWS</span></div>
-              <div class="c_tabDouble">
-                <div class="tabBox">
-                  <div class="tab">
-                    <button type="button">tab1</button>
-                    <button type="button">tab2</button>
-                    <button type="button">tab3</button>
-                  </div>
-                  <div class="contentBox">
-                    <div class="content">
-                      <div class="c_tabLeft">
-                        <div class="tabBox">
-                          <div class="tab"><button>審查評估業務</button><button>法規諮詢輔導業務</button></div>
-                          <div class="contentBox">
-                            <div class="content">
-                              11
-                              <div class="editor">
-                                <img src="images/demo/pic.jpg" alt="" />
-                              </div>
-                            </div>
-                            <div class="content">
-                              12
-                              <div class="editor">
-                                <img src="images/demo/pic.jpg" alt="" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="content">
-                      <div class="c_tabLeft">
-                        <div class="tabBox">
-                          <div class="tab"><button>審查評估業務</button><button>法規諮詢輔導業務</button></div>
-                          <div class="contentBox">
-                            <div class="content">
-                              21
-                              <div class="editor">
-                                <img src="images/demo/pic.jpg" alt="" />
-                              </div>
-                            </div>
-                            <div class="content">
-                              22
-                              <div class="editor">
-                                <img src="images/demo/pic.jpg" alt="" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="content">
-                      <div class="c_tabLeft">
-                        <div class="tabBox">
-                          <div class="tab"><button>審查評估業務</button><button>法規諮詢輔導業務</button></div>
-                          <div class="contentBox">
-                            <div class="content">
-                              31
-                              <div class="editor">
-                                <img src="images/demo/pic.jpg" alt="" />
-                              </div>
-                            </div>
-                            <div class="content">
-                              32
-                              <div class="editor">
-                                <img src="images/demo/pic.jpg" alt="" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="col-12" style="background: url('images/mp/bg.jpg') no-repeat">
-          <div class="container">
-            <div class="col">
-              <div class="c_titleBox">雙層頁籤_選單式<span>NEWS</span></div>
-              <div class="c_tabDouble">
-                <div class="tabBox">
-                  <div class="tab">
-                    <button type="button">tab1</button>
-                    <button type="button">tab2</button>
-                    <button type="button">tab3</button>
-                  </div>
-                  <div class="contentBox">
-                    <div class="content">
-                      <div class="c_tabSelect">
-                        <button type="button" class="switchBtn">其他表單</button>
-                        <div class="tabBox">
-                          <div class="tab"><button class="active">審查評估業務</button><button>法規諮詢輔導業務</button></div>
-                          <div class="contentBox">
-                            <div class="content active">
-                              <div class="subTitle">審查評估業務</div>
-                              11
-                              <div class="editor">
-                                <img src="images/demo/pic.jpg" alt="" />
-                              </div>
-                            </div>
-                            <div class="content">
-                              <div class="subTitle">法規諮詢輔導業務</div>
-                              12
-                              <div class="editor">
-                                <img src="images/demo/pic.jpg" alt="" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="content">
-                      <div class="c_tabSelect">
-                        <button type="button" class="switchBtn">其他表單</button>
-                        <div class="tabBox">
-                          <div class="tab"><button class="active">審查評估業務</button><button>法規諮詢輔導業務</button></div>
-                          <div class="contentBox">
-                            <div class="content active">
-                              <div class="subTitle">審查評估業務</div>
-                              21
-                              <div class="editor">
-                                <img src="images/demo/pic.jpg" alt="" />
-                              </div>
-                            </div>
-                            <div class="content">
-                              <div class="subTitle">法規諮詢輔導業務</div>
-                              22
-                              <div class="editor">
-                                <img src="images/demo/pic.jpg" alt="" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="content">
-                      <div class="c_tabSelect">
-                        <button type="button" class="switchBtn">其他表單</button>
-                        <div class="tabBox">
-                          <div class="tab"><button class="active">審查評估業務</button><button>法規諮詢輔導業務</button></div>
-                          <div class="contentBox">
-                            <div class="content active">
-                              <div class="subTitle">審查評估業務</div>
-                              31
-                              <div class="editor">
-                                <img src="images/demo/pic.jpg" alt="" />
-                              </div>
-                            </div>
-                            <div class="content">
-                              <div class="subTitle">法規諮詢輔導業務</div>
-                              32
-                              <div class="editor">
-                                <img src="images/demo/pic.jpg" alt="" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="col-12">
-          <div class="container">
-            <div class="col">
-              <!-- 圖文條列 -->
-              <div class="c_titleBox">圖文條列<span>NEWS</span></div>
-              <div class="c_ptBox checkOuter12_3">
-                <ul class="listBox">
-                  <li class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/pic2.jpg" alt="" /></div>
-                      <div class="info">
-                        <div class="title">About Us</div>
-                        <div class="description">
-                          U.S. Food and Drug Administration (US FDA) 為美國衛⽣及公共服務部直轄的聯邦政府機構，其下有不同專責單位負責新藥上市前審查及藥品上市後的安全性觀察。類⽐的機構在歐盟European Medicines Agency
-                          (EMA)或⽇本厚⽣勞動省下均有。⽽在台灣協助⻝藥署(TFDA)從事醫藥品相關審查的機構，則為財團法人醫藥品查驗中心，即Center for Drug Evaluation (CDE)。人力，進行初複審兩階段審...
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/pic2.jpg" alt="" /></div>
-                      <div class="info">
-                        <div class="title">簡介</div>
-                        <div class="description">
-                          查驗中心於 2006 年成立醫療器材組，主要的業務範圍包括醫療器材相關之技術性資料評估及法規諮詢輔導。而協助食品藥物管理署執行之醫療器材技術性資料評估，包含醫療器材臨床試驗計畫書、臨床試驗報告、查驗登記及相關展延變更，以確保我國民眾使用安全性。 <br />
-                          此外，針對重要國家型生技計畫，及生技醫藥學研產業之政府補助計畫申請案，進行醫療器材案件有關法...
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="#">
-                      <div class="info">
-                        <div class="title">未來展望</div>
-                        <div class="description">
-                          展望未來，查驗中心將持續致力於技術性審查品質的精益求精，落實優良審查規範（Good Review
-                          Practice），協助法規規範更新與草案研擬，發展醫藥科技評估專業；同時釋放法規科學諮詢輔導能量，建立法規輔導平台，提供產學研界醫藥品研發及上市所需之法規諮詢服務，加速我國利基新醫藥品之開發。我們亦將持續與國際上醫藥發達國家之法規單位保持專業領域交流與吸取相關新知，厚實我們在醫藥審查、科技評估能量，為國人健康與健康照護體系發展貢獻心力，作為衛生福利部在藥政、健保的堅實後盾。
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-                <div class="c_indexMore"><a href="#">更多</a></div>
-              </div>
-              <!-- 圖文條列 -->
-            </div>
-          </div>
-        </section>
-
-        <section class="col-12" style="background: url('images/mp/bg2.jpg') no-repeat">
-          <div class="container">
-            <div class="col">
-              <div class="c_titleBox">文字連結_頁籤式<span>NEWS</span></div>
-              <div class="c_tab">
-                <div class="tabBox">
-                  <div class="tab">
-                    <button type="button">審查業務</button>
-                    <button type="button">諮詢輔導</button>
-                    <button type="button">業務說明</button>
-                  </div>
-                  <div class="contentBox">
-                    <div class="content">
-                      <ul class="listBox">
-                        <li class="item"><a href="#">法規新知及政策</a></li>
-                        <li class="item"><a href="#">研發策略指導原則 (醫療器材)</a></li>
-                        <li class="item"><a href="#">常見問答FAQ</a></li>
-                        <li class="item"><a href="#">文字連結_頁籤式</a></li>
-                        <li class="item"><a href="#">推薦網站連結</a></li>
-                        <li class="item"><a href="#">推薦網站連結</a></li>
-                      </ul>
-                      <div class="c_indexMore"><a href="#">更多</a></div>
-                    </div>
-                    <div class="content">
-                      <ul class="listBox">
-                        <li class="item"><a href="#">法規新知及政策</a></li>
-                        <li class="item"><a href="#">研發策略指導原則 (醫療器材)</a></li>
-                        <li class="item"><a href="#">常見問答FAQ</a></li>
-                        <li class="item"><a href="#">文字連結_頁籤式</a></li>
-                        <li class="item"><a href="#">推薦網站連結</a></li>
-                        <li class="item"><a href="#">推薦網站連結</a></li>
-                      </ul>
-                      <div class="c_indexMore"><a href="#">更多</a></div>
-                    </div>
-                    <div class="content">
-                      <ul class="listBox">
-                        <li class="item"><a href="#">法規新知及政策</a></li>
-                        <li class="item"><a href="#">研發策略指導原則 (醫療器材)</a></li>
-                        <li class="item"><a href="#">常見問答FAQ</a></li>
-                        <li class="item"><a href="#">文字連結_頁籤式</a></li>
-                        <li class="item"><a href="#">推薦網站連結</a></li>
-                        <li class="item"><a href="#">推薦網站連結</a></li>
-                      </ul>
-                      <div class="c_indexMore"><a href="#">更多</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="col-12">
-          <div class="container">
-            <div class="col">
-              <!-- 最新消息卡片(有標籤) -->
-              <div class="c_titleBox">最新消息卡片(有標籤)<span>NEWS</span></div>
-              <div class="c_newsCard">
-                <div class="listBox slick12_3">
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
-                      <div class="info">
-                        <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                        <time>開課日期：2023-11-01</time>
-                        <time>報名截止：2023-11-30</time>
-                        <ul class="tagBox">
-                          <li class="tag">實體課程</li>
-                          <li class="tag">7hr</li>
-                        </ul>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
-                      <div class="info">
-                        <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                        <time>開課日期：2023-11-01</time>
-                        <time>報名截止：2023-11-30</time>
-                        <ul class="tagBox">
-                          <li class="tag">實體課程</li>
-                          <li class="tag">7hr</li>
-                        </ul>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
-                      <div class="info">
-                        <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                        <time>開課日期：2023-11-01</time>
-                        <time>報名截止：2023-11-30</time>
-                        <ul class="tagBox">
-                          <li class="tag">實體課程</li>
-                          <li class="tag">7hr</li>
-                        </ul>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
-                      <div class="info">
-                        <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                        <time>開課日期：2023-11-01</time>
-                        <time>報名截止：2023-11-30</time>
-                        <ul class="tagBox">
-                          <li class="tag">實體課程</li>
-                          <li class="tag">7hr</li>
-                        </ul>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="c_indexMore"><a href="#">更多</a></div>
-              </div>
-              <!-- 最新消息卡片(有標籤) -->
-            </div>
-          </div>
-        </section>
-
-        <section class="col-12">
-          <div class="container">
-            <div class="col">
-              <!-- 最新消息卡片(有標籤)+頁籤式 -->
-              <div class="c_titleBox">最新消息卡片(有標籤)+頁籤式<span>NEWS</span></div>
-              <div class="c_newsCardTab">
-                <div class="tabBox">
-                  <div class="tab">
-                    <button type="button">收費課程</button>
-                    <button type="button">計畫活動（政府補助課程）</button>
-                  </div>
-                  <div class="contentBox">
-                    <div class="content">
-                      <div class="listBox slick12_3">
-                        <div class="item">
-                          <a href="#">
-                            <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
-                            <div class="info">
-                              <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                              <time>開課日期：2023-11-01</time>
-                              <time>報名截止：2023-11-30</time>
-                              <ul class="tagBox">
-                                <li class="tag">實體課程</li>
-                                <li class="tag">7hr</li>
-                              </ul>
-                            </div>
-                          </a>
-                        </div>
-                        <div class="item">
-                          <a href="#">
-                            <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
-                            <div class="info">
-                              <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                              <time>開課日期：2023-11-01</time>
-                              <time>報名截止：2023-11-30</time>
-                              <ul class="tagBox">
-                                <li class="tag">實體課程</li>
-                                <li class="tag">7hr</li>
-                              </ul>
-                            </div>
-                          </a>
-                        </div>
-                        <div class="item">
-                          <a href="#">
-                            <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
-                            <div class="info">
-                              <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                              <time>開課日期：2023-11-01</time>
-                              <time>報名截止：2023-11-30</time>
-                              <ul class="tagBox">
-                                <li class="tag">實體課程</li>
-                                <li class="tag">7hr</li>
-                              </ul>
-                            </div>
-                          </a>
-                        </div>
-                        <div class="item">
-                          <a href="#">
-                            <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
-                            <div class="info">
-                              <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                              <time>開課日期：2023-11-01</time>
-                              <time>報名截止：2023-11-30</time>
-                              <ul class="tagBox">
-                                <li class="tag">實體課程</li>
-                                <li class="tag">7hr</li>
-                              </ul>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="c_indexMore"><a href="#">更多</a></div>
-                    </div>
-                    <div class="content">
-                      <div class="listBox slick12_3">
-                        <div class="item">
-                          <a href="#">
-                            <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
-                            <div class="info">
-                              <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                              <time>開課日期：2023-11-01</time>
-                              <time>報名截止：2023-11-30</time>
-                              <ul class="tagBox">
-                                <li class="tag">實體課程</li>
-                                <li class="tag">7hr</li>
-                              </ul>
-                            </div>
-                          </a>
-                        </div>
-                        <div class="item">
-                          <a href="#">
-                            <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
-                            <div class="info">
-                              <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                              <time>開課日期：2023-11-01</time>
-                              <time>報名截止：2023-11-30</time>
-                              <ul class="tagBox">
-                                <li class="tag">實體課程</li>
-                                <li class="tag">7hr</li>
-                              </ul>
-                            </div>
-                          </a>
-                        </div>
-                        <div class="item">
-                          <a href="#">
-                            <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
-                            <div class="info">
-                              <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                              <time>開課日期：2023-11-01</time>
-                              <time>報名截止：2023-11-30</time>
-                              <ul class="tagBox">
-                                <li class="tag">實體課程</li>
-                                <li class="tag">7hr</li>
-                              </ul>
-                            </div>
-                          </a>
-                        </div>
-                        <div class="item">
-                          <a href="#">
-                            <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
-                            <div class="info">
-                              <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                              <time>開課日期：2023-11-01</time>
-                              <time>報名截止：2023-11-30</time>
-                              <ul class="tagBox">
-                                <li class="tag">實體課程</li>
-                                <li class="tag">7hr</li>
-                              </ul>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="c_indexMore"><a href="#">更多</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- 最新消息卡片(有標籤)+頁籤式 -->
-            </div>
-          </div>
-        </section>
-
-        <section class="col-12">
-          <div class="container">
-            <div class="col">
-              <!-- 文字連結_區塊底圖式 -->
-              <div class="c_titleBox">文字連結_區塊底圖式<span>NEWS</span></div>
-              <div class="c_cardLink">
-                <div class="listBox slick12_3">
-                  <div class="item">
-                    <a href="#">
+                <div class="item">
+                  <a href="#">
+                    <div class="picBox">
                       <div class="pic"><img src="images/mp/pic1.jpg" alt="" /></div>
-                      <div class="info">
-                        <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/pic1.jpg" alt="" /></div>
-                      <div class="info">
-                        <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/pic1.jpg" alt="" /></div>
-                      <div class="info">
-                        <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/pic1.jpg" alt="" /></div>
-                      <div class="info">
-                        <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="c_indexMore"><a href="#">更多</a></div>
-              </div>
-              <!-- 文字連結_區塊底圖式 -->
-            </div>
-          </div>
-        </section>
-
-        <section class="col-6-6" style="background-color: #eee">
-          <div class="container">
-            <div class="col">
-              <!-- 文字連結_一般條列式 -->
-              <div class="c_titleBox">文字連結_一般條列式<span>NEWS</span></div>
-              <div class="c_textLinkList checkOuter12_3">
-                <ul class="listBox">
-                  <li class="item">
-                    <a href="#">
-                      <div class="title">法規新知及政策</div>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="#">
-                      <div class="title">教育訓練課程</div>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="#">
-                      <div class="title">常見問答FAQ</div>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="#">
-                      <div class="title">推薦網站連結</div>
-                    </a>
-                  </li>
-                  <li class="item">
-                    <a href="#">
-                      <div class="title">教育訓練課程</div>
-                    </a>
-                  </li>
-                </ul>
-                <div class="c_indexMore"><a href="#">更多</a></div>
-              </div>
-              <!-- 文字連結_一般條列式 -->
-            </div>
-            <div class="col">
-              <!-- 文字編輯區塊 -->
-              <div class="c_titleBox">文字編輯區塊<span>NEWS</span></div>
-              <div class="c_textEditor">
-                <div class="listBox slick12_3">
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/pic9.jpg" alt="" /></div>
-                      <div class="info">
-                        <div class="title">文字編輯區塊</div>
-                        <div class="description">
-                          <ul class="listBox">
-                            <li>接洽方式：函寄 或 E-mail（請註明應徵類別）</li>
-                            <li>攜備文件：詳細個人履歷自傳資料、半身近照(應徵審查員者請附曾發表之論文目錄/摘要）</li>
-                            <li>人資聯絡電話： 02-8170-6000 轉 661 / 651 / 656</li>
-                            <li>電子信箱：hr@cde.org.tw</li>
-                            <li>地　　址：台北市南港區 11557 忠孝東路六段 465 號 3 樓</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="picBox">
-                        <div class="pic"><img src="images/mp/pic1.jpg" alt="" /></div>
-                      </div>
-                      <div class="info">
-                        <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                        <div class="description">一、近年因疫情及地緣政治因素造成供應鏈重組之影響，使得藥品供應短缺消息時有所聞，財團法人醫藥品查驗中心（以下簡稱本中心）為因應相關公衛需求，及...</div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="c_indexMore"><a href="#">更多</a></div>
-              </div>
-              <!-- 文字編輯區塊 -->
-            </div>
-          </div>
-        </section>
-
-        <section class="col-12">
-          <div class="container">
-            <!-- 小廣告輪播 -->
-            <div class="col">
-              <div class="c_titleBox">小廣告輪播<span>NEWS</span></div>
-              <div class="c_linkBox">
-                <div class="listBox slick12_5">
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/pic5.jpg" alt="" /></div>
-                      <div class="title">台灣藥物臨床試驗資訊網</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/pic6.jpg" alt="" /></div>
-                      <div class="title">台灣臨床試驗資訊平台</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/pic7.jpg" alt="" /></div>
-                      <div class="title">台灣藥品法規資訊網</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/pic5.jpg" alt="" /></div>
-                      <div class="title">食藥署醫療器材輔導中心</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/pic6.jpg" alt="" /></div>
-                      <div class="title">台灣藥物臨床試驗資訊網</div>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="images/mp/pic6.jpg" alt="" /></div>
-                      <div class="title">台灣臨床試驗資訊平台</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 小廣告輪播 -->
-          </div>
-        </section>
-
-        <section class="col-6-6" style="background: url('images/mp/bg2.jpg') no-repeat">
-          <div class="container">
-            <div class="col">
-              <div class="c_titleBox">影音專區<span>NEWS</span></div>
-              <div class="c_videoBox">
-                <div class="pic">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/eP9zg7dK41I?si=AMnGTDRevlI3IAh_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                <div class="info">
-                  <div class="title">台灣藥物臨床試驗資訊網</div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <!-- 文字區塊連結 -->
-              <div class="c_titleBox">文字區塊連結<span>NEWS</span></div>
-              <div class="c_textLink checkOuter12_3">
-                <ul class="listBox">
-                  <li class="item">
-                    <a href="#">
-                      <div class="title">付費諮詢</div>
-                    </a>
-                  </li>
-
-                  <li class="item">
-                    <a href="#">
-                      <div class="title">一般諮詢</div>
-                    </a>
-                  </li>
-
-                  <li class="item">
-                    <a href="#">
-                      <div class="title">常見問題FAQ</div>
-                    </a>
-                  </li>
-
-                  <li class="item">
-                    <a href="#">
-                      <div class="title">常見問題FAQ</div>
-                    </a>
-                  </li>
-
-                  <li class="item">
-                    <a href="#">
-                      <div class="title">常見問題FAQ</div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- 文字區塊連結 -->
-            </div>
-          </div>
-        </section>
-
-        <section class="col-12">
-          <div class="container">
-            <div class="col">
-              <!-- 最新消息卡片式(有連結按鈕) -->
-              <div class="c_titleBox">最新消息卡片式(有連結按鈕)<span>NEWS</span></div>
-              <div class="c_newsCardLink">
-                <div class="listBox slick12_3">
-                  <div class="item">
-                    <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
+                    </div>
                     <div class="info">
                       <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                      <time>開課日期：2023-11-01</time>
-                      <time>報名截止：2023-11-30</time>
-                      <ul class="linkBox">
-                        <li><a href="#">草案瀏覽</a></li>
-                        <li><a href="#">草案建言</a></li>
-                        <li><a href="#">滿意度調查表</a></li>
-                      </ul>
+                      <div class="description">一、近年因疫情及地緣政治因素造成供應鏈重組之影響，使得藥品供應短缺消息時有所聞，財團法人醫藥品查驗中心（以下簡稱本中心）為因應相關公衛需求，及...</div>
                     </div>
-                  </div>
-                  <div class="item">
-                    <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
-                    <div class="info">
-                      <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                      <time>開課日期：2023-11-01</time>
-                      <time>報名截止：2023-11-30</time>
-                      <ul class="linkBox">
-                        <li><a href="#">草案瀏覽</a></li>
-                        <li><a href="#">草案建言</a></li>
-                        <li><a href="#">滿意度調查表</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
-                    <div class="info">
-                      <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                      <time>開課日期：2023-11-01</time>
-                      <time>報名截止：2023-11-30</time>
-                      <ul class="linkBox">
-                        <li><a href="#">草案瀏覽</a></li>
-                        <li><a href="#">草案建言</a></li>
-                        <li><a href="#">滿意度調查表</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
-                    <div class="info">
-                      <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
-                      <time>開課日期：2023-11-01</time>
-                      <time>報名截止：2023-11-30</time>
-                      <ul class="linkBox">
-                        <li><a href="#">草案瀏覽</a></li>
-                        <li><a href="#">草案建言</a></li>
-                        <li><a href="#">滿意度調查表</a></li>
-                      </ul>
-                    </div>
-                  </div>
+                  </a>
                 </div>
-                <div class="c_indexMore"><a href="#">更多</a></div>
               </div>
-              <!-- 最新消息卡片式(有連結按鈕) -->
-            </div>
-          </div>
-        </section>
 
-        <section class="col-12" style="background: url('images/mp/bg.jpg') no-repeat">
-          <div class="container">
-            <div class="col">
-              <div class="c_titleBox">FAQ<span>NEWS</span></div>
-              <div class="c_faq">
-                <ul class="listBox checkOuter12_4">
-                  <li class="item">
-                    <a href="#" class="title">生物製劑須在unprocessed bulk執行外來物質之檢測，若使用連續製程，應如何檢測以確保無外來物質汙染?</a>
-                  </li>
-                  <li class="item">
-                    <a href="#" class="title">微脂粒藥品一般具有其特殊屬性，於藥品查驗登記階段，微脂粒藥品的成品安定性規格中，有那些需考量的層面?</a>
-                  </li>
-                  <li class="item">
-                    <a href="#" class="title">微脂粒藥品一般具有其特殊屬性，於藥品查驗登記階段，微脂粒藥品的成品安定性規格中，有那些需考量的層面?</a>
-                  </li>
-                  <li class="item">
-                    <a href="#" class="title">微脂粒藥品一般具有其特殊屬性，於藥品查驗登記階段，微脂粒藥品的成品安定性規格中，有那些需考量的層面?</a>
-                  </li>
-                  <li class="item">
-                    <a href="#" class="title">微脂粒藥品一般具有其特殊屬性，於藥品查驗登記階段，微脂粒藥品的成品安定性規格中，有那些需考量的層面?</a>
-                  </li>
-                </ul>
-                <div class="c_indexMore"><a href="#">更多</a></div>
-              </div>
+              <div class="c_indexMore"><a href="#">更多</a></div>
             </div>
+            <!-- 圖文卡片式 -->
           </div>
-        </section>
-      </div>
-      <!-- fatfooter Start -->
-      <section class="fatfooter">
-        <div class="container">
-          <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btn-fatfooter">收合</button>
-          <nav>
-            <ul>
-              <li>
-                <a href="#">審查評估業務</a>
-                <ul>
-                  <li><a href="#">藥品</a></li>
-                  <li><a href="#">細胞治療技術</a></li>
-                  <li><a href="#">醫療器材</a></li>
-                  <li><a href="#">醫療科技評估</a></li>
-                  <li><a href="#">健康食品及特殊營養食品</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">法規諮詢輔導</a>
-                <ul>
-                  <li><a href="#">藥品</a></li>
-                  <li><a href="#">細胞治療技術</a></li>
-                  <li><a href="#">醫療器材</a></li>
-                  <li><a href="#">醫療科技評估</a></li>
-                  <li><a href="#">健康食品及特殊營養食品</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">最新法規資訊</a>
-                <ul>
-                  <li><a href="#">藥品</a></li>
-                  <li><a href="#">細胞治療技術</a></li>
-                  <li><a href="#">醫療器材</a></li>
-                  <li><a href="#">醫療科技評估</a></li>
-                  <li><a href="#">健康食品及特殊營養食品</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">訊息公告</a>
-                <ul>
-                  <li><a href="#">CDE重大消息/政策</a></li>
-                  <li><a href="#">業務最新公告</a></li>
-                  <li><a href="http://www.google.com">採購公告</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">認識CDE</a>
-                <ul>
-                  <li><a href="#">緣起宗旨</a></li>
-                  <li><a href="#">董事會/董事長</a></li>
-                  <li><a href="#">執行長</a></li>
-                  <li><a href="#">組織架構</a></li>
-                  <li><a href="#">業務介紹</a></li>
-                  <li><a href="#">公開資訊</a></li>
-                  <li><a href="#">地理位置</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">加入CDE</a>
-                <ul>
-                  <li><a href="#">菁英招募</a></li>
-                  <li><a href="#">實習專區</a></li>
-                  <li><a href="#">下載專區</a></li>
-                  <li><a href="#">聯絡我們</a></li>
-                  <li><a href="#">員工專區</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
         </div>
       </section>
-      <!-- fatfooter End -->
-      <!-- footer Start-->
-      <footer>
+
+      <section class="col-12" style="background: url('images/mp/bg.jpg') no-repeat">
         <div class="container">
-          <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
-          <div class="footer_logo">
-            <img src="images/footer_logo.svg" alt="" class="img-responsive" />
-          </div>
-          <div class="footer_map"><a href="#">本中心位置圖</a></div>
-          <div class="footer_info">
-            <div class="infoblock">
-              <p class="Copyright">
-                版權所有© 財團法人醫藥品查驗中心<br />
-                地址：台北市南港區11557忠孝東路六段465號3樓
-              </p>
-            </div>
-            <div class="infoblock">
-              <p>
-                電話：886-2-8170-6000（總機服務時間：8:30-12:30 ，13:30-17:30）<br />
-                傳真：886-2-8170-6001、886-2-8170-6002
-              </p>
-            </div>
-            <div class="infoblock">
-              <p>
-                本網站支援IE、Firefox及Chrome，最佳瀏覽解析度為1024x768以上<br />
-                <span class="update">更新日期:<em>2018/01/01</em></span>
-                <span class="counter">累計瀏覽人次:<em>46476653</em></span>
-              </p>
+          <div class="col">
+            <div class="c_titleBox">統計圖表<span>NEWS</span></div>
+            <div class="c_chart chart1">
+              <div class="c_indexMore"><a href="#">更多</a></div>
             </div>
           </div>
         </div>
-      </footer>
-      <!-- footer End -->
+      </section>
+
+      <section class="col-12" style="background: url('images/mp/bg.jpg') no-repeat">
+        <div class="container">
+          <div class="col">
+            <div class="c_titleBox">統計圖表_頁籤式<span>NEWS</span></div>
+            <div class="c_tab2">
+              <div class="tabBox">
+                <div class="tab">
+                  <button type="button">tab1</button>
+                  <button type="button">tab2</button>
+                  <button type="button">tab3</button>
+                </div>
+                <div class="contentBox">
+                  <div class="content">
+                    <div class="c_chart chart2"></div>
+                  </div>
+                  <div class="content">
+                    <div class="c_chart chart3"></div>
+                  </div>
+                  <div class="content">
+                    <div class="c_chart chart4"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12" style="background: url('images/mp/bg.jpg') no-repeat">
+        <div class="container">
+          <div class="col">
+            <div class="c_titleBox">頁籤功能(按鈕在左)<span>NEWS</span></div>
+            <div class="c_tabLeft">
+              <div class="tabBox">
+                <div class="tab"><button>審查評估業務</button><button>法規諮詢輔導業務</button></div>
+                <div class="contentBox">
+                  <div class="content">
+                    1
+                    <div class="editor">
+                      <img src="images/demo/pic.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="content">
+                    2
+                    <div class="editor">
+                      <img src="images/demo/pic.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12" style="background: url('images/mp/bg.jpg') no-repeat">
+        <div class="container">
+          <div class="col">
+            <div class="c_titleBox">雙層頁籤<span>NEWS</span></div>
+            <div class="c_tabDouble">
+              <div class="tabBox">
+                <div class="tab">
+                  <button type="button">tab1</button>
+                  <button type="button">tab2</button>
+                  <button type="button">tab3</button>
+                </div>
+                <div class="contentBox">
+                  <div class="content">
+                    <div class="c_tabLeft">
+                      <div class="tabBox">
+                        <div class="tab"><button>審查評估業務</button><button>法規諮詢輔導業務</button></div>
+                        <div class="contentBox">
+                          <div class="content">
+                            11
+                            <div class="editor">
+                              <img src="images/demo/pic.jpg" alt="" />
+                            </div>
+                          </div>
+                          <div class="content">
+                            12
+                            <div class="editor">
+                              <img src="images/demo/pic.jpg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="c_tabLeft">
+                      <div class="tabBox">
+                        <div class="tab"><button>審查評估業務</button><button>法規諮詢輔導業務</button></div>
+                        <div class="contentBox">
+                          <div class="content">
+                            21
+                            <div class="editor">
+                              <img src="images/demo/pic.jpg" alt="" />
+                            </div>
+                          </div>
+                          <div class="content">
+                            22
+                            <div class="editor">
+                              <img src="images/demo/pic.jpg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="c_tabLeft">
+                      <div class="tabBox">
+                        <div class="tab"><button>審查評估業務</button><button>法規諮詢輔導業務</button></div>
+                        <div class="contentBox">
+                          <div class="content">
+                            31
+                            <div class="editor">
+                              <img src="images/demo/pic.jpg" alt="" />
+                            </div>
+                          </div>
+                          <div class="content">
+                            32
+                            <div class="editor">
+                              <img src="images/demo/pic.jpg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12" style="background: url('images/mp/bg.jpg') no-repeat">
+        <div class="container">
+          <div class="col">
+            <div class="c_titleBox">雙層頁籤_選單式<span>NEWS</span></div>
+            <div class="c_tabDouble">
+              <div class="tabBox">
+                <div class="tab">
+                  <button type="button">tab1</button>
+                  <button type="button">tab2</button>
+                  <button type="button">tab3</button>
+                </div>
+                <div class="contentBox">
+                  <div class="content">
+                    <div class="c_tabSelect">
+                      <button type="button" class="switchBtn">其他表單</button>
+                      <div class="tabBox">
+                        <div class="tab"><button class="active">審查評估業務</button><button>法規諮詢輔導業務</button></div>
+                        <div class="contentBox">
+                          <div class="content active">
+                            <div class="subTitle">審查評估業務</div>
+                            11
+                            <div class="editor">
+                              <img src="images/demo/pic.jpg" alt="" />
+                            </div>
+                          </div>
+                          <div class="content">
+                            <div class="subTitle">法規諮詢輔導業務</div>
+                            12
+                            <div class="editor">
+                              <img src="images/demo/pic.jpg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="c_tabSelect">
+                      <button type="button" class="switchBtn">其他表單</button>
+                      <div class="tabBox">
+                        <div class="tab"><button class="active">審查評估業務</button><button>法規諮詢輔導業務</button></div>
+                        <div class="contentBox">
+                          <div class="content active">
+                            <div class="subTitle">審查評估業務</div>
+                            21
+                            <div class="editor">
+                              <img src="images/demo/pic.jpg" alt="" />
+                            </div>
+                          </div>
+                          <div class="content">
+                            <div class="subTitle">法規諮詢輔導業務</div>
+                            22
+                            <div class="editor">
+                              <img src="images/demo/pic.jpg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="c_tabSelect">
+                      <button type="button" class="switchBtn">其他表單</button>
+                      <div class="tabBox">
+                        <div class="tab"><button class="active">審查評估業務</button><button>法規諮詢輔導業務</button></div>
+                        <div class="contentBox">
+                          <div class="content active">
+                            <div class="subTitle">審查評估業務</div>
+                            31
+                            <div class="editor">
+                              <img src="images/demo/pic.jpg" alt="" />
+                            </div>
+                          </div>
+                          <div class="content">
+                            <div class="subTitle">法規諮詢輔導業務</div>
+                            32
+                            <div class="editor">
+                              <img src="images/demo/pic.jpg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12">
+        <div class="container">
+          <div class="col">
+            <!-- 圖文條列 -->
+            <div class="c_titleBox">圖文條列<span>NEWS</span></div>
+            <div class="c_ptBox checkOuter12_3">
+              <ul class="listBox">
+                <li class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/pic2.jpg" alt="" /></div>
+                    <div class="info">
+                      <div class="title">About Us</div>
+                      <div class="description">
+                        U.S. Food and Drug Administration (US FDA) 為美國衛⽣及公共服務部直轄的聯邦政府機構，其下有不同專責單位負責新藥上市前審查及藥品上市後的安全性觀察。類⽐的機構在歐盟European Medicines Agency
+                        (EMA)或⽇本厚⽣勞動省下均有。⽽在台灣協助⻝藥署(TFDA)從事醫藥品相關審查的機構，則為財團法人醫藥品查驗中心，即Center for Drug Evaluation (CDE)。人力，進行初複審兩階段審...
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/pic2.jpg" alt="" /></div>
+                    <div class="info">
+                      <div class="title">簡介</div>
+                      <div class="description">
+                        查驗中心於 2006 年成立醫療器材組，主要的業務範圍包括醫療器材相關之技術性資料評估及法規諮詢輔導。而協助食品藥物管理署執行之醫療器材技術性資料評估，包含醫療器材臨床試驗計畫書、臨床試驗報告、查驗登記及相關展延變更，以確保我國民眾使用安全性。 <br />
+                        此外，針對重要國家型生技計畫，及生技醫藥學研產業之政府補助計畫申請案，進行醫療器材案件有關法...
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#">
+                    <div class="info">
+                      <div class="title">未來展望</div>
+                      <div class="description">
+                        展望未來，查驗中心將持續致力於技術性審查品質的精益求精，落實優良審查規範（Good Review
+                        Practice），協助法規規範更新與草案研擬，發展醫藥科技評估專業；同時釋放法規科學諮詢輔導能量，建立法規輔導平台，提供產學研界醫藥品研發及上市所需之法規諮詢服務，加速我國利基新醫藥品之開發。我們亦將持續與國際上醫藥發達國家之法規單位保持專業領域交流與吸取相關新知，厚實我們在醫藥審查、科技評估能量，為國人健康與健康照護體系發展貢獻心力，作為衛生福利部在藥政、健保的堅實後盾。
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <div class="c_indexMore"><a href="#">更多</a></div>
+            </div>
+            <!-- 圖文條列 -->
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12" style="background: url('images/mp/bg2.jpg') no-repeat">
+        <div class="container">
+          <div class="col">
+            <div class="c_titleBox">文字連結_頁籤式<span>NEWS</span></div>
+            <div class="c_tab">
+              <div class="tabBox">
+                <div class="tab">
+                  <button type="button">審查業務</button>
+                  <button type="button">諮詢輔導</button>
+                  <button type="button">業務說明</button>
+                </div>
+                <div class="contentBox">
+                  <div class="content">
+                    <ul class="listBox">
+                      <li class="item"><a href="#">法規新知及政策</a></li>
+                      <li class="item"><a href="#">研發策略指導原則 (醫療器材)</a></li>
+                      <li class="item"><a href="#">常見問答FAQ</a></li>
+                      <li class="item"><a href="#">文字連結_頁籤式</a></li>
+                      <li class="item"><a href="#">推薦網站連結</a></li>
+                      <li class="item"><a href="#">推薦網站連結</a></li>
+                    </ul>
+                    <div class="c_indexMore"><a href="#">更多</a></div>
+                  </div>
+                  <div class="content">
+                    <ul class="listBox">
+                      <li class="item"><a href="#">法規新知及政策</a></li>
+                      <li class="item"><a href="#">研發策略指導原則 (醫療器材)</a></li>
+                      <li class="item"><a href="#">常見問答FAQ</a></li>
+                      <li class="item"><a href="#">文字連結_頁籤式</a></li>
+                      <li class="item"><a href="#">推薦網站連結</a></li>
+                      <li class="item"><a href="#">推薦網站連結</a></li>
+                    </ul>
+                    <div class="c_indexMore"><a href="#">更多</a></div>
+                  </div>
+                  <div class="content">
+                    <ul class="listBox">
+                      <li class="item"><a href="#">法規新知及政策</a></li>
+                      <li class="item"><a href="#">研發策略指導原則 (醫療器材)</a></li>
+                      <li class="item"><a href="#">常見問答FAQ</a></li>
+                      <li class="item"><a href="#">文字連結_頁籤式</a></li>
+                      <li class="item"><a href="#">推薦網站連結</a></li>
+                      <li class="item"><a href="#">推薦網站連結</a></li>
+                    </ul>
+                    <div class="c_indexMore"><a href="#">更多</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12">
+        <div class="container">
+          <div class="col">
+            <!-- 最新消息卡片(有標籤) -->
+            <div class="c_titleBox">最新消息卡片(有標籤)<span>NEWS</span></div>
+            <div class="c_newsCard">
+              <div class="listBox slick12_3">
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
+                    <div class="info">
+                      <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                      <time>開課日期：2023-11-01</time>
+                      <time>報名截止：2023-11-30</time>
+                      <ul class="tagBox">
+                        <li class="tag">實體課程</li>
+                        <li class="tag">7hr</li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
+                    <div class="info">
+                      <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                      <time>開課日期：2023-11-01</time>
+                      <time>報名截止：2023-11-30</time>
+                      <ul class="tagBox">
+                        <li class="tag">實體課程</li>
+                        <li class="tag">7hr</li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
+                    <div class="info">
+                      <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                      <time>開課日期：2023-11-01</time>
+                      <time>報名截止：2023-11-30</time>
+                      <ul class="tagBox">
+                        <li class="tag">實體課程</li>
+                        <li class="tag">7hr</li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
+                    <div class="info">
+                      <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                      <time>開課日期：2023-11-01</time>
+                      <time>報名截止：2023-11-30</time>
+                      <ul class="tagBox">
+                        <li class="tag">實體課程</li>
+                        <li class="tag">7hr</li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="c_indexMore"><a href="#">更多</a></div>
+            </div>
+            <!-- 最新消息卡片(有標籤) -->
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12">
+        <div class="container">
+          <div class="col">
+            <!-- 最新消息卡片(有標籤)+頁籤式 -->
+            <div class="c_titleBox">最新消息卡片(有標籤)+頁籤式<span>NEWS</span></div>
+            <div class="c_newsCardTab">
+              <div class="tabBox">
+                <div class="tab">
+                  <button type="button">收費課程</button>
+                  <button type="button">計畫活動（政府補助課程）</button>
+                </div>
+                <div class="contentBox">
+                  <div class="content">
+                    <div class="listBox slick12_3">
+                      <div class="item">
+                        <a href="#">
+                          <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
+                          <div class="info">
+                            <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                            <time>開課日期：2023-11-01</time>
+                            <time>報名截止：2023-11-30</time>
+                            <ul class="tagBox">
+                              <li class="tag">實體課程</li>
+                              <li class="tag">7hr</li>
+                            </ul>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="item">
+                        <a href="#">
+                          <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
+                          <div class="info">
+                            <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                            <time>開課日期：2023-11-01</time>
+                            <time>報名截止：2023-11-30</time>
+                            <ul class="tagBox">
+                              <li class="tag">實體課程</li>
+                              <li class="tag">7hr</li>
+                            </ul>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="item">
+                        <a href="#">
+                          <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
+                          <div class="info">
+                            <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                            <time>開課日期：2023-11-01</time>
+                            <time>報名截止：2023-11-30</time>
+                            <ul class="tagBox">
+                              <li class="tag">實體課程</li>
+                              <li class="tag">7hr</li>
+                            </ul>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="item">
+                        <a href="#">
+                          <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
+                          <div class="info">
+                            <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                            <time>開課日期：2023-11-01</time>
+                            <time>報名截止：2023-11-30</time>
+                            <ul class="tagBox">
+                              <li class="tag">實體課程</li>
+                              <li class="tag">7hr</li>
+                            </ul>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="c_indexMore"><a href="#">更多</a></div>
+                  </div>
+                  <div class="content">
+                    <div class="listBox slick12_3">
+                      <div class="item">
+                        <a href="#">
+                          <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
+                          <div class="info">
+                            <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                            <time>開課日期：2023-11-01</time>
+                            <time>報名截止：2023-11-30</time>
+                            <ul class="tagBox">
+                              <li class="tag">實體課程</li>
+                              <li class="tag">7hr</li>
+                            </ul>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="item">
+                        <a href="#">
+                          <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
+                          <div class="info">
+                            <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                            <time>開課日期：2023-11-01</time>
+                            <time>報名截止：2023-11-30</time>
+                            <ul class="tagBox">
+                              <li class="tag">實體課程</li>
+                              <li class="tag">7hr</li>
+                            </ul>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="item">
+                        <a href="#">
+                          <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
+                          <div class="info">
+                            <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                            <time>開課日期：2023-11-01</time>
+                            <time>報名截止：2023-11-30</time>
+                            <ul class="tagBox">
+                              <li class="tag">實體課程</li>
+                              <li class="tag">7hr</li>
+                            </ul>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="item">
+                        <a href="#">
+                          <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
+                          <div class="info">
+                            <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                            <time>開課日期：2023-11-01</time>
+                            <time>報名截止：2023-11-30</time>
+                            <ul class="tagBox">
+                              <li class="tag">實體課程</li>
+                              <li class="tag">7hr</li>
+                            </ul>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="c_indexMore"><a href="#">更多</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 最新消息卡片(有標籤)+頁籤式 -->
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12">
+        <div class="container">
+          <div class="col">
+            <!-- 文字連結_區塊底圖式 -->
+            <div class="c_titleBox">文字連結_區塊底圖式<span>NEWS</span></div>
+            <div class="c_cardLink">
+              <div class="listBox slick12_3">
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/pic1.jpg" alt="" /></div>
+                    <div class="info">
+                      <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/pic1.jpg" alt="" /></div>
+                    <div class="info">
+                      <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/pic1.jpg" alt="" /></div>
+                    <div class="info">
+                      <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/pic1.jpg" alt="" /></div>
+                    <div class="info">
+                      <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="c_indexMore"><a href="#">更多</a></div>
+            </div>
+            <!-- 文字連結_區塊底圖式 -->
+          </div>
+        </div>
+      </section>
+
+      <section class="col-6-6" style="background-color: #eee">
+        <div class="container">
+          <div class="col">
+            <!-- 文字連結_一般條列式 -->
+            <div class="c_titleBox">文字連結_一般條列式<span>NEWS</span></div>
+            <div class="c_textLinkList checkOuter12_3">
+              <ul class="listBox">
+                <li class="item">
+                  <a href="#">
+                    <div class="title">法規新知及政策</div>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#">
+                    <div class="title">教育訓練課程</div>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#">
+                    <div class="title">常見問答FAQ</div>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#">
+                    <div class="title">推薦網站連結</div>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#">
+                    <div class="title">教育訓練課程</div>
+                  </a>
+                </li>
+              </ul>
+              <div class="c_indexMore"><a href="#">更多</a></div>
+            </div>
+            <!-- 文字連結_一般條列式 -->
+          </div>
+          <div class="col">
+            <!-- 文字編輯區塊 -->
+            <div class="c_titleBox">文字編輯區塊<span>NEWS</span></div>
+            <div class="c_textEditor">
+              <div class="listBox slick12_3">
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/pic9.jpg" alt="" /></div>
+                    <div class="info">
+                      <div class="title">文字編輯區塊</div>
+                      <div class="description">
+                        <ul class="listBox">
+                          <li>接洽方式：函寄 或 E-mail（請註明應徵類別）</li>
+                          <li>攜備文件：詳細個人履歷自傳資料、半身近照(應徵審查員者請附曾發表之論文目錄/摘要）</li>
+                          <li>人資聯絡電話： 02-8170-6000 轉 661 / 651 / 656</li>
+                          <li>電子信箱：hr@cde.org.tw</li>
+                          <li>地　　址：台北市南港區 11557 忠孝東路六段 465 號 3 樓</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="picBox">
+                      <div class="pic"><img src="images/mp/pic1.jpg" alt="" /></div>
+                    </div>
+                    <div class="info">
+                      <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                      <div class="description">一、近年因疫情及地緣政治因素造成供應鏈重組之影響，使得藥品供應短缺消息時有所聞，財團法人醫藥品查驗中心（以下簡稱本中心）為因應相關公衛需求，及...</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="c_indexMore"><a href="#">更多</a></div>
+            </div>
+            <!-- 文字編輯區塊 -->
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12">
+        <div class="container">
+          <!-- 小廣告輪播 -->
+          <div class="col">
+            <div class="c_titleBox">小廣告輪播<span>NEWS</span></div>
+            <div class="c_linkBox">
+              <div class="listBox slick12_5">
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/pic5.jpg" alt="" /></div>
+                    <div class="title">台灣藥物臨床試驗資訊網</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/pic6.jpg" alt="" /></div>
+                    <div class="title">台灣臨床試驗資訊平台</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/pic7.jpg" alt="" /></div>
+                    <div class="title">台灣藥品法規資訊網</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/pic5.jpg" alt="" /></div>
+                    <div class="title">食藥署醫療器材輔導中心</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/pic6.jpg" alt="" /></div>
+                    <div class="title">台灣藥物臨床試驗資訊網</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="pic"><img src="images/mp/pic6.jpg" alt="" /></div>
+                    <div class="title">台灣臨床試驗資訊平台</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 小廣告輪播 -->
+        </div>
+      </section>
+
+      <section class="col-6-6" style="background: url('images/mp/bg2.jpg') no-repeat">
+        <div class="container">
+          <div class="col">
+            <div class="c_titleBox">影音專區<span>NEWS</span></div>
+            <div class="c_videoBox">
+              <div class="pic">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/eP9zg7dK41I?si=AMnGTDRevlI3IAh_" title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="info">
+                <div class="title">台灣藥物臨床試驗資訊網</div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <!-- 文字區塊連結 -->
+            <div class="c_titleBox">文字區塊連結<span>NEWS</span></div>
+            <div class="c_textLink checkOuter12_3">
+              <ul class="listBox">
+                <li class="item">
+                  <a href="#">
+                    <div class="title">付費諮詢</div>
+                  </a>
+                </li>
+
+                <li class="item">
+                  <a href="#">
+                    <div class="title">一般諮詢</div>
+                  </a>
+                </li>
+
+                <li class="item">
+                  <a href="#">
+                    <div class="title">常見問題FAQ</div>
+                  </a>
+                </li>
+
+                <li class="item">
+                  <a href="#">
+                    <div class="title">常見問題FAQ</div>
+                  </a>
+                </li>
+
+                <li class="item">
+                  <a href="#">
+                    <div class="title">常見問題FAQ</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- 文字區塊連結 -->
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12">
+        <div class="container">
+          <div class="col">
+            <!-- 最新消息卡片式(有連結按鈕) -->
+            <div class="c_titleBox">最新消息卡片式(有連結按鈕)<span>NEWS</span></div>
+            <div class="c_newsCardLink">
+              <div class="listBox slick12_3">
+                <div class="item">
+                  <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
+                  <div class="info">
+                    <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                    <p>為鼓勵與促進嚴重衰弱或危及生命 (severely debilitating or life-threatening, SDLT)疾病之治療，並考量反義寡核苷酸藥品 (antisense oligonucleotide, ASO)之藥品特性與使用經驗，因而撰寫此篇指導原則供各界參考。</p>
+                    <time>開課日期：2023-11-01</time>
+                    <time>報名截止：2023-11-30</time>
+                    <ul class="linkBox">
+                      <li><a href="#">草案瀏覽</a></li>
+                      <li><a href="#">草案建言</a></li>
+                      <li><a href="#">滿意度調查表</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
+                  <div class="info">
+                    <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                    <p>細胞外囊泡 (extracellular vesicles)製劑為通過分離和純化細胞分泌於細胞外的脂雙層囊泡而製造的藥物，由於其中應不含細胞，因此不屬於當前細胞治療製劑的分類。<br>
+                      我國已有相當產學研單位投入此製劑之開發項目，有鑑於我國尚未發布針對此類產品之法規，故制定此細胞外囊泡製劑製造與管制之研發策略指導原則，期能提供研發階段之策略參考，及闡述品質相關法規科學建議。</p>
+                    <time>開課日期：2023-11-01</time>
+                    <time>報名截止：2023-11-30</time>
+                    <ul class="linkBox">
+                      <li><a href="#">草案瀏覽</a></li>
+                      <li><a href="#">草案建言</a></li>
+                      <li><a href="#">滿意度調查表</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
+                  <div class="info">
+                    <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                    <p>核酸藥品為精準醫療領域的新興科技項目之一。為鼓勵國內各界從事創新藥品之開發，考量我國尚無核酸藥品專門法規或指引，故制定本指導原則供各界參考。 本指導原則之制定，乃基於當前對於核酸藥品及相關技術之科學知識，倘若所使用的方法具有合理的理論基礎以反映科學上進展，則並非一定要遵循本指導原則所提及的方法。未來若有相關的科學進展，將再進一步修訂本指導原則。</p>
+                    <time>開課日期：2023-11-01</time>
+                    <time>報名截止：2023-11-30</time>
+                    <ul class="linkBox">
+                      <li><a href="#">草案瀏覽</a></li>
+                      <li><a href="#">草案建言</a></li>
+                      <li><a href="#">滿意度調查表</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="pic"><img src="images/mp/pic3.jpg" alt="" /></div>
+                  <div class="info">
+                    <div class="title">「具緊急公衛需求藥品法規科學輔導專案」甄選辦法</div>
+                    <p>細胞外囊泡 (extracellular vesicles)製劑為通過分離和純化細胞分泌於細胞外的脂雙層囊泡而製造的藥物，由於其中應不含細胞，因此不屬於當前細胞治療製劑的分類。<br>
+                      我國已有相當產學研單位投入此製劑之開發項目，有鑑於我國尚未發布針對此類產品之法規，故制定此細胞外囊泡製劑製造與管制之研發策略指導原則，期能提供研發階段之策略參考，及闡述品質相關法規科學建議。</p>
+                    <time>開課日期：2023-11-01</time>
+                    <time>報名截止：2023-11-30</time>
+                    <ul class="linkBox">
+                      <li><a href="#">草案瀏覽</a></li>
+                      <li><a href="#">草案建言</a></li>
+                      <li><a href="#">滿意度調查表</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="c_indexMore"><a href="#">更多</a></div>
+            </div>
+            <!-- 最新消息卡片式(有連結按鈕) -->
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12" style="background: url('images/mp/bg.jpg') no-repeat">
+        <div class="container">
+          <div class="col">
+            <div class="c_titleBox">FAQ<span>NEWS</span></div>
+            <div class="c_faq">
+              <ul class="listBox checkOuter12_4">
+                <li class="item">
+                  <a href="#" class="title">生物製劑須在unprocessed bulk執行外來物質之檢測，若使用連續製程，應如何檢測以確保無外來物質汙染?</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="title">微脂粒藥品一般具有其特殊屬性，於藥品查驗登記階段，微脂粒藥品的成品安定性規格中，有那些需考量的層面?</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="title">微脂粒藥品一般具有其特殊屬性，於藥品查驗登記階段，微脂粒藥品的成品安定性規格中，有那些需考量的層面?</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="title">微脂粒藥品一般具有其特殊屬性，於藥品查驗登記階段，微脂粒藥品的成品安定性規格中，有那些需考量的層面?</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="title">微脂粒藥品一般具有其特殊屬性，於藥品查驗登記階段，微脂粒藥品的成品安定性規格中，有那些需考量的層面?</a>
+                </li>
+              </ul>
+              <div class="c_indexMore"><a href="#">更多</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-    <a href="javascript:;" class="scrollToTop">回頁首</a>
-    <!-- JQ -->
+    <!-- fatfooter Start -->
+    <section class="fatfooter">
+      <div class="container">
+        <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btn-fatfooter">收合</button>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">審查評估業務</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">法規諮詢輔導</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">最新法規資訊</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">訊息公告</a>
+              <ul>
+                <li><a href="#">CDE重大消息/政策</a></li>
+                <li><a href="#">業務最新公告</a></li>
+                <li><a href="http://www.google.com">採購公告</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">認識CDE</a>
+              <ul>
+                <li><a href="#">緣起宗旨</a></li>
+                <li><a href="#">董事會/董事長</a></li>
+                <li><a href="#">執行長</a></li>
+                <li><a href="#">組織架構</a></li>
+                <li><a href="#">業務介紹</a></li>
+                <li><a href="#">公開資訊</a></li>
+                <li><a href="#">地理位置</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">加入CDE</a>
+              <ul>
+                <li><a href="#">菁英招募</a></li>
+                <li><a href="#">實習專區</a></li>
+                <li><a href="#">下載專區</a></li>
+                <li><a href="#">聯絡我們</a></li>
+                <li><a href="#">員工專區</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <!-- fatfooter End -->
+    <!-- footer Start-->
+    <footer>
+      <div class="container">
+        <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+        <div class="footer_logo">
+          <img src="images/footer_logo.svg" alt="" class="img-responsive" />
+        </div>
+        <div class="footer_map"><a href="#">本中心位置圖</a></div>
+        <div class="footer_info">
+          <div class="infoblock">
+            <p class="Copyright">
+              版權所有© 財團法人醫藥品查驗中心<br />
+              地址：台北市南港區11557忠孝東路六段465號3樓
+            </p>
+          </div>
+          <div class="infoblock">
+            <p>
+              電話：886-2-8170-6000（總機服務時間：8:30-12:30 ，13:30-17:30）<br />
+              傳真：886-2-8170-6001、886-2-8170-6002
+            </p>
+          </div>
+          <div class="infoblock">
+            <p>
+              本網站支援IE、Firefox及Chrome，最佳瀏覽解析度為1024x768以上<br />
+              <span class="update">更新日期:<em>2018/01/01</em></span>
+              <span class="counter">累計瀏覽人次:<em>46476653</em></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer End -->
+  </div>
+  <a href="javascript:;" class="scrollToTop">回頁首</a>
+  <!-- JQ -->
 
-    <script>
-      const chartData = [
-        {
-          title: '審查評估業務',
-          info: [0, 12000, 6],
-          data: [
-            {
-              title: '項目A',
-              value: 2313,
-            },
-            {
-              title: '項目B',
-              value: 7122,
-            },
-            {
-              title: '項目C',
-              value: 1343,
-            },
-            {
-              title: '項目D',
-              value: 1657,
-            },
-            {
-              title: '項目E',
-              value: 9645,
-            },
-            {
-              title: '項目F',
-              value: 5467,
-            },
-            {
-              title: '項目G',
-              value: 3546,
-            },
-          ],
-        },
-        {
-          title: '法規諮詢輔導業務',
-          info: [0, 12000, 6],
-          data: [
-            {
-              title: '項目H',
-              value: 2313,
-            },
-            {
-              title: '項目I',
-              value: 7122,
-            },
-          ],
-        },
-      ];
-      const chartData2 = [
-        {
-          title: '審查評估業務',
-          info: [0, 12000, 6],
-          data: [
-            {
-              title: '項目AA',
-              value: 2313,
-            },
-            {
-              title: '項目B',
-              value: 7122,
-            },
-            {
-              title: '項目C',
-              value: 1343,
-            },
-            {
-              title: '項目D',
-              value: 1657,
-            },
-            {
-              title: '項目E',
-              value: 9645,
-            },
-            {
-              title: '項目F',
-              value: 5467,
-            },
-            {
-              title: '項目G',
-              value: 3546,
-            },
-          ],
-        },
-        {
-          title: '法規諮詢輔導業務',
-          info: [0, 12000, 6],
-          data: [
-            {
-              title: '項目HH',
-              value: 2313,
-            },
-            {
-              title: '項目I',
-              value: 7122,
-            },
-          ],
-        },
-      ];
-    </script>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <!-- 外掛 plugin js -->
-    <script src="vendor/jquery.easing.min.js"></script>
-    <!-- ease -->
-    <script src="vendor/slick/slick.min.js "></script>
-    <!-- slick -->
-    <script src="vendor/lazyload/lazyload.js"></script>
-    <!-- lazyload -->
-    <script src="vendor/picturefill/picturefill.min.js" async></script>
-    <!-- picturefill -->
-    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
-    <!-- scrolltable -->
-    <!-- sticky-sidebar -->
-    <script src="vendor/sticky-sidebar/sticky-sidebar.js"></script>
-    <script src="vendor/sticky-sidebar/ResizeSensor.js"></script>
-    <!-- fancy -->
-    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
-    <!-- hyUI -->
-    <script src="js/hyui.js"></script>
-    <!-- 客製js -->
-    <script src="js/customize.js"></script>
-    <script>
-      // 圖表
-      chartFn('.chart1', chartData);
+  <script>
+    const chartData = [
+      {
+        title: '審查評估業務',
+        info: [0, 12000, 6],
+        data: [
+          {
+            title: '項目A',
+            value: 2313,
+          },
+          {
+            title: '項目B',
+            value: 7122,
+          },
+          {
+            title: '項目C',
+            value: 1343,
+          },
+          {
+            title: '項目D',
+            value: 1657,
+          },
+          {
+            title: '項目E',
+            value: 9645,
+          },
+          {
+            title: '項目F',
+            value: 5467,
+          },
+          {
+            title: '項目G',
+            value: 3546,
+          },
+        ],
+      },
+      {
+        title: '法規諮詢輔導業務',
+        info: [0, 12000, 6],
+        data: [
+          {
+            title: '項目H',
+            value: 2313,
+          },
+          {
+            title: '項目I',
+            value: 7122,
+          },
+        ],
+      },
+    ];
+    const chartData2 = [
+      {
+        title: '審查評估業務',
+        info: [0, 12000, 6],
+        data: [
+          {
+            title: '項目AA',
+            value: 2313,
+          },
+          {
+            title: '項目B',
+            value: 7122,
+          },
+          {
+            title: '項目C',
+            value: 1343,
+          },
+          {
+            title: '項目D',
+            value: 1657,
+          },
+          {
+            title: '項目E',
+            value: 9645,
+          },
+          {
+            title: '項目F',
+            value: 5467,
+          },
+          {
+            title: '項目G',
+            value: 3546,
+          },
+        ],
+      },
+      {
+        title: '法規諮詢輔導業務',
+        info: [0, 12000, 6],
+        data: [
+          {
+            title: '項目HH',
+            value: 2313,
+          },
+          {
+            title: '項目I',
+            value: 7122,
+          },
+        ],
+      },
+    ];
+  </script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <!-- 外掛 plugin js -->
+  <script src="vendor/jquery.easing.min.js"></script>
+  <!-- ease -->
+  <script src="vendor/slick/slick.min.js "></script>
+  <!-- slick -->
+  <script src="vendor/lazyload/lazyload.js"></script>
+  <!-- lazyload -->
+  <script src="vendor/picturefill/picturefill.min.js" async></script>
+  <!-- picturefill -->
+  <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+  <!-- scrolltable -->
+  <!-- sticky-sidebar -->
+  <script src="vendor/sticky-sidebar/sticky-sidebar.js"></script>
+  <script src="vendor/sticky-sidebar/ResizeSensor.js"></script>
+  <!-- fancy -->
+  <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+  <!-- hyUI -->
+  <script src="js/hyui.js"></script>
+  <!-- 客製js -->
+  <script src="js/customize.js"></script>
+  <script>
+    // 圖表
+    chartFn('.chart1', chartData);
 
-      // 頁籤 + 圖表
-      tabUse('.c_tab2');
-      chartFn('.chart2', chartData2);
-      chartFn('.chart3', chartData);
-      chartFn('.chart4', chartData2);
-    </script>
-  </body>
+    // 頁籤 + 圖表
+    tabUse('.c_tab2');
+    chartFn('.chart2', chartData2);
+    chartFn('.chart3', chartData);
+    chartFn('.chart4', chartData2);
+  </script>
+</body>
+
 </html>

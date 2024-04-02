@@ -2056,11 +2056,15 @@ $thirdColor: #f7924d;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
       }
+      p {
+        color: #d7f3ff;
+        @include text-line(3, 23px);
+      }
 
       time {
         display: block;
         color: #d7f3ff;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
       }
 
       .linkBox {
@@ -2069,7 +2073,7 @@ $thirdColor: #f7924d;
         list-style: none;
         padding: 0;
         gap: 5px;
-        margin: 0;
+        margin: 1em 0 0.5em;
 
         a {
           display: flex;
