@@ -998,4 +998,4 @@ $(function () {
 //     $(this).parents('.introduction_nav').addClass('slick-current');
 //     $(this).parents('.introduction_nav').siblings('.Slider-nav').find('.slick-slide').removeClass('slick-current');
 //   });
-});
+// });
