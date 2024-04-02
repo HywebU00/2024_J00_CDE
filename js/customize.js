@@ -949,14 +949,14 @@ $(function () {
   _slidernavbtn.parents('.slick-slide').removeClass('slick-current');
 
   _slidernavbtn.click(function () {
-    _introductionfor.fadeOut();
-    _sliderfor.fadeIn();
+    _introductionfor.hide();
+    _sliderfor.show();
     _sliderfor.slick('refresh');
     $(this).parents('.Slider-nav').siblings('.introduction_nav').removeClass('slick-current');
   });
   _introductionnavbtn.click(function () {
-    _introductionfor.fadeIn();
-    _sliderfor.fadeOut();
+    _introductionfor.show();
+    _sliderfor.hide();
     $(this).parents('.introduction_nav').addClass('slick-current');
     $(this).parents('.introduction_nav').siblings('.Slider-nav').find('.slick-slide').removeClass('slick-current');
   });
