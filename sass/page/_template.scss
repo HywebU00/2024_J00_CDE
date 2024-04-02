@@ -101,9 +101,7 @@ h2.title {
     top: 116px;
     z-index: 11;
     width: 1.5em;
-
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-
     @include screen('tablet') {
       display: block;
     }
