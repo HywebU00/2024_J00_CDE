@@ -974,28 +974,28 @@ $(function () {
   });
 });
 
-$(function () {
-  let _sliderfor = $('.mp_annualreportsBlock .Syncing_slider .Slider-forall .Slider-for');
-  let _introductionfor = $('.mp_annualreportsBlock .Syncing_slider .Slider-forall .introduction_for');
-  // Slider-nav 按鈕
-  let _slidernavbtn = $('.mp_annualreportsBlock .Syncing_slider .Slider-navall .Slider-nav .item p');
-  // introduction_nav 按鈕
-  let _introductionnavbtn = $('.mp_annualreportsBlock .Syncing_slider .Slider-navall .introduction_nav .item p');
+// $(function () {
+//   let _sliderfor = $('.mp_annualreportsBlock .Syncing_slider .Slider-forall .Slider-for');
+//   let _introductionfor = $('.mp_annualreportsBlock .Syncing_slider .Slider-forall .introduction_for');
+//   // Slider-nav 按鈕
+//   let _slidernavbtn = $('.mp_annualreportsBlock .Syncing_slider .Slider-navall .Slider-nav .item p');
+//   // introduction_nav 按鈕
+//   let _introductionnavbtn = $('.mp_annualreportsBlock .Syncing_slider .Slider-navall .introduction_nav .item p');
 
-  _sliderfor.hide();
-  _introductionnavbtn.parents('.introduction_nav').addClass('slick-current');
-  _slidernavbtn.parents('.slick-slide').removeClass('slick-current');
+//   _sliderfor.hide();
+//   _introductionnavbtn.parents('.introduction_nav').addClass('slick-current');
+//   _slidernavbtn.parents('.slick-slide').removeClass('slick-current');
 
-  _slidernavbtn.click(function () {
-    _introductionfor.hide();
-    _sliderfor.show();
-    _sliderfor.slick('refresh');
-    $(this).parents('.Slider-nav').siblings('.introduction_nav').removeClass('slick-current');
-  });
-  _introductionnavbtn.click(function () {
-    _introductionfor.show();
-    _sliderfor.hide();
-    $(this).parents('.introduction_nav').addClass('slick-current');
-    $(this).parents('.introduction_nav').siblings('.Slider-nav').find('.slick-slide').removeClass('slick-current');
-  });
+//   _slidernavbtn.click(function () {
+//     _introductionfor.hide();
+//     _sliderfor.show();
+//     _sliderfor.slick('refresh');
+//     $(this).parents('.Slider-nav').siblings('.introduction_nav').removeClass('slick-current');
+//   });
+//   _introductionnavbtn.click(function () {
+//     _introductionfor.show();
+//     _sliderfor.hide();
+//     $(this).parents('.introduction_nav').addClass('slick-current');
+//     $(this).parents('.introduction_nav').siblings('.Slider-nav').find('.slick-slide').removeClass('slick-current');
+//   });
 });
