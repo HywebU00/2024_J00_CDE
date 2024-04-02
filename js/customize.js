@@ -209,61 +209,99 @@ $(function () {
     asNavFor: '.Slider-nav',
     infinite: true,
   });
-  $('.Slider-nav').slick({
-    slidesToShow: 10,
-    slidesToScroll: 1,
-    asNavFor: '.Slider-for',
-    dots: true,
-    arrows: true,
-    lazyLoad: 'ondemand',
-    focusOnSelect: true,
-    infinite: true,
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 8,
-        },
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 6,
-        },
-      },
-      {
-        breakpoint: 1000,
-        settings: {
-          slidesToShow: 5,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 630,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 530,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 400,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+
+  //點選slick-slide時才開始切換
+  let check = 0;
+  $('.mp_annualreportsBlock .Slider-navall .Slider-nav').on('click', function () {
+    check = 1;
   });
 
+  $('.Slider-nav')
+    .slick({
+      slidesToShow: 10,
+      slidesToScroll: 1,
+      asNavFor: '.Slider-for',
+      dots: true,
+      arrows: true,
+      lazyLoad: 'ondemand',
+      focusOnSelect: true,
+      infinite: true,
+      responsive: [
+        {
+          breakpoint: 1400,
+          settings: {
+            slidesToShow: 8,
+          },
+        },
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 6,
+          },
+        },
+        {
+          breakpoint: 1000,
+          settings: {
+            slidesToShow: 5,
+          },
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 4,
+          },
+        },
+        {
+          breakpoint: 630,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 530,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 400,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+    })
+    .on('beforeChange', (slick, direction) => {
+      //slick切換前執行
+      $('.mp_annualreportsBlock .introduction_nav').removeClass('slick-current');
+      $('.mp_annualreportsBlock .introduction_for').hide();
+      $('.mp_annualreportsBlock .Syncing_slider .Slider-forall .Slider-for').show();
+      $('.mp_annualreportsBlock .Syncing_slider .Slider-forall .Slider-for').slick('refresh');
+    })
+    .on('breakpoint', (slick, direction) => {
+      console.log(check);
+      // 斷點時執行
+      if (check === 0) {
+        $('.mp_annualreportsBlock .introduction_nav').addClass('slick-current');
+        $('.mp_annualreportsBlock .Slider-navall .Slider-nav .slick-slide').removeClass('slick-current').removeClass('slick-active');
+        $('.mp_annualreportsBlock .Syncing_slider .Slider-forall .Slider-for').hide();
+        $('.mp_annualreportsBlock .introduction_for').show();
+      }
+    });
+
+  //初始化
+  $('.mp_annualreportsBlock .Syncing_slider .Slider-forall .Slider-for').hide();
+  $('.mp_annualreportsBlock .Slider-navall .Slider-nav .slick-slide').removeClass('slick-current').removeClass('slick-active');
+  $('.mp_annualreportsBlock .introduction_nav').addClass('slick-current');
+
+  //點選introduction時
+  $('.mp_annualreportsBlock .introduction_nav').on('click', function () {
+    check = 0;
+    $('.mp_annualreportsBlock .Syncing_slider .Slider-forall .Slider-for').hide();
+    $('.mp_annualreportsBlock .Slider-navall .Slider-nav .slick-slide').removeClass('slick-current').removeClass('slick-active');
+    $('.mp_annualreportsBlock .introduction_nav').addClass('slick-current');
+    $('.mp_annualreportsBlock .introduction_for').show();
+  });
   // password_toggle
   var passShow = false;
   $('.password_toggle').each(function (index, el) {
