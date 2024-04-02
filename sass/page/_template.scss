@@ -95,6 +95,51 @@ h2.title {
     font-size: 1.25em;
   }
   .nodemenu_btn {
+    position: absolute;
+    left: -30px;
+    top: 0px;
+    z-index: 11;
+    width: 1.5em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 8px;
+    transition: 0.5s;
+    @media (max-width: 1400px) {
+      left: 0px;
+    }
+    @include screen('tablet') {
+      display: none;
+    }
+
+    a {
+      color: #fff;
+      display: block;
+      background-color: $secondaryColor;
+      padding: 2em 0.5em 1em;
+      border-radius: 8px;
+      width: 2em;
+      position: relative;
+      &:before {
+        content: '';
+        border: 2px solid #fff;
+        border-right: none;
+        border-bottom: none;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 0.8em;
+        left: 0.8em;
+        width: 8px;
+        height: 8px;
+      }
+      &.open {
+        border-radius: 8px;
+        &:before {
+          left: 0.6em;
+          transform: rotate(135deg);
+        }
+      }
+    }
+  }
+  .nodemenu_mobilebtn {
     display: none;
     position: absolute;
     left: 0em;
@@ -112,9 +157,9 @@ h2.title {
     a {
       color: #fff;
       display: block;
-      background-color: $primaryColor;
+      background-color: $secondaryColor;
       padding: 2em 0.5em 1em;
-      border-radius: 8px;
+      border-radius: 0 8px 8px 0;
       width: 2em;
       position: relative;
       &:before {
@@ -130,7 +175,7 @@ h2.title {
         height: 8px;
       }
       &.open {
-        border-radius: 8px;
+        border-radius: 0 8px 8px 0;
         &:before {
           left: 0.8em;
           transform: rotate(-45deg);
@@ -149,6 +194,7 @@ h2.title {
     flex-basis: 240px;
     max-width: 240px;
     margin-right: 40px;
+    transition: 0.5s;
 
     &.hidden {
       + .center_block {
@@ -163,17 +209,33 @@ h2.title {
       flex-basis: calc(100% - 280px);
       max-width: calc(100% - 280px);
     }
-
+    @media (max-width: 1400px) {
+      margin-left: 30px;
+      + .center_block {
+        flex: auto;
+        flex-basis: calc(100% - 310px);
+        max-width: calc(100% - 310px);
+      }
+      &.hidden {
+        + .center_block {
+          margin-left: 30px;
+          flex: none;
+          flex-basis: calc(100% - 30px);
+          max-width: calc(100% - 30px);
+        }
+      }
+    }
     @include screen('tablet') {
       position: absolute;
-      left: -210px;
+      left: -240px;
       top: 116px;
       bottom: 0;
-      width: 210px;
+      width: 240px;
       transition: 0.5s;
       z-index: 10;
+      margin-left: 0;
       &.open {
-        left: 2em;
+        left: 2.5em;
       }
 
       + .center_block {
@@ -181,9 +243,6 @@ h2.title {
         flex-basis: 100%;
         max-width: 100%;
       }
-    }
-    @include screen('mobile') {
-      top: 100px;
     }
   }
 }

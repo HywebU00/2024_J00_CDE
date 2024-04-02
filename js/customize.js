@@ -358,18 +358,39 @@ $(function () {
       $(this).parent('li').siblings('li').children('ul').stop().slideUp();
       $(this).parent('li').siblings('.hasChild').children('button').removeClass('open');
     });
-
-  //  內頁左欄 左右收合
+  //  內頁左欄電腦版 左右收合
+  // $('.innerpage .container .left_block').addClass('hidden');
   $('.nodemenu_btn>a').click(function () {
-    $('.left_block').stop().toggleClass('open');
-    $(this).stop().toggleClass('open');
+    if ($('.innerpage .container .left_block').hasClass('hidden')) {
+      $('.innerpage .container .left_block').removeClass('hidden');
+      $(this).removeClass('open');
+      $(this).text('次選單收合');
+    } else {
+      $('.innerpage .container .left_block').addClass('hidden');
+      $(this).addClass('open');
+      $(this).text('次選單展開');
+    }
+  });
+  //  內頁左欄手機版 左右收合
+  $('.nodemenu_mobilebtn>a').click(function () {
+    if ($(this).hasClass('open')) {
+      $('.left_block').stop().removeClass('open');
+      $(this).stop().removeClass('open');
+      $(this).text('次選單展開');
+    } else {
+      $('.left_block').stop().addClass('open');
+      $(this).stop().addClass('open');
+      $(this).text('次選單收合');
+    }
   });
   // 點擊其他地方，左欄收起
   $(document)
     .off('touchend click')
     .on('touchend click', function (e) {
-      var container = $('.nodemenu_btn a, .left_block '); //點這些以外的區塊
+      var container = $('.nodemenu_mobilebtn a, .left_block '); //點這些以外的區塊
       if (!container.is(e.target) && container.has(e.target).length === 0) {
+        $('.nodemenu_mobilebtn>a').removeClass('open');
+        $('.nodemenu_mobilebtn>a').text('次選單展開');
         $('.left_block').removeClass('open'); //要被收起來的區塊
         $('.left_block .leftblock_nodemenu ul ul').stop().slideUp();
         $('.left_block .leftblock_nodemenu ul li.hasChild button').removeClass('open');
