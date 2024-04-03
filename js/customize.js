@@ -377,10 +377,12 @@ $(function () {
       $('.left_block').stop().removeClass('open');
       $(this).stop().removeClass('open');
       $(this).text('次選單展開');
+      $('body').removeClass('noscroll');
     } else {
       $('.left_block').stop().addClass('open');
       $(this).stop().addClass('open');
       $(this).text('次選單收合');
+      $('body').addClass('noscroll');
     }
   });
   // 點擊其他地方，左欄收起
@@ -394,6 +396,7 @@ $(function () {
         $('.left_block').removeClass('open'); //要被收起來的區塊
         $('.left_block .leftblock_nodemenu ul ul').stop().slideUp();
         $('.left_block .leftblock_nodemenu ul li.hasChild button').removeClass('open');
+        $('body').removeClass('noscroll');
       }
     });
 });

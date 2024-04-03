@@ -75,6 +75,7 @@ h2.title {
   background-color: #fff;
   padding-bottom: 5em;
   font-size: 1.125em;
+  position: relative;
   @include screen('mobile') {
     padding-top: 60px;
   }
@@ -103,8 +104,23 @@ h2.title {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     border-radius: 8px;
     transition: 0.5s;
+    cursor: pointer;
     @media (max-width: 1400px) {
       left: 0px;
+
+      & ~ .center_block {
+        margin-left: 30px;
+        flex-basis: calc(100% - 310px) !important;
+        max-width: calc(100% - 310px) !important;
+      }
+      & ~ .hidden {
+        + .center_block {
+          flex: none;
+          margin-left: 30px;
+          flex-basis: calc(100% - 30px) !important;
+          max-width: calc(100% - 30px) !important;
+        }
+      }
     }
     @include screen('tablet') {
       display: none;
@@ -141,18 +157,24 @@ h2.title {
   }
   .nodemenu_mobilebtn {
     display: none;
-    position: absolute;
+    position: fixed;
     left: 0em;
-    top: 116px;
+    top: 120px;
     z-index: 11;
     width: 1.5em;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    cursor: pointer;
     @include screen('tablet') {
       display: block;
+      & ~ .center_block {
+        margin-left: 30px;
+        flex-basis: calc(100% - 30px) !important;
+        max-width: calc(100% - 30px) !important;
+      }
     }
     @include screen('mobile') {
       display: block;
-      top: 100px;
+      top: 120px;
     }
     a {
       color: #fff;
@@ -187,6 +209,7 @@ h2.title {
     flex: none;
     flex-basis: 100%;
     max-width: 100%;
+    transition: 0.5s;
   }
 
   .left_block {
@@ -211,6 +234,7 @@ h2.title {
     }
     @media (max-width: 1400px) {
       margin-left: 30px;
+      margin-right: 10px;
       + .center_block {
         flex: auto;
         flex-basis: calc(100% - 310px);
@@ -218,22 +242,22 @@ h2.title {
       }
       &.hidden {
         + .center_block {
-          margin-left: 30px;
           flex: none;
-          flex-basis: calc(100% - 30px);
-          max-width: calc(100% - 30px);
+          flex-basis: 100%;
+          max-width: 100%;
         }
       }
     }
     @include screen('tablet') {
-      position: absolute;
+      position: fixed;
       left: -240px;
-      top: 116px;
+      top: 122px;
       bottom: 0;
       width: 240px;
       transition: 0.5s;
       z-index: 10;
       margin-left: 0;
+      margin-right: 0;
       &.open {
         left: 2.5em;
       }

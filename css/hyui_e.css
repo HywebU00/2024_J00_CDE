@@ -3226,6 +3226,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 @media screen and (max-width: 767px) {
   .header:before {
     height: 60px;
+    box-shadow: 0px 2px 5px RGBA(0, 0, 0, 0.3);
   }
 }
 .header > .container .searchCtrl, .header > .container .sidebarCtrl {
@@ -7206,7 +7207,7 @@ table .date {
   .table_list td:before {
     content: attr(data-title);
     position: absolute;
-    top: 0.5em;
+    top: 0.8em;
     left: 0.5em;
     width: 30%;
     padding-right: 10px;
@@ -7672,6 +7673,11 @@ table .date {
   background: #fff;
   border-radius: 8px;
   padding: 1em 2em;
+}
+@media screen and (max-width: 575px) {
+  .tabSet.subscription_epaper .tabContent {
+    padding: 1em;
+  }
 }
 .tabSet.nwes_slider {
   margin: 0 0 30px;
@@ -11920,7 +11926,11 @@ h3.title3 .maps iframe {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-.c_news .info .description {
+.c_news .info .description p {
+  display: none;
+}
+.c_news .info .description p:first-of-type {
+  display: block;
   opacity: 0.8;
   overflow: hidden;
   display: -webkit-box;
@@ -13409,9 +13419,6 @@ h3.title3 .maps iframe {
 .sitemap {
   margin: 0px auto 1em;
 }
-.sitemap p {
-  font-size: 0.938em;
-}
 .sitemap p kbd {
   border: 1px solid #aaa;
   background: transparent;
@@ -13633,6 +13640,8 @@ h3.title3 .maps iframe {
   border-top: 5px solid #0c3a78;
   border-bottom: 5px solid #0c3a78;
   position: relative;
+  overflow-y: scroll;
+  height: 90%;
 }
 .leftblock_nodemenu:before {
   content: "";
@@ -13757,6 +13766,12 @@ h3.title3 .maps iframe {
   line-height: 1.7em;
   margin-bottom: 2em;
 }
+@media screen and (max-width: 575px) {
+  .explain_block,
+  .np {
+    padding: 1em;
+  }
+}
 
 .npimage {
   position: relative;
@@ -13796,7 +13811,8 @@ h3.title3 .maps iframe {
 }
 @media screen and (max-width: 991px) {
   .searchblockbtn {
-    margin-left: 1.5em;
+    margin-left: 0;
+    margin-bottom: 0;
   }
 }
 .searchblockbtn:hover, .searchblockbtn:focus {
@@ -13820,6 +13836,11 @@ h3.title3 .maps iframe {
   margin-bottom: 3em;
   font-size: 1em;
   display: none;
+}
+@media screen and (max-width: 575px) {
+  .conditional_searchblock {
+    padding: 1em;
+  }
 }
 .conditional_searchblock.open {
   display: block;

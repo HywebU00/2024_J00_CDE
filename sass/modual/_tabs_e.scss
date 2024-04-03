@@ -79,6 +79,9 @@
       background: #fff;
       border-radius: 8px;
       padding: 1em 2em;
+      @include screen('xs_mobile') {
+        padding: 1em;
+      }
     }
   }
   // 最新消息

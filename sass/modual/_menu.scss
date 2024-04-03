@@ -16,6 +16,7 @@
   position: relative;
   z-index: 99;
   clear: both;
+  font-size: 1.063em;
   &.orangemenu {
     &.sticky {
       position: fixed;
@@ -172,7 +173,7 @@
       flex: 0 0 auto;
       > a {
         display: block;
-        padding: 0 1em 0;
+        padding: 0 0.7em 0;
         min-height: 2.5em;
         font-weight: bold;
         line-height: 2.5em;
@@ -223,7 +224,7 @@
       ul {
         display: none;
         overflow: visible;
-        width: 150px;
+        width: 160px;
         background: rgb(12, 58, 120);
         padding: 0;
         z-index: 999999;
@@ -233,13 +234,14 @@
         list-style: none;
         text-align: left;
         animation: showMenu 0.3s $cubic;
-        font-size: 0.938em;
+        font-size: 1em;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
         // 第二層選單樣式
         li {
           float: none;
           a {
-            padding: 0.6em 1.2em;
+            padding: 0.6em 1em;
             color: #fff;
             font-weight: bold;
             &:hover,

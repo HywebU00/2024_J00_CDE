@@ -3225,6 +3225,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 @media screen and (max-width: 767px) {
   .header:before {
     height: 60px;
+    box-shadow: 0px 2px 5px RGBA(0, 0, 0, 0.3);
   }
 }
 .header > .container .searchCtrl, .header > .container .sidebarCtrl {
@@ -3656,6 +3657,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   position: relative;
   z-index: 99;
   clear: both;
+  font-size: 1.063em;
 }
 .menu.orangemenu.sticky {
   position: fixed;
@@ -3801,7 +3803,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .menu > ul > li > a {
   display: block;
-  padding: 0 1em 0;
+  padding: 0 0.7em 0;
   min-height: 2.5em;
   font-weight: bold;
   line-height: 2.5em;
@@ -3846,7 +3848,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .menu ul li ul {
   display: none;
   overflow: visible;
-  width: 150px;
+  width: 160px;
   background: rgb(12, 58, 120);
   padding: 0;
   z-index: 999999;
@@ -3856,14 +3858,14 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   list-style: none;
   text-align: left;
   animation: showMenu 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  font-size: 0.938em;
+  font-size: 1em;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .menu ul li ul li {
   float: none;
 }
 .menu ul li ul li a {
-  padding: 0.6em 1.2em;
+  padding: 0.6em 1em;
   color: #fff;
   font-weight: bold;
 }
@@ -7205,7 +7207,7 @@ table .date {
   .table_list td:before {
     content: attr(data-title);
     position: absolute;
-    top: 0.5em;
+    top: 0.8em;
     left: 0.5em;
     width: 30%;
     padding-right: 10px;
@@ -7672,6 +7674,11 @@ table .date {
   border-radius: 8px;
   padding: 1em 2em;
 }
+@media screen and (max-width: 575px) {
+  .tabSet.subscription_epaper .tabContent {
+    padding: 1em;
+  }
+}
 .tabSet.nwes_slider {
   margin: 0 0 30px;
   width: 100%;
@@ -7709,6 +7716,7 @@ table .date {
   padding: 0.5em 0.5em;
   background: #0c3a78;
   color: #fff;
+  height: 2.5em;
 }
 .tabSet.cpreview_slider .tabItems .item:hover {
   background: #4b74ac;
@@ -9409,6 +9417,7 @@ h2.title {
   background-color: #fff;
   padding-bottom: 5em;
   font-size: 1.125em;
+  position: relative;
 }
 @media screen and (max-width: 767px) {
   .innerpage {
@@ -9447,10 +9456,22 @@ h2.title {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   border-radius: 8px;
   transition: 0.5s;
+  cursor: pointer;
 }
 @media (max-width: 1400px) {
   .innerpage .nodemenu_btn {
     left: 0px;
+  }
+  .innerpage .nodemenu_btn ~ .center_block {
+    margin-left: 30px;
+    flex-basis: calc(100% - 310px) !important;
+    max-width: calc(100% - 310px) !important;
+  }
+  .innerpage .nodemenu_btn ~ .hidden + .center_block {
+    flex: none;
+    margin-left: 30px;
+    flex-basis: calc(100% - 30px) !important;
+    max-width: calc(100% - 30px) !important;
   }
 }
 @media screen and (max-width: 991px) {
@@ -9488,22 +9509,28 @@ h2.title {
 }
 .innerpage .nodemenu_mobilebtn {
   display: none;
-  position: absolute;
+  position: fixed;
   left: 0em;
-  top: 116px;
+  top: 120px;
   z-index: 11;
   width: 1.5em;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  cursor: pointer;
 }
 @media screen and (max-width: 991px) {
   .innerpage .nodemenu_mobilebtn {
     display: block;
   }
+  .innerpage .nodemenu_mobilebtn ~ .center_block {
+    margin-left: 30px;
+    flex-basis: calc(100% - 30px) !important;
+    max-width: calc(100% - 30px) !important;
+  }
 }
 @media screen and (max-width: 767px) {
   .innerpage .nodemenu_mobilebtn {
     display: block;
-    top: 100px;
+    top: 120px;
   }
 }
 .innerpage .nodemenu_mobilebtn a {
@@ -9538,6 +9565,7 @@ h2.title {
   flex: none;
   flex-basis: 100%;
   max-width: 100%;
+  transition: 0.5s;
 }
 .innerpage .left_block {
   flex: none;
@@ -9559,6 +9587,7 @@ h2.title {
 @media (max-width: 1400px) {
   .innerpage .left_block {
     margin-left: 30px;
+    margin-right: 10px;
   }
   .innerpage .left_block + .center_block {
     flex: auto;
@@ -9566,22 +9595,22 @@ h2.title {
     max-width: calc(100% - 310px);
   }
   .innerpage .left_block.hidden + .center_block {
-    margin-left: 30px;
     flex: none;
-    flex-basis: calc(100% - 30px);
-    max-width: calc(100% - 30px);
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 991px) {
   .innerpage .left_block {
-    position: absolute;
+    position: fixed;
     left: -240px;
-    top: 116px;
+    top: 122px;
     bottom: 0;
     width: 240px;
     transition: 0.5s;
     z-index: 10;
     margin-left: 0;
+    margin-right: 0;
   }
   .innerpage .left_block.open {
     left: 2.5em;
@@ -11790,7 +11819,11 @@ h3.title3 .maps iframe {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-.c_news .info .description {
+.c_news .info .description p {
+  display: none;
+}
+.c_news .info .description p:first-of-type {
+  display: block;
   opacity: 0.8;
   overflow: hidden;
   display: -webkit-box;
@@ -13279,9 +13312,6 @@ h3.title3 .maps iframe {
 .sitemap {
   margin: 0px auto 1em;
 }
-.sitemap p {
-  font-size: 0.938em;
-}
 .sitemap p kbd {
   border: 1px solid #aaa;
   background: transparent;
@@ -13503,6 +13533,8 @@ h3.title3 .maps iframe {
   border-top: 5px solid #0c3a78;
   border-bottom: 5px solid #0c3a78;
   position: relative;
+  overflow-y: scroll;
+  height: 90%;
 }
 .leftblock_nodemenu:before {
   content: "";
@@ -13627,6 +13659,12 @@ h3.title3 .maps iframe {
   line-height: 1.7em;
   margin-bottom: 2em;
 }
+@media screen and (max-width: 575px) {
+  .explain_block,
+  .np {
+    padding: 1em;
+  }
+}
 
 .npimage {
   position: relative;
@@ -13666,7 +13704,8 @@ h3.title3 .maps iframe {
 }
 @media screen and (max-width: 991px) {
   .searchblockbtn {
-    margin-left: 1.5em;
+    margin-left: 0;
+    margin-bottom: 0;
   }
 }
 .searchblockbtn:hover, .searchblockbtn:focus {
@@ -13690,6 +13729,11 @@ h3.title3 .maps iframe {
   margin-bottom: 3em;
   font-size: 1em;
   display: none;
+}
+@media screen and (max-width: 575px) {
+  .conditional_searchblock {
+    padding: 1em;
+  }
 }
 .conditional_searchblock.open {
   display: block;

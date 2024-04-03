@@ -53,7 +53,6 @@
   .tabContent {
     display: none;
     position: relative;
-
     // box-shadow: #bbb 0 0 0 1px inset;
     background-color: #fff;
 
@@ -79,6 +78,9 @@
       background: #fff;
       border-radius: 8px;
       padding: 1em 2em;
+      @include screen('xs_mobile') {
+        padding: 1em;
+      }
     }
   }
   // 最新消息
@@ -124,6 +126,7 @@
         padding: 0.5em 0.5em;
         background: $primaryColor;
         color: #fff;
+        height: 2.5em;
         &:hover {
           background: $linkColor;
         }

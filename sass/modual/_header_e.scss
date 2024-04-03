@@ -25,6 +25,7 @@
     z-index: -1;
     @include screen('mobile') {
       height: 60px;
+      box-shadow: 0px 2px 5px RGBA(0, 0, 0, 0.3);
     }
   }
   // mobile btn for extend

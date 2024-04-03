@@ -9,6 +9,9 @@
   font-size: 1.125em;
   line-height: 1.7em;
   margin-bottom: 2em;
+  @include screen('xs_mobile') {
+    padding: 1em;
+  }
 }
 // np圖
 .npimage {
@@ -32,7 +35,8 @@
   padding-left: 2.5em;
 
   @include screen('tablet') {
-    margin-left: 1.5em;
+    margin-left: 0;
+    margin-bottom: 0;
   }
   &:hover,
   &:focus {
@@ -56,6 +60,9 @@
   margin-bottom: 3em;
   font-size: 1em;
   display: none;
+  @include screen('xs_mobile') {
+    padding: 1em;
+  }
   &.open {
     display: block;
   }

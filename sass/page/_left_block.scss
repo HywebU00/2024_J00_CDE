@@ -90,6 +90,8 @@
   border-top: 5px solid $primaryColor;
   border-bottom: 5px solid $primaryColor;
   position: relative;
+  overflow-y: scroll;
+  height: 90%;
   &:before {
     content: '';
     width: 40%;
