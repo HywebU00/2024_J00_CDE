@@ -3814,7 +3814,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 @media screen and (max-width: 991px) {
   .menu > ul > li > a {
-    padding: 0 0.5em;
+    padding: 0 0.4em;
   }
 }
 .menu > ul > li.hasChild > a:after {
@@ -9455,12 +9455,21 @@ h2.title {
   width: 1.5em;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   border-radius: 8px;
-  transition: 0.5s;
   cursor: pointer;
+}
+.innerpage .nodemenu_btn.nodemenu_btnfixed {
+  position: fixed;
+  left: calc(50% - 700px);
+  top: 70px;
 }
 @media (max-width: 1400px) {
   .innerpage .nodemenu_btn {
     left: 0px;
+  }
+  .innerpage .nodemenu_btn.nodemenu_btnfixed {
+    position: fixed;
+    left: 0;
+    top: 70px;
   }
   .innerpage .nodemenu_btn ~ .center_block {
     margin-left: 30px;
@@ -9520,6 +9529,7 @@ h2.title {
 @media screen and (max-width: 991px) {
   .innerpage .nodemenu_mobilebtn {
     display: block;
+    top: 220px;
   }
   .innerpage .nodemenu_mobilebtn ~ .center_block {
     margin-left: 30px;
@@ -9604,7 +9614,7 @@ h2.title {
   .innerpage .left_block {
     position: fixed;
     left: -240px;
-    top: 122px;
+    top: 220px;
     bottom: 0;
     width: 240px;
     transition: 0.5s;
@@ -9619,6 +9629,11 @@ h2.title {
     flex: none;
     flex-basis: 100%;
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .innerpage .left_block {
+    top: 120px;
   }
 }
 
@@ -13534,7 +13549,19 @@ h3.title3 .maps iframe {
   border-bottom: 5px solid #0c3a78;
   position: relative;
   overflow-y: scroll;
-  height: 90%;
+}
+.leftblock_nodemenu.stickySidebar {
+  position: sticky;
+  top: 70px;
+}
+@media screen and (max-width: 991px) {
+  .leftblock_nodemenu {
+    height: 90%;
+  }
+  .leftblock_nodemenu.stickySidebar {
+    position: relative;
+    top: auto;
+  }
 }
 .leftblock_nodemenu:before {
   content: "";

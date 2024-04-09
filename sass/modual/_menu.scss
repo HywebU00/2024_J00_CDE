@@ -182,7 +182,7 @@
         font-size: 1.125em;
         position: relative;
         @include screen('tablet') {
-          padding: 0 0.5em;
+          padding: 0 0.4em;
         }
       }
       &.hasChild {

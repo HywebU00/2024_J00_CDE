@@ -91,7 +91,17 @@
   border-bottom: 5px solid $primaryColor;
   position: relative;
   overflow-y: scroll;
-  height: 90%;
+  &.stickySidebar {
+    position: sticky;
+    top: 70px;
+  }
+  @include screen('tablet') {
+    height: 90%;
+    &.stickySidebar {
+      position: relative;
+      top: auto;
+    }
+  }
   &:before {
     content: '';
     width: 40%;
