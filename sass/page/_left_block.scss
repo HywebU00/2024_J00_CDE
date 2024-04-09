@@ -90,13 +90,14 @@
   border-top: 5px solid $primaryColor;
   border-bottom: 5px solid $primaryColor;
   position: relative;
-  overflow-y: scroll;
+
   &.stickySidebar {
     position: sticky;
     top: 70px;
   }
   @include screen('tablet') {
-    height: 90%;
+    height: 95%;
+    overflow-y: auto;
     &.stickySidebar {
       position: relative;
       top: auto;

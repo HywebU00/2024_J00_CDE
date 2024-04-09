@@ -13548,7 +13548,6 @@ h3.title3 .maps iframe {
   border-top: 5px solid #0c3a78;
   border-bottom: 5px solid #0c3a78;
   position: relative;
-  overflow-y: scroll;
 }
 .leftblock_nodemenu.stickySidebar {
   position: sticky;
@@ -13556,7 +13555,8 @@ h3.title3 .maps iframe {
 }
 @media screen and (max-width: 991px) {
   .leftblock_nodemenu {
-    height: 90%;
+    height: 95%;
+    overflow-y: auto;
   }
   .leftblock_nodemenu.stickySidebar {
     position: relative;
