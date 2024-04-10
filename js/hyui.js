@@ -225,6 +225,13 @@ $(function () {
       liHasChild.on({
         mouseenter: function () {
           $(this).children('ul').stop(true, false).fadeIn();
+          let menuUlCount = $(this).attr('data-col');
+          if ($(this).parent().parent().is('.menu')) {
+            console.log(window.innerWidth, $(this).offset().left, $(this).children('ul').width());
+            if (window.innerWidth < $(this).offset().left + $(this).children('ul').width() * menuUlCount) {
+              $(this).addClass('leftSlider');
+            }
+          }
         },
         mouseleave: function () {
           $(this).parent().siblings('ul').hide();
@@ -871,15 +878,18 @@ $(function () {
   // ---  判斷PC版選單超過畫面時左邊增加.leftSlider
   function checkUlWidth() {
     // --- 計算
-    var menuLeft = $('.header .container').offset().left;
-    var menuLi = $('.header .menu > ul > li');
-    var windowWidth = $(window).outerWidth();
-    var menuLiLeft;
-    var leftWidth;
-    menuLi.each(function () {
-      menuLiLeft = $(this).offset().left;
-      leftWidth = $(this).width() * $(this).find('ul').length;
-      menuLiLeft + leftWidth + menuLeft > windowWidth ? $(this).addClass('leftSlider') : $(this).removeClass('leftSlider');
+    $('.header .menu > ul > li').each(function () {
+      const numbers = [];
+      $(this)
+        .find('li')
+        .each(function () {
+          numbers.push($(this).parents('ul').length - 1);
+        });
+
+      if (numbers.length > 0) {
+        const maxNumber = Math.max(...numbers);
+        $(this).attr('data-col', maxNumber);
+      }
     });
   }
   checkUlWidth();
