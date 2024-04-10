@@ -16,25 +16,18 @@ table {
       font-weight: normal;
     }
   }
-  th, // td:not(.gsib_b,.gsc-search-button) {
-    //     padding: .5em;
-    //     text-align: left;
-    // }
-    // td:not(.gsib_a,.gsc-search-button){
-    //     border: #ddd 1px solid;
-    //     word-break: break-all;
-    //     a {
-    //         word-break: break-all;
-    //     }
-    // }
-    td {
+  th,
+  td {
     padding: 0.8em 0.5em;
     text-align: left;
-    // font-size: 1.063em;
   }
   td {
     border: #ddd 1px solid;
     word-break: break-all;
+    &.nopadding {
+      padding: 0;
+      border: none;
+    }
 
     a {
       word-break: break-all;
@@ -43,8 +36,9 @@ table {
         text-decoration: underline;
       }
     }
-    button {
-      margin: 0;
+    .btn {
+      margin: 0 !important;
+      padding: 0.3em 1.25em;
     }
   }
   th {
@@ -86,7 +80,94 @@ table {
 
 .table_list {
   margin: 1em 0 2em;
+  tr {
+    &.here {
+      border: 2px solid #000;
+      border-bottom: none;
+    }
+    &.nexthere {
+      border: 2px solid #000;
+      border-top: none;
+    }
+  }
+  .cp_table {
+    display: none;
+    th {
+      background-color: #666;
+    }
+    ol {
+      margin: 0 0 0 30px;
+      padding: 0;
+      li {
+        margin-bottom: 1em !important;
+      }
+    }
+  }
+  &.vacancies {
+    tr:nth-child(4n + 1) {
+      background: #f4f4f4;
+    }
+    a {
+      position: relative;
+      padding-right: 2em;
+      &.open {
+        &:after {
+          transform: rotate(-225deg);
+          bottom: 7px;
+          border: 2px solid #000;
+          border-top: none;
+          border-right: none;
+        }
+        &:before {
+          background-color: $color-yellow;
+        }
+      }
+
+      &:after {
+        content: '';
+        border: 2px solid $primaryColor;
+        border-top: none;
+        border-right: none;
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        right: 8px;
+        bottom: 10px;
+        transform: rotate(-45deg);
+        transition: 0.5s;
+      }
+      &:before {
+        content: '';
+        width: 24px;
+        height: 22px;
+        border-radius: 3px;
+        background-color: lighten($color: $lightColor, $amount: 7);
+        position: absolute;
+        right: 0px;
+        bottom: 2px;
+      }
+    }
+    tr {
+      .nopadding {
+        tr:nth-child(n) {
+          background: #fff !important;
+        }
+      }
+    }
+  }
+
   @include screen('xs_mobile') {
+    &.vacancies {
+      tr:nth-child(even) {
+        // border: none;
+        td {
+          border-bottom: none !important;
+          table {
+            border: #ddd 1px solid !important;
+          }
+        }
+      }
+    }
     background-color: transparent !important; //Force table to not be like tables anymore
     thead,
     tbody,
@@ -102,16 +183,17 @@ table {
     }
     tr {
       border: 1px solid #ccc;
-      margin-bottom: 10px; // background-color: #333;
+      margin-bottom: 0; // background-color: #333;
     }
     td {
       // Behave  like a "row"
       border: none !important;
-      border-bottom: 1px solid #eee !important;
+      border-bottom: 1px solid #ddd !important;
       position: relative;
       padding-left: 35% !important;
       white-space: normal;
       text-align: left;
+      background-color: #fff;
       &:before {
         content: attr(data-title);
         position: absolute;
@@ -123,6 +205,45 @@ table {
         text-align: left;
         font-weight: bold;
         color: #000;
+      }
+
+      &.nopadding {
+        padding-left: 0 !important;
+        &:before {
+          display: none;
+        }
+        .cp_table {
+          table {
+            border: none !important;
+            tr {
+              display: flex;
+              margin-bottom: 0;
+              border: none;
+              border-bottom: 1px solid #ddd;
+
+              &:last-child {
+                border-bottom: none;
+              }
+            }
+            th {
+              white-space: wrap;
+              flex: 0 0 auto;
+              flex-basis: 35%;
+              max-width: 35%;
+              border: none;
+            }
+            td {
+              padding-left: 0.5em !important;
+              border: none !important;
+              border-bottom: none;
+              flex: 1 1 auto;
+
+              &:before {
+                display: none;
+              }
+            }
+          }
+        }
       }
     }
   }

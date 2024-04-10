@@ -1006,3 +1006,24 @@ $(function () {
     }
   });
 });
+$(function () {
+  $('.vacancies td a').click(function () {
+    // $(this).stop().toggleClass('open');
+    // $(this).parents('tr').next('tr').find('.cp_table').stop().slideToggle();
+    if ($(this).parents('tr').next('tr').find('.cp_table').is(':hidden')) {
+      $(this).parents('tr').siblings('tr').removeClass('here').removeClass('nexthere');
+      $(this).parents('tr').addClass('here');
+      $(this).parents('tr').next('tr').addClass('nexthere');
+
+      $(this).parents('tr').siblings('tr').find('.cp_table').stop().slideUp();
+      $(this).parents('tr').siblings('tr').find('a').stop().removeClass('open');
+      $(this).parents('tr').next('tr').find('.cp_table').stop().slideDown();
+      $(this).stop().addClass('open');
+    } else {
+      $(this).parents('tr').next('tr').find('.cp_table').stop().slideUp();
+      $(this).stop().removeClass('open');
+      $(this).parents('tr').removeClass('here');
+      $(this).parents('tr').siblings('tr').removeClass('here').removeClass('nexthere');
+    }
+  });
+});

@@ -7132,14 +7132,19 @@ table td {
   border: #ddd 1px solid;
   word-break: break-all;
 }
+table td.nopadding {
+  padding: 0;
+  border: none;
+}
 table td a {
   word-break: break-all;
 }
 table td a:hover {
   text-decoration: underline;
 }
-table td button {
-  margin: 0;
+table td .btn {
+  margin: 0 !important;
+  padding: 0.3em 1.25em;
 }
 table th {
   background-color: #0c3a78;
@@ -7176,9 +7181,79 @@ table .date {
 .table_list {
   margin: 1em 0 2em;
 }
+.table_list tr.here {
+  border: 2px solid #000;
+  border-bottom: none;
+}
+.table_list tr.nexthere {
+  border: 2px solid #000;
+  border-top: none;
+}
+.table_list .cp_table {
+  display: none;
+}
+.table_list .cp_table th {
+  background-color: #666;
+}
+.table_list .cp_table ol {
+  margin: 0 0 0 30px;
+  padding: 0;
+}
+.table_list .cp_table ol li {
+  margin-bottom: 1em !important;
+}
+.table_list.vacancies tr:nth-child(4n+1) {
+  background: #f4f4f4;
+}
+.table_list.vacancies a {
+  position: relative;
+  padding-right: 2em;
+}
+.table_list.vacancies a.open:after {
+  transform: rotate(-225deg);
+  bottom: 7px;
+  border: 2px solid #000;
+  border-top: none;
+  border-right: none;
+}
+.table_list.vacancies a.open:before {
+  background-color: #fec003;
+}
+.table_list.vacancies a:after {
+  content: "";
+  border: 2px solid #0c3a78;
+  border-top: none;
+  border-right: none;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  right: 8px;
+  bottom: 10px;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+}
+.table_list.vacancies a:before {
+  content: "";
+  width: 24px;
+  height: 22px;
+  border-radius: 3px;
+  background-color: #b4cde5;
+  position: absolute;
+  right: 0px;
+  bottom: 2px;
+}
+.table_list.vacancies tr .nopadding tr:nth-child(n) {
+  background: #fff !important;
+}
 @media screen and (max-width: 575px) {
   .table_list {
     background-color: transparent !important;
+  }
+  .table_list.vacancies tr:nth-child(even) td {
+    border-bottom: none !important;
+  }
+  .table_list.vacancies tr:nth-child(even) td table {
+    border: #ddd 1px solid !important;
   }
   .table_list thead,
   .table_list tbody,
@@ -7194,15 +7269,16 @@ table .date {
   }
   .table_list tr {
     border: 1px solid #ccc;
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
   .table_list td {
     border: none !important;
-    border-bottom: 1px solid #eee !important;
+    border-bottom: 1px solid #ddd !important;
     position: relative;
     padding-left: 35% !important;
     white-space: normal;
     text-align: left;
+    background-color: #fff;
   }
   .table_list td:before {
     content: attr(data-title);
@@ -7215,6 +7291,40 @@ table .date {
     text-align: left;
     font-weight: bold;
     color: #000;
+  }
+  .table_list td.nopadding {
+    padding-left: 0 !important;
+  }
+  .table_list td.nopadding:before {
+    display: none;
+  }
+  .table_list td.nopadding .cp_table table {
+    border: none !important;
+  }
+  .table_list td.nopadding .cp_table table tr {
+    display: flex;
+    margin-bottom: 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+  .table_list td.nopadding .cp_table table tr:last-child {
+    border-bottom: none;
+  }
+  .table_list td.nopadding .cp_table table th {
+    white-space: wrap;
+    flex: 0 0 auto;
+    flex-basis: 35%;
+    max-width: 35%;
+    border: none;
+  }
+  .table_list td.nopadding .cp_table table td {
+    padding-left: 0.5em !important;
+    border: none !important;
+    border-bottom: none;
+    flex: 1 1 auto;
+  }
+  .table_list td.nopadding .cp_table table td:before {
+    display: none;
   }
 }
 
@@ -11691,6 +11801,9 @@ h3.title3 .maps iframe {
   margin-left: -5px;
 }
 
+.cp_table table {
+  background-color: #fff;
+}
 @media screen and (max-width: 575px) {
   .cp_table table th,
   .cp_table table td {

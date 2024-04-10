@@ -655,6 +655,9 @@ h3.title3 {
 }
 
 .cp_table {
+  table {
+    background-color: #fff;
+  }
   @include screen('xs_mobile') {
     table {
       th,
