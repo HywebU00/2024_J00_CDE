@@ -12566,9 +12566,8 @@ h3.title3 .maps iframe {
 }
 .c_ptBox .item .pic {
   width: 30%;
-  max-width: 285px;
+  max-width: 280px;
   line-height: 0;
-  max-height: 200px;
 }
 .c_ptBox .item .pic img {
   height: 100%;
