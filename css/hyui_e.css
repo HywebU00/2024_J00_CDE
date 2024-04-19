@@ -13224,6 +13224,9 @@ h3.title3 .maps iframe {
   display: none;
   margin: 0 -12px;
 }
+.c_newsCardTab .content.active {
+  display: block;
+}
 .c_newsCardTab .item:hover .info {
   background: #f7924d;
 }
