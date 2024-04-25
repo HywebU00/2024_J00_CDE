@@ -74,7 +74,7 @@ h2.title {
   background-repeat: no-repeat;
   background-color: #fff;
   padding-bottom: 5em;
-  font-size: 1.125em;
+  font-size: 1.188em;
   position: relative;
   @include screen('mobile') {
     padding-top: 60px;
@@ -89,11 +89,11 @@ h2.title {
     }
   }
   &.small_size {
-    font-size: 1em;
+    font-size: 1.063em;
   }
 
   &.large_size {
-    font-size: 1.25em;
+    font-size: 1.313em;
   }
   .nodemenu_btn {
     position: absolute;
@@ -287,4 +287,7 @@ h2.title {
 
 .hidden {
   display: none;
+}
+.word_red {
+  color: $color-red;
 }

@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+  <meta name="robots" content="noindex" />
+  <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HyUI kit</title>
+  <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+  <!-- slick css-->
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+  <!-- 燈箱facybox -->
+  <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
+  <!-- hyUI css -->
+  <link rel="stylesheet" href="css/hyui.css" />
+  <!-- favicon -->
+  <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- 直接跳主內容區 -->
+  <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+  <!-- wrapper Start -->
+  <div class="wrapper">
+    <!-- header Start -->
+    <header class="header ">
+      <div class="container">
+        <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+        <h1>
+          <a href="index.htm"><img src="images/logo.svg" alt="網站標題" /></a>
+        </h1>
+
+        <!-- navigation Start -->
+        <nav class="navigation" role="navigation" aria-label="Site">
+          <!-- 新增div navlist -->
+          <div class="navlist">
+            <ul>
+              <li><a href="#">網站導覽</a></li>
+              <li><a href="#">意見信箱</a></li>
+              <li><a href="#">員工專區</a></li>
+              <li><a href="#">English</a></li>
+            </ul>
+          </div>
+          <!-- font_size -->
+          <div class="font_size_block">
+            <button type="button" class="fontsize_btn">A</button>
+            <div class="font_size_list">
+              <ul>
+                <li><a href="#" role="button" class="small">小</a></li>
+                <li><a href="#" role="button" class="medium">中</a></li>
+                <li><a href="#" role="button" class="large">大</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Search Start -->
+          <div class="searchblock">
+            <button type="button" class="searchbtn">查詢</button>
+            <div class="searchcontent">
+              <div class="search" role="search">
+                <div class="form_grp">
+                  <label for="mustSameAsId">搜尋</label>
+                  <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S" title="請輸入文字" aria-label="搜尋網站內容" />
+                  <input name="" type="submit" value="查詢" class="btn btn-search" />
+                </div>
+                <!-- <div class="btn_grp">
+                              <input name="" type="submit" value="進階搜尋" class="btn" />
+                            </div> -->
+                <div class="keywordHot">
+                  <ul>
+                    <li><a href="#">熱門熱門</a></li>
+                    <li><a href="#">查詢</a></li>
+                    <li><a href="#">字詞三</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Search End -->
+        </nav>
+        <!-- navigation End -->
+        <!-- menu Start -->
+        <nav class="menu" role="navigation" aria-label="Header的導航列">
+          <ul>
+            <li>
+              <a href="#">審查評估業務</a>
+              <ul>
+                <li><a href="#">藥品</a>
+                  <ul>
+                    <li><a href="#">臨床試驗計畫書審查</a></li>
+                    <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
+                    <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li><a href="#">法規諮詢輔導</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a>
+                  <ul>
+                    <li><a href="#">新藥查驗登記</a></li>
+                    <li><a href="#">學名藥查驗登記</a></li>
+                    <li><a href="#">醫師藥師藥劑生指示藥品及成藥等三類別</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">最新法規資訊</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">訊息公告</a>
+              <ul>
+                <li><a href="#">CDE重大消息/政策</a></li>
+                <li><a href="#">業務最新公告</a></li>
+                <li><a href="http://www.google.com">採購公告</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">認識CDE</a>
+              <ul>
+                <li><a href="#">緣起宗旨</a></li>
+                <li><a href="#">董事會/董事長</a></li>
+                <li><a href="#">執行長</a></li>
+                <li><a href="#">組織架構</a></li>
+                <li><a href="#">業務介紹</a></li>
+                <li><a href="#">公開資訊</a></li>
+                <li><a href="#">地理位置</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">加入CDE</a>
+              <ul>
+                <li><a href="#">菁英招募</a></li>
+                <li><a href="#">實習專區</a></li>
+                <li><a href="#">下載專區</a></li>
+                <li><a href="#">聯絡我們</a></li>
+                <li><a href="#">員工專區</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- menu End -->
+        <!-- noscript -->
+        <noscript>
+          您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+          <a href="#">網站導覽</a>
+        </noscript>
+      </div>
+    </header>
+    <!-- header End -->
+    <!-- main Start -->
+    <div id="center" class="main innerpage">
+      <!-- 內頁新增一個classname-->
+      <a class="accesskey" href="#ac" id="ac" accesskey="C" title="主要內容區">:::</a>
+      <!-- breadcrumb路徑 start-->
+      <div class="breadcrumb">
+        <ul>
+          <li><a href="#">首頁</a></li>
+          <li><a href="#">節點</a></li>
+          <li>節點</li>
+        </ul>
+      </div>
+      <div class="container">
+        <!-- <div class="nodemenu_btn "><a href="javascript:;">次選單收合</a></div>
+        <div class="nodemenu_mobilebtn"><a href="javascript:;">次選單展開</a></div> -->
+        <!-- 左側 -->
+        <div class="left_block hidden">
+          <div class="leftblock_nodemenu stickySidebar">
+            <div class="title">審查評估業務</div>
+            <ul>
+              <li><a href="mp.htm">業務說明</a>
+              </li>
+              <li>
+                <a href="np.htm">臨床試驗</a>
+                <ul>
+                  <li><a href="#">臨床試驗計畫書審查</a></li>
+                  <li><a href="#">藥品生體可用率及生體相等性試驗計畫書</a></li>
+                  <li><a href="#">藥品生體可用率、生體相等性及溶離率曲線比對試驗報告</a></li>
+                </ul>
+              </li>
+              <li><a href="#">銜接性試驗評估</a>
+              </li>
+              <li><a href="#">藥品查驗登記</a>
+                <ul>
+                  <li><a href="#">新藥查驗登記</a></li>
+                  <li><a href="#">學名藥查驗登記</a></li>
+                  <li><a href="#">醫師藥師藥劑生指示藥品及成藥等三類別</a></li>
+                </ul>
+              </li>
+              <li><a href="#">原料藥</a>
+                <ul>
+                  <li><a href="#">原料藥查驗登記</a></li>
+                  <li><a href="#">原料藥主檔案評估</a></li>
+                </ul>
+              </li>
+              <li><a href="#">藥品上市後業務</a>
+                <ul>
+                  <li><a href="#">適應症及用法用量變更</a></li>
+                  <li><a href="#">仿單變更</a></li>
+                  <li><a href="#">藥品風險管理計畫及執行成效報告評估</a></li>
+                </ul>
+              </li>
+              <li><a href="#">常見問題FAQ</a>
+                <ul>
+                  <li><a href="#">臨床試驗</a></li>
+                  <li><a href="#">銜接性試驗評估</a></li>
+                  <li><a href="#">藥品查驗登記</a></li>
+                  <li><a href="#">原料藥</a></li>
+                  <li><a href="#">藥品上市後業務</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 主要內容區 -->
+        <div class="center_block">
+          <h2 class="title">我要應徵</h2>
+          <!-- function_panel -->
+          <div class="function_panel">
+            <!-- function功能區塊 start-->
+            <div class="function">
+              <ul>
+                <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
+                <li class="print"><a href="#">友善列印</a></li>
+                <li class="forward"><a href="#">轉寄友人</a></li>
+              </ul>
+            </div>
+            <!-- 社群分享 -->
+            <div class="share">
+              <ul>
+                <li>
+                  <a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_line.svg" alt="line" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_googleplus.svg" alt="google plus" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_rss.svg" alt="RSS" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_plurk.svg" alt="Plurk" /></a>
+                </li>
+              </ul>
+            </div>
+            <!-- function功能區塊 end-->
+          </div>
+          <!-- function_panel -->
+
+
+          <!-- aP Start -->
+          <section class="ap">
+            <div class="formdata_group">
+              <form action="">
+                <div class="datatitle"><span>我要應徵</span></div>
+                <div class="flex-form">
+                  <!-- 單層 1-->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title">應徵職務：</label>
+                    <div class="form_content">
+                      <div class="content_word">藥劑科技組/生物製劑CMC審查員(博士級)</div>
+                    </div>
+                  </div>
+                  <!-- 2 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title">錄取後可報到日：</label>
+                    <div class="form_content data_flex ">
+                      <div class="radio_grp form_inline">
+                        <label><input type="radio" name="sampleRadio" value="" checked="" />隨時</label>
+                        <label><input type="radio" name="sampleRadio" value="" />可報到日期</label>
+                      </div>
+                      <div class="data_group">
+                        <div class="datepick">
+                          <input name="" type="date" value="" class="calendar" placeholder="開始日期" />
+                        </div>之後
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 3 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title">希望待遇：</label>
+                    <div class="form_content data_flex ">
+                      <div class="radio_grp form_inline">
+                        <label><input type="radio" name="sampleRadio" value="" checked="" />面議</label>
+                        <label><input type="radio" name="sampleRadio" value="" checked="" />依公司規定</label>
+                        <label><input type="radio" name="sampleRadio" value="" />自填 ,</label>
+                      </div>
+                      <div class="data_group">
+                        <label for="">月薪 <input name="text" type="text" value="" placeholder="請填寫具體數字" class="inputtext_long" /></label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 4 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title">是否有推薦：</label>
+                    <div class="form_content data_flex">
+                      <div class="radio_grp form_inline">
+                        <label><input type="radio" name="sampleRadio" value="" checked="" />否</label>
+                        <label><input type="radio" name="sampleRadio" value="" checked="" />是 ,</label>
+                      </div>
+                      <div class="data_group ">
+                        <div class="form_grpin">
+                          <label for="">推薦人姓名：</label><input name="username" type="text" placeholder="" />
+                        </div>
+                        <div class="form_grpin">
+                          <label for="">關係：</label><input name="username" type="text" placeholder="" />
+                        </div>
+                        <div class="form_grpin">
+                          <label for="">單位：</label><input name="username" type="text" placeholder="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 5 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title">就業狀況：</label>
+                    <div class="form_content">
+                      <div class="radio_grp form_inline">
+                        <label><input type="radio" name="sampleRadio" value="" checked="" />就業中</label>
+                        <label><input type="radio" name="sampleRadio" value="" checked="" />待業中</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!--  -->
+                </div>
+                <div class="datatitle"><span>基本資料</span></div>
+                <div class="flex-form">
+                  <!-- 1 -->
+                  <div class="form_grp">
+                    <div class="flex-col-equal-2">
+                      <div class="form_grp">
+                        <label for="fake-legend" class="form_title" aria-required="true">中文姓名：</label>
+                        <div class="form_content">
+                          <input type="text" id="fake-legend" placeholder="請輸入中文姓名" />
+                        </div>
+                      </div>
+                      <div class="form_grp">
+                        <label for="fake-legend" class="form_title" aria-required="true">英文姓名：</label>
+                        <div class="form_content">
+                          <input type="text" id="fake-legend" placeholder="請輸入英文姓名，例：Ran-An Lee" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 2 -->
+                  <div class="form_grp">
+                    <div class="flex-col-equal-2">
+                      <div class="form_grp">
+                        <label for="fake-legend" class="form_title" aria-required="true">生日：</label>
+                        <div class="form_content">
+                          <div class="datepick">
+                            <input name="" type="date" value="" class="calendar" placeholder="開始日期" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_grp">
+                        <label for="fake-legend" class="form_title" aria-required="true">身分證字號：</label>
+                        <div class="form_content">
+                          <input type="text" id="fake-legend" placeholder="請輸入身分證字號" />
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <!-- 3 -->
+                  <div class="form_grp">
+                    <div class="flex-col-equal-2">
+                      <div class="form_grp">
+                        <label for="fake-legend" class="form_title" aria-required="true">性別：</label>
+                        <div class="form_content">
+                          <div class="radio_grp form_inline ">
+                            <label> <input type="radio" name="sampleRadio5" value="" checked="">男</label>
+                            <label> <input type="radio" name="sampleRadio5" value="">女</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_grp">
+                        <label for="fake-legend" class="form_title" aria-required="true">役別：</label>
+                        <div class="form_content">
+                          <div class="radio_grp form_inline nopadding">
+                            <label> <input type="radio" name="sampleRadio5" value="" checked="">役畢</label>
+                            <label> <input type="radio" name="sampleRadio5" value="">待役</label>
+                            <label> <input type="radio" name="sampleRadio5" value="">免役 </label>
+                            <input name="text" type="text" value="" placeholder="免役原因" class="inputtext_short" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 4-->
+                  <div class="form_grp">
+                    <div class="form_grp">
+                      <label for="fake-legend" class="form_title" aria-required="true">國籍：</label>
+                      <div class="form_content">
+                        <div class="radio_grp form_inline nopadding">
+                          <label> <input type="radio" name="sampleRadio5" value="" checked="">本國籍</label>
+                          <label> <input type="radio" name="sampleRadio5" value="">外國籍 </label>
+                          <input name="text" type="text" value="" placeholder="外國籍自填" class="inputtext_long " />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 5 -->
+                  <div class="form_grp">
+                    <div class="flex-col-equal-2">
+                      <div class="form_grp">
+                        <label for="fake-legend" class="form_title" aria-required="true">身心障礙類型：</label>
+                        <div class="form_content">
+                          <div class="radio_grp form_inline">
+                            <label> <input type="radio" name="sampleRadio5" value="" checked="">無</label>
+                            <label> <input type="radio" name="sampleRadio5" value="">輕度</label>
+                            <label> <input type="radio" name="sampleRadio5" value="">中度</label>
+                            <label> <input type="radio" name="sampleRadio5" value="">重度</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_grp">
+                        <label for="fake-legend" class="form_title" aria-required="true">是否為原住民：</label>
+                        <div class="form_content">
+                          <div class="radio_grp form_inline">
+                            <label> <input type="radio" name="sampleRadio5" value="" checked="">是</label>
+                            <label> <input type="radio" name="sampleRadio5" value="">否</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ６ -->
+                  <div class="form_grp">
+                    <div class="flex-col-equal-2">
+                      <div class="form_grp">
+                        <label for="fake-legend" class="form_title" aria-required="true">手機號碼：</label>
+                        <div class="form_content">
+                          <input type="text" id="fake-legend" placeholder="請輸入手機號碼" />
+                        </div>
+                      </div>
+                      <div class="form_grp">
+                        <label for="fake-legend" class="form_title" aria-required="true">通訊電話：</label>
+                        <div class="form_content">
+                          <input type="text" id="fake-legend" placeholder="請輸入通訊電話" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 7-->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">電子信箱：</label>
+                    <div class="form_content">
+                      <input type="text" id="fake-legend" placeholder="請輸入電子信箱" />
+                    </div>
+                  </div>
+                  <!-- 8-->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">通訊地址：</label>
+                    <div class="form_content">
+                      <input type="text" id="fake-legend" placeholder="請輸入通訊地址" />
+                    </div>
+                  </div>
+                  <!-- 9-->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">學歷：</label>
+                    <div class="form_content">
+                      <!-- 第二層 -->
+                      <!-- 兩欄 -->
+                      <div class="form_grp secondblcok">
+                        <label for="" class="form_title2">最高學歷</label>
+                        <div class="form_content">
+                          <div class="form_grp">
+                            <div class="form_content form_col-6-6">
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">學校名稱：</label>
+                                <input name="username" type="text" placeholder="請輸入學校名稱" />
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">科系：</label>
+                                <input name="username" type="text" placeholder="請輸入科系名稱" readonly="" />
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">狀態：</label>
+                                <div class="radio_grp form_inline nopadding">
+                                  <label> <input type="radio" name="sampleRadio5" value="" checked="">畢業</label>
+                                  <label> <input type="radio" name="sampleRadio5" value="">肄業</label>
+                                  <label> <input type="radio" name="sampleRadio5" value="">在學</label>
+                                </div>
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">修業期間：</label>
+                                <div class="datepick_block">
+                                  <div class="datepick">
+                                    <input name="" type="date" value="" class="calendar" placeholder="開始日期" />
+                                  </div>
+                                  <div class="datepick">
+                                    <input name="" type="date" value="" class="calendar" placeholder="結束日期" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 第二層 -->
+                      <!-- 兩欄 -->
+                      <div class="form_grp secondblcok">
+                        <label for="" class="form_title2">次高學歷</label>
+                        <div class="form_content">
+                          <div class="form_grp">
+                            <div class="form_content form_col-6-6">
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">學校名稱：</label>
+                                <input name="username" type="text" placeholder="請輸入學校名稱" />
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">科系：</label>
+                                <input name="username" type="text" placeholder="請輸入科系名稱" readonly="" />
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">狀態：</label>
+                                <div class="radio_grp form_inline nopadding">
+                                  <label> <input type="radio" name="sampleRadio5" value="" checked="">畢業</label>
+                                  <label> <input type="radio" name="sampleRadio5" value="">肄業</label>
+                                  <label> <input type="radio" name="sampleRadio5" value="">在學</label>
+                                </div>
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">修業期間：</label>
+                                <div class="datepick_block">
+                                  <div class="datepick">
+                                    <input name="" type="date" value="" class="calendar" placeholder="開始日期" />
+                                  </div>
+                                  <div class="datepick">
+                                    <input name="" type="date" value="" class="calendar" placeholder="結束日期" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 第二層 -->
+                      <!-- 兩欄 -->
+                      <div class="form_grp secondblcok">
+                        <label for="" class="form_title2">其他</label>
+                        <div class="form_content">
+                          <div class="form_grp">
+                            <div class="form_content form_col-6-6">
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">學校名稱：</label>
+                                <input name="username" type="text" placeholder="請輸入學校名稱" />
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">科系：</label>
+                                <input name="username" type="text" placeholder="請輸入科系名稱" readonly="" />
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">狀態：</label>
+                                <div class="radio_grp form_inline nopadding">
+                                  <label> <input type="radio" name="sampleRadio5" value="" checked="">畢業</label>
+                                  <label> <input type="radio" name="sampleRadio5" value="">肄業</label>
+                                  <label> <input type="radio" name="sampleRadio5" value="">在學</label>
+                                </div>
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">修業期間：</label>
+                                <div class="datepick_block">
+                                  <div class="datepick">
+                                    <input name="" type="date" value="" class="calendar" placeholder="開始日期" />
+                                  </div>
+                                  <div class="datepick">
+                                    <input name="" type="date" value="" class="calendar" placeholder="結束日期" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--  -->
+                    </div>
+                  </div>
+                  <!-- 10-->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">家庭成員：</label>
+                    <div class="form_content">
+                      <!-- 第二層 -->
+                      <!-- 四欄 -->
+                      <div class="form_grp secondblcok">
+                        <div class="form_content">
+                          <div class="form_content form_col-3-3-3-3">
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">父親：</label>
+                              <input name="username" type="text" placeholder="請輸入姓名" />
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">在職狀況：</label>
+                              <div class="radio_grp form_inline nopadding">
+                                <label> <input type="radio" name="sampleRadio5" value="" checked="">在職</label>
+                                <label> <input type="radio" name="sampleRadio5" value="">退休</label>
+                                <label> <input type="radio" name="sampleRadio5" value="">無</label>
+                              </div>
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">任職公司：</label>
+                              <input name="username" type="text" placeholder="請輸入任職公司" />
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">職稱：</label>
+                              <input name="username" type="text" placeholder="請輸入職稱" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 第二層 -->
+                      <!-- 四欄 -->
+                      <div class="form_grp secondblcok">
+                        <div class="form_content">
+                          <div class="form_content form_col-3-3-3-3">
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">母親：</label>
+                              <input name="username" type="text" placeholder="請輸入姓名" />
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">在職狀況：</label>
+                              <div class="radio_grp form_inline nopadding">
+                                <label> <input type="radio" name="sampleRadio5" value="" checked="">在職</label>
+                                <label> <input type="radio" name="sampleRadio5" value="">退休</label>
+                                <label> <input type="radio" name="sampleRadio5" value="">無</label>
+                              </div>
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">任職公司：</label>
+                              <input name="username" type="text" placeholder="請輸入任職公司" />
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">職稱：</label>
+                              <input name="username" type="text" placeholder="請輸入職稱" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 第二層 -->
+                      <!-- 四欄 -->
+                      <div class="form_grp secondblcok">
+                        <div class="form_content">
+                          <div class="form_content form_col-3-3-3-3">
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">配偶：</label>
+                              <input name="username" type="text" placeholder="請輸入姓名" />
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">在職狀況：</label>
+                              <div class="radio_grp form_inline nopadding">
+                                <label> <input type="radio" name="sampleRadio5" value="" checked="">在職</label>
+                                <label> <input type="radio" name="sampleRadio5" value="">退休</label>
+                                <label> <input type="radio" name="sampleRadio5" value="">無</label>
+                              </div>
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">任職公司：</label>
+                              <input name="username" type="text" placeholder="請輸入任職公司" />
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">職稱：</label>
+                              <input name="username" type="text" placeholder="請輸入職稱" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 第二層 -->
+                      <!-- 四欄 -->
+                      <div class="form_grp secondblcok">
+                        <div class="form_content">
+                          <div class="form_content form_col-3-3-3-3">
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">成年子女：</label>
+                              <input name="username" type="text" placeholder="請輸入姓名" />
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">在職狀況：</label>
+                              <div class="radio_grp form_inline nopadding">
+                                <label> <input type="radio" name="sampleRadio5" value="" checked="">在職</label>
+                                <label> <input type="radio" name="sampleRadio5" value="">退休</label>
+                                <label> <input type="radio" name="sampleRadio5" value="">無</label>
+                              </div>
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">任職公司：</label>
+                              <input name="username" type="text" placeholder="請輸入任職公司" />
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">職稱：</label>
+                              <input name="username" type="text" placeholder="請輸入職稱" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--  -->
+                    </div>
+                  </div>
+                  <!-- 11 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title">是否曾經參加過本中心面試：</label>
+                    <div class="form_content data_flex">
+                      <div class="radio_grp form_inline">
+                        <label><input type="radio" name="sampleRadio" value="" checked="" />否</label>
+                        <label><input type="radio" name="sampleRadio" value="" checked="" />是 ,</label>
+                      </div>
+                      <div class="data_group ">
+                        <div class="form_grpin">
+                          <div class="datepick"><label for="">時間：</label>
+                            <input name="" type="date" value="" class="calendar" placeholder="開始日期" />
+                          </div>
+                        </div>
+                        <div class="form_grpin">
+                          <label for="">應徵職位：</label><input name="username" type="text" placeholder="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 12 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title">是否有親友目前或曾經任職本中心：</label>
+                    <div class="form_content data_flex">
+                      <div class="radio_grp form_inline">
+                        <label><input type="radio" name="sampleRadio" value="" checked="" />否</label>
+                        <label><input type="radio" name="sampleRadio" value="" checked="" />是 ,</label>
+                      </div>
+                      <div class="data_group ">
+                        <div class="form_grpin">
+                          <label for="">親友姓名：</label><input name="username" type="text" placeholder="" />
+                        </div>
+                        <div class="form_grpin">
+                          <label for="">關係：</label><input name="username" type="text" placeholder="" />
+                        </div>
+                        <div class="form_grpin">
+                          <label for="">單位：</label><input name="username" type="text" placeholder="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 13-->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">推薦人：<span class="remind">*請提供兩位推薦人</span></label>
+                    <div class="form_content">
+                      <!-- 第二層 -->
+                      <!-- 五欄 -->
+                      <div class="form_grp secondblcok">
+                        <div class="form_content">
+                          <div class="form_content form_col-5">
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">姓名：</label>
+                              <input name="username" type="text" placeholder="請輸入姓名" />
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">公司：</label>
+                              <input name="username" type="text" placeholder="請輸入公司" />
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">部門：</label>
+                              <input name="username" type="text" placeholder="請輸入部門" />
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">職位：</label>
+                              <input name="username" type="text" placeholder="請輸入職位" />
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">電話號碼：</label>
+                              <input name="username" type="text" placeholder="請輸入電話號碼" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 第二層 -->
+                      <!-- 五欄 -->
+                      <div class="form_grp secondblcok">
+                        <div class="form_content">
+                          <div class="form_content form_col-5">
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">姓名：</label>
+                              <input name="username" type="text" placeholder="請輸入姓名" />
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">公司：</label>
+                              <input name="username" type="text" placeholder="請輸入公司" />
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">部門：</label>
+                              <input name="username" type="text" placeholder="請輸入部門" />
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">職位：</label>
+                              <input name="username" type="text" placeholder="請輸入職位" />
+                            </div>
+                            <div class="form_grp">
+                              <label for="username" class="form_title_tree">電話號碼：</label>
+                              <input name="username" type="text" placeholder="請輸入電話號碼" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--  -->
+                    </div>
+                  </div>
+                  <!--  -->
+                </div>
+                <div class="datatitle"><span>個人經歷</span></div>
+                <div class="flex-form">
+                  <!-- 1 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">工作經歷：</label>
+                    <div class="form_content">
+                      <!-- 第二層 -->
+                      <!-- 兩欄 -->
+                      <div class="form_grp secondblcok">
+                        <div class="form_content">
+                          <div class="form_grp">
+                            <div class="form_content form_col-6-6">
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">服務機構：</label>
+                                <input name="username" type="text" placeholder="請輸入服務機構" />
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">職稱：</label>
+                                <input name="username" type="text" placeholder="請輸入職稱" readonly="" />
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">月薪：</label>
+                                <input name="username" type="text" placeholder="請輸入月薪" />
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">離職原因：</label>
+                                <input name="username" type="text" placeholder="請輸入離職原因" readonly="" />
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">服務期間：</label>
+                                <div class="datepick_block">
+                                  <div class="datepick">
+                                    <input name="" type="date" value="" class="calendar" placeholder="開始日期" />
+                                  </div>
+                                  <div class="datepick">
+                                    <input name="" type="date" value="" class="calendar" placeholder="結束日期" />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">產業類別：</label>
+                                <input name="username" type="text" placeholder="請輸入產業類別" readonly="" />
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">公司規模人數：</label>
+                                <input name="username" type="text" placeholder="請輸入人數" readonly="" />
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">是否為管理職：</label>
+                                <div class="radio_grp form_inline nopadding">
+                                  <label> <input type="radio" name="sampleRadio5" value="" checked="">是</label>
+                                  <label> <input type="radio" name="sampleRadio5" value="">否</label>
+
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="addbtn"><button type="button" class="btn btn-gray "><i class="i_add2"></i>新增一筆</button></div>
+                      <!--  -->
+                    </div>
+                  </div>
+                  <!-- 2 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">語言能力：</label>
+                    <div class="form_content">
+                      <!-- 第二層 -->
+                      <!-- 五欄 -->
+                      <div class="form_grp secondblcok">
+                        <div class="form_content">
+                          <div class="form_grp">
+                            <div class="form_content form_col-5">
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">語言：</label>
+                                <input name="username" type="text" placeholder="請輸入語言" />
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">聽：</label>
+                                <select name="" id="fake-legend">
+                                  <option value="">請選擇</option>
+                                  <option value="">優</option>
+                                  <option value="">好</option>
+                                  <option value="">可</option>
+                                  <option value="">略懂</option>
+                                  <option value="">無</option>
+                                </select>
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">說：</label>
+                                <select name="" id="fake-legend">
+                                  <option value="">請選擇</option>
+                                  <option value="">優</option>
+                                  <option value="">好</option>
+                                  <option value="">可</option>
+                                  <option value="">略懂</option>
+                                  <option value="">無</option>
+                                </select>
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">讀：</label>
+                                <select name="" id="fake-legend">
+                                  <option value="">請選擇</option>
+                                  <option value="">優</option>
+                                  <option value="">好</option>
+                                  <option value="">可</option>
+                                  <option value="">略懂</option>
+                                  <option value="">無</option>
+                                </select>
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">寫：</label>
+                                <select name="" id="fake-legend">
+                                  <option value="">請選擇</option>
+                                  <option value="">優</option>
+                                  <option value="">好</option>
+                                  <option value="">可</option>
+                                  <option value="">略懂</option>
+                                  <option value="">無</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="addbtn"><button type="button" class="btn btn-gray "><i class="i_add2"></i>新增一筆</button></div>
+                      <!--  -->
+                    </div>
+                  </div>
+                  <!-- 3-->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">熟悉之電腦語言箱：</label>
+                    <div class="form_content">
+                      <textarea name="" id="address" cols="30" rows="10"></textarea>
+                    </div>
+                  </div>
+                  <!-- 4-->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">曾受過的職業或技術訓練：</label>
+                    <div class="form_content">
+                      <textarea name="" id="address" cols="30" rows="10"></textarea>
+                    </div>
+                  </div>
+                  <!-- 5 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">執照/證書：</label>
+                    <div class="form_content">
+                      <!-- 第二層 -->
+                      <!-- 四欄 -->
+                      <div class="form_grp secondblcok">
+                        <div class="form_content">
+                          <div class="form_grp">
+                            <div class="form_content form_col-3-3-3-3">
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">執照/政府證書：</label>
+                                <input name="username" type="text" placeholder="請輸入執照/政府證書" />
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">發照日期：</label>
+                                <div class="datepick single_datepick">
+                                  <input name="" type="date" value="" class="calendar" placeholder="開始日期" />
+                                </div>
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">證照號碼：</label>
+                                <input name="username" type="text" placeholder="請輸入證照號碼" />
+                              </div>
+                              <div class="form_grp">
+                                <label for="username" class="form_title_tree">備註：</label>
+                                <input name="username" type="text" placeholder="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="addbtn"><button type="button" class="btn btn-gray "><i class="i_add2"></i>新增一筆</button></div>
+                      <!--  -->
+                    </div>
+                  </div>
+                  <!--  -->
+                </div>
+                <div class="datatitle"><span>個人資料告知事項暨同意書 (必填)</span></div>
+                <div class="flex-form">
+                  <div class="form_grp">
+                    <div class="form_content notitle">
+                      <div class="consenblock">
+                        <ul>
+                          <li>
+                            <span class="checkbox_block"><input type="checkbox" name="" id=""></span>本人同意及授權財團法人醫藥品查驗中心得就本人於此甄選報名表中所提供之資料內容之正確性進行確認。
+                          </li>
+                          <li>
+                            <span class="checkbox_block"><input type="checkbox" name="" id=""></span>本人聲明在此甄選報名表中所填之資料均屬確實，如有虛偽不實，願無條件取消錄取資格或終止勞動契約。
+                          </li>
+                          <li>
+                            <span class="checkbox_block"><input type="checkbox" name="" id=""></span>本人已詳閱「財團法人醫藥品查驗中心利益衝突迴避辦法」，本人同意並保證於受僱期間內嚴格遵守規定，如有違反，願依中心規定接受處分，絕無異議。
+                          </li>
+                          <li>
+                            <span class="checkbox_block"><input type="checkbox" name=""
+                                id=""></span>本人特此同意及授權財團法人醫藥品查驗中心為招募聘用、人事管理及業務執行之目的，在符合個人資料保護相關法令之範圍內，利用本人已經提供及未來將提供的個人資料，並得於無被錄取後保存至少一年，如被錄取則與人事資料一併永久保存。
+                          </li>
+                          <li>
+                            <span class="checkbox_block"><input type="checkbox" name=""
+                                id=""></span>本人已詳閱上開內容，並確認本人已瞭解且已依個人資料保護法及相關法令之規定，受告知本甄選報名表內個人資料之蒐集目的、個人資料類別、利用之期間、地區、對象及方式、依個人資料保護法第三條規定得行使之權利及權利行使方式、及不提供本甄選報名表內個人資料或提供不完整時，致財團法人醫藥品查驗中心無法評估本人所應徵職務之適任性，對本人權益之影響。
+                          </li>
+                          <li>
+                            <span class="checkbox_block"><input type="checkbox" name="" id=""></span><span class="word_red">敬請確認以上內容正確，送出後即無法修改，另請E-mail大頭照與相關附件(論文摘要、著作等)。</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">驗證碼：</label>
+                    <div class="form_content form_inline">
+                      <img src="images/basic/captcha.gif" alt="" class="captcha" />
+                      <input name="" type="text" value="" />
+                      <button class="btn"><i class="i_reflash"></i>重新整理</button>
+                      <button class="btn"><i class="i_play"></i>語音播放</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn_grp ">
+                  <button class="btn btn-submit">送出</button>
+                  <button class="btn btn-reset">重填</button>
+                </div>
+              </form>
+
+            </div>
+          </section>
+          <!-- aP End -->
+        </div>
+      </div>
+    </div>
+    <!-- fatfooter Start -->
+    <section class="fatfooter">
+      <div class="container">
+        <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btn-fatfooter">收合</button>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">審查評估業務</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li><a href="#">法規諮詢輔導</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">最新法規資訊</a>
+              <ul>
+                <li><a href="#">藥品</a></li>
+                <li><a href="#">細胞治療技術</a></li>
+                <li><a href="#">醫療器材</a></li>
+                <li><a href="#">醫療科技評估</a></li>
+                <li><a href="#">健康食品及特殊營養食品</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">訊息公告</a>
+              <ul>
+                <li><a href="#">CDE重大消息/政策</a></li>
+                <li><a href="#">業務最新公告</a></li>
+                <li><a href="http://www.google.com">採購公告</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">認識CDE</a>
+              <ul>
+                <li><a href="#">緣起宗旨</a></li>
+                <li><a href="#">董事會/董事長</a></li>
+                <li><a href="#">執行長</a></li>
+                <li><a href="#">組織架構</a></li>
+                <li><a href="#">業務介紹</a></li>
+                <li><a href="#">公開資訊</a></li>
+                <li><a href="#">地理位置</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">加入CDE</a>
+              <ul>
+                <li><a href="#">菁英招募</a></li>
+                <li><a href="#">實習專區</a></li>
+                <li><a href="#">下載專區</a></li>
+                <li><a href="#">聯絡我們</a></li>
+                <li><a href="#">員工專區</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <!-- fatfooter End -->
+    <!-- footer Start-->
+    <footer>
+      <div class="container">
+        <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+        <div class="footer_logo">
+          <img src="images/footer_logo.svg" alt="" class="img-responsive" />
+        </div>
+        <div class="footer_map"><a href="#">本中心位置圖</a></div>
+        <div class="footer_info">
+          <div class="infoblock">
+            <p class="Copyright">版權所有© 財團法人醫藥品查驗中心<br>
+              地址：台北市南港區11557忠孝東路六段465號3樓</p>
+          </div>
+          <div class="infoblock">
+            <p>電話：886-2-8170-6000（總機服務時間：8:30-12:30 ，13:30-17:30）<br>
+              傳真：886-2-8170-6001、886-2-8170-6002</p>
+          </div>
+          <div class="infoblock">
+            <p>本網站支援IE、Firefox及Chrome，最佳瀏覽解析度為1024x768以上<br>
+              <span class="update">更新日期:<em>2018/01/01</em></span>
+              <span class="counter">累計瀏覽人次:<em>46476653</em></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer End -->
+  </div>
+  <a href="javascript:;" class="scrollToTop">回頁首</a>
+  <!-- JQ -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <!-- 外掛 plugin js -->
+  <script src="vendor/jquery.easing.min.js"></script>
+  <!-- ease -->
+  <script src="vendor/slick/slick.min.js "></script>
+  <!-- slick -->
+  <script src="vendor/lazyload/lazyload.js"></script>
+  <!-- lazyload -->
+  <script src="vendor/picturefill/picturefill.min.js" async></script>
+  <!-- picturefill -->
+  <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+  <!-- scrolltable -->
+  <!-- sticky-sidebar -->
+  <script src="vendor/sticky-sidebar/sticky-sidebar.js"></script>
+  <script src="vendor/sticky-sidebar/ResizeSensor.js"></script>
+  <!-- fancy -->
+  <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+  <!-- hyUI -->
+  <script src="js/hyui.js"></script>
+  <!-- 客製js -->
+  <script src="js/customize.js"></script>
+</body>
+
+</html>

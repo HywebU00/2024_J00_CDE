@@ -1,10 +1,10 @@
-$form_title_width: 150px; // 表單title寬度
+$form_title_width: 160px; // 表單title寬度
 $m-gutter: 4px; // Flex grid system default margin
 @mixin formStyle($f_color: $color-word, $f_border: $color-gray, $f_radius: $btn-radius) {
   color: $f_color;
   font-size: 1em;
   border: 1px solid $f_border;
-  padding: 0.5em;
+  padding: 0.3em 0.5em;
   background: #fff;
   vertical-align: middle;
   margin: 0.3em;
@@ -350,8 +350,69 @@ select::-ms-expand {
       }
     }
     // 日期專屬
+    .datepick_block {
+      display: flex;
+      @include screen('tablet') {
+        display: block;
+        .datepick {
+          & + .datepick {
+            margin-left: 0;
+            &:before {
+              display: none;
+            }
+          }
+          > input[type='date'] {
+            width: 10em;
+          }
+        }
+      }
+      @include screen('mobile') {
+        display: flex;
+        .datepick {
+          & + .datepick {
+            margin-left: 0.3em;
+            &:before {
+              display: inline-block;
+              content: '~';
+              font-size: 1.5em;
+              color: #777;
+            }
+          }
+          > input[type='date'] {
+            width: 8em;
+          }
+        }
+      }
+      @include screen('xs_mobile') {
+        .datepick {
+          width: auto;
+        }
+      }
+      @media (max-width: 480px) {
+        display: block;
+        .datepick {
+          width: 100%;
+          & + .datepick {
+            margin-left: 0;
+            &:before {
+              display: none;
+            }
+          }
+          > input[type='date'] {
+            width: 100%;
+          }
+        }
+      }
+    }
     .datepick {
       position: relative;
+      vertical-align: middle;
+      &.single_datepick {
+        width: 98%;
+        > input[type='date'] {
+          width: 100%;
+        }
+      }
       @include screen('xs_mobile') {
         width: 100%;
         display: block;
@@ -395,7 +456,8 @@ select::-ms-expand {
       }
       > input[type='text'],
       > input[type='date'] {
-        width: 10em;
+        width: 8em;
+
         @include screen('xs_mobile') {
           width: calc(100% - 0.6em);
         }
@@ -452,6 +514,10 @@ select::-ms-expand {
     // @include gutter();
     // form_content內，同時有多組的表單時
     // 詳見：樣式 2
+    &.notitle {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
     > section {
       // background: pink;
       width: 100%;
@@ -494,7 +560,7 @@ select::-ms-expand {
       border-bottom: none;
       // 調整標題
       .form_title {
-        color: #008175;
+        color: #333;
       }
       .form_content {
         flex-shrink: 0;
@@ -502,7 +568,7 @@ select::-ms-expand {
         // max-width:  calc(100% - #{$form_title_width});
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: flex-start;
         @include gutter(0);
         @include screen('mobile') {
           flex-basis: 100%;
@@ -521,6 +587,7 @@ select::-ms-expand {
             }
           }
         }
+
         // 第三層的設定
         .form_grp {
           // 調整標題
@@ -530,6 +597,7 @@ select::-ms-expand {
           }
         }
       }
+
       // &:first-child {
       //     padding-top: 0;
       // }
@@ -537,6 +605,10 @@ select::-ms-expand {
         border-bottom: none;
         margin-bottom: 0;
       }
+    }
+    // 內容文字
+    .content_word {
+      padding: 0.65em 0;
     }
   }
   // 選單格線系統
@@ -617,7 +689,7 @@ select::-ms-expand {
       width: 50%;
       flex-basis: 50%;
       max-width: 50%;
-      @include screen('xs_mobile') {
+      @include screen('mobile') {
         width: 100%;
         flex-basis: 100%;
         max-width: 100%;
@@ -665,7 +737,7 @@ select::-ms-expand {
       width: 25%;
       flex-basis: 25%;
       max-width: 25%;
-      @include screen('mobile') {
+      @include screen('tablet') {
         width: 50%;
         flex-basis: 50%;
         max-width: 50%;
@@ -686,6 +758,35 @@ select::-ms-expand {
         width: calc(100% - 0.6em);
         flex-basis: calc(100% - 0.6em);
         max-width: calc(100% - 0.6em);
+      }
+    }
+  }
+  .form_col-5 {
+    > .form_grp {
+      width: calc(100% / 5);
+      flex-basis: calc(100% / 5);
+      max-width: calc(100% / 5);
+      @include screen('tablet') {
+        width: 50%;
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+      @include screen('xs_mobile') {
+        flex-basis: 100%;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+    > input,
+    > select,
+    > label {
+      width: calc(100% / 5 - 0.6em);
+      flex-basis: calc(100% / 5 - 0.6em);
+      max-width: calc(100% / 5 - 0.6em);
+      @include screen('xs_mobile') {
+        width: calc(50% - 0.6em);
+        flex-basis: calc(50% - 0.6em);
+        max-width: calc(50% - 0.6em);
       }
     }
   }
@@ -1126,14 +1227,20 @@ select::-ms-expand {
     align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
-    padding: 0 0;
+    padding: 0.3em 0;
     @include screen('mobile') {
       flex-wrap: wrap;
+    }
+    .form_grp {
+      padding: 0;
     }
   }
   .check_grp,
   .radio_grp {
-    padding: 1em 0 0;
+    padding: 0.65em 0;
+    &.nopadding {
+      padding: 0;
+    }
     label {
       position: relative;
       //display: block;
@@ -1141,6 +1248,7 @@ select::-ms-expand {
       flex-basis: 100%;
       display: flex;
       align-items: flex-start;
+
       input {
         &:checked {
           & ~ span {
@@ -1164,23 +1272,24 @@ select::-ms-expand {
     &.form_inline {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
       label {
         //display: inline-block;
-        margin: 0 0.5em 10px 0;
+        margin: 0 0.5em 5px 0;
         flex: 0 0 auto;
-        flex-basis: 18%;
+        flex-basis: auto;
         margin-right: 2%;
         display: inline-flex;
-        align-items: flex-start;
-        @include screen('notebook') {
-          flex-basis: 23%;
-        }
-        @include screen('tablet') {
-          flex-basis: 31%;
-        }
-        @include screen('mobile') {
-          flex-basis: 48%;
-        }
+        align-items: center;
+        // @include screen('notebook') {
+        //   flex-basis: 23%;
+        // }
+        // @include screen('tablet') {
+        //   flex-basis: 31%;
+        // }
+        // @include screen('mobile') {
+        //   flex-basis: 48%;
+        // }
         @include screen('xs_mobile') {
           flex-basis: 100%;
           margin-right: 0;
@@ -1294,7 +1403,40 @@ select::-ms-expand {
     flex: 0 0 100% !important;
   }
 }
+.data_flex {
+  display: flex;
+  flex-wrap: wrap;
+  .check_grp,
+  .radio_grp {
+    width: auto;
+    flex: 0 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 1em;
 
+    label {
+      // flex-basis: auto !important;
+      margin: 0 0.5em 0 0 !important;
+    }
+  }
+  .data_group {
+    flex: 1 1 auto;
+    white-space: nowrap;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    .form_grpin {
+      flex: 0 0 auto;
+
+      float: left;
+      label {
+      }
+      input {
+        width: 120px;
+      }
+    }
+  }
+}
 //---------------------------------------------下拉選單--------//
 label,
 legend {
@@ -1405,6 +1547,7 @@ textarea {
   @include formStyle();
   height: 5em;
   overflow-y: scroll;
+  border: 2px solid #f0f1f2;
   @include screen('xs_mobile') {
     width: 100%;
   }
@@ -1428,8 +1571,8 @@ select:focus {
 //---------------------------------------------下拉選單--------//
 select {
   line-height: 1.4em;
-  padding: 0.5em 24px 0.5em 0.5em;
-  border: 1px solid $color-gray;
+  padding: 0.3em 24px 0.3em 0.5em;
+  border: 2px solid #f0f1f2;
   background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right center;
   background-size: 16px;
   option {
@@ -1453,7 +1596,7 @@ input[type='reset'] {
 input[type='checkbox'],
 input[type='radio'] {
   font-size: 1em;
-  margin: 0.3em;
+  margin: 0.2em 0.3em;
   width: 1em;
   height: 1em;
   background-color: #fff;

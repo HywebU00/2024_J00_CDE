@@ -1981,6 +1981,30 @@ kbd kbd {
   cursor: pointer;
 }
 
+.btn-gray {
+  background: #666;
+  border: 1px solid #666;
+  color: #fff;
+}
+.btn-gray:hover {
+  background: #4d4d4d;
+  border: 1px solid #333333;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+}
+.btn-gray:focus {
+  background: #4d4d4d;
+  border: 1px solid #333333;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+}
+.btn-gray.active {
+  background: #737373;
+  cursor: pointer;
+}
+
 .btn-submit {
   background: #0e458f;
   border: 1px solid #0e458f;
@@ -5374,8 +5398,71 @@ select::-ms-expand {
     width: 100% !important;
   }
 }
+.flex-form .form_grp .datepick_block {
+  display: flex;
+}
+@media screen and (max-width: 991px) {
+  .flex-form .form_grp .datepick_block {
+    display: block;
+  }
+  .flex-form .form_grp .datepick_block .datepick + .datepick {
+    margin-left: 0;
+  }
+  .flex-form .form_grp .datepick_block .datepick + .datepick:before {
+    display: none;
+  }
+  .flex-form .form_grp .datepick_block .datepick > input[type=date] {
+    width: 10em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .flex-form .form_grp .datepick_block {
+    display: flex;
+  }
+  .flex-form .form_grp .datepick_block .datepick + .datepick {
+    margin-left: 0.3em;
+  }
+  .flex-form .form_grp .datepick_block .datepick + .datepick:before {
+    display: inline-block;
+    content: "~";
+    font-size: 1.5em;
+    color: #777;
+  }
+  .flex-form .form_grp .datepick_block .datepick > input[type=date] {
+    width: 8em;
+  }
+}
+@media screen and (max-width: 575px) {
+  .flex-form .form_grp .datepick_block .datepick {
+    width: auto;
+  }
+}
+@media (max-width: 480px) {
+  .flex-form .form_grp .datepick_block {
+    display: block;
+  }
+  .flex-form .form_grp .datepick_block .datepick {
+    width: 100%;
+  }
+  .flex-form .form_grp .datepick_block .datepick + .datepick {
+    margin-left: 0;
+  }
+  .flex-form .form_grp .datepick_block .datepick + .datepick:before {
+    display: none;
+  }
+  .flex-form .form_grp .datepick_block .datepick > input[type=date] {
+    width: 100%;
+  }
+}
 .flex-form .form_grp .datepick {
   position: relative;
+  vertical-align: middle;
+}
+.flex-form .form_grp .datepick.single_datepick {
+  width: 98%;
+}
+.flex-form .form_grp .datepick.single_datepick > input[type=date] {
+  width: 100%;
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_grp .datepick {
@@ -5419,7 +5506,7 @@ select::-ms-expand {
 }
 .flex-form .form_grp .datepick > input[type=text],
 .flex-form .form_grp .datepick > input[type=date] {
-  width: 10em;
+  width: 8em;
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_grp .datepick > input[type=text],
@@ -5435,8 +5522,8 @@ select::-ms-expand {
   font-weight: 500;
 }
 .flex-form .form_title {
-  max-width: 150px;
-  flex: 0 0 150px;
+  max-width: 160px;
+  flex: 0 0 160px;
   align-self: flex-start;
   padding: 0.65em 0;
   font-weight: 500;
@@ -5455,8 +5542,8 @@ select::-ms-expand {
   }
 }
 .flex-form .form_title + .form_content[class*=form_col] {
-  flex-basis: calc(100% - 150px);
-  max-width: calc(100% - 150px);
+  flex-basis: calc(100% - 160px);
+  max-width: calc(100% - 160px);
   padding-top: 0;
 }
 @media screen and (max-width: 767px) {
@@ -5467,12 +5554,16 @@ select::-ms-expand {
 }
 .flex-form .form_content {
   display: flex;
-  max-width: calc(100% - 150px);
+  max-width: calc(100% - 160px);
   flex: auto;
-  flex-basis: calc(100% - 150px);
+  flex-basis: calc(100% - 160px);
   position: relative;
   min-height: 1px;
   flex-wrap: wrap;
+}
+.flex-form .form_content.notitle {
+  max-width: 100%;
+  flex-basis: 100%;
 }
 .flex-form .form_content > section {
   width: 100%;
@@ -5518,13 +5609,13 @@ select::-ms-expand {
   border-bottom: none;
 }
 .flex-form .form_content .form_grp .form_title {
-  color: #008175;
+  color: #333;
 }
 .flex-form .form_content .form_grp .form_content {
   flex-shrink: 0;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   min-height: 1px;
   padding-left: 0;
@@ -5560,6 +5651,9 @@ select::-ms-expand {
 .flex-form .form_content .form_grp:last-child {
   border-bottom: none;
   margin-bottom: 0;
+}
+.flex-form .form_content .content_word {
+  padding: 0.65em 0;
 }
 .flex-form [class*=form_col] {
   flex-basis: 100%;
@@ -5942,7 +6036,7 @@ select::-ms-expand {
   flex-basis: 50%;
   max-width: 50%;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 767px) {
   .flex-form .form_col-6-6 > .form_grp {
     width: 100%;
     flex-basis: 100%;
@@ -5998,7 +6092,7 @@ select::-ms-expand {
   flex-basis: 25%;
   max-width: 25%;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .flex-form .form_col-3-3-3-3 > .form_grp {
     width: 50%;
     flex-basis: 50%;
@@ -6026,6 +6120,41 @@ select::-ms-expand {
     width: calc(100% - 0.6em);
     flex-basis: calc(100% - 0.6em);
     max-width: calc(100% - 0.6em);
+  }
+}
+.flex-form .form_col-5 > .form_grp {
+  width: 20%;
+  flex-basis: 20%;
+  max-width: 20%;
+}
+@media screen and (max-width: 991px) {
+  .flex-form .form_col-5 > .form_grp {
+    width: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .flex-form .form_col-5 > .form_grp {
+    flex-basis: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.flex-form .form_col-5 > input,
+.flex-form .form_col-5 > select,
+.flex-form .form_col-5 > label {
+  width: calc(20% - 0.6em);
+  flex-basis: calc(20% - 0.6em);
+  max-width: calc(20% - 0.6em);
+}
+@media screen and (max-width: 575px) {
+  .flex-form .form_col-5 > input,
+  .flex-form .form_col-5 > select,
+  .flex-form .form_col-5 > label {
+    width: calc(50% - 0.6em);
+    flex-basis: calc(50% - 0.6em);
+    max-width: calc(50% - 0.6em);
   }
 }
 .flex-form .form_col-2-2-2-2-2-2 > .form_grp {
@@ -6564,7 +6693,7 @@ select::-ms-expand {
   align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
-  padding: 0 0;
+  padding: 0.3em 0;
 }
 @media screen and (max-width: 767px) {
   .flex-form .form_grp,
@@ -6575,9 +6704,20 @@ select::-ms-expand {
     flex-wrap: wrap;
   }
 }
+.flex-form .form_grp .form_grp,
+.flex-form .check_grp .form_grp,
+.flex-form .radio_grp .form_grp,
+.flex-form .btn_grp .form_grp,
+.flex-form .upload_grp .form_grp {
+  padding: 0;
+}
 .flex-form .check_grp,
 .flex-form .radio_grp {
-  padding: 1em 0 0;
+  padding: 0.65em 0;
+}
+.flex-form .check_grp.nopadding,
+.flex-form .radio_grp.nopadding {
+  padding: 0;
 }
 .flex-form .check_grp label,
 .flex-form .radio_grp label {
@@ -6604,33 +6744,16 @@ select::-ms-expand {
 .flex-form .radio_grp.form_inline {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 .flex-form .check_grp.form_inline label,
 .flex-form .radio_grp.form_inline label {
-  margin: 0 0.5em 10px 0;
+  margin: 0 0.5em 5px 0;
   flex: 0 0 auto;
-  flex-basis: 18%;
+  flex-basis: auto;
   margin-right: 2%;
   display: inline-flex;
-  align-items: flex-start;
-}
-@media screen and (max-width: 1399px) {
-  .flex-form .check_grp.form_inline label,
-  .flex-form .radio_grp.form_inline label {
-    flex-basis: 23%;
-  }
-}
-@media screen and (max-width: 991px) {
-  .flex-form .check_grp.form_inline label,
-  .flex-form .radio_grp.form_inline label {
-    flex-basis: 31%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .flex-form .check_grp.form_inline label,
-  .flex-form .radio_grp.form_inline label {
-    flex-basis: 48%;
-  }
+  align-items: center;
 }
 @media screen and (max-width: 575px) {
   .flex-form .check_grp.form_inline label,
@@ -6733,6 +6856,37 @@ select::-ms-expand {
   flex: 0 0 100% !important;
 }
 
+.data_flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.data_flex .check_grp,
+.data_flex .radio_grp {
+  width: auto;
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 1em;
+}
+.data_flex .check_grp label,
+.data_flex .radio_grp label {
+  margin: 0 0.5em 0 0 !important;
+}
+.data_flex .data_group {
+  flex: 1 1 auto;
+  white-space: nowrap;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.data_flex .data_group .form_grpin {
+  flex: 0 0 auto;
+  float: left;
+}
+.data_flex .data_group .form_grpin input {
+  width: 120px;
+}
+
 label,
 legend {
   display: inline-block;
@@ -6777,7 +6931,7 @@ button {
   color: #333;
   font-size: 1em;
   border: 1px solid #ccc;
-  padding: 0.5em;
+  padding: 0.3em 0.5em;
   background: #fff;
   vertical-align: middle;
   margin: 0.3em;
@@ -6856,7 +7010,7 @@ textarea {
   color: #333;
   font-size: 1em;
   border: 1px solid #ccc;
-  padding: 0.5em;
+  padding: 0.3em 0.5em;
   background: #fff;
   vertical-align: middle;
   margin: 0.3em;
@@ -6865,6 +7019,7 @@ textarea {
   transition: all 0.3s ease-out;
   height: 5em;
   overflow-y: scroll;
+  border: 2px solid #f0f1f2;
 }
 @media screen and (max-width: 575px) {
   textarea {
@@ -6888,8 +7043,8 @@ select:focus {
 
 select {
   line-height: 1.4em;
-  padding: 0.5em 24px 0.5em 0.5em;
-  border: 1px solid #ccc;
+  padding: 0.3em 24px 0.3em 0.5em;
+  border: 2px solid #f0f1f2;
   background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right center;
   background-size: 16px;
 }
@@ -6905,7 +7060,7 @@ select:-moz-focusring {
 input[type=checkbox],
 input[type=radio] {
   font-size: 1em;
-  margin: 0.3em;
+  margin: 0.2em 0.3em;
   width: 1em;
   height: 1em;
   background-color: #fff;
@@ -13987,19 +14142,20 @@ h3.title3 .maps iframe {
 }
 
 .explain_block,
-.np {
+.np,
+.formdata_group {
   background-color: #fff;
   padding: 2em;
   border-radius: 8px;
   color: #333;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  font-size: 1.125em;
   line-height: 1.7em;
   margin-bottom: 2em;
 }
 @media screen and (max-width: 575px) {
   .explain_block,
-  .np {
+  .np,
+  .formdata_group {
     padding: 1em;
   }
 }
@@ -14037,7 +14193,7 @@ h3.title3 .maps iframe {
   background-image: url("../images/icon/icon_search2.svg");
   background-repeat: no-repeat;
   background-size: 20px;
-  background-position: 15px 12px;
+  background-position: 15px 17px;
   padding-left: 2.5em;
 }
 @media screen and (max-width: 991px) {
@@ -14206,11 +14362,96 @@ h3.title3 .maps iframe {
 .apform {
   margin: 0;
 }
-.apform .form_grp {
-  padding: 0.5em 0;
-}
 .apform .btn_grp {
   margin: 1em 0;
+}
+
+.formdata_group .datatitle {
+  background: rgb(111, 167, 218);
+  background: linear-gradient(90deg, rgb(111, 167, 218) 0%, rgb(246, 217, 222) 100%);
+  padding: 0.3em 1em;
+  border-radius: 8px;
+  color: #0c3a78;
+  border-left: 8px solid #0c3a78;
+  letter-spacing: 0.05em;
+}
+.formdata_group .datatitle span {
+  color: #fff;
+}
+.formdata_group .inputtext_long {
+  vertical-align: middle;
+  width: 80%;
+}
+.formdata_group .inputtext_short {
+  vertical-align: middle;
+  width: 120px !important;
+}
+.formdata_group .consenblock {
+  margin-bottom: 0.5em;
+}
+.formdata_group .consenblock ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.formdata_group .consenblock ul li {
+  padding: 0.8em 0 0.8em 1.7em;
+  border-bottom: 1px solid #ddd;
+}
+.formdata_group .consenblock ul li .checkbox_block {
+  margin-left: -1.8em;
+  margin-right: 0.2em;
+}
+.formdata_group .consenblock ul li .checkbox_block input[type=checkbox] {
+  margin: -0.1em 0.3em 0;
+}
+.formdata_group .flex-form .form_grp .form_content .form_grp {
+  display: block;
+}
+.formdata_group .flex-form .form_grp .form_content .form_grp.secondblcok {
+  background-color: #f5f5f5;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  border-radius: 10px;
+}
+.formdata_group .flex-form .form_grp .form_content .form_grp.secondblcok input[type=text] {
+  width: 98%;
+}
+.formdata_group .flex-form .form_grp .form_content .form_grp .form_title2 {
+  color: #0c3a78;
+  font-weight: bolder;
+  padding: 0em 0.35em 0 1.2em;
+  position: relative;
+}
+.formdata_group .flex-form .form_grp .form_content .form_grp .form_title2:before {
+  content: "";
+  width: 8px;
+  height: 20px;
+  background-color: #0c3a78;
+  position: absolute;
+  left: 5px;
+  top: 0.3em;
+  border-radius: 20px;
+}
+.formdata_group .flex-form .form_grp .form_content .form_grp .form_content {
+  max-width: 100%;
+}
+.formdata_group .flex-form .form_grp .form_title_tree {
+  color: #4b74ac;
+}
+.formdata_group .flex-form .form_grp .remind {
+  color: #d30000;
+  font-size: 0.813em;
+  display: block;
+}
+.formdata_group .flex-form .form_grp .addbtn button i {
+  margin-right: 0.35em;
+}
+.formdata_group .flex-form .form_grp .addbtn button .i_add2:before {
+  width: 0.8em;
+  height: 1.3em;
+  vertical-align: top;
+  background-position: 0 5px;
 }
 
 @media print {
