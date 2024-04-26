@@ -253,6 +253,9 @@ select::-ms-expand {
     &:last-child {
       border-bottom: transparent; // 最後一筆不要下虛線
     }
+    &.noborder {
+      border-bottom: transparent;
+    }
   }
   &.form_inline {
     border-bottom: 1px dashed #ddd;
@@ -352,46 +355,11 @@ select::-ms-expand {
     // 日期專屬
     .datepick_block {
       display: flex;
-      @include screen('tablet') {
-        display: block;
-        .datepick {
-          & + .datepick {
-            margin-left: 0;
-            &:before {
-              display: none;
-            }
-          }
-          > input[type='date'] {
-            width: 10em;
-          }
-        }
-      }
-      @include screen('mobile') {
-        display: flex;
-        .datepick {
-          & + .datepick {
-            margin-left: 0.3em;
-            &:before {
-              display: inline-block;
-              content: '~';
-              font-size: 1.5em;
-              color: #777;
-            }
-          }
-          > input[type='date'] {
-            width: 8em;
-          }
-        }
-      }
-      @include screen('xs_mobile') {
-        .datepick {
-          width: auto;
-        }
-      }
+
       @media (max-width: 480px) {
         display: block;
         .datepick {
-          width: 100%;
+          width: 99%;
           & + .datepick {
             margin-left: 0;
             &:before {
@@ -399,7 +367,7 @@ select::-ms-expand {
             }
           }
           > input[type='date'] {
-            width: 100%;
+            width: 99%;
           }
         }
       }
@@ -642,6 +610,7 @@ select::-ms-expand {
   }
   // 引用 Flex grid system
   // 父層設定 - 均分
+
   .flex-col-equal-1,
   .flex-col-equal-2,
   .flex-col-equal-3,
@@ -713,10 +682,26 @@ select::-ms-expand {
       width: calc(100% * 0.33333);
       flex-basis: calc(100% * 0.33333);
       max-width: calc(100% * 0.33333);
+      @include screen('tablet') {
+        width: calc(50% - 0.6em);
+        flex-basis: calc(50% - 0.6em);
+        max-width: calc(50% - 0.6em);
+      }
       @include screen('xs_mobile') {
         width: 100%;
         flex-basis: 100%;
         max-width: 100%;
+      }
+      &.fullgrp_merge2 {
+        flex: 1 1 auto;
+        width: calc(100% * 0.66666);
+        flex-basis: calc(100% * 0.66666);
+        max-width: calc(100% * 0.66666);
+        @include screen('tablet') {
+          width: 100%;
+          flex-basis: 100%;
+          max-width: 100%;
+        }
       }
     }
     > input,
@@ -725,6 +710,11 @@ select::-ms-expand {
       width: calc(100% * 0.33333 - 0.6em);
       flex-basis: calc(100% * 0.33333 - 0.6em);
       max-width: calc(100% * 0.33333 - 0.6em);
+      @include screen('tablet') {
+        width: calc(50% - 0.6em);
+        flex-basis: calc(50% - 0.6em);
+        max-width: calc(50% - 0.6em);
+      }
       @include screen('xs_mobile') {
         width: calc(100% - 0.6em);
         flex-basis: calc(100% - 0.6em);
@@ -1198,6 +1188,15 @@ select::-ms-expand {
       }
     }
   }
+  .form_grp {
+    &.fullgrp {
+      flex: 1 1 auto;
+      width: 100%;
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+
   .btn_grp {
     justify-content: center;
     .btn,
@@ -1545,7 +1544,7 @@ input[type='submit'] {
 
 textarea {
   @include formStyle();
-  height: 5em;
+  // height: 5em;
   overflow-y: scroll;
   border: 2px solid #f0f1f2;
   @include screen('xs_mobile') {

@@ -1837,26 +1837,26 @@ kbd kbd {
   outline: none;
 }
 
-.btn-green {
+.sh .btn-green {
   background: #298729;
   border: 1px solid #298729;
   color: #fff;
 }
-.btn-green:hover {
+.sh .btn-green:hover {
   background: #1d601d;
   border: 1px solid #113911;
   cursor: pointer;
   color: #fff;
   outline: none;
 }
-.btn-green:focus {
+.sh .btn-green:focus {
   background: #1d601d;
   border: 1px solid #113911;
   cursor: pointer;
   color: #fff;
   outline: none;
 }
-.btn-green.active {
+.sh .btn-green.active {
   background: #2f9b2f;
   cursor: pointer;
 }
@@ -5310,6 +5310,9 @@ select::-ms-expand {
 .flex-form .form_grp:last-child {
   border-bottom: transparent;
 }
+.flex-form .form_grp.noborder {
+  border-bottom: transparent;
+}
 .flex-form.form_inline {
   border-bottom: 1px dashed #ddd;
 }
@@ -5401,48 +5404,12 @@ select::-ms-expand {
 .flex-form .form_grp .datepick_block {
   display: flex;
 }
-@media screen and (max-width: 991px) {
-  .flex-form .form_grp .datepick_block {
-    display: block;
-  }
-  .flex-form .form_grp .datepick_block .datepick + .datepick {
-    margin-left: 0;
-  }
-  .flex-form .form_grp .datepick_block .datepick + .datepick:before {
-    display: none;
-  }
-  .flex-form .form_grp .datepick_block .datepick > input[type=date] {
-    width: 10em;
-  }
-}
-@media screen and (max-width: 767px) {
-  .flex-form .form_grp .datepick_block {
-    display: flex;
-  }
-  .flex-form .form_grp .datepick_block .datepick + .datepick {
-    margin-left: 0.3em;
-  }
-  .flex-form .form_grp .datepick_block .datepick + .datepick:before {
-    display: inline-block;
-    content: "~";
-    font-size: 1.5em;
-    color: #777;
-  }
-  .flex-form .form_grp .datepick_block .datepick > input[type=date] {
-    width: 8em;
-  }
-}
-@media screen and (max-width: 575px) {
-  .flex-form .form_grp .datepick_block .datepick {
-    width: auto;
-  }
-}
 @media (max-width: 480px) {
   .flex-form .form_grp .datepick_block {
     display: block;
   }
   .flex-form .form_grp .datepick_block .datepick {
-    width: 100%;
+    width: 99%;
   }
   .flex-form .form_grp .datepick_block .datepick + .datepick {
     margin-left: 0;
@@ -5451,7 +5418,7 @@ select::-ms-expand {
     display: none;
   }
   .flex-form .form_grp .datepick_block .datepick > input[type=date] {
-    width: 100%;
+    width: 99%;
   }
 }
 .flex-form .form_grp .datepick {
@@ -6064,8 +6031,28 @@ select::-ms-expand {
   flex-basis: 33.333%;
   max-width: 33.333%;
 }
+@media screen and (max-width: 991px) {
+  .flex-form .form_col-4-4-4 > .form_grp {
+    width: calc(50% - 0.6em);
+    flex-basis: calc(50% - 0.6em);
+    max-width: calc(50% - 0.6em);
+  }
+}
 @media screen and (max-width: 575px) {
   .flex-form .form_col-4-4-4 > .form_grp {
+    width: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+.flex-form .form_col-4-4-4 > .form_grp.fullgrp_merge2 {
+  flex: 1 1 auto;
+  width: 66.666%;
+  flex-basis: 66.666%;
+  max-width: 66.666%;
+}
+@media screen and (max-width: 991px) {
+  .flex-form .form_col-4-4-4 > .form_grp.fullgrp_merge2 {
     width: 100%;
     flex-basis: 100%;
     max-width: 100%;
@@ -6077,6 +6064,15 @@ select::-ms-expand {
   width: calc(33.333% - 0.6em);
   flex-basis: calc(33.333% - 0.6em);
   max-width: calc(33.333% - 0.6em);
+}
+@media screen and (max-width: 991px) {
+  .flex-form .form_col-4-4-4 > input,
+  .flex-form .form_col-4-4-4 > select,
+  .flex-form .form_col-4-4-4 > label {
+    width: calc(50% - 0.6em);
+    flex-basis: calc(50% - 0.6em);
+    max-width: calc(50% - 0.6em);
+  }
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_col-4-4-4 > input,
@@ -6665,6 +6661,12 @@ select::-ms-expand {
     flex-basis: calc(100% - 0.6em);
   }
 }
+.flex-form .form_grp.fullgrp {
+  flex: 1 1 auto;
+  width: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
 .flex-form .btn_grp {
   justify-content: center;
 }
@@ -7017,7 +7019,6 @@ textarea {
   box-sizing: border-box;
   border-radius: 8px;
   transition: all 0.3s ease-out;
-  height: 5em;
   overflow-y: scroll;
   border: 2px solid #f0f1f2;
 }
@@ -14378,6 +14379,11 @@ h3.title3 .maps iframe {
 .formdata_group .datatitle span {
   color: #fff;
 }
+.formdata_group .datatitle span em {
+  font-style: normal;
+  color: #d30000;
+  margin-left: 0.5em;
+}
 .formdata_group .inputtext_long {
   vertical-align: middle;
   width: 80%;
@@ -14416,6 +14422,14 @@ h3.title3 .maps iframe {
 }
 .formdata_group .flex-form .form_grp .form_content .form_grp.secondblcok input[type=text] {
   width: 98%;
+}
+.formdata_group .flex-form .form_grp .form_content .form_grp.secondblcok:only-child {
+  margin-bottom: 0em;
+}
+@media screen and (max-width: 767px) {
+  .formdata_group .flex-form .form_grp .form_content .form_grp.secondblcok textarea {
+    width: 98%;
+  }
 }
 .formdata_group .flex-form .form_grp .form_content .form_grp .form_title2 {
   color: #0c3a78;

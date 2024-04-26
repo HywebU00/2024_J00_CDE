@@ -203,6 +203,11 @@
     letter-spacing: 0.05em;
     span {
       color: #fff;
+      em {
+        font-style: normal;
+        color: $color-red;
+        margin-left: 0.5em;
+      }
     }
   }
 
@@ -247,6 +252,14 @@
             border-radius: 10px;
             input[type='text'] {
               width: 98%;
+            }
+            &:only-child {
+              margin-bottom: 0em;
+            }
+            @include screen('mobile') {
+              textarea {
+                width: 98%;
+              }
             }
           }
           .form_title2 {
