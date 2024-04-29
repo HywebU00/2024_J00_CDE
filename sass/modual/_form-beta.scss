@@ -355,7 +355,7 @@ select::-ms-expand {
     // 日期專屬
     .datepick_block {
       display: flex;
-
+      flex-wrap: wrap;
       @media (max-width: 480px) {
         display: block;
         .datepick {
@@ -373,6 +373,7 @@ select::-ms-expand {
       }
     }
     .datepick {
+      flex: 0 0 auto;
       position: relative;
       vertical-align: middle;
       &.single_datepick {
@@ -381,6 +382,7 @@ select::-ms-expand {
           width: 100%;
         }
       }
+
       @include screen('xs_mobile') {
         width: 100%;
         display: block;
@@ -426,9 +428,12 @@ select::-ms-expand {
       > input[type='date'] {
         width: 8em;
 
-        @include screen('xs_mobile') {
-          width: calc(100% - 0.6em);
-        }
+        // @include screen('xs_mobile') {
+        //   width: calc(100% - 0.6em);
+        // }
+      }
+      > input[type='month'] {
+        width: 8.5em;
       }
       > input[type='text'] {
         padding-right: 2em;

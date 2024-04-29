@@ -3796,7 +3796,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .menu.sticky > ul > li > a {
   color: #fff;
-  padding: 0.3em 1em;
+  padding: 0.3em 0.8em;
 }
 .menu.sticky > ul > li:hover {
   background: rgb(8, 36, 74);
@@ -5403,6 +5403,7 @@ select::-ms-expand {
 }
 .flex-form .form_grp .datepick_block {
   display: flex;
+  flex-wrap: wrap;
 }
 @media (max-width: 480px) {
   .flex-form .form_grp .datepick_block {
@@ -5422,6 +5423,7 @@ select::-ms-expand {
   }
 }
 .flex-form .form_grp .datepick {
+  flex: 0 0 auto;
   position: relative;
   vertical-align: middle;
 }
@@ -5475,11 +5477,8 @@ select::-ms-expand {
 .flex-form .form_grp .datepick > input[type=date] {
   width: 8em;
 }
-@media screen and (max-width: 575px) {
-  .flex-form .form_grp .datepick > input[type=text],
-  .flex-form .form_grp .datepick > input[type=date] {
-    width: calc(100% - 0.6em);
-  }
+.flex-form .form_grp .datepick > input[type=month] {
+  width: 8.5em;
 }
 .flex-form .form_grp .datepick > input[type=text] {
   padding-right: 2em;
@@ -14194,7 +14193,7 @@ h3.title3 .maps iframe {
 }
 .formdata_group .inputtext_long {
   vertical-align: middle;
-  width: 80%;
+  width: 80% !important;
 }
 .formdata_group .inputtext_short {
   vertical-align: middle;
