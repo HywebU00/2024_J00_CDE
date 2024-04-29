@@ -11246,6 +11246,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   background: #fff;
   border-radius: 8px;
   padding: 2em;
+  overflow: hidden;
 }
 @media screen and (max-width: 575px) {
   .cp {
