@@ -1245,6 +1245,9 @@ select::-ms-expand {
     &.nopadding {
       padding: 0;
     }
+    &.haveinput {
+      margin-top: 5px;
+    }
     label {
       position: relative;
       //display: block;
