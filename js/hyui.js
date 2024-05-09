@@ -844,9 +844,13 @@ $(function () {
       table_Arrow();
     }, 50);
   });
+
   // /*------------------------------------*/
   // //////////table 加上 data-title//////////
   // /*------------------------------------*/
+  if ($('.cp').has('table')) {
+    $('table').wrap('<div class="table_list"></div>');
+  }
   function rwdTable() {
     $('.table_list')
       .find('table')

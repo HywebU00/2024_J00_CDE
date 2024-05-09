@@ -1027,8 +1027,3 @@ $(function () {
     }
   });
 });
-$(function () {
-  if ($('.cp').has('table')) {
-    $('table').wrap('<div class="table_list"></div>');
-  }
-});
