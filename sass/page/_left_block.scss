@@ -171,13 +171,25 @@
       &:last-child {
         border: none;
       }
+      &.hasChild {
+        a {
+          margin-right: 3em;
+        }
+        ul {
+          li {
+            a {
+              margin-right: 1em;
+            }
+          }
+        }
+      }
       a {
         display: inline-block;
-        padding: 0.5em 1em 0.5em 1.2em;
+        padding: 0.5em 0.5em 0.5em 1em;
         line-height: 1.4em;
         color: #333;
         font-size: 1.063em;
-        margin-right: 3em;
+        margin-right: 1em;
         &:hover {
           color: $aHover;
         }

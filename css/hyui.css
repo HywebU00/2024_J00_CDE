@@ -13911,13 +13911,19 @@ h3.title3 .maps iframe {
 .leftblock_nodemenu ul > li:last-child {
   border: none;
 }
+.leftblock_nodemenu ul > li.hasChild a {
+  margin-right: 3em;
+}
+.leftblock_nodemenu ul > li.hasChild ul li a {
+  margin-right: 1em;
+}
 .leftblock_nodemenu ul > li a {
   display: inline-block;
-  padding: 0.5em 1em 0.5em 1.2em;
+  padding: 0.5em 0.5em 0.5em 1em;
   line-height: 1.4em;
   color: #333;
   font-size: 1.063em;
-  margin-right: 3em;
+  margin-right: 1em;
 }
 .leftblock_nodemenu ul > li a:hover {
   color: #4b74ac;
