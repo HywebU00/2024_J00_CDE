@@ -7981,11 +7981,15 @@ table .date {
   padding: 1em 0;
   box-shadow: none;
 }
+.tabSet.cpreview_slider .tabItems {
+  flex-wrap: wrap;
+}
 .tabSet.cpreview_slider .tabItems .item {
   padding: 0.5em 0.5em;
   background: #0c3a78;
   color: #fff;
   height: 2.5em;
+  margin-bottom: 0.5em;
 }
 .tabSet.cpreview_slider .tabItems .item:hover {
   background: #4b74ac;

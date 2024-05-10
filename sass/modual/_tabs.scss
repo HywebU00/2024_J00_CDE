@@ -122,11 +122,13 @@
   //cp審查
   &.cpreview_slider {
     .tabItems {
+      flex-wrap: wrap;
       .item {
         padding: 0.5em 0.5em;
         background: $primaryColor;
         color: #fff;
         height: 2.5em;
+        margin-bottom: 0.5em;
         &:hover {
           background: $linkColor;
         }
