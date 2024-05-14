@@ -1007,7 +1007,7 @@ $(function () {
   });
 });
 $(function () {
-  $('.vacancies td a').click(function () {
+  $('.vacancies td a.vacanciesbtn').click(function () {
     // $(this).stop().toggleClass('open');
     // $(this).parents('tr').next('tr').find('.cp_table').stop().slideToggle();
     if ($(this).parents('tr').next('tr').find('.cp_table').is(':hidden')) {

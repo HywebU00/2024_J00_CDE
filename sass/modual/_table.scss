@@ -108,43 +108,45 @@ table {
       background: #f4f4f4;
     }
     a {
-      position: relative;
-      padding-right: 2em;
-      &.open {
+      &.vacanciesbtn {
+        position: relative;
+        padding-right: 2em;
+        &.open {
+          &:after {
+            transform: rotate(-225deg);
+            bottom: 7px;
+            border: 2px solid #000;
+            border-top: none;
+            border-right: none;
+          }
+          &:before {
+            background-color: $color-yellow;
+          }
+        }
+
         &:after {
-          transform: rotate(-225deg);
-          bottom: 7px;
-          border: 2px solid #000;
+          content: '';
+          border: 2px solid $primaryColor;
           border-top: none;
           border-right: none;
+          width: 6px;
+          height: 6px;
+          position: absolute;
+          right: 8px;
+          bottom: 10px;
+          transform: rotate(-45deg);
+          transition: 0.5s;
         }
         &:before {
-          background-color: $color-yellow;
+          content: '';
+          width: 24px;
+          height: 22px;
+          border-radius: 3px;
+          background-color: lighten($color: $lightColor, $amount: 7);
+          position: absolute;
+          right: 0px;
+          bottom: 2px;
         }
-      }
-
-      &:after {
-        content: '';
-        border: 2px solid $primaryColor;
-        border-top: none;
-        border-right: none;
-        width: 6px;
-        height: 6px;
-        position: absolute;
-        right: 8px;
-        bottom: 10px;
-        transform: rotate(-45deg);
-        transition: 0.5s;
-      }
-      &:before {
-        content: '';
-        width: 24px;
-        height: 22px;
-        border-radius: 3px;
-        background-color: lighten($color: $lightColor, $amount: 7);
-        position: absolute;
-        right: 0px;
-        bottom: 2px;
       }
     }
     tr {

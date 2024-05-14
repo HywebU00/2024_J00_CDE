@@ -7364,21 +7364,21 @@ table .date {
 .table_list.vacancies tr:nth-child(4n+1) {
   background: #f4f4f4;
 }
-.table_list.vacancies a {
+.table_list.vacancies a.vacanciesbtn {
   position: relative;
   padding-right: 2em;
 }
-.table_list.vacancies a.open:after {
+.table_list.vacancies a.vacanciesbtn.open:after {
   transform: rotate(-225deg);
   bottom: 7px;
   border: 2px solid #000;
   border-top: none;
   border-right: none;
 }
-.table_list.vacancies a.open:before {
+.table_list.vacancies a.vacanciesbtn.open:before {
   background-color: #fec003;
 }
-.table_list.vacancies a:after {
+.table_list.vacancies a.vacanciesbtn:after {
   content: "";
   border: 2px solid #0c3a78;
   border-top: none;
@@ -7391,7 +7391,7 @@ table .date {
   transform: rotate(-45deg);
   transition: 0.5s;
 }
-.table_list.vacancies a:before {
+.table_list.vacancies a.vacanciesbtn:before {
   content: "";
   width: 24px;
   height: 22px;
