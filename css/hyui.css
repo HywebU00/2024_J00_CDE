@@ -7769,6 +7769,7 @@ table .date {
 .lp .list ol > li span.dept {
   display: inline-block;
   font-size: 0.938em;
+  color: #888;
 }
 @media screen and (max-width: 767px) {
   .lp .list > ul > li span.dept,

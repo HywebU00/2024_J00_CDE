@@ -87,6 +87,7 @@
         span.dept {
           display: inline-block;
           font-size: 0.938em;
+          color: #888;
           @include screen('mobile') {
             display: block;
           }
