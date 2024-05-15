@@ -7732,6 +7732,12 @@ table .date {
   display: flex;
   font-size: 1.063em;
 }
+@media (max-width: 480px) {
+  .lp .list > ul > li > a,
+  .lp .list ol > li > a {
+    flex-wrap: wrap;
+  }
+}
 .lp .list > ul > li > a:hover,
 .lp .list ol > li > a:hover {
   color: #4b74ac;
@@ -7753,6 +7759,12 @@ table .date {
 .lp .list ol > li .title {
   flex: 1 1 auto;
   flex-basis: auto;
+}
+@media (max-width: 480px) {
+  .lp .list > ul > li .title,
+  .lp .list ol > li .title {
+    flex-basis: calc(100% - 3em);
+  }
 }
 .lp .list > ul > li .title .new,
 .lp .list ol > li .title .new {
@@ -7785,6 +7797,14 @@ table .date {
   color: #666;
   font-size: 0.938em;
   text-align: center;
+}
+@media (max-width: 480px) {
+  .lp .list > ul > li time,
+  .lp .list ol > li time {
+    flex-basis: calc(100% - 3em);
+    margin-left: 3em;
+    text-align: left;
+  }
 }
 
 .sub_menu ul,
