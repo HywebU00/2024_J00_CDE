@@ -7806,6 +7806,167 @@ table .date {
     text-align: left;
   }
 }
+.lp .list2 {
+  margin: 2em 0 3em;
+}
+.lp .list2 > ul,
+.lp .list2 ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.lp .list2 > ul > li,
+.lp .list2 ol > li {
+  flex: 0 0 auto;
+  flex-basis: 48%;
+  padding: 0;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .lp .list2 > ul > li,
+  .lp .list2 ol > li {
+    flex-basis: 100%;
+  }
+}
+.lp .list2 > ul > li .tag,
+.lp .list2 ol > li .tag {
+  margin-left: 2em;
+}
+.lp .list2 > ul > li > a,
+.lp .list2 ol > li > a {
+  display: block;
+  padding: 1em 2em 1em 0.5em;
+  position: relative;
+  line-height: 1.45em;
+  color: #333;
+  display: flex;
+  font-size: 1.063em;
+  background-color: #fff;
+  height: 100%;
+  border-radius: 30px 0 50px 0;
+  border-right: 8px solid #ddd;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 0.5s;
+}
+@media screen and (max-width: 767px) {
+  .lp .list2 > ul > li > a,
+  .lp .list2 ol > li > a {
+    padding: 1em 1em 1em 0.5em;
+  }
+}
+@media (max-width: 480px) {
+  .lp .list2 > ul > li > a,
+  .lp .list2 ol > li > a {
+    flex-wrap: wrap;
+  }
+}
+.lp .list2 > ul > li > a:hover,
+.lp .list2 ol > li > a:hover {
+  color: #0c3a78;
+  border-right: 8px solid #f7924d;
+  background-color: #fff;
+  border-radius: 30px 0 70px 0;
+}
+.lp .list2 > ul > li > a:hover .num,
+.lp .list2 ol > li > a:hover .num {
+  color: #fff;
+}
+.lp .list2 > ul > li > a:hover .num:before,
+.lp .list2 ol > li > a:hover .num:before {
+  background-color: #f7924d;
+}
+.lp .list2 > ul > li > a .num,
+.lp .list2 ol > li > a .num {
+  flex: 0 0 auto;
+  flex-basis: 2.5em;
+  margin-right: 0.3em;
+  text-align: center;
+  color: #666;
+  position: relative;
+  isolation: isolate;
+  transition: 0.5s;
+}
+.lp .list2 > ul > li > a .num:after,
+.lp .list2 ol > li > a .num:after {
+  content: "";
+  width: 38px;
+  height: 38px;
+  border-radius: 50px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 50%, rgb(0, 102, 204) 50%, rgb(0, 102, 204) 100%);
+  position: absolute;
+  left: 8px;
+  top: -2px;
+  z-index: -2;
+}
+.lp .list2 > ul > li > a .num:before,
+.lp .list2 ol > li > a .num:before {
+  content: "";
+  width: 34px;
+  height: 34px;
+  border-radius: 50px;
+  background-color: #fff;
+  position: absolute;
+  left: 8px;
+  top: -3px;
+  z-index: -1;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: 0.5s;
+}
+.lp .list2 > ul > li .title,
+.lp .list2 ol > li .title {
+  flex: 1 1 auto;
+  flex-basis: auto;
+}
+@media (max-width: 480px) {
+  .lp .list2 > ul > li .title,
+  .lp .list2 ol > li .title {
+    flex-basis: calc(100% - 3em);
+  }
+}
+.lp .list2 > ul > li .title .new,
+.lp .list2 ol > li .title .new {
+  background-color: #f7924d;
+  color: #fff;
+  padding: 0.1em 0.5em;
+  border-radius: 8px;
+  margin-left: 1em;
+  font-style: normal;
+  font-size: 0.938em;
+  display: inline-block;
+}
+.lp .list2 > ul > li span.dept,
+.lp .list2 ol > li span.dept {
+  display: inline-block;
+  font-size: 0.938em;
+  color: #888;
+}
+@media screen and (max-width: 767px) {
+  .lp .list2 > ul > li span.dept,
+  .lp .list2 ol > li span.dept {
+    display: block;
+  }
+}
+.lp .list2 > ul > li time,
+.lp .list2 ol > li time {
+  flex: 0 0 auto;
+  flex-basis: 110px;
+  display: block;
+  color: #666;
+  font-size: 0.938em;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .lp .list2 > ul > li time,
+  .lp .list2 ol > li time {
+    flex-basis: calc(100% - 3em);
+    margin-left: 3em;
+    text-align: left;
+  }
+}
 
 .sub_menu ul,
 .sub_menu ol {
