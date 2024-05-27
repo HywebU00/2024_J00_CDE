@@ -7847,7 +7847,7 @@ table .date {
   background-color: #fff;
   height: 100%;
   border-radius: 30px 0 50px 0;
-  border-right: 8px solid #ddd;
+  border-right: 8px solid #f7924d;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: 0.5s;
 }
@@ -7868,7 +7868,8 @@ table .date {
   color: #0c3a78;
   border-right: 8px solid #f7924d;
   background-color: #fff;
-  border-radius: 30px 0 70px 0;
+  border-radius: 30px 0 80px 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .lp .list2 > ul > li > a:hover .num,
 .lp .list2 ol > li > a:hover .num {
@@ -7908,7 +7909,7 @@ table .date {
   width: 34px;
   height: 34px;
   border-radius: 50px;
-  background-color: #fff;
+  background-color: #dde9f3;
   position: absolute;
   left: 8px;
   top: -3px;
