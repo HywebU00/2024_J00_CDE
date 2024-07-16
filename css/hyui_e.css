@@ -10956,6 +10956,14 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   font-size: 1.125em;
   font-weight: bolder;
   letter-spacing: 0.03em;
+  overflow: hidden;
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  line-height: 2.2em;
+  height: calc(2.2em * 5);
 }
 
 .mp_businessBlock {
