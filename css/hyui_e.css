@@ -11241,6 +11241,9 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .mp_annualreportsBlock .Syncing_slider .Slider-forall .introduction_for {
   padding-bottom: 2em;
 }
+.mp_annualreportsBlock .Syncing_slider .Slider-forall .introduction_for .item a {
+  display: block;
+}
 .mp_annualreportsBlock .Syncing_slider .Slider-forall .introduction_for .item .itemblock .content {
   flex: 1 1 auto;
 }
@@ -11269,6 +11272,9 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
     padding: 0 20px 30px;
     margin: 0 0px;
   }
+}
+.mp_annualreportsBlock .Syncing_slider .Slider-for .item a {
+  display: block;
 }
 .mp_annualreportsBlock .Syncing_slider .Slider-for .item .itemblock {
   display: flex;

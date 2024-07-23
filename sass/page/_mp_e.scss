@@ -1033,6 +1033,9 @@ a.more {
       .introduction_for {
         padding-bottom: 2em;
         .item {
+          a {
+            display: block;
+          }
           .itemblock {
             .content {
               flex: 1 1 auto;
@@ -1064,6 +1067,9 @@ a.more {
         margin: 0 0px;
       }
       .item {
+        a {
+          display: block;
+        }
         .itemblock {
           display: flex;
           @media (max-width: 800px) {
