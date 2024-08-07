@@ -95,7 +95,8 @@ h2.title {
   &.large_size {
     font-size: 1.313em;
   }
-  .nodemenu_btn {
+  .nodemenu_btn,
+  .nodemenu_btn_e {
     position: absolute;
     left: -30px;
     top: 0px;
@@ -164,7 +165,13 @@ h2.title {
       }
     }
   }
-  .nodemenu_mobilebtn {
+  .nodemenu_btn_e {
+    a {
+      writing-mode: vertical-lr;
+    }
+  }
+  .nodemenu_mobilebtn,
+  .nodemenu_mobilebtn_e {
     display: none;
     position: fixed;
     left: 0em;
@@ -214,6 +221,12 @@ h2.title {
           transform: rotate(-45deg);
         }
       }
+    }
+  }
+
+  .nodemenu_mobilebtn_e {
+    a {
+      writing-mode: vertical-lr;
     }
   }
   .center_block {

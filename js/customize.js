@@ -359,7 +359,6 @@ $(function () {
       $(this).parent('li').siblings('.hasChild').children('button').removeClass('open');
     });
   //  內頁左欄電腦版 左右收合
-  // $('.innerpage .container .left_block').addClass('hidden');
   $('.nodemenu_btn>a').click(function () {
     if ($('.innerpage .container .left_block').hasClass('hidden')) {
       $('.innerpage .container .left_block').removeClass('hidden');
@@ -371,17 +370,44 @@ $(function () {
       $(this).text('次選單展開');
     }
   });
+  //  內頁左欄電腦版（英文版） 左右收合
+  $('.nodemenu_btn_e>a').click(function () {
+    if ($('.innerpage .container .left_block').hasClass('hidden')) {
+      $('.innerpage .container .left_block').removeClass('hidden');
+      $(this).removeClass('open');
+      $(this).text('Close Submenu');
+    } else {
+      $('.innerpage .container .left_block').addClass('hidden');
+      $(this).addClass('open');
+      $(this).text('Open Submenu');
+    }
+  });
   //  內頁左欄手機版 左右收合
   $('.nodemenu_mobilebtn>a').click(function () {
     if ($(this).hasClass('open')) {
-      $('.left_block').stop().removeClass('open');
+      $('.innerpage .container .left_block').stop().removeClass('open');
       $(this).stop().removeClass('open');
       $(this).text('次選單展開');
       $('body').removeClass('noscroll');
     } else {
-      $('.left_block').stop().addClass('open');
+      $('.innerpage .container .left_block').stop().addClass('open');
       $(this).stop().addClass('open');
       $(this).text('次選單收合');
+      $('body').addClass('noscroll');
+    }
+  });
+
+  //  內頁左欄手機版（英文版） 左右收合
+  $('.nodemenu_mobilebtn_e>a').click(function () {
+    if ($(this).hasClass('open')) {
+      $('.innerpage .container .left_block').stop().removeClass('open');
+      $(this).stop().removeClass('open');
+      $(this).text('Open Submenu');
+      $('body').removeClass('noscroll');
+    } else {
+      $('.innerpage .container .left_block').stop().addClass('open');
+      $(this).stop().addClass('open');
+      $(this).text('Close Submenu');
       $('body').addClass('noscroll');
     }
   });
