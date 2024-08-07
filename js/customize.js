@@ -415,10 +415,11 @@ $(function () {
   $(document)
     .off('touchend click')
     .on('touchend click', function (e) {
-      var container = $('.nodemenu_mobilebtn a, .left_block '); //點這些以外的區塊
+      var container = $('.nodemenu_mobilebtn a, .left_block, .nodemenu_mobilebtn_e a '); //點這些以外的區塊
       if (!container.is(e.target) && container.has(e.target).length === 0) {
-        $('.nodemenu_mobilebtn>a').removeClass('open');
+        $('.nodemenu_mobilebtn>a, .nodemenu_mobilebtn_e>a').removeClass('open');
         $('.nodemenu_mobilebtn>a').text('次選單展開');
+        $(' .nodemenu_mobilebtn_e>a').text('Open Submenu');
         $('.left_block').removeClass('open'); //要被收起來的區塊
         $('.left_block .leftblock_nodemenu ul ul').stop().slideUp();
         $('.left_block .leftblock_nodemenu ul li.hasChild button').removeClass('open');
