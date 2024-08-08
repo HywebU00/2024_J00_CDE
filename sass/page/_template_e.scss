@@ -100,7 +100,8 @@ h2.title {
   &.large_size {
     font-size: 1.25em;
   }
-  .nodemenu_btn {
+  .nodemenu_btn,
+  .nodemenu_btn_e {
     position: absolute;
     left: -30px;
     top: 0px;
@@ -169,7 +170,13 @@ h2.title {
       }
     }
   }
-  .nodemenu_mobilebtn {
+  .nodemenu_btn_e {
+    a {
+      writing-mode: vertical-lr;
+    }
+  }
+  .nodemenu_mobilebtn,
+  .nodemenu_mobilebtn_e {
     display: none;
     position: fixed;
     left: 0em;
@@ -219,6 +226,70 @@ h2.title {
           transform: rotate(-45deg);
         }
       }
+    }
+  }
+
+  .nodemenu_mobilebtn_e {
+    a {
+      writing-mode: vertical-lr;
+    }
+  }
+  .nodemenu_mobilebtn_e {
+    display: none;
+    position: fixed;
+    left: 0em;
+    top: 120px;
+    z-index: 11;
+    width: 1.5em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    cursor: pointer;
+
+    @include screen('tablet') {
+      display: block;
+      top: 220px;
+      & ~ .center_block {
+        margin-left: 30px;
+        flex-basis: calc(100% - 30px) !important;
+        max-width: calc(100% - 30px) !important;
+      }
+    }
+    @include screen('mobile') {
+      display: block;
+      top: 120px;
+    }
+    a {
+      color: #fff;
+      display: block;
+      background-color: $secondaryColor;
+      padding: 2em 0.5em 1em;
+      border-radius: 0 8px 8px 0;
+      width: 2em;
+      position: relative;
+      &:before {
+        content: '';
+        border: 2px solid #fff;
+        border-right: none;
+        border-bottom: none;
+        transform: rotate(135deg);
+        position: absolute;
+        top: 0.8em;
+        left: 0.6em;
+        width: 8px;
+        height: 8px;
+      }
+      &.open {
+        border-radius: 0 8px 8px 0;
+        &:before {
+          left: 0.8em;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .nodemenu_mobilebtn_e {
+    a {
+      writing-mode: vertical-lr;
     }
   }
   .center_block {
