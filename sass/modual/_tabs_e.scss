@@ -132,7 +132,7 @@
         padding: 0.5em 0.5em;
         background-color: $secondaryColor;
         color: #fff;
-        // height: 2.5em;
+        line-height: 1.3em;
         margin-bottom: 0.5em;
         &:hover {
           background: $importantColor;
@@ -151,7 +151,6 @@
         .item {
           margin-bottom: 0.5em;
           font-size: 1.063em;
-          line-height: 1.2em;
         }
       }
       @include screen('xs_mobile') {

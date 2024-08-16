@@ -8175,6 +8175,7 @@ table .date {
   padding: 0.5em 0.5em;
   background-color: #f7924d;
   color: #fff;
+  line-height: 1.3em;
   margin-bottom: 0.5em;
 }
 .tabSet.cpreview_slider .tabItems .item:hover {
@@ -8192,7 +8193,6 @@ table .date {
   .tabSet.cpreview_slider .tabItems .item {
     margin-bottom: 0.5em;
     font-size: 1.063em;
-    line-height: 1.2em;
   }
 }
 @media screen and (max-width: 575px) {
