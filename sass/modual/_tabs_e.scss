@@ -8,14 +8,16 @@
     .item {
       flex: 1 1 auto;
       font-size: 1.125em;
-      height: 3em;
+      height: auto;
       text-align: center;
       border: none;
       margin: 0px 3px;
       box-shadow: none;
-      background: #fff;
+      background: $secondaryColor;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
       border-radius: 8px;
+      color: #fff;
+      line-height: 1.2em;
       &:first-of-type {
         margin-left: 0;
       }
@@ -125,8 +127,26 @@
   //cp審查
   &.cpreview_slider {
     .tabItems {
+      flex-wrap: wrap;
       .item {
         padding: 0.5em 0.5em;
+
+        background-color: $secondaryColor;
+        color: #fff;
+        height: 2.5em;
+        margin-bottom: 0.5em;
+        &:hover {
+          background: $importantColor;
+        }
+
+        &.active {
+          background: $primaryColor;
+          &:before {
+            content: '';
+            border: 10px solid $primaryColor;
+            border-color: $primaryColor transparent transparent transparent;
+          }
+        }
       }
       @include screen('mobile') {
         .item {
@@ -143,6 +163,14 @@
           flex: 0 0 auto;
           font-size: 1em;
           margin-bottom: 0.5em;
+        }
+      }
+      @media (max-width: 480px) {
+        .item {
+          flex: 1 1 auto;
+          flex-basis: 100%;
+          margin-left: 0;
+          margin-right: 0;
         }
       }
     }

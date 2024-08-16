@@ -8204,6 +8204,14 @@ table .date {
     margin-bottom: 0.5em;
   }
 }
+@media (max-width: 480px) {
+  .tabSet.cpreview_slider .tabItems .item {
+    flex: 1 1 auto;
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
 .thumbnail {
   box-shadow: 0 0 3em -1.5em rgba(0, 0, 0, 0.5);

@@ -8064,14 +8064,16 @@ table .date {
 .tabSet .tabItems .item {
   flex: 1 1 auto;
   font-size: 1.125em;
-  height: 3em;
+  height: auto;
   text-align: center;
   border: none;
   margin: 0px 3px;
   box-shadow: none;
-  background: #fff;
+  background: #f7924d;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 8px;
+  color: #fff;
+  line-height: 1.2em;
   cursor: pointer;
 }
 .tabSet .tabItems .item:first-of-type {
@@ -8166,8 +8168,26 @@ table .date {
   padding: 1em 0;
   box-shadow: none;
 }
+.tabSet.cpreview_slider .tabItems {
+  flex-wrap: wrap;
+}
 .tabSet.cpreview_slider .tabItems .item {
   padding: 0.5em 0.5em;
+  background-color: #f7924d;
+  color: #fff;
+  height: 2.5em;
+  margin-bottom: 0.5em;
+}
+.tabSet.cpreview_slider .tabItems .item:hover {
+  background: #f7924d;
+}
+.tabSet.cpreview_slider .tabItems .item.active {
+  background: #0c3a78;
+}
+.tabSet.cpreview_slider .tabItems .item.active:before {
+  content: "";
+  border: 10px solid #0c3a78;
+  border-color: #0c3a78 transparent transparent transparent;
 }
 @media screen and (max-width: 767px) {
   .tabSet.cpreview_slider .tabItems .item {
@@ -8186,6 +8206,14 @@ table .date {
     flex: 0 0 auto;
     font-size: 1em;
     margin-bottom: 0.5em;
+  }
+}
+@media (max-width: 480px) {
+  .tabSet.cpreview_slider .tabItems .item {
+    flex: 1 1 auto;
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
