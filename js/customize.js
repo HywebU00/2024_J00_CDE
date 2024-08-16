@@ -1034,6 +1034,15 @@ $(function () {
   });
 });
 $(function () {
+  $(window).on('scroll', function () {
+    if ($(this).scrollTop() > 180) {
+      $('.nodemenu_btn_e').addClass('nodemenu_btnfixed');
+    } else {
+      $('.nodemenu_btn_e').removeClass('nodemenu_btnfixed');
+    }
+  });
+});
+$(function () {
   $('.vacancies td a.vacanciesbtn').click(function () {
     // $(this).stop().toggleClass('open');
     // $(this).parents('tr').next('tr').find('.cp_table').stop().slideToggle();
