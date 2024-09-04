@@ -11020,9 +11020,6 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
     flex-basis: 100%;
   }
 }
-.mp_businessBlock .business_group:hover .pic img {
-  transform: scale(1.1);
-}
 .mp_businessBlock .business_group .pic {
   flex: 0 0 auto;
   flex-basis: 45%;
@@ -11041,7 +11038,10 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   content: "";
   padding-top: 0.52;
 }
-.mp_businessBlock .business_group .pic img {
+.mp_businessBlock .business_group .pic a {
+  display: block;
+}
+.mp_businessBlock .business_group .pic a img {
   display: block;
   position: absolute;
   top: 0;
@@ -11054,6 +11054,9 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   -o-object-fit: cover;
      object-fit: cover;
   transition: 0.5s;
+}
+.mp_businessBlock .business_group .pic a:hover img {
+  transform: scale(1.1);
 }
 .mp_businessBlock .business_group .info {
   flex: 1 1 auto;

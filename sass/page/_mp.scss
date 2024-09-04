@@ -776,13 +776,7 @@ a.more {
       flex: 1 1 auto;
       flex-basis: 100%;
     }
-    &:hover {
-      .pic {
-        img {
-          transform: scale(1.1);
-        }
-      }
-    }
+
     .pic {
       flex: 0 0 auto;
       flex-basis: 45%;
@@ -798,18 +792,26 @@ a.more {
         content: '';
         padding-top: 0.52;
       }
-      img {
+      a {
         display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        margin: auto;
-        object-fit: cover;
-        transition: 0.5s;
+        img {
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          margin: auto;
+          object-fit: cover;
+          transition: 0.5s;
+        }
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
       }
     }
     .info {
