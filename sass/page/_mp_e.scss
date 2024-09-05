@@ -828,6 +828,14 @@ a.more {
         color: $color-word;
         font-weight: bolder;
         margin-bottom: 0.5em;
+        a {
+          display: block;
+
+          color: $primaryColor;
+          &:hover {
+            color: $secondaryColor;
+          }
+        }
       }
       ul {
         margin: 0;

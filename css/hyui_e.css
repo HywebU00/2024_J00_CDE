@@ -11144,6 +11144,13 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   font-weight: bolder;
   margin-bottom: 0.5em;
 }
+.mp_businessBlock .business_group .info .title a {
+  display: block;
+  color: #0c3a78;
+}
+.mp_businessBlock .business_group .info .title a:hover {
+  color: #f7924d;
+}
 .mp_businessBlock .business_group .info ul {
   margin: 0;
   padding: 0;
@@ -12692,6 +12699,10 @@ h3.title3 .maps iframe {
   --gap: 30px;
   gap: var(--gap);
   padding: 0;
+}
+.c_iconBox_next_lv .listBox.boxcenter,
+.c_iconBox_no_lv .listBox.boxcenter {
+  justify-content: center;
 }
 .c_iconBox_next_lv .listBox .item,
 .c_iconBox_no_lv .listBox .item {

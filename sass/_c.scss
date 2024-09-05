@@ -483,6 +483,9 @@ $thirdColor: #f7924d;
     --gap: 30px;
     gap: var(--gap);
     padding: 0;
+    &.boxcenter {
+      justify-content: center;
+    }
 
     .item {
       border-radius: 12px;

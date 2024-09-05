@@ -776,6 +776,13 @@ a.more {
       flex: 1 1 auto;
       flex-basis: 100%;
     }
+    &:hover {
+      .pic {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
 
     .pic {
       flex: 0 0 auto;
@@ -787,31 +794,24 @@ a.more {
       @include screen('xs_mobile') {
         flex-basis: 35%;
       }
+
       &:before {
         display: inline-block;
         content: '';
         padding-top: 0.52;
       }
-      a {
+      img {
         display: block;
-        img {
-          display: block;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          margin: auto;
-          object-fit: cover;
-          transition: 0.5s;
-        }
-        &:hover {
-          img {
-            transform: scale(1.1);
-          }
-        }
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        object-fit: cover;
+        transition: 0.5s;
       }
     }
     .info {
@@ -824,6 +824,14 @@ a.more {
         color: $color-word;
         font-weight: bolder;
         margin-bottom: 0.5em;
+        a {
+          display: block;
+
+          color: $primaryColor;
+          &:hover {
+            color: $secondaryColor;
+          }
+        }
       }
       ul {
         margin: 0;

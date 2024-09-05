@@ -11020,6 +11020,9 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
     flex-basis: 100%;
   }
 }
+.mp_businessBlock .business_group:hover .pic img {
+  transform: scale(1.1);
+}
 .mp_businessBlock .business_group .pic {
   flex: 0 0 auto;
   flex-basis: 45%;
@@ -11038,10 +11041,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   content: "";
   padding-top: 0.52;
 }
-.mp_businessBlock .business_group .pic a {
-  display: block;
-}
-.mp_businessBlock .business_group .pic a img {
+.mp_businessBlock .business_group .pic img {
   display: block;
   position: absolute;
   top: 0;
@@ -11055,9 +11055,6 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
      object-fit: cover;
   transition: 0.5s;
 }
-.mp_businessBlock .business_group .pic a:hover img {
-  transform: scale(1.1);
-}
 .mp_businessBlock .business_group .info {
   flex: 1 1 auto;
   padding: 1em;
@@ -11069,6 +11066,13 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   color: #333;
   font-weight: bolder;
   margin-bottom: 0.5em;
+}
+.mp_businessBlock .business_group .info .title a {
+  display: block;
+  color: #0c3a78;
+}
+.mp_businessBlock .business_group .info .title a:hover {
+  color: #f7924d;
 }
 .mp_businessBlock .business_group .info ul {
   margin: 0;
@@ -12416,6 +12420,10 @@ h3.title3 .maps iframe {
   --gap: 30px;
   gap: var(--gap);
   padding: 0;
+}
+.c_iconBox_next_lv .listBox.boxcenter,
+.c_iconBox_no_lv .listBox.boxcenter {
+  justify-content: center;
 }
 .c_iconBox_next_lv .listBox .item,
 .c_iconBox_no_lv .listBox .item {
