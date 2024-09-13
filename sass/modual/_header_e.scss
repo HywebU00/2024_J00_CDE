@@ -177,7 +177,25 @@
       li {
         flex: 0 0 auto;
         position: relative;
-
+        margin: 0 0 0 0.5em;
+        &.hasbgcolor {
+          margin: 0 0.5em 0 0.8em;
+          &:after {
+            right: -1em;
+          }
+          a {
+            background-color: #84abd8;
+            color: #fff;
+            border-radius: 50px;
+            padding: 0.3em 1em;
+            transition: 0.5s;
+            &:hover {
+              color: #fff;
+              background-color: darken($color: #84abd8, $amount: 10);
+              text-decoration: none;
+            }
+          }
+        }
         &:after {
           content: '';
           width: 3px;
@@ -185,12 +203,12 @@
           border-radius: 50%;
           background-color: #999;
           position: absolute;
-          right: 0;
+          right: -0.5em;
           top: 48%;
         }
         a {
           display: block;
-          padding: 0.5em 1em;
+          padding: 0.3em 1em;
           text-decoration: none;
           @include aSetting_nocolor;
           @include screen('tablet') {

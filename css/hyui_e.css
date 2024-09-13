@@ -3409,6 +3409,25 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .header .navigation .navlist li {
   flex: 0 0 auto;
   position: relative;
+  margin: 0 0 0 0.5em;
+}
+.header .navigation .navlist li.hasbgcolor {
+  margin: 0 0.5em 0 0.8em;
+}
+.header .navigation .navlist li.hasbgcolor:after {
+  right: -1em;
+}
+.header .navigation .navlist li.hasbgcolor a {
+  background-color: #84abd8;
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.3em 1em;
+  transition: 0.5s;
+}
+.header .navigation .navlist li.hasbgcolor a:hover {
+  color: #fff;
+  background-color: #5d91cc;
+  text-decoration: none;
 }
 .header .navigation .navlist li:after {
   content: "";
@@ -3417,12 +3436,12 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   border-radius: 50%;
   background-color: #999;
   position: absolute;
-  right: 0;
+  right: -0.5em;
   top: 48%;
 }
 .header .navigation .navlist li a {
   display: block;
-  padding: 0.5em 1em;
+  padding: 0.3em 1em;
   text-decoration: none;
   color: #333;
   text-decoration: none;
