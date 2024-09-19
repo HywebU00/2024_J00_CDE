@@ -4161,6 +4161,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   min-height: 2em;
   line-height: 2em;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  white-space: wrap;
 }
 .sidebar .m_area .menu ul li.hasChild > a,
 .sidebar .m_area .megamenu ul li.hasChild > a {
@@ -4244,7 +4245,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .sidebar .navigation ul li a {
   display: block;
   line-height: 1.5em;
-  padding: 0.25em 0.5em 0.25em 1.1em;
+  padding: 0.25em 0.5em 0.25em 1.8em;
   font-size: 0.875em;
   color: #fff;
   font-weight: normal;
@@ -4253,13 +4254,13 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .sidebar .navigation ul li a:before {
   position: absolute;
-  top: 0.75em;
+  top: 1.2em;
   left: 0;
   content: "";
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 2px 0 2px 4px;
+  border-width: 4px 0 4px 4px;
   border-color: transparent transparent transparent #ffffff;
   transition: 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   opacity: 0;
@@ -4417,7 +4418,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .megamenu ul li ul li a {
   padding: 0.6em 1.2em;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
   box-sizing: border-box;
 }
@@ -4522,7 +4523,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   position: absolute;
   top: 0;
   left: 0;
-  color: #FFF;
+  color: #fff;
   width: 100%;
   height: 3em;
   background: #0c3a78;
@@ -4534,7 +4535,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   width: 100%;
   box-shadow: 0px 0px 4px RGBA(0, 0, 0, 0.4);
   margin-bottom: 1em;
-  background: #CCC;
+  background: #ccc;
 }
 .sidebar .m_area .megamenu a {
   display: block;
@@ -4554,13 +4555,13 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   padding: 0.5em 1em;
   min-height: 2em;
   line-height: 2em;
-  background: #FFF;
-  border-bottom: 1px solid #CCC;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
 }
 .sidebar .m_area .megamenu ul li.hasChild > a {
   padding: 0.5em 1em;
   color: #222;
-  background: #FFF;
+  background: #fff;
   padding-right: 36px;
   position: relative;
 }
@@ -4603,7 +4604,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .sidebar .m_area .megamenu ul li ul li li a {
   background: rgba(0, 0, 0, 0.15) !important;
   padding: 0.5em 1em 0.5em 4em !important;
-  border-bottom: 1px solid #BBB;
+  border-bottom: 1px solid #bbb;
 }
 .sidebar .m_area .megamenu ul li ul li li a:hover, .sidebar .m_area .megamenu ul li ul li li a:focus {
   background: rgba(0, 0, 0, 0.25) !important;
@@ -4638,11 +4639,11 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .sidebar .navigation ul li a {
   display: block;
-  height: 3em;
-  line-height: 2em;
+  height: auto;
+  line-height: 1.5em;
   padding: 0.5em 1em;
   font-size: 0.938em;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -12146,6 +12147,22 @@ h3.title3 .maps iframe {
   display: block;
   color: #f7924d;
   font-size: 0.5625em;
+}
+
+.c_main .main .breadcrumb,
+.mp_main .main .breadcrumb {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .c_main .main .breadcrumb,
+  .mp_main .main .breadcrumb {
+    display: block;
+    margin: 0 auto;
+  }
+}
+.c_main .main.innerpage .breadcrumb,
+.mp_main .main.innerpage .breadcrumb {
+  display: block;
 }
 
 .c_main section {
