@@ -18,6 +18,11 @@
       border-radius: 8px;
       color: #fff;
       line-height: 1.2em;
+      min-width: 15em;
+      @media (max-width: 430px) {
+        min-width: 100%;
+        max-width: 100%;
+      }
       &:first-of-type {
         margin-left: 0;
       }

@@ -279,9 +279,12 @@ h3.title3 {
     }
 
     .file_name {
-      line-height: 1.8em;
+      line-height: 1.5em;
       margin: 0.2em 0.5em 0.2em 0;
       color: #222;
+      display: block;
+      flex: 1 1 auto;
+      flex-basis: 100%;
 
       ~ span {
         flex: 0 0 auto;

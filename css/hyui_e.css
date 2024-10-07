@@ -7358,7 +7358,7 @@ table .date {
 }
 
 .table_list {
-  margin: 1em 0 2em;
+  margin: 1em 0;
 }
 .table_list tr.here {
   border: 2px solid #000;
@@ -8094,7 +8094,14 @@ table .date {
   border-radius: 8px;
   color: #fff;
   line-height: 1.2em;
+  min-width: 15em;
   cursor: pointer;
+}
+@media (max-width: 430px) {
+  .tabSet .tabItems .item {
+    min-width: 100%;
+    max-width: 100%;
+  }
 }
 .tabSet .tabItems .item:first-of-type {
   margin-left: 0;
@@ -11854,9 +11861,12 @@ h3.title3 .maps iframe {
   color: #666;
 }
 .file_download li .file_name {
-  line-height: 1.8em;
+  line-height: 1.5em;
   margin: 0.2em 0.5em 0.2em 0;
   color: #222;
+  display: block;
+  flex: 1 1 auto;
+  flex-basis: 100%;
 }
 .file_download li .file_name ~ span {
   flex: 0 0 auto;
@@ -12735,6 +12745,7 @@ h3.title3 .maps iframe {
   --gap: 30px;
   gap: var(--gap);
   padding: 0;
+  margin: 0;
 }
 .c_iconBox_next_lv .listBox.boxcenter,
 .c_iconBox_no_lv .listBox.boxcenter {
@@ -13259,6 +13270,7 @@ h3.title3 .maps iframe {
   flex-direction: column;
   padding: 0;
   gap: 30px;
+  margin: 0 0 20px;
 }
 @media screen and (max-width: 767px) {
   .c_ptBox .listBox {
@@ -13662,9 +13674,13 @@ h3.title3 .maps iframe {
   font-weight: bold;
   margin-bottom: 10px;
   overflow: hidden;
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-height: 1.5em;
+  height: calc(1.5em * 2);
 }
 .c_newsCard .item .info time {
   display: block;
@@ -13772,9 +13788,13 @@ h3.title3 .maps iframe {
   font-weight: bold;
   margin-bottom: 10px;
   overflow: hidden;
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-height: 1.5em;
+  height: calc(1.5em * 2);
 }
 .c_newsCardTab .item .info time {
   display: block;
@@ -13815,11 +13835,15 @@ h3.title3 .maps iframe {
 .c_cardLink .info .title {
   font-size: 1.125em;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   overflow: hidden;
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-height: 1.5em;
+  height: calc(1.5em * 2);
 }
 
 .c_textLinkList .listBox {
@@ -14525,6 +14549,34 @@ h3.title3 .maps iframe {
   .formdata_group {
     padding: 1em;
   }
+}
+
+.explain_block2 {
+  background-color: #eee;
+  padding: 1.5em;
+  border-radius: 8px;
+  color: #333;
+}
+.explain_block2 ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.explain_block2 ul li {
+  margin: 0 0 0.7em;
+}
+.explain_block2 ul li:last-child {
+  margin: 0;
+}
+.explain_block2 ul li span {
+  text-align: justify;
+  display: inline-block;
+  background-color: #eee;
+  padding: 0 0.5em;
+  color: #333;
+  margin-right: 0.5em;
+  border-right: 1px solid #666;
+  font-weight: bold;
 }
 
 .npimage {
