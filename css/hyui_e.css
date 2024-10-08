@@ -7387,6 +7387,7 @@ table .date {
 .table_list.vacancies a.vacanciesbtn {
   position: relative;
   padding-right: 2em;
+  line-height: 1.5em;
 }
 .table_list.vacancies a.vacanciesbtn.open:after {
   transform: rotate(-225deg);
@@ -7420,6 +7421,19 @@ table .date {
   position: absolute;
   right: 0px;
   bottom: 2px;
+}
+.table_list.vacancies a.hot_btn {
+  margin-left: 1em;
+  display: inline-block;
+  background-color: #d30000;
+  color: #fff;
+  padding: 0 0.5em;
+  font-size: 0.813em;
+  border-radius: 3px;
+}
+.table_list.vacancies a.hot_btn:hover {
+  background-color: #ba0000;
+  text-decoration: none;
 }
 .table_list.vacancies tr .nopadding tr:nth-child(n) {
   background: #fff !important;

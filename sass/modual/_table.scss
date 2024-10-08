@@ -111,6 +111,7 @@ table {
       &.vacanciesbtn {
         position: relative;
         padding-right: 2em;
+        line-height: 1.5em;
         &.open {
           &:after {
             transform: rotate(-225deg);
@@ -146,6 +147,19 @@ table {
           position: absolute;
           right: 0px;
           bottom: 2px;
+        }
+      }
+      &.hot_btn {
+        margin-left: 1em;
+        display: inline-block;
+        background-color: $color-red;
+        color: #fff;
+        padding: 0 0.5em;
+        font-size: 0.813em;
+        border-radius: 3px;
+        &:hover {
+          background-color: darken($color: $color-red, $amount: 5);
+          text-decoration: none;
         }
       }
     }
