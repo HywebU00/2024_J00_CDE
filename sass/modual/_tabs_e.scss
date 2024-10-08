@@ -6,7 +6,7 @@
     margin: 0 auto 1em;
 
     .item {
-      flex: 1 1 auto;
+      flex: 0 1 auto;
       font-size: 1.125em;
       height: auto;
       text-align: center;
@@ -18,11 +18,7 @@
       border-radius: 8px;
       color: #fff;
       line-height: 1.2em;
-      min-width: 15em;
-      @media (max-width: 430px) {
-        min-width: 100%;
-        max-width: 100%;
-      }
+
       &:first-of-type {
         margin-left: 0;
       }
@@ -110,6 +106,11 @@
         margin-bottom: 0.5em;
         font-weight: bolder;
         letter-spacing: 0.03em;
+        min-width: 15em;
+        @media (max-width: 430px) {
+          min-width: 100%;
+          max-width: 100%;
+        }
         &:hover {
           background: $lightColor;
         }
@@ -134,7 +135,7 @@
     .tabItems {
       flex-wrap: wrap;
       .item {
-        padding: 0.5em 0.5em;
+        padding: 0.5em 0.8em;
         background-color: $secondaryColor;
         color: #fff;
         line-height: 1.3em;

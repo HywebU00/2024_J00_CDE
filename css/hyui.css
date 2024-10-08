@@ -8093,9 +8093,10 @@ table .date {
   margin: 0 auto 1em;
 }
 .tabSet .tabItems .item {
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   font-size: 1.125em;
   height: 3em;
+  padding: 0em 0.5em;
   text-align: center;
   border: none;
   margin: 0px 3px;
@@ -8103,14 +8104,7 @@ table .date {
   background: #fff;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 8px;
-  min-width: 11em;
   cursor: pointer;
-}
-@media (max-width: 430px) {
-  .tabSet .tabItems .item {
-    min-width: 100%;
-    max-width: 100%;
-  }
 }
 .tabSet .tabItems .item:first-of-type {
   margin-left: 0;
@@ -8187,6 +8181,14 @@ table .date {
   height: auto;
   padding: 0.5em 1em;
   margin-bottom: 0.5em;
+  font-weight: bold;
+  min-width: 11em;
+}
+@media (max-width: 430px) {
+  .tabSet.nwes_slider .tabItems .item {
+    min-width: 100%;
+    max-width: 100%;
+  }
 }
 .tabSet.nwes_slider .tabItems .item:hover {
   background: #4b74ac;
@@ -8206,7 +8208,7 @@ table .date {
   flex-wrap: wrap;
 }
 .tabSet.cpreview_slider .tabItems .item {
-  padding: 0.5em 0.5em;
+  padding: 0.5em 0.8em;
   background: #0c3a78;
   color: #fff;
   height: 2.5em;
@@ -12090,6 +12092,10 @@ h3.title3 .maps iframe {
     margin-right: 0;
     margin-bottom: 1em;
   }
+}
+
+.leveldescription li {
+  list-style: none;
 }
 
 .c_main section {
