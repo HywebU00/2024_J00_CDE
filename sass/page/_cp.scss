@@ -715,8 +715,144 @@ h3.title3 {
   }
 }
 
-.leveldescription {
-  li {
-    list-style: none;
+// 階層順序中文
+.hierarchical_order {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  > li {
+    counter-increment: number01;
+    padding-left: 2em;
+    text-indent: -2em;
+    margin-bottom: 2em;
+    &:before {
+      content: counter(number01, cjk-ideographic) '、';
+      width: 2em;
+      display: inline-block;
+      text-align: right;
+    }
+    > ul {
+      margin: 1em 0;
+      padding: 0;
+      list-style-type: none;
+      > li {
+        counter-increment: number02;
+        padding-left: 1.7em;
+        text-indent: -2em;
+        &:before {
+          content: '(' counter(number02, cjk-ideographic) ')';
+          width: 1.7em;
+          margin-right: 0.3em;
+          display: inline-block;
+          text-align: right;
+        }
+        > ul {
+          margin: 1em 0;
+          padding: 0;
+          list-style-type: none;
+          > li {
+            counter-increment: number03;
+            padding-left: 1.7em;
+            text-indent: -1.7em;
+            &:before {
+              content: counter(number03, decimal) '、';
+              width: 1.7em;
+              display: inline-block;
+              text-align: right;
+            }
+            > ul {
+              margin: 1em 0;
+              padding: 0;
+              list-style-type: none;
+              > li {
+                counter-increment: number04;
+                padding-left: 1.7em;
+                text-indent: -2em;
+
+                &:before {
+                  content: '(' counter(number04, decimal) ')';
+                  width: 1.7em;
+                  text-align: right;
+                  margin-right: 0.3em;
+                  display: inline-block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 階層順序英文
+.hierarchical_order_e {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  > li {
+    counter-increment: number01;
+    padding-left: 2em;
+    text-indent: -2em;
+    margin-bottom: 2em;
+    &:before {
+      content: counter(number01, decimal) '、';
+      width: 2em;
+      display: inline-block;
+      text-align: right;
+    }
+    > ul {
+      margin: 1em 0;
+      padding: 0;
+      list-style-type: none;
+      > li {
+        counter-increment: number02;
+        padding-left: 1.7em;
+        text-indent: -2em;
+        &:before {
+          content: '(' counter(number02, decimal) ')';
+          width: 1.7em;
+          margin-right: 0.3em;
+          display: inline-block;
+          text-align: right;
+        }
+        > ul {
+          margin: 1em 0;
+          padding: 0;
+          list-style-type: none;
+          > li {
+            counter-increment: number03;
+            padding-left: 1.7em;
+            text-indent: -1.7em;
+            &:before {
+              content: counter(number03, upper-alpha) '、';
+              width: 1.7em;
+              display: inline-block;
+              text-align: right;
+            }
+            > ul {
+              margin: 1em 0;
+              padding: 0;
+              list-style-type: none;
+              > li {
+                counter-increment: number04;
+                padding-left: 1.7em;
+                text-indent: -2em;
+
+                &:before {
+                  content: '(' counter(number04, lower-alpha) ')';
+                  width: 1.7em;
+                  text-align: right;
+                  margin-right: 0.3em;
+                  display: inline-block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

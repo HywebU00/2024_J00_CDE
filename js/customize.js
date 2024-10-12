@@ -1078,7 +1078,7 @@ $(function () {
       $(this).parent('td').siblings('td').find('a').stop().addClass('open');
     } else {
       $(this).parents('tr').next('tr').find('.cp_table').stop().slideUp();
-      $(this).parent('td').siblings('td').find('a').stop().removeClass('open');
+      $(this).stop().removeClass('open');
       $(this).parents('tr').removeClass('here');
       $(this).parents('tr').siblings('tr').removeClass('here').removeClass('nexthere');
     }
