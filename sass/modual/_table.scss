@@ -40,6 +40,9 @@ table {
       margin: 0 !important;
       padding: 0.3em 1.25em;
     }
+    pre {
+      white-space: pre-wrap;
+    }
   }
   th {
     background-color: $primaryColor;
@@ -155,11 +158,11 @@ table {
         font-size: 0;
         background-image: url('../images/icon_hot.png');
         background-repeat: no-repeat;
-        background-position: center;
-        background-size: 22px 28px;
-        width: 23px;
-        height: 28px;
-        vertical-align: top;
+        background-position: center -1px;
+        background-size: 18px 22px;
+        width: 18px;
+        height: 22px;
+        vertical-align: middle;
         &:hover {
           background-image: url('../images/icon_hot_hover.png');
         }
