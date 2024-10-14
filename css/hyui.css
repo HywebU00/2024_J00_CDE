@@ -7324,6 +7324,7 @@ table td .btn {
 }
 table td pre {
   white-space: pre-wrap;
+  line-height: 1.7em;
 }
 table th {
   background-color: #0c3a78;
