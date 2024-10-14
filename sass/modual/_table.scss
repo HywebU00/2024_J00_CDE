@@ -108,6 +108,7 @@ table {
       background: #f4f4f4;
     }
     a {
+      margin-right: 0.5em;
       &.vacanciesbtn {
         position: relative;
         padding-right: 2em;
@@ -150,16 +151,17 @@ table {
         }
       }
       &.hot_btn {
-        margin-left: 1em;
         display: inline-block;
-        background-color: $color-red;
-        color: #fff;
-        padding: 0 0.5em;
-        font-size: 0.813em;
-        border-radius: 3px;
+        font-size: 0;
+        background-image: url('../images/icon_hot.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 22px 28px;
+        width: 23px;
+        height: 28px;
+        vertical-align: top;
         &:hover {
-          background-color: darken($color: $color-red, $amount: 5);
-          text-decoration: none;
+          background-image: url('../images/icon_hot_hover.png');
         }
       }
     }

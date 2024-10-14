@@ -7384,6 +7384,9 @@ table .date {
 .table_list.vacancies tr:nth-child(4n+1) {
   background: #f4f4f4;
 }
+.table_list.vacancies a {
+  margin-right: 0.5em;
+}
 .table_list.vacancies a.vacanciesbtn {
   position: relative;
   padding-right: 2em;
@@ -7423,17 +7426,18 @@ table .date {
   bottom: 2px;
 }
 .table_list.vacancies a.hot_btn {
-  margin-left: 1em;
   display: inline-block;
-  background-color: #d30000;
-  color: #fff;
-  padding: 0 0.5em;
-  font-size: 0.813em;
-  border-radius: 3px;
+  font-size: 0;
+  background-image: url("../images/icon_hot.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px 28px;
+  width: 23px;
+  height: 28px;
+  vertical-align: top;
 }
 .table_list.vacancies a.hot_btn:hover {
-  background-color: #ba0000;
-  text-decoration: none;
+  background-image: url("../images/icon_hot_hover.png");
 }
 .table_list.vacancies tr .nopadding tr:nth-child(n) {
   background: #fff !important;
