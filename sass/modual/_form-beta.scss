@@ -1255,6 +1255,7 @@ select::-ms-expand {
       flex-basis: 100%;
       display: flex;
       align-items: flex-start;
+      margin-bottom: 0.5em;
 
       input {
         &:checked {
@@ -1286,6 +1287,7 @@ select::-ms-expand {
         flex: 0 0 auto;
         flex-basis: auto;
         margin-right: 2%;
+        margin-bottom: 0;
         display: inline-flex;
         align-items: center;
         // @include screen('notebook') {
