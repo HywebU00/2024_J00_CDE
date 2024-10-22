@@ -764,6 +764,46 @@ a.more {
     }
   }
 }
+// 關於CDE
+.mp_aboutcde {
+  margin-bottom: 2em;
+  .choosebtn {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+    .item {
+      background: $primaryColor;
+      color: #fff;
+      box-shadow: none;
+      border-radius: 8px;
+      flex: 0 0 auto;
+      height: auto;
+      padding: 0.5em 1em;
+      margin-bottom: 0.5em;
+      font-weight: bolder;
+      letter-spacing: 0.03em;
+      min-width: 15em;
+      border: none;
+      @media (max-width: 430px) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+      &:hover,
+      &:focus {
+        background-color: $secondaryColor;
+      }
+    }
+  }
+  .aboutcde_Content {
+    line-height: 2.2em;
+    font-size: 1.125em;
+    font-weight: bolder;
+    letter-spacing: 0.03em;
+    @include text-line(5, 2.2em);
+  }
+}
+
 // 重要業務及服務
 .mp_businessBlock {
   display: flex;
