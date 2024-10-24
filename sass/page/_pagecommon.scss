@@ -347,7 +347,8 @@
     flex: 0 0 auto;
     flex-basis: 48%;
     margin: 0 1% 1.5em;
-    background-color: #fff;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(156deg, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 100%);
     border-radius: 8px;
     padding: 1.5em 1.5em 2em;
     box-sizing: border-box;
