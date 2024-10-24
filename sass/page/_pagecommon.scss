@@ -338,3 +338,75 @@
     }
   }
 }
+
+// 人物介紹
+.character_block {
+  display: flex;
+  flex-wrap: wrap;
+  .character_group {
+    flex: 0 0 auto;
+    flex-basis: 48%;
+    margin: 0 1% 1.5em;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5em 1.5em 2em;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    @media (max-width: 600px) {
+      flex-basis: 100%;
+      margin: 0 0 1.5em;
+    }
+    .character_head {
+      padding-bottom: 1em;
+      border-bottom: 1px solid #ccc;
+      .jobtitle {
+        font-size: 1.125em;
+        font-weight: 600;
+        margin-bottom: 0.3em;
+        color: #333;
+      }
+      .unit {
+        font-size: 1em;
+        color: #666;
+        margin-bottom: 0.3em;
+      }
+      .since {
+        font-size: 1em;
+        color: #666;
+      }
+    }
+    .peoplepic {
+      text-align: center;
+      img {
+        width: 300px;
+        margin: 0 auto;
+      }
+    }
+    .content {
+      line-height: 1.7em;
+      color: #666;
+    }
+  }
+}
+.innerpage {
+  .left_block {
+    &.hidden {
+      + .center_block {
+        .character_block {
+          .character_group {
+            flex-basis: 31%;
+            margin: 0 1.166% 1.5em;
+            @include screen('tablet') {
+              flex-basis: 48%;
+              margin: 0 1% 1.5em;
+            }
+            @media (max-width: 600px) {
+              flex-basis: 100%;
+              margin: 0 0 1.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
