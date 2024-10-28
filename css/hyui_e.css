@@ -11734,7 +11734,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .cp img {
   text-align: center;
   max-width: 100%;
-  margin-bottom: 1em;
+  margin: 0 auto 1em;
 }
 .cp img.float_left {
   float: left;
@@ -11764,6 +11764,13 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
     margin-bottom: 1em;
   }
 }
+.cp .pic_center {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.cp .pic_center img {
+  max-width: 100%;
+}
 .cp .iframe_v {
   overflow: hidden;
   padding-top: 56.25%;
@@ -11785,6 +11792,8 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   color: #0c3a78;
   text-decoration: none;
   color: #135cbe;
+  font-weight: bold;
+  text-decoration: underline;
 }
 .cp a:hover, .cp a:focus {
   color: #4b74ac;
