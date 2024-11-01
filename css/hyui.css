@@ -1278,6 +1278,7 @@ th {
   font-size: 1em;
   line-height: 1.85em;
   margin-top: 0;
+  margin-bottom: 0.5em;
 }
 .cp ul,
 .cp ol {
@@ -1312,6 +1313,9 @@ th {
     width: auto;
     clear: both;
   }
+}
+.cp br {
+  margin-bottom: 0.5em;
 }
 
 :focus:not(:focus-visible) {
@@ -11408,6 +11412,9 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .cp table {
   background: #fff;
   margin-bottom: 0;
+}
+.cp table td {
+  vertical-align: top;
 }
 .cp img {
   text-align: center;
