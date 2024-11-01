@@ -7351,6 +7351,12 @@ table .aRight {
 table .date {
   white-space: nowrap;
 }
+table .num {
+  text-align: center;
+}
+table .filesize {
+  white-space: nowrap;
+}
 @media screen and (max-width: 575px) {
   table .aCenter {
     text-align: left;
@@ -11413,8 +11419,44 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   background: #fff;
   margin-bottom: 0;
 }
+.cp table th {
+  padding: 0.5em;
+}
 .cp table td {
   vertical-align: top;
+  padding: 0.5em;
+}
+@media screen and (max-width: 575px) {
+  .cp table td:before {
+    top: 0.5em;
+  }
+}
+.cp table td .file_download {
+  margin: 0;
+}
+.cp table td .file_download ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.cp table td .file_download ul li {
+  padding: 0;
+  border-bottom: none;
+}
+.cp table td .file_download ul li:before {
+  display: none;
+}
+.cp table td .file_download ul li span {
+  margin: 0 auto;
+}
+@media screen and (max-width: 575px) {
+  .cp table td .file_download ul li span {
+    margin: 0;
+  }
+}
+.cp table td .file_download ul li span a {
+  text-decoration: none;
+  white-space: nowrap;
 }
 .cp img {
   text-align: center;
@@ -11641,6 +11683,7 @@ h3.title3 .maps iframe {
   color: #fff;
   display: inline-block;
   margin-right: 8px;
+  text-decoration: none;
 }
 .file_download li span.file_doc a {
   color: #fff;
@@ -14384,6 +14427,10 @@ h3.title3 .maps iframe {
 .leftblock_nodemenu ul > li.hasChild ul li a {
   margin-right: 1em;
 }
+.leftblock_nodemenu ul > li.active > a {
+  font-weight: bold;
+  color: #135cbe;
+}
 .leftblock_nodemenu ul > li a {
   display: inline-block;
   padding: 0.5em 0.5em 0.5em 1em;
@@ -14416,6 +14463,10 @@ h3.title3 .maps iframe {
   left: 1.5em;
   top: 16px;
   border: none;
+}
+.leftblock_nodemenu ul > li ul li.active > a {
+  font-weight: bold;
+  color: #4b74ac;
 }
 .leftblock_nodemenu ul > li ul li a {
   padding: 0.4em 0 0.4em 2.5em;

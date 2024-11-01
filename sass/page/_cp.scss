@@ -82,8 +82,43 @@
   table {
     background: #fff;
     margin-bottom: 0;
+    th {
+      padding: 0.5em;
+    }
     td {
       vertical-align: top;
+      padding: 0.5em;
+      @include screen('xs_mobile') {
+        &:before {
+          top: 0.5em;
+        }
+      }
+      .file_download {
+        margin: 0;
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          li {
+            padding: 0;
+            border-bottom: none;
+
+            &:before {
+              display: none;
+            }
+            span {
+              margin: 0 auto;
+              @include screen('xs_mobile') {
+                margin: 0;
+              }
+              a {
+                text-decoration: none;
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -310,6 +345,7 @@ h3.title3 {
           color: #fff;
           display: inline-block;
           margin-right: 8px;
+          text-decoration: none;
         }
       }
     }

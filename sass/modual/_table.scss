@@ -68,6 +68,12 @@ table {
   .date {
     white-space: nowrap;
   }
+  .num {
+    text-align: center;
+  }
+  .filesize {
+    white-space: nowrap;
+  }
   @include screen('xs_mobile') {
     .aCenter {
       text-align: left;
