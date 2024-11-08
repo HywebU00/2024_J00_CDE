@@ -84,7 +84,7 @@ footer {
     margin: 0 0 10px;
     padding: 0;
     line-height: 1.6em;
-    word-break: break-all;
+    overflow-wrap: break-word;
   }
   .footer_icon {
     flex: 0 1 200px;

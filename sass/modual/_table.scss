@@ -23,14 +23,14 @@ table {
   }
   td {
     border: #ddd 1px solid;
-    word-break: break-all;
+    overflow-wrap: break-word;
     &.nopadding {
       padding: 0;
       border: none;
     }
 
     a {
-      word-break: break-all;
+      overflow-wrap: break-word;
 
       &:hover {
         text-decoration: underline;
