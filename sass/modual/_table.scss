@@ -82,6 +82,24 @@ table {
       text-align: left;
     }
   }
+  td {
+    .file_download {
+      margin: 0 auto;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      li {
+        padding: 0;
+        display: block;
+        border-bottom: none;
+        &:before {
+          display: none !important;
+        }
+      }
+    }
+  }
 }
 
 .table_list {
@@ -177,6 +195,8 @@ table {
           background: #fff !important;
         }
       }
+    }
+    td {
     }
   }
 

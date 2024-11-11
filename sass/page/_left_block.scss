@@ -196,6 +196,7 @@
         color: #333;
         font-size: 1.063em;
         margin-right: 1em;
+        // overflow-wrap: break-word;
         &:hover {
           color: $aHover;
         }

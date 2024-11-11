@@ -7365,6 +7365,22 @@ table .filesize {
     text-align: left;
   }
 }
+table td .file_download {
+  margin: 0 auto;
+}
+table td .file_download ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+table td .file_download li {
+  padding: 0;
+  display: block;
+  border-bottom: none;
+}
+table td .file_download li:before {
+  display: none !important;
+}
 
 .table_list {
   margin: 1em 0;
