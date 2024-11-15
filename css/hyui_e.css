@@ -4866,19 +4866,28 @@ footer .footer_logo img {
 }
 footer .footer_map {
   flex: 0 0 auto;
-  flex-basis: 214px;
 }
-footer .footer_map a {
+footer .footer_map ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+footer .footer_map ul li {
+  margin-left: 5px;
+}
+footer .footer_map ul li a {
   display: block;
-  padding: 0.5em;
+  padding: 0.5em 1em;
   background-color: #f7924d;
   color: #fff;
   text-align: center;
   border-radius: 50px;
   font-size: 1.25em;
+  transition: 0.5s;
 }
-footer .footer_map a:hover {
-  background-color: #f7924d;
+footer .footer_map ul li a:hover {
+  background-color: #f5741c;
 }
 footer .footer_info {
   flex: 1 1 auto;
