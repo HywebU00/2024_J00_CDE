@@ -95,6 +95,19 @@ $thirdColor: #f7924d;
     color: $secColor;
     font-size: 0.5625em;
   }
+  a {
+    display: block;
+    color: #00263e;
+    span {
+      color: $secColor;
+    }
+    &:hover {
+      color: $mainColor;
+      span {
+        color: darken($color: $secColor, $amount: 5);
+      }
+    }
+  }
 }
 .c_main,
 .mp_main {

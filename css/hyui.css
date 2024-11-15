@@ -12405,6 +12405,19 @@ h3.title3 .maps iframe {
   color: #f7924d;
   font-size: 0.5625em;
 }
+.c_titleBox a {
+  display: block;
+  color: #00263e;
+}
+.c_titleBox a span {
+  color: #f7924d;
+}
+.c_titleBox a:hover {
+  color: #0c3a78;
+}
+.c_titleBox a:hover span {
+  color: #f68335;
+}
 
 .c_main .main .breadcrumb,
 .mp_main .main .breadcrumb {
