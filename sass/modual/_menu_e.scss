@@ -216,6 +216,7 @@
   ul {
     li {
       position: relative;
+
       a {
         display: block;
         text-decoration: none;
@@ -223,7 +224,7 @@
       ul {
         display: none;
         overflow: visible;
-        width: 100%;
+        min-width: 100%;
         background: rgb(12, 58, 120);
         padding: 0;
         z-index: 999999;
@@ -242,6 +243,7 @@
             padding: 0.6em 1.2em;
             color: #fff;
             font-weight: bold;
+
             &:hover,
             &:focus {
               background: $aHover;
@@ -255,7 +257,7 @@
           }
           > a {
             padding-right: 2em;
-
+            display: block;
             &:hover,
             &:focus {
               background: $aHover;

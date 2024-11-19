@@ -3895,7 +3895,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .menu ul li ul {
   display: none;
   overflow: visible;
-  width: 100%;
+  min-width: 100%;
   background: rgb(12, 58, 120);
   padding: 0;
   z-index: 999999;
@@ -3925,6 +3925,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .menu ul li ul li.hasChild > a {
   padding-right: 2em;
+  display: block;
 }
 .menu ul li ul li.hasChild > a:hover, .menu ul li ul li.hasChild > a:focus {
   background: #4b74ac;
