@@ -14716,6 +14716,7 @@ h3.title3 .maps iframe {
   margin: 0 0 1em;
   font-size: 1.125em;
   font-weight: bolder;
+  line-height: 1.4;
 }
 .pictext_list_block .pictext_list .content .title a {
   display: block;
@@ -14763,6 +14764,20 @@ h3.title3 .maps iframe {
   border: 1px solid #ccc;
   margin-right: 8px;
   font-size: 0.938em;
+}
+@media (max-width: 700px) {
+  .pictext_list_block .pictext_list {
+    flex-wrap: wrap;
+  }
+  .pictext_list_block .pictext_list .picture {
+    flex: 1 1 auto;
+    flex-basis: 100%;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  .pictext_list_block .pictext_list .content {
+    padding-left: 0;
+  }
 }
 
 .apform {
