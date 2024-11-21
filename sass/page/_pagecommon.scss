@@ -117,7 +117,7 @@
 
   .pictext_list {
     display: flex;
-    // border-bottom: 1px solid #999;
+    align-items: flex-start;
     padding: 1em;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px;
     background-color: #fff;

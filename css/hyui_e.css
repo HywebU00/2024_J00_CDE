@@ -14981,6 +14981,7 @@ h3.title3 .maps iframe {
 }
 .pictext_list_block .pictext_list {
   display: flex;
+  align-items: flex-start;
   padding: 1em;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px;
   background-color: #fff;
