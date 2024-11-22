@@ -12942,6 +12942,26 @@ h3.title3 .maps iframe {
   text-indent: 1px;
   padding-bottom: 2px;
 }
+.c_news .picBox .newtag {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  color: #fff;
+  width: 86px;
+  height: 86px;
+  background-image: url("../images/newtagbg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 86px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.125em;
+  transform: rotate(-5deg);
+}
 .c_news .info {
   max-width: 625px;
   color: #fff;
@@ -13002,6 +13022,15 @@ h3.title3 .maps iframe {
 }
 .c_news ul li a:hover time {
   background: #1e4881;
+}
+.c_news ul li .jobtag {
+  width: 30px;
+  height: 27.7px;
+  margin-right: 10px;
+}
+.c_news ul li .jobtag img {
+  width: 100%;
+  height: 100%;
 }
 .c_news ul li .title {
   font-size: 1.125em;

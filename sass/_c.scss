@@ -380,6 +380,26 @@ $thirdColor: #f7924d;
         padding-bottom: 2px;
       }
     }
+    .newtag {
+      position: absolute;
+      left: 15px;
+      bottom: 15px;
+      border-radius: 50%;
+      color: #fff;
+      width: 86px;
+      height: 86px;
+      background-image: url('../images/newtagbg.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 86px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.125em;
+      transform: rotate(-5deg);
+    }
   }
 
   .info {
@@ -455,7 +475,15 @@ $thirdColor: #f7924d;
           }
         }
       }
-
+      .jobtag {
+        width: 30px;
+        height: 27.7px;
+        margin-right: 10px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
       .title {
         font-size: 1.125em;
         font-weight: bold;
