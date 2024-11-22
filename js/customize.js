@@ -482,154 +482,196 @@ let width6 = (outerWidth / 12) * 6;
 let width4 = (outerWidth / 12) * 4;
 
 function checkOuter12_5() {
-  $('.checkOuter12_5').each(function () {
-    let elemWidth = $(this).width();
+  const checkOuter12_5 = document.querySelectorAll('.checkOuter12_5');
+  checkOuter12_5?.forEach((item) => {
+    let elemWidth = item.offsetWidth;
     if (elemWidth <= width4) {
-      $(this).attr('col', 2);
+      item.setAttribute('col', 2);
     } else if (elemWidth <= width6) {
-      $(this).attr('col', 3);
+      item.setAttribute('col', 3);
     } else if (elemWidth <= width8) {
-      $(this).attr('col', 4);
+      item.setAttribute('col', 4);
     } else if (elemWidth > width8) {
-      $(this).attr('col', 5);
+      item.setAttribute('col', 5);
     }
   });
 }
-function checkOuter12_3() {
-  $('.checkOuter12_3').each(function () {
-    let elemWidth = $(this).width();
-    if (elemWidth <= width6) {
-      $(this).attr('col', 1);
-    } else if (elemWidth <= width8) {
-      $(this).attr('col', 2);
-    } else if (elemWidth > width8) {
-      $(this).attr('col', 3);
-    }
-  });
-}
+
 function checkOuter12_4() {
-  $('.checkOuter12_4').each(function () {
-    let elemWidth = $(this).width();
+  const checkOuter12_4 = document.querySelectorAll('.checkOuter12_4');
+  checkOuter12_4?.forEach((item) => {
+    let elemWidth = item.offsetWidth;
     if (elemWidth <= width4) {
-      $(this).attr('col', 1);
+      item.setAttribute('col', 1);
     } else if (elemWidth <= width6) {
-      $(this).attr('col', 2);
+      item.setAttribute('col', 2);
     } else if (elemWidth <= width8) {
-      $(this).attr('col', 3);
+      item.setAttribute('col', 3);
     } else if (elemWidth > width8) {
-      $(this).attr('col', 4);
+      item.setAttribute('col', 4);
     }
   });
 }
-$(window).on('load resize', checkOuter12_5);
-$(window).on('load resize', checkOuter12_4);
-$(window).on('load resize', checkOuter12_3);
+
+function checkOuter12_3() {
+  const checkOuter12_3 = document.querySelectorAll('.checkOuter12_3');
+  checkOuter12_3?.forEach((item) => {
+    let elemWidth = item.offsetWidth;
+    if (elemWidth <= width6) {
+      item.setAttribute('col', 1);
+    } else if (elemWidth <= width8) {
+      item.setAttribute('col', 2);
+    } else if (elemWidth > width8) {
+      item.setAttribute('col', 3);
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', checkOuter12_5);
+document.addEventListener('DOMContentLoaded', checkOuter12_4);
+document.addEventListener('DOMContentLoaded', checkOuter12_3);
+window.addEventListener('resize', checkOuter12_5);
+window.addEventListener('resize', checkOuter12_4);
+window.addEventListener('resize', checkOuter12_3);
 
 function checkSlick12_5() {
-  if (!$('.slick12_5').length) {
-    return;
-  }
-  $('.slick12_5').each(function () {
-    let boxWidth = $(this).width();
+  const slick12_5 = document.querySelectorAll('.slick12_5');
+  slick12_5?.forEach((item) => {
+    let boxWidth = item.offsetWidth;
     if (boxWidth <= width4) {
-      $(this).parent().attr('col', 2);
-      $(this).slick('unslick');
-      $(this).off().slick({
+      item.setAttribute('col', 2);
+      $(item).hasClass('slick-initialized') ? $(item).slick('unslick') : null;
+      $(item).slick({
         slidesToShow: 2,
+        infinite: true,
+        slidesToScroll: 1,
+        dots: false,
       });
     } else if (boxWidth <= width6) {
-      $(this).parent().attr('col', 3);
-      $(this).slick('unslick');
-      $(this).off().slick({
+      item.setAttribute('col', 3);
+      $(item).hasClass('slick-initialized') ? $(item).slick('unslick') : null;
+      $(item).slick({
         slidesToShow: 3,
+        infinite: true,
+        slidesToScroll: 1,
+        dots: false,
       });
     } else if (boxWidth <= width8) {
-      $(this).parent().attr('col', 4);
-      $(this).slick('unslick');
-      $(this).off().slick({
+      item.setAttribute('col', 4);
+      $(item).hasClass('slick-initialized') ? $(item).slick('unslick') : null;
+      $(item).slick({
         slidesToShow: 4,
+        infinite: true,
+        slidesToScroll: 1,
+        dots: false,
       });
     } else if (boxWidth > width8) {
-      $(this).parent().attr('col', 5);
-      $(this).slick('unslick');
-      $(this).off().slick({
+      item.setAttribute('col', 5);
+      $(item).hasClass('slick-initialized') ? $(item).slick('unslick') : null;
+      $(item).slick({
         slidesToShow: 5,
-      });
-    }
-  });
-}
-
-function checkSlick12_3() {
-  if (!$('.slick12_3').length) {
-    return;
-  }
-  $('.slick12_3').each(function () {
-    let boxWidth = $(this).width() - 30;
-    if (boxWidth <= width4) {
-      $(this).parent().attr('col', 1);
-      $(this).slick('unslick');
-      $(this).off().slick({
-        slidesToShow: 1,
-      });
-    } else if (boxWidth <= width6) {
-      $(this).attr('col', 1);
-      $(this).slick('unslick');
-      $(this).off().slick({
-        slidesToShow: 1,
-      });
-    } else if (boxWidth <= width8) {
-      $(this).attr('col', 2);
-      $(this).slick('unslick');
-      $(this).off().slick({
-        slidesToShow: 2,
-      });
-    } else if (boxWidth > width8) {
-      $(this).attr('col', 3);
-      $(this).slick('unslick');
-      $(this).off().slick({
-        slidesToShow: 3,
+        infinite: true,
+        slidesToScroll: 1,
+        dots: false,
       });
     }
   });
 }
 
 function checkSlick12_4() {
-  if (!$('.slick12_4').length) {
-    return;
-  }
-  $('.slick12_4').each(function () {
-    let boxWidth = $(this).width();
+  const slick12_4 = document.querySelectorAll('.slick12_4');
+  slick12_4?.forEach((item) => {
+    let boxWidth = item.offsetWidth;
     if (boxWidth <= width4) {
-      $(this).attr('col', 1);
-      $(this).slick('unslick');
-      $(this).off().slick({
+      item.setAttribute('col', 1);
+      $(item).hasClass('slick-initialized') ? $(item).slick('unslick') : null;
+      $(item).slick({
         slidesToShow: 1,
+        infinite: true,
+        slidesToScroll: 1,
+        dots: false,
       });
     } else if (boxWidth <= width6) {
-      $(this).attr('col', 2);
-      $(this).slick('unslick');
-      $(this).off().slick({
+      item.setAttribute('col', 2);
+      $(item).hasClass('slick-initialized') ? $(item).slick('unslick') : null;
+      $(item).slick({
         slidesToShow: 2,
+        infinite: true,
+        slidesToScroll: 1,
+        dots: false,
       });
     } else if (boxWidth <= width8) {
-      $(this).attr('col', 3);
-      $(this).slick('unslick');
-      $(this).off().slick({
+      item.setAttribute('col', 3);
+      $(item).hasClass('slick-initialized') ? $(item).slick('unslick') : null;
+      $(item).slick({
         slidesToShow: 3,
+        infinite: true,
+        slidesToScroll: 1,
+        dots: false,
       });
     } else if (boxWidth > width8) {
-      $(this).attr('col', 4);
-      $(this).slick('unslick');
-      $(this).off().slick({
+      item.setAttribute('col', 4);
+      $(item).hasClass('slick-initialized') ? $(item).slick('unslick') : null;
+      $(item).slick({
         slidesToShow: 4,
+        infinite: true,
+        slidesToScroll: 1,
+        dots: false,
       });
     }
   });
 }
 
-$(window).on('load resize', checkSlick12_5);
-$(window).on('load resize', checkSlick12_4);
-$(window).on('load resize', checkSlick12_3);
+function checkSlick12_3() {
+  const slick12_3 = document.querySelectorAll('.slick12_3');
+  slick12_3?.forEach((item) => {
+    let boxWidth = item.offsetWidth - 30;
+    if (boxWidth <= width4) {
+      item.setAttribute('col', 1);
+      $(item).hasClass('slick-initialized') ? $(item).slick('unslick') : null;
+      $(item).slick({
+        slidesToShow: 1,
+        infinite: true,
+        slidesToScroll: 1,
+        dots: false,
+      });
+    } else if (boxWidth <= width6) {
+      item.setAttribute('col', 1);
+      $(item).hasClass('slick-initialized') ? $(item).slick('unslick') : null;
+      $(item).slick({
+        slidesToShow: 1,
+        infinite: true,
+        slidesToScroll: 1,
+        dots: false,
+      });
+    } else if (boxWidth <= width8) {
+      item.setAttribute('col', 2);
+      $(item).hasClass('slick-initialized') ? $(item).slick('unslick') : null;
+      $(item).slick({
+        slidesToShow: 2,
+        infinite: true,
+        slidesToScroll: 1,
+        dots: false,
+      });
+    } else if (boxWidth > width8) {
+      item.setAttribute('col', 3);
+      $(item).hasClass('slick-initialized') ? $(item).slick('unslick') : null;
+      $(item).slick({
+        slidesToShow: 3,
+        infinite: true,
+        slidesToScroll: 1,
+        dots: false,
+      });
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', checkSlick12_5);
+document.addEventListener('DOMContentLoaded', checkSlick12_4);
+document.addEventListener('DOMContentLoaded', checkSlick12_3);
+window.addEventListener('resize', checkSlick12_5);
+window.addEventListener('resize', checkSlick12_4);
+window.addEventListener('resize', checkSlick12_3);
 
 function animateNumber(element, start, stop, duration, ease) {
   let startTime = null;
