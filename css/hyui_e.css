@@ -11806,6 +11806,11 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   text-decoration: none;
   white-space: nowrap;
 }
+.cp table td a {
+  color: #4b74ac;
+  text-decoration: none;
+  font-weight: normal;
+}
 .cp img {
   text-align: center;
   max-width: 100%;
