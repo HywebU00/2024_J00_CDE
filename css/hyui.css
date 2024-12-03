@@ -10220,6 +10220,10 @@ pre {
   line-height: 1.7em;
 }
 
+.keyword {
+  background: #fff000;
+}
+
 a.more {
   display: block;
   width: 10em;

@@ -10280,6 +10280,10 @@ h2.title {
   display: none;
 }
 
+.keyword {
+  background: #fff000;
+}
+
 a.more {
   display: block;
   width: 10em;
