@@ -515,6 +515,7 @@ h3.title3 {
     padding: 0 !important;
     margin-bottom: 0 !important;
     justify-content: center;
+    line-height: 1.4em;
     $fileType: doc, docx, odt, xls, xlsx, csv, ods, ppt, pptx, odp, zip, txt, mov, mp3, jpg, wmv, mp4, pdf, other;
 
     @each $fileType in $fileType {

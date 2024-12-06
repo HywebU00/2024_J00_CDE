@@ -11993,6 +11993,7 @@ h3.title3 .maps iframe {
   padding: 0 !important;
   margin-bottom: 0 !important;
   justify-content: center;
+  line-height: 1.4em;
 }
 .file_type li span.file_doc {
   color: #fff;
