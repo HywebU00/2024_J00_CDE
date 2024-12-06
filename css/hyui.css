@@ -11387,6 +11387,22 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   display: inline-block !important;
 }
 
+.mpvideo_block {
+  padding: 0 !important;
+}
+.mpvideo_block .container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+.mpvideo_block .container > .col {
+  padding: 0 !important;
+}
+.mpvideo_block .container video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
 .cp {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   background: #fff;
