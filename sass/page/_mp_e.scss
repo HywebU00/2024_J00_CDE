@@ -1292,3 +1292,21 @@ a.more {
     }
   }
 }
+
+// 首頁影片
+.mpvideo_block {
+  padding: 0 !important;
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    // outline: 1px solid red;
+    > .col {
+      padding: 0 !important;
+    }
+    video {
+      display: inline-block;
+      vertical-align: baseline;
+    }
+  }
+}
