@@ -12274,6 +12274,182 @@ h3.title3 .maps iframe {
   background: #2d0715;
 }
 
+.file_type {
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+  zoom: 1;
+}
+.file_type:before, .file_type:after {
+  content: "";
+  display: table;
+}
+.file_type:after {
+  clear: both;
+}
+.file_type ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.file_type li {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 0;
+  margin-bottom: 0 !important;
+  justify-content: center;
+}
+.file_type li span.file_doc {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span.file_docx {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span.file_odt {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span.file_xls {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span.file_xlsx {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span.file_csv {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span.file_ods {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span.file_ppt {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span.file_pptx {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span.file_odp {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span.file_zip {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span.file_txt {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span.file_mov {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span.file_mp3 {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span.file_jpg {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span.file_wmv {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span.file_mp4 {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span.file_pdf {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span.file_other {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2em 0.8em;
+  border-radius: 3px;
+}
+.file_type li span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.file_type li span.file_doc, .file_type li span.file_docx, .file_type li span.file_odt {
+  background: #275cb7;
+}
+.file_type li span.file_xls, .file_type li span.file_xlsx, .file_type li span.file_csv, .file_type li span.file_ods {
+  background: #387947;
+}
+.file_type li span.file_ppt, .file_type li span.file_pptx, .file_type li span.file_odp, .file_type li span.file_pdf {
+  background: #c55a3b;
+}
+.file_type li span.file_pdf {
+  background: #c00;
+}
+.file_type li span.file_zip {
+  background: #eb712e;
+}
+.file_type li span.file_txt, .file_type li span.file_other {
+  background: #555;
+}
+.file_type li span.file_mov {
+  background: #009999;
+}
+.file_type li span.file_mp3, .file_type li span.file_mp4 {
+  background: #088ecc;
+}
+.file_type li span.file_jpg {
+  background: #6c29a4;
+}
+.file_type li span.file_wmv {
+  background: #430a1f;
+}
+
 .web_link {
   margin: 1em 0;
 }
