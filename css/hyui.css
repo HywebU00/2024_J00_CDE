@@ -11990,123 +11990,142 @@ h3.title3 .maps iframe {
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  padding: 0;
+  padding: 0 !important;
   margin-bottom: 0 !important;
   justify-content: center;
 }
 .file_type li span.file_doc {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span.file_docx {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span.file_odt {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span.file_xls {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span.file_xlsx {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span.file_csv {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span.file_ods {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span.file_ppt {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span.file_pptx {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span.file_odp {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span.file_zip {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span.file_txt {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span.file_mov {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span.file_mp3 {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span.file_jpg {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span.file_wmv {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span.file_mp4 {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span.file_pdf {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span.file_other {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.8em !important;
   border-radius: 3px;
+  font-size: 1.188rem;
 }
 .file_type li span {
   display: flex;
