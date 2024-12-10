@@ -80,3 +80,16 @@
     }
   }
 }
+.np {
+  a {
+    @include aSetting;
+    color: lighten($color: $primaryColor, $amount: 15);
+    font-weight: bold;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+      color: lighten($color: $primaryColor, $amount: 15);
+    }
+  }
+}

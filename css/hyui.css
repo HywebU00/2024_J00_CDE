@@ -8133,6 +8133,22 @@ table td .file_download li:before {
   text-decoration: none;
 }
 
+.np a {
+  color: #0c3a78;
+  text-decoration: none;
+  color: #135cbe;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.np a:hover, .np a:focus {
+  color: #4b74ac;
+  cursor: pointer;
+}
+.np a:hover {
+  text-decoration: underline;
+  color: #135cbe;
+}
+
 .tabSet {
   margin: 30px auto;
 }
