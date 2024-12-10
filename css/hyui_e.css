@@ -12305,6 +12305,18 @@ h3.title3 .maps iframe {
 .file_download li span.file_wmv a:hover, .file_download li span.file_wmv a:focus {
   background: #2d0715;
 }
+.file_download table ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.file_download table ul li {
+  padding: 0;
+  border-bottom: none;
+}
+.file_download table ul li:before {
+  display: none;
+}
 
 .file_type {
   width: 100%;
