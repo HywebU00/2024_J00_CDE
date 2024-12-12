@@ -357,6 +357,7 @@ a.more {
           }
         }
       }
+
       // 箭頭的樣式
 
       .slick-prev {
@@ -432,6 +433,7 @@ a.more {
         }
       }
     }
+
     .mpSlider02 {
       width: 100%;
       @include gutter(0);
@@ -659,6 +661,14 @@ a.more {
           width: 48px;
           // background: $mainColor;
         }
+      }
+    }
+    // 影片
+    .mpvideo_group {
+      height: 400px;
+      video {
+        display: inline-block;
+        vertical-align: baseline;
       }
     }
   }
@@ -1064,9 +1074,11 @@ a.more {
     > .col {
       padding: 0 !important;
     }
-    video {
-      display: inline-block;
-      vertical-align: baseline;
+    .mpvideo_group {
+      video {
+        display: inline-block;
+        vertical-align: baseline;
+      }
     }
   }
 }

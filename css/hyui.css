@@ -11027,6 +11027,13 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .mpSliderblock .container .slick-dots li.slick-active button {
   width: 48px;
 }
+.mpSliderblock .container .mpvideo_group {
+  height: 400px;
+}
+.mpSliderblock .container .mpvideo_group video {
+  display: inline-block;
+  vertical-align: baseline;
+}
 
 .mp_newsBlock .tabContent .nwes_content {
   display: flex;
@@ -11414,7 +11421,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .mpvideo_block .container > .col {
   padding: 0 !important;
 }
-.mpvideo_block .container video {
+.mpvideo_block .container .mpvideo_group video {
   display: inline-block;
   vertical-align: baseline;
 }

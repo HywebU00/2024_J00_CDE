@@ -30,13 +30,17 @@ $(function () {
     },
   });
   $('.mpSlider01').slick({
-    // mobileFirst: true,
-    dots: true,
-    arrows: true,
-    // infinite: true,
+    // dots: true,
+    // arrows: true,
     speed: 500,
-    autoplay: false,
+    // autoplay: false,
     fade: true,
+
+    autoplay: true, // 自動播放
+    dots: true, // 顯示分頁點
+    arrows: true, // 顯示箭頭導航
+    infinite: true,
+
     lazyLoaded: true,
     lazyLoad: 'ondemand',
     ease: 'ease',
@@ -47,11 +51,10 @@ $(function () {
       return $('<button type="button" aria-label="' + title + '"/>').text(title);
     },
   });
+
   $('.mpSlider02').slick({
-    // mobileFirst: true,
     dots: true,
     arrows: true,
-    // infinite: true,
     speed: 500,
     autoplay: false,
     fade: true,
