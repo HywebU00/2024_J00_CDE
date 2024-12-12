@@ -10672,10 +10672,11 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   .mpSliderblock .container .mpSlider01 .slick-prev {
     right: auto;
     left: 10px;
-    top: 25%;
+    top: 50%;
     bottom: auto;
     width: 50px !important;
     height: 50px !important;
+    margin-top: -25px;
   }
   .mpSliderblock .container .mpSlider01 .slick-prev:hover, .mpSliderblock .container .mpSlider01 .slick-prev:focus {
     width: 60px !important;
@@ -10711,10 +10712,11 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 @media screen and (max-width: 767px) {
   .mpSliderblock .container .mpSlider01 .slick-next {
     right: 10px;
-    top: 25%;
+    top: 50%;
     bottom: auto;
     width: 50px !important;
     height: 50px !important;
+    margin-top: -25px;
   }
   .mpSliderblock .container .mpSlider01 .slick-next:hover, .mpSliderblock .container .mpSlider01 .slick-next:focus {
     width: 60px !important;

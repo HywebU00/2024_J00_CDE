@@ -386,10 +386,11 @@ a.more {
         @include screen('mobile') {
           right: auto;
           left: 10px;
-          top: 25%;
+          top: 50%;
           bottom: auto;
           width: 50px !important;
           height: 50px !important;
+          margin-top: -25px;
           &:hover,
           &:focus {
             width: 60px !important;
@@ -424,10 +425,11 @@ a.more {
         }
         @include screen('mobile') {
           right: 10px;
-          top: 25%;
+          top: 50%;
           bottom: auto;
           width: 50px !important;
           height: 50px !important;
+          margin-top: -25px;
           &:hover,
           &:focus {
             width: 60px !important;
