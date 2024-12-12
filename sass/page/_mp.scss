@@ -386,16 +386,19 @@ a.more {
         @include screen('mobile') {
           right: auto;
           left: 10px;
-          top: 50%;
+          top: 90px;
           bottom: auto;
           width: 50px !important;
           height: 50px !important;
-          margin-top: -25px;
+
           &:hover,
           &:focus {
             width: 60px !important;
             height: 60px !important;
           }
+        }
+        @media (max-width: 400px) {
+          top: 70px;
         }
       }
       .slick-next {
@@ -425,16 +428,19 @@ a.more {
         }
         @include screen('mobile') {
           right: 10px;
-          top: 50%;
+          top: 90px;
           bottom: auto;
           width: 50px !important;
           height: 50px !important;
-          margin-top: -25px;
+
           &:hover,
           &:focus {
             width: 60px !important;
             height: 60px !important;
           }
+        }
+        @media (max-width: 400px) {
+          top: 70px;
         }
       }
     }

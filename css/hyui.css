@@ -10672,15 +10672,19 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   .mpSliderblock .container .mpSlider01 .slick-prev {
     right: auto;
     left: 10px;
-    top: 50%;
+    top: 90px;
     bottom: auto;
     width: 50px !important;
     height: 50px !important;
-    margin-top: -25px;
   }
   .mpSliderblock .container .mpSlider01 .slick-prev:hover, .mpSliderblock .container .mpSlider01 .slick-prev:focus {
     width: 60px !important;
     height: 60px !important;
+  }
+}
+@media (max-width: 400px) {
+  .mpSliderblock .container .mpSlider01 .slick-prev {
+    top: 70px;
   }
 }
 .mpSliderblock .container .mpSlider01 .slick-next {
@@ -10712,15 +10716,19 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 @media screen and (max-width: 767px) {
   .mpSliderblock .container .mpSlider01 .slick-next {
     right: 10px;
-    top: 50%;
+    top: 90px;
     bottom: auto;
     width: 50px !important;
     height: 50px !important;
-    margin-top: -25px;
   }
   .mpSliderblock .container .mpSlider01 .slick-next:hover, .mpSliderblock .container .mpSlider01 .slick-next:focus {
     width: 60px !important;
     height: 60px !important;
+  }
+}
+@media (max-width: 400px) {
+  .mpSliderblock .container .mpSlider01 .slick-next {
+    top: 70px;
   }
 }
 .mpSliderblock .container .mpSlider02 {
