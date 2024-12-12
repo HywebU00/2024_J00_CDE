@@ -30,24 +30,18 @@ $(function () {
     },
   });
   $('.mpSlider01').slick({
-    // dots: true,
-    // arrows: true,
+    dots: true,
+    arrows: true,
     speed: 500,
-    // autoplay: false,
+    autoplay: false,
     fade: true,
-
-    autoplay: true, // 自動播放
-    dots: true, // 顯示分頁點
-    arrows: true, // 顯示箭頭導航
-    infinite: true,
-
     lazyLoaded: true,
     lazyLoad: 'ondemand',
     ease: 'ease',
     pauseOnHover: false,
     pauseOnFocus: false,
     customPaging: function (slider, i) {
-      var title = $(slider.$slides[i]).find('img').attr('alt').trim();
+      var title = $(slider.$slides[i]).find('img').attr('alt')?.trim();
       return $('<button type="button" aria-label="' + title + '"/>').text(title);
     },
   });
@@ -64,7 +58,7 @@ $(function () {
     pauseOnHover: false,
     pauseOnFocus: false,
     customPaging: function (slider, i) {
-      var title = $(slider.$slides[i]).find('img').attr('alt').trim();
+      var title = $(slider.$slides[i]).find('img').attr('alt')?.trim();
       return $('<button type="button" aria-label="' + title + '"/>').text(title);
     },
   });

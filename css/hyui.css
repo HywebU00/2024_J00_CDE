@@ -10393,6 +10393,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .mpSliderblock .container .mpSlider01 .pic_box a {
   display: flex;
   background-color: #d3d3d3;
+  overflow: hidden;
 }
 .mpSliderblock .container .mpSlider01 .pic_box a:after {
   content: "";
@@ -10448,7 +10449,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   .mpSliderblock .container .mpSlider01 .pic_box a {
     display: block;
   }
-  .mpSliderblock .container .mpSlider01 .pic_box a:after {
+  .mpSliderblock .container .mpSlider01 .pic_box a:after, .mpSliderblock .container .mpSlider01 .pic_box a:before {
     display: none;
   }
 }
@@ -10622,7 +10623,6 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   flex-basis: 75%;
   max-width: 75%;
   overflow: hidden;
-  outline: 1px solid red;
 }
 @media screen and (max-width: 767px) {
   .mpSliderblock .container .mpSlider01 .pic_box a .pic {
@@ -10633,7 +10633,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .mpSliderblock .container .mpSlider01 .pic_box a .pic:before {
   display: inline-block;
   content: "";
-  padding-top: 28.884180791%;
+  padding-top: 29.884180791%;
 }
 .mpSliderblock .container .mpSlider01 .pic_box a .pic img {
   display: block;
@@ -11026,9 +11026,6 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .mpSliderblock .container .slick-dots li.slick-active button {
   width: 48px;
-}
-.mpSliderblock .container .mpvideo_group {
-  height: 400px;
 }
 .mpSliderblock .container .mpvideo_group video {
   display: inline-block;

@@ -183,9 +183,11 @@ a.more {
       padding-bottom: 3em;
       .pic_box {
         // height: 410px;
+
         a {
           display: flex;
           background-color: #d3d3d3;
+          overflow: hidden;
           &:after {
             content: '';
             border-radius: 0 0 25% 0/0 1% 102% 0;
@@ -230,7 +232,8 @@ a.more {
           }
           @include screen('mobile') {
             display: block;
-            &:after {
+            &:after,
+            &:before {
               display: none;
             }
           }
@@ -251,6 +254,7 @@ a.more {
             background-image: url('../images/mp/mpsliderbg.jpg');
             background-repeat: no-repeat;
             background-position: center top;
+
             @media (max-width: 1800px) {
               border-radius: 0 0 78% 0/0 1% 100% 0;
             }
@@ -333,7 +337,6 @@ a.more {
             flex-basis: 75%;
             max-width: 75%;
             overflow: hidden;
-            outline: 1px solid red;
             @include screen('mobile') {
               max-width: 100%;
               position: relative;
@@ -341,7 +344,7 @@ a.more {
             &:before {
               display: inline-block;
               content: '';
-              padding-top: calc(409 / 1416) * 100%;
+              padding-top: calc(423.16 / 1416) * 100%;
             }
             img {
               display: block;
@@ -665,7 +668,8 @@ a.more {
     }
     // 影片
     .mpvideo_group {
-      height: 400px;
+      // height: 424px;
+      // overflow: hidden;
       video {
         display: inline-block;
         vertical-align: baseline;
