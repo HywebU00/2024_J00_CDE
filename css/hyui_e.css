@@ -12841,10 +12841,12 @@ h3.title3 .maps iframe {
   margin-bottom: 2em;
 }
 .hierarchical_order_e > li:before {
-  content: counter(number01, decimal) "、";
+  content: counter(number01, decimal) ".";
   width: 2em;
   display: inline-block;
   text-align: right;
+  margin-right: 5px;
+  margin-left: -5px;
 }
 .hierarchical_order_e > li > ul {
   margin: 0.5em 0;
@@ -12874,10 +12876,12 @@ h3.title3 .maps iframe {
   text-indent: -1.7em;
 }
 .hierarchical_order_e > li > ul > li > ul > li:before {
-  content: counter(number03, upper-alpha) "、";
+  content: counter(number03, upper-alpha) ".";
   width: 1.7em;
   display: inline-block;
   text-align: right;
+  margin-right: 5px;
+  margin-left: -7px;
 }
 .hierarchical_order_e > li > ul > li > ul > li > ul {
   margin: 0.5em 0;
