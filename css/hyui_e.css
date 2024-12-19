@@ -11317,7 +11317,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   color: #b3b3b3;
   position: absolute;
   right: 0;
-  top: 0;
+  bottom: 0;
 }
 .mp_businessBlock .business_group .info ul li:last-child:after {
   display: none;
@@ -11477,8 +11477,9 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   content: "/";
   color: #b3b3b3;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: auto;
+  bottom: 0;
+  margin-left: 6px;
 }
 .mp_achievementsBlock .item .info ul li:last-child:after {
   display: none;

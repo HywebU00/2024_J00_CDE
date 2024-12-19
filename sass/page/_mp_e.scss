@@ -892,7 +892,7 @@ a.more {
             color: #b3b3b3;
             position: absolute;
             right: 0;
-            top: 0;
+            bottom: 0;
           }
           &:last-child {
             &:after {
@@ -1043,8 +1043,9 @@ a.more {
             content: '/';
             color: #b3b3b3;
             position: absolute;
-            right: 0;
-            top: 0;
+            right: auto;
+            bottom: 0;
+            margin-left: 6px;
           }
           &:last-child {
             &:after {
