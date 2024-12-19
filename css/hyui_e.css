@@ -11167,7 +11167,6 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .mp_newsBlock .tabContent .nwes_content .wordcontent {
   line-height: 2.2em;
   font-size: 1.125em;
-  font-weight: bolder;
   letter-spacing: 0.03em;
   overflow: hidden;
   text-overflow: -o-ellipsis-lastline;
@@ -11201,6 +11200,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   letter-spacing: 0.03em;
   min-width: 15em;
   border: none;
+  font-size: 1.25em;
 }
 @media (max-width: 430px) {
   .mp_aboutcde .choosebtn .item {
@@ -11214,7 +11214,6 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .mp_aboutcde .aboutcde_Content {
   line-height: 2.2em;
   font-size: 1.125em;
-  font-weight: bolder;
   letter-spacing: 0.03em;
   overflow: hidden;
   text-overflow: -o-ellipsis-lastline;

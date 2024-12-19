@@ -757,7 +757,6 @@ a.more {
       .wordcontent {
         line-height: 2.2em;
         font-size: 1.125em;
-        font-weight: bolder;
         letter-spacing: 0.03em;
         @include text-line(5, 2.2em);
       }
@@ -785,6 +784,7 @@ a.more {
       letter-spacing: 0.03em;
       min-width: 15em;
       border: none;
+      font-size: 1.25em;
       @media (max-width: 430px) {
         min-width: 100%;
         max-width: 100%;
@@ -798,7 +798,7 @@ a.more {
   .aboutcde_Content {
     line-height: 2.2em;
     font-size: 1.125em;
-    font-weight: bolder;
+
     letter-spacing: 0.03em;
     @include text-line(5, 2.2em);
   }
