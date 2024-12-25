@@ -4844,6 +4844,7 @@ footer .container {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   display: flex;
 }
 footer .container > div {
@@ -4862,12 +4863,20 @@ footer a:hover, footer a:focus {
   color: #07244a;
 }
 footer .footer_logo {
-  flex: 1 1 300px;
+  flex: 0 0 300px;
   flex-basis: 300px;
+  margin-right: 20px;
 }
 footer .footer_logo img {
   width: 300px;
   height: 52px;
+}
+footer .footer_certification {
+  flex: 1 1 70px;
+  flex-basis: 70x;
+}
+footer .footer_certification img {
+  width: 70px;
 }
 footer .footer_map {
   flex: 0 0 auto;
