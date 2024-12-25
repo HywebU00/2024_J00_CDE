@@ -1056,6 +1056,7 @@ a.more {
     padding-top: 1em;
     a {
       .pic {
+        @include aspect-ratio(6, 1.95);
         img {
           border-radius: 8px;
         }
