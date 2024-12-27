@@ -14026,16 +14026,7 @@ h3.title3 .maps iframe {
 .c_ptBox .item .info .description {
   line-height: 2;
   color: #7f7f7f;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
   font-size: 1.125em;
-}
-@media screen and (max-width: 767px) {
-  .c_ptBox .item .info .description {
-    -webkit-line-clamp: 3;
-  }
 }
 .c_ptBox .item .info .description_keepdoing {
   line-height: 2;
