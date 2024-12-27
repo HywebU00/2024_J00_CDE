@@ -11469,6 +11469,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .mp_linkBox .item a .pic img {
   border-radius: 8px;
+  width: 100%;
 }
 .mp_linkBox .item a .title {
   border-radius: 8px;
@@ -13762,6 +13763,26 @@ h3.title3 .maps iframe {
 }
 @media screen and (max-width: 767px) {
   .c_ptBox .item .info .description {
+    -webkit-line-clamp: 3;
+  }
+}
+.c_ptBox .item .info .description_keepdoing {
+  line-height: 2;
+  color: #7f7f7f;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  font-size: 1.125em;
+}
+.c_ptBox .item .info .description_keepdoing br {
+  display: none;
+}
+.c_ptBox .item .info .description_keepdoing p {
+  all: unset;
+}
+@media screen and (max-width: 767px) {
+  .c_ptBox .item .info .description_keepdoing {
     -webkit-line-clamp: 3;
   }
 }

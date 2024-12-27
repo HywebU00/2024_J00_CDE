@@ -14037,6 +14037,26 @@ h3.title3 .maps iframe {
     -webkit-line-clamp: 3;
   }
 }
+.c_ptBox .item .info .description_keepdoing {
+  line-height: 2;
+  color: #7f7f7f;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  font-size: 1.125em;
+}
+.c_ptBox .item .info .description_keepdoing br {
+  display: none;
+}
+.c_ptBox .item .info .description_keepdoing p {
+  all: unset;
+}
+@media screen and (max-width: 767px) {
+  .c_ptBox .item .info .description_keepdoing {
+    -webkit-line-clamp: 3;
+  }
+}
 .c_ptBox .item:hover {
   transform: translate(-3px, -3px);
   box-shadow: 0 0 15px 0 rgba(12, 58, 120, 0.5);

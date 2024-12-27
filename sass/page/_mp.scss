@@ -1059,6 +1059,7 @@ a.more {
         @include aspect-ratio(6, 1.95);
         img {
           border-radius: 8px;
+          width: 100%;
         }
       }
       .title {

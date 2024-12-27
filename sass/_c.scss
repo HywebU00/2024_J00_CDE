@@ -1268,6 +1268,24 @@ $thirdColor: #f7924d;
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         font-size: 1.125em;
+        @include screen('mobile') {
+          -webkit-line-clamp: 3;
+        }
+      }
+      .description_keepdoing {
+        line-height: 2;
+        color: #7f7f7f;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        font-size: 1.125em;
+        br {
+          display: none;
+        }
+        p {
+          all: unset;
+        }
 
         @include screen('mobile') {
           -webkit-line-clamp: 3;
