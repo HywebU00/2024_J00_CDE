@@ -206,6 +206,7 @@ $(function () {
     lazyLoad: 'ondemand',
     asNavFor: '.Slider-nav',
     infinite: true,
+    adaptiveHeight: true,
   });
 
   //點選slick-slide時才開始切換

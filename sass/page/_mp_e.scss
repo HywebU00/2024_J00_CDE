@@ -334,7 +334,7 @@ a.more {
             flex-basis: 75%;
             max-width: 75%;
             overflow: hidden;
-            outline: 1px solid red;
+
             @include screen('mobile') {
               max-width: 100%;
               position: relative;
@@ -1134,6 +1134,7 @@ a.more {
             .bookcover {
               img {
                 width: 246px;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
               }
               @media (max-width: 800px) {
                 width: 246px;
@@ -1145,6 +1146,46 @@ a.more {
             flex: 1 1 auto;
             p {
               font-size: 1.188em;
+            }
+          }
+          .bookblock_list {
+            flex: 1 1 auto;
+            flex-basis: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .bookcover {
+              padding: 20px 30px 30px;
+
+              img {
+                width: 180px;
+                transition: 0.5s;
+              }
+              &:nth-last-of-type(2) {
+                img {
+                  width: 246px;
+                }
+              }
+              a {
+                display: block;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+                &:hover {
+                  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 20px;
+                  img {
+                    transform: scale(1.07);
+                  }
+                }
+              }
+              @media (max-width: 800px) {
+                width: 246px;
+                margin: 0 auto 1em;
+                display: none;
+                &:nth-last-of-type(2) {
+                  display: block;
+                }
+              }
             }
           }
         }

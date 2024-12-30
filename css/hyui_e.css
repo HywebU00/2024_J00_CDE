@@ -10719,7 +10719,6 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   flex-basis: 75%;
   max-width: 75%;
   overflow: hidden;
-  outline: 1px solid red;
 }
 @media screen and (max-width: 767px) {
   .mpSliderblock .container .mpSlider01 .pic_box a .pic {
@@ -11608,6 +11607,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .mp_annualreportsBlock .Syncing_slider .Slider-for .item .itemblock .bookblock .bookcover img {
   width: 246px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 @media (max-width: 800px) {
   .mp_annualreportsBlock .Syncing_slider .Slider-for .item .itemblock .bookblock .bookcover {
@@ -11620,6 +11620,43 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .mp_annualreportsBlock .Syncing_slider .Slider-for .item .itemblock .content p {
   font-size: 1.188em;
+}
+.mp_annualreportsBlock .Syncing_slider .Slider-for .item .itemblock .bookblock_list {
+  flex: 1 1 auto;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mp_annualreportsBlock .Syncing_slider .Slider-for .item .itemblock .bookblock_list .bookcover {
+  padding: 20px 30px 30px;
+}
+.mp_annualreportsBlock .Syncing_slider .Slider-for .item .itemblock .bookblock_list .bookcover img {
+  width: 180px;
+  transition: 0.5s;
+}
+.mp_annualreportsBlock .Syncing_slider .Slider-for .item .itemblock .bookblock_list .bookcover:nth-last-of-type(2) img {
+  width: 246px;
+}
+.mp_annualreportsBlock .Syncing_slider .Slider-for .item .itemblock .bookblock_list .bookcover a {
+  display: block;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.mp_annualreportsBlock .Syncing_slider .Slider-for .item .itemblock .bookblock_list .bookcover a:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 20px;
+}
+.mp_annualreportsBlock .Syncing_slider .Slider-for .item .itemblock .bookblock_list .bookcover a:hover img {
+  transform: scale(1.07);
+}
+@media (max-width: 800px) {
+  .mp_annualreportsBlock .Syncing_slider .Slider-for .item .itemblock .bookblock_list .bookcover {
+    width: 246px;
+    margin: 0 auto 1em;
+    display: none;
+  }
+  .mp_annualreportsBlock .Syncing_slider .Slider-for .item .itemblock .bookblock_list .bookcover:nth-last-of-type(2) {
+    display: block;
+  }
 }
 .mp_annualreportsBlock .Syncing_slider .Slider-navall {
   display: flex;
