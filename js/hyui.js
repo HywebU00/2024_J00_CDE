@@ -723,7 +723,7 @@ $(function () {
     }
     // alt+U header
     if (e.altKey && e.keyCode == 85) {
-      $('html, body').animate({ scrollTop: 0 }, 200, 'easeOutExpo');
+      $('html, body').animate({ scrollTop: 0 }, 200, 'description');
       $('header').find('.accesskey').focus();
     }
     // alt+C 主要內容區
