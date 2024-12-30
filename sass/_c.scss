@@ -1499,9 +1499,49 @@ $thirdColor: #f7924d;
 
   .contentBox {
     flex-grow: 1;
-    padding: 30px 5% 30px 30px;
+    padding: 30px;
     background: #fff;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+    h3.title4 {
+      background-color: #cfd7e6;
+      padding: 0.5em 1em 0.4em 3em;
+      border-radius: 50px;
+      color: #fff;
+      font-size: 1.375em;
+      letter-spacing: 0.05em;
+      position: relative;
+      margin-top: 0;
+      &:before {
+        content: '';
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #fae586;
+        position: absolute;
+        left: 0.3em;
+        top: -5px;
+        z-index: 8;
+      }
+      &:after {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #dafffa;
+        position: absolute;
+        left: 1.5em;
+        top: 10px;
+        z-index: 8;
+      }
+      span {
+        position: relative;
+        // background-color: #dafffa;
+        padding: 0.2em 0;
+        border-radius: 50px;
+        z-index: 9;
+        color: $primaryColor;
+      }
+    }
   }
 
   .content {
